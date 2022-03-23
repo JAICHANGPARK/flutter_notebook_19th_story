@@ -53,6 +53,9 @@ class _MainInboxHomePageState extends State<MainInboxHomePage> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.mail),
+      ),
     );
   }
 }
