@@ -8,20 +8,28 @@ class MainInboxHomePage extends StatefulWidget {
 }
 
 class _MainInboxHomePageState extends State<MainInboxHomePage> {
+  GlobalKey<ScaffoldState> _globalKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _globalKey,
       backgroundColor: Colors.white,
+      drawerEnableOpenDragGesture: false,
+      drawer: Drawer(),
       body: SafeArea(
         child: Column(
           children: [
             Container(
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8),
+                padding: const EdgeInsets.symmetric(vertical: 4),
                 child: Row(
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+
+                        _globalKey.currentState!.openDrawer();
+                      },
                       icon: const Icon(Icons.menu),
                     ),
                     const Expanded(
@@ -54,7 +62,8 @@ class _MainInboxHomePageState extends State<MainInboxHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.mail),
+        onPressed: () {},
+        child: Icon(Icons.email_outlined),
       ),
     );
   }
