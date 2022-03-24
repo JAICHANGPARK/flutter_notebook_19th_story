@@ -58,105 +58,111 @@ class _MainInboxHomePageState extends State<MainInboxHomePage> {
               child: Consumer(builder: (context, ref, _) {
                 final inbox = ref.watch(inboxLoader);
                 return inbox.when(
-                    data: (items) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ListView.separated(
-                          itemBuilder: (context, index) {
-                            return Container(
-                              height: 82,
-                              padding: const EdgeInsets.all(8),
-                              child: Row(
-                                children: [
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              items[index].title ?? "",
-                                              style: const TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 12,
-                                              ),
-                                            ),
-                                            (items[index].isNew ?? false)
-                                                ? Container(
-                                                    decoration: BoxDecoration(
-                                                      color: Colors.red,
-                                                      borderRadius: BorderRadius.circular(6),
-                                                    ),
-                                                    child: const Center(
-                                                      child: Text(
-                                                        "New",
-                                                        style: TextStyle(
-                                                          color: Colors.white,
-                                                          fontSize: 12,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  )
-                                                : Container(),
-                                          ],
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(vertical: 12),
-                                          child: Text(
-                                            items[index].subtitle ?? "",
+                  data: (items) {
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ListView.separated(
+                        itemBuilder: (context, index) {
+                          return Container(
+                            height: 86,
+                            padding: const EdgeInsets.all(8),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            items[index].title ?? "",
                                             style: const TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 12,
                                             ),
                                           ),
-                                        ),
-                                        Text(
-                                          items[index].overlayText ?? "",
+                                          (items[index].isNew ?? false)
+                                              ? Container(
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.red,
+                                                    borderRadius: BorderRadius.circular(6),
+                                                  ),
+                                                  padding: const EdgeInsets.symmetric(
+                                                    horizontal: 4,
+                                                    vertical: 2,
+                                                  ),
+                                                  child: const Center(
+                                                    child: Text(
+                                                      "New",
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 12,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                )
+                                              : Container(),
+                                        ],
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(vertical: 12),
+                                        child: Text(
+                                          items[index].subtitle ?? "",
                                           style: const TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 12,
-                                            color: Colors.grey,
-                                            overflow: TextOverflow.ellipsis,
                                           ),
                                         ),
-                                      ],
-                                    ),
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(items[index].time ?? "--:--"),
-                                      (items[index].isFavorite ?? false)
-                                          ? const Icon(
-                                              Icons.star,
-                                        size: 18,
-                                            )
-                                          : const Icon(
-                                              Icons.star_border,
-                                        size: 18,
-                                            )
+                                      ),
+                                      Text(
+                                        items[index].overlayText ?? "",
+                                        style: const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12,
+                                          color: Colors.grey,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ),
                                     ],
-                                  )
-                                ],
-                              ),
-                            );
-                          },
-                          separatorBuilder: (context, _) => const Divider(),
-                          itemCount: items.length,
-                        ),
-                      );
-                    },
-                    error: (err, stack) {
-                      return Center(
-                        child: Text("$err $stack"),
-                      );
-                    },
-                    loading: () => const Center(
-                          child: CircularProgressIndicator(),
-                        ));
-                return ListView(
-                  children: [],
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 8,
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(items[index].time ?? "--:--"),
+                                    (items[index].isFavorite ?? false)
+                                        ? const Icon(
+                                            Icons.star,
+                                            size: 18,
+                                          )
+                                        : const Icon(
+                                            Icons.star_border,
+                                            size: 18,
+                                          )
+                                  ],
+                                )
+                              ],
+                            ),
+                          );
+                        },
+                        separatorBuilder: (context, _) => const Divider(),
+                        itemCount: items.length,
+                      ),
+                    );
+                  },
+                  error: (err, stack) {
+                    return Center(
+                      child: Text("$err $stack"),
+                    );
+                  },
+                  loading: () => const Center(
+                    child: CircularProgressIndicator(),
+                  ),
                 );
               }),
             )
