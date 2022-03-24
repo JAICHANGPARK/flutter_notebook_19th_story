@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'src/mail_inbox_home_page.dart';
+import 'src/ui/mail_inbox_home_page.dart';
 
 class MailInboxApp extends StatelessWidget {
   const MailInboxApp({Key? key}) : super(key: key);
