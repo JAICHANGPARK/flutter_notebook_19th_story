@@ -110,6 +110,9 @@ class _NewMessagePageState extends State<NewMessagePage> {
                         decoration: InputDecoration(
                           border: InputBorder.none,
                         ),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
@@ -120,6 +123,13 @@ class _NewMessagePageState extends State<NewMessagePage> {
               height: 0,
               color: Colors.grey,
             ),
+            Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: TextField(
+              showCursor: true,
+            ),
+                )),
           ],
         ),
       ),
