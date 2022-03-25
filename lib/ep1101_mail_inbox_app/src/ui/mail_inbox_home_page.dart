@@ -68,9 +68,30 @@ class _MainInboxHomePageState extends State<MainInboxHomePage> {
                             onDismissed: (d) {
                               print(d);
                             },
+                            // secondaryBackground: Container(
+                            //   color: Colors.blue,
+                            // ),
                             background: Container(
                               decoration: BoxDecoration(
                                 color: Colors.red,
+                              ),
+                              padding: EdgeInsets.only(right: 48),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(Icons.delete_outlined, color: Colors.white,),
+                                      SizedBox(height: 4,),
+                                      Text("Delete", style: TextStyle(
+                                        color: Colors.white,
+                                      ),)
+                                    ],
+                                  )
+
+                                ],
                               ),
                             ),
                             direction: DismissDirection.endToStart,
