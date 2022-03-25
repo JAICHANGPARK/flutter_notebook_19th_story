@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_19th_story/ep1101_mail_inbox_app/src/provider/inbox_loader.dart';
+import 'package:flutter_notebook_19th_story/ep1101_mail_inbox_app/src/ui/new_message_page.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class MainInboxHomePage extends StatefulWidget {
@@ -72,17 +73,17 @@ class _MainInboxHomePageState extends State<MainInboxHomePage> {
                             //   color: Colors.blue,
                             // ),
                             background: Container(
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Colors.red,
                               ),
-                              padding: EdgeInsets.only(right: 48),
+                              padding: const EdgeInsets.only(right: 48),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
+                                    children: const [
                                       Icon(Icons.delete_outlined, color: Colors.white,),
                                       SizedBox(height: 4,),
                                       Text("Delete", style: TextStyle(
@@ -204,7 +205,9 @@ class _MainInboxHomePageState extends State<MainInboxHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context)=>NewMessagePage()));
+        },
         child: const Icon(Icons.email_outlined),
       ),
     );
