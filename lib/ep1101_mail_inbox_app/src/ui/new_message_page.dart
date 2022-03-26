@@ -124,12 +124,13 @@ class _NewMessagePageState extends State<NewMessagePage> {
               color: Colors.grey,
             ),
             Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: TextField(
-              showCursor: true,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: TextField(
+                  showCursor: true,
+                ),
+              ),
             ),
-                )),
           ],
         ),
       ),
