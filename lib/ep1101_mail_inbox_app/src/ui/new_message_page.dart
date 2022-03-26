@@ -107,10 +107,10 @@ class _NewMessagePageState extends State<NewMessagePage> {
                       height: 32,
                       child: TextField(
                         controller: _subjectTextEditingController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
                         ),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -124,9 +124,9 @@ class _NewMessagePageState extends State<NewMessagePage> {
               color: Colors.grey,
             ),
             Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: TextField(
+              child: const Padding(
+                padding: EdgeInsets.all(16.0),
+                child: const TextField(
                   showCursor: true,
                 ),
               ),
