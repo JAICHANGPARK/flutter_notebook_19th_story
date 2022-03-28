@@ -91,8 +91,9 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                               Container(
                                 width: 84,
                                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
-                                decoration: const BoxDecoration(
+                                decoration: BoxDecoration(
                                   color: Colors.yellow,
+                                  borderRadius: BorderRadius.circular(8),
                                 ),
                                 child: const Center(
                                   child: Text(
@@ -145,7 +146,36 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
           color: Colors.black,
         ),
         child: Row(
-          children: [],
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Column(
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.home),
+                  color: Colors.grey,
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.bar_chart),
+                  color: Colors.grey,
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.fitness_center),
+                  color: Colors.grey,
+                ),
+              ],
+            ),
+          ],
         ),
       )),
     );
