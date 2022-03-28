@@ -171,6 +171,24 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                 IconButton(
                   onPressed: () {},
                   icon: Icon(Icons.fitness_center),
+                  color: Colors.purple,
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.list_alt),
+                  color: Colors.grey,
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.person),
                   color: Colors.grey,
                 ),
               ],
