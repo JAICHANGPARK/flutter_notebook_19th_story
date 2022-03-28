@@ -70,7 +70,16 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                           right: 0,
                           top: 0,
                           bottom: 0,
-                          child: Container(),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                  "https://cdn.pixabay.com/photo/2015/07/02/10/23/training-828741_960_720.jpg",
+                                ),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
                         )
                       ],
                     )
@@ -78,6 +87,11 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                 ),
               ),
             ),
+            Text("Discover More",style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 18
+            ),),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
