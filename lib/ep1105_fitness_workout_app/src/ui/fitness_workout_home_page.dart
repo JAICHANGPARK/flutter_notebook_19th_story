@@ -7,8 +7,7 @@ class FitnessWorkoutHomePage extends StatefulWidget {
   State<FitnessWorkoutHomePage> createState() => _FitnessWorkoutHomePageState();
 }
 
-class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage>
-with SingleTickerProviderStateMixin{
+class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   @override
@@ -17,38 +16,46 @@ with SingleTickerProviderStateMixin{
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: NestedScrollView(
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return [
             SliverAppBar(
-              title: Text("Live workouts"),
+              backgroundColor: Colors.black,
+              foregroundColor: Colors.white,
+              title: const Text("Live workouts"),
               actions: [
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.search),
+                  icon: const Icon(Icons.search),
                 ),
               ],
               bottom: TabBar(
                 controller: _tabController,
-                tabs: [
+                indicatorColor: Colors.deepPurpleAccent,
+                indicatorPadding: EdgeInsets.symmetric(horizontal: 16),
+                tabs: const [
                   Tab(text: "Live show"),
-                  Tab(text: "Watch Later",),
+                  Tab(
+                    text: "Watch Later",
+                  ),
                 ],
               ),
             ),
-
           ];
         },
         body: ListView(
+          padding: EdgeInsets.zero,
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                height: 240,
-                decoration: BoxDecoration(
+                height: 320,
+                decoration: const BoxDecoration(
                   color: Colors.red,
                 ),
               ),
@@ -57,7 +64,7 @@ with SingleTickerProviderStateMixin{
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: 240,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.red,
                 ),
               ),
