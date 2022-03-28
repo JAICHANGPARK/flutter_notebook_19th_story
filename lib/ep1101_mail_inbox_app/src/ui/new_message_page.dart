@@ -107,20 +107,18 @@ class _NewMessagePageState extends State<NewMessagePage> {
                   Expanded(
                     child: SizedBox(
                       height: 32,
-                      child: Consumer(
-                        builder: (context, ref, _) {
-                          final controller = ref.watch(subjectInputProvider);
-                          return TextField(
-                            controller: controller,
-                            decoration: const InputDecoration(
-                              border: InputBorder.none,
-                            ),
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                            ),
-                          );
-                        }
-                      ),
+                      child: Consumer(builder: (context, ref, _) {
+                        final controller = ref.watch(subjectInputProvider);
+                        return TextField(
+                          controller: controller,
+                          decoration: const InputDecoration(
+                            border: InputBorder.none,
+                          ),
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        );
+                      }),
                     ),
                   ),
                 ],
@@ -130,12 +128,20 @@ class _NewMessagePageState extends State<NewMessagePage> {
               height: 0,
               color: Colors.grey,
             ),
-            const Expanded(
+            Expanded(
               child: Padding(
                 padding: EdgeInsets.all(16.0),
-                child: TextField(
-                  showCursor: true,
-                ),
+                child: Consumer(builder: (context, ref, _) {
+                  final controller = ref.watch(bodyInputProvider);
+                  return TextField(
+                    controller: controller,
+                    showCursor: true,
+                    maxLines: 100,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                    ),
+                  );
+                }),
               ),
             ),
           ],
