@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_19th_story/ep1101_mail_inbox_app/src/provider/new_mail_controller.dart';
+import 'package:flutter_notebook_19th_story/ep1101_mail_inbox_app/src/services/mail_launcher.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class NewMessagePage extends StatefulWidget {
@@ -42,9 +43,20 @@ class _NewMessagePageState extends State<NewMessagePage> {
                       ),
                     )),
                   ),
-                  IconButton(onPressed: () async{
-
-                  }, icon: const Icon(Icons.send)),
+                  Consumer(builder: (context, ref, _) {
+                    final subject = ref.watch(subjectInputProvider);
+                    final body = ref.watch(bodyInputProvider);
+                    return IconButton(
+                        onPressed: () async {
+                          final params = Uri(
+                            scheme: "mailto",
+                            path: "test@gmail.com",
+                            query: 'subject=${subject.toString()}&body=${body.toString()}',
+                          );
+                          await sendMail(params);
+                        },
+                        icon: const Icon(Icons.send));
+                  }),
                   IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
                 ],
               ),
