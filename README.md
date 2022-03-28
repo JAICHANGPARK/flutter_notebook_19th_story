@@ -6,8 +6,8 @@
 
 ### EP1105-
 
-- Mobile Mail inbox Messages
-- by Magda Sadowska
+- Fitness & Workout Mobile App Interaction
+- by pixency mobile for Pixency
 - https://dribbble.com/shots/17844860-Fitness-Workout-Mobile-App-Interaction
 
 <img
