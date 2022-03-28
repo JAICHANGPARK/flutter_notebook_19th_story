@@ -111,18 +111,15 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        child: Container(
-          height: 72,
-          decoration: BoxDecoration(
-            color: Colors.black
-          ),
-          child: Row(
-            children: [
-
-            ],
-          ),
-        )
-      ),
+          child: Container(
+        height: 72,
+        decoration: const BoxDecoration(
+          color: Colors.black,
+        ),
+        child: Row(
+          children: [],
+        ),
+      )),
     );
   }
 }
