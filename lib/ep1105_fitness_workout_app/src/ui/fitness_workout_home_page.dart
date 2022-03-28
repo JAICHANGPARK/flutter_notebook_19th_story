@@ -39,7 +39,7 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
               bottom: TabBar(
                 controller: _tabController,
                 indicatorColor: Colors.deepPurpleAccent,
-                indicatorPadding: EdgeInsets.symmetric(horizontal: 16),
+                indicatorPadding: const EdgeInsets.symmetric(horizontal: 16),
                 tabs: const [
                   Tab(text: "Live show"),
                   Tab(
@@ -71,9 +71,9 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                           top: 0,
                           bottom: 0,
                           child: Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               image: DecorationImage(
-                                image: NetworkImage(
+                                image: const NetworkImage(
                                   "https://cdn.pixabay.com/photo/2015/07/02/10/23/training-828741_960_720.jpg",
                                 ),
                                 fit: BoxFit.cover,
@@ -87,11 +87,17 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                 ),
               ),
             ),
-            Text("Discover More",style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 18
-            ),),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                "Discover More",
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -103,6 +109,19 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
             )
           ],
         ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        child: Container(
+          height: 72,
+          decoration: BoxDecoration(
+            color: Colors.black
+          ),
+          child: Row(
+            children: [
+
+            ],
+          ),
+        )
       ),
     );
   }
