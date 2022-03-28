@@ -130,14 +130,14 @@ class _NewMessagePageState extends State<NewMessagePage> {
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(16.0),
                 child: Consumer(builder: (context, ref, _) {
                   final controller = ref.watch(bodyInputProvider);
                   return TextField(
                     controller: controller,
                     showCursor: true,
                     maxLines: 100,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       border: InputBorder.none,
                     ),
                   );
