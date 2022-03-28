@@ -83,23 +83,28 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                           ),
                         ),
                         Positioned(
+                          left: 16,
+                          right: 16,
+                          bottom: 16,
                           child: Column(
                             children: [
                               Container(
-                                width: 72,
-                                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 7),
-                                child: Center(
-                                  child: Text("Premium"),
-                                ),
-                                decoration: BoxDecoration(
+                                width: 84,
+                                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+                                decoration: const BoxDecoration(
                                   color: Colors.yellow,
+                                ),
+                                child: const Center(
+                                  child: Text(
+                                    "Premium",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
                                 ),
                               )
                             ],
                           ),
-                          left: 16,
-                          right: 16,
-                          bottom: 16,
                         )
                       ],
                     )
