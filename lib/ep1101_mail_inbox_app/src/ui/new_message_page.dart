@@ -42,7 +42,9 @@ class _NewMessagePageState extends State<NewMessagePage> {
                       ),
                     )),
                   ),
-                  IconButton(onPressed: () {}, icon: const Icon(Icons.send)),
+                  IconButton(onPressed: () async{
+
+                  }, icon: const Icon(Icons.send)),
                   IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
                 ],
               ),
