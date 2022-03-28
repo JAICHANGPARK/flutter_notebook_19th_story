@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1101_mail_inbox_app/src/provider/new_mail_controller.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class NewMessagePage extends StatefulWidget {
   const NewMessagePage({Key? key}) : super(key: key);
@@ -105,14 +107,19 @@ class _NewMessagePageState extends State<NewMessagePage> {
                   Expanded(
                     child: SizedBox(
                       height: 32,
-                      child: TextField(
-                        controller: _subjectTextEditingController,
-                        decoration: const InputDecoration(
-                          border: InputBorder.none,
-                        ),
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                      child: Consumer(
+                        builder: (context, ref, _) {
+                          final controller = ref.watch(subjectInputProvider);
+                          return TextField(
+                            controller: _subjectTextEditingController,
+                            decoration: const InputDecoration(
+                              border: InputBorder.none,
+                            ),
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          );
+                        }
                       ),
                     ),
                   ),
