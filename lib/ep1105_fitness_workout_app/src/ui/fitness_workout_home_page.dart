@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FitnessWorkoutHomePage extends StatefulWidget {
@@ -73,13 +74,32 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                           child: Container(
                             decoration: const BoxDecoration(
                               image: DecorationImage(
-                                image: const NetworkImage(
+                                image: NetworkImage(
                                   "https://cdn.pixabay.com/photo/2015/07/02/10/23/training-828741_960_720.jpg",
                                 ),
                                 fit: BoxFit.cover,
                               ),
                             ),
                           ),
+                        ),
+                        Positioned(
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 72,
+                                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+                                child: Center(
+                                  child: Text("Premium"),
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Colors.yellow,
+                                ),
+                              )
+                            ],
+                          ),
+                          left: 16,
+                          right: 16,
+                          bottom: 16,
                         )
                       ],
                     )
@@ -91,22 +111,25 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
               padding: EdgeInsets.all(8.0),
               child: Text(
                 "Discover More",
-                style: const TextStyle(
+                style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 240,
-                decoration: const BoxDecoration(
-                  color: Colors.red,
+            ...List.generate(
+              10,
+              (index) => Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 240,
+                  decoration: const BoxDecoration(
+                    color: Colors.red,
+                  ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
