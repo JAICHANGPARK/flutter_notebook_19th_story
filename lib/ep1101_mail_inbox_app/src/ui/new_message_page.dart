@@ -111,7 +111,7 @@ class _NewMessagePageState extends State<NewMessagePage> {
                         builder: (context, ref, _) {
                           final controller = ref.watch(subjectInputProvider);
                           return TextField(
-                            controller: _subjectTextEditingController,
+                            controller: controller,
                             decoration: const InputDecoration(
                               border: InputBorder.none,
                             ),
