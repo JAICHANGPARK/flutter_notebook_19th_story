@@ -173,6 +173,10 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                   icon: Icon(Icons.fitness_center),
                   color: Colors.purple,
                 ),
+                CircleAvatar(
+                  radius: 3,
+                  backgroundColor: Colors.purple,
+                )
               ],
             ),
             Column(
