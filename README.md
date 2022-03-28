@@ -2,7 +2,19 @@
 
 ## UI Design
 
-### EP1101-
+
+
+### EP1105-
+
+- Mobile Mail inbox Messages
+- by Magda Sadowska
+- https://dribbble.com/shots/17844860-Fitness-Workout-Mobile-App-Interaction
+
+<img
+src="https://cdn.dribbble.com/users/11217283/screenshots/17844860/media/5ea1368b1783984d9e98bbdadddaee9f.mp4"
+width="400px"/>
+
+### EP1101-1104
 
 - Mobile Mail inbox Messages
 - by Magda Sadowska
