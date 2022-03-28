@@ -9,12 +9,14 @@ class FitnessWorkoutHomePage extends StatefulWidget {
 
 class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with SingleTickerProviderStateMixin {
   late TabController _tabController;
+  PageController? _pageController;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
+    _pageController = PageController();
   }
 
   @override
@@ -57,6 +59,22 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                 height: 320,
                 decoration: const BoxDecoration(
                   color: Colors.red,
+                ),
+                child: PageView(
+                  controller: _pageController,
+                  children: [
+                    Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          right: 0,
+                          top: 0,
+                          bottom: 0,
+                          child: Container(),
+                        )
+                      ],
+                    )
+                  ],
                 ),
               ),
             ),
