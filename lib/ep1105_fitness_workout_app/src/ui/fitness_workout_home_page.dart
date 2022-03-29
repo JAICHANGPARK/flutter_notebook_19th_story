@@ -195,6 +195,13 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                 child: SmoothPageIndicator(
                                   controller: _pageController!,
                                   count: 3,
+                                  effect: ExpandingDotsEffect(
+                                    dotHeight: 8,
+                                    dotWidth: 16,
+                                    strokeWidth: 8,
+                                    dotColor: Colors.grey,
+                                    activeDotColor: Colors.purpleAccent
+                                  ),
                                 ),
                               ),
                             ],
