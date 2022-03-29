@@ -108,7 +108,7 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 4,),
+                              SizedBox(height: 12,),
                               const Text(
                                 "Morning workouts",
                                 style: const TextStyle(color: Colors.white, fontSize: 20),
@@ -118,12 +118,13 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                 "with fitness specialist",
                                 style: TextStyle(color: Colors.white, fontSize: 20),
                               ),
-                              SizedBox(height: 4,),
+                              SizedBox(height: 12,),
                               Row(
                                 children: const [
                                   Icon(
                                     Icons.videocam,
                                     color: Colors.red,
+
                                   ),
                                   Text(
                                     "Live Now",
