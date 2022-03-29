@@ -215,9 +215,10 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: Colors.grey,
+                                color: Colors.grey[200]!,
                               ),
                             ),
+                            padding: EdgeInsets.all(4),
                             child: CircleAvatar(
                               backgroundColor: Colors.deepPurpleAccent,
                               child: Icon(Icons.play_arrow),
