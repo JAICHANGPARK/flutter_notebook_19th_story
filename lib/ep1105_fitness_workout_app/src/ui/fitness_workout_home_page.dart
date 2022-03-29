@@ -136,6 +136,7 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                     "Live Now",
                                     style: TextStyle(
                                       color: Colors.red,
+                                      fontSize: 12,
                                     ),
                                   ),
                                   SizedBox(
@@ -145,6 +146,7 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                     "120 watching",
                                     style: TextStyle(
                                       color: Colors.white,
+                                      fontSize: 12,
                                     ),
                                   )
                                 ],
