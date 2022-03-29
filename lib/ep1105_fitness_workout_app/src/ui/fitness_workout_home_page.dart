@@ -87,10 +87,14 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                           right: 16,
                           bottom: 16,
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
                                 width: 84,
-                                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 12,
+                                  vertical: 7,
+                                ),
                                 decoration: BoxDecoration(
                                   color: Colors.yellow,
                                   borderRadius: BorderRadius.circular(8),
