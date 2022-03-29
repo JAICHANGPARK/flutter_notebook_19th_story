@@ -188,14 +188,14 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 16,
                               ),
                               Center(
                                 child: SmoothPageIndicator(
                                   controller: _pageController!,
                                   count: 3,
-                                  effect: ExpandingDotsEffect(
+                                  effect: const ExpandingDotsEffect(
                                       dotHeight: 8,
                                       dotWidth: 16,
                                       strokeWidth: 8,
@@ -217,6 +217,11 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                               border: Border.all(
                                 color: Colors.grey,
                               ),
+                            ),
+                            child: CircleAvatar(
+                              backgroundColor: Colors.deepPurpleAccent,
+                              child: Icon(Icons.play_arrow),
+                              foregroundColor: Colors.white,
                             ),
                           ),
                         ),
