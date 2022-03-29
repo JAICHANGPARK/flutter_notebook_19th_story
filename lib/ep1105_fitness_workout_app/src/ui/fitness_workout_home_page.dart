@@ -196,15 +196,28 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                   controller: _pageController!,
                                   count: 3,
                                   effect: ExpandingDotsEffect(
-                                    dotHeight: 8,
-                                    dotWidth: 16,
-                                    strokeWidth: 8,
-                                    dotColor: Colors.grey,
-                                    activeDotColor: Colors.purpleAccent
-                                  ),
+                                      dotHeight: 8,
+                                      dotWidth: 16,
+                                      strokeWidth: 8,
+                                      dotColor: Colors.grey,
+                                      activeDotColor: Colors.purpleAccent),
                                 ),
                               ),
                             ],
+                          ),
+                        ),
+                        Positioned(
+                          right: 16,
+                          bottom: 48,
+                          child: Container(
+                            height: 64,
+                            width: 64,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                color: Colors.grey,
+                              ),
+                            ),
                           ),
                         ),
                       ],
