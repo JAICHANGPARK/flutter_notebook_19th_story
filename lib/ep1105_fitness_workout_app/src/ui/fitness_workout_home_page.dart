@@ -108,16 +108,19 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                   ),
                                 ),
                               ),
-                              Text(
+                              SizedBox(height: 4,),
+                              const Text(
                                 "Morning workouts",
-                                style: TextStyle(color: Colors.white, fontSize: 20),
+                                style: const TextStyle(color: Colors.white, fontSize: 20),
                               ),
-                              Text(
+                              SizedBox(height: 4,),
+                              const Text(
                                 "with fitness specialist",
                                 style: TextStyle(color: Colors.white, fontSize: 20),
                               ),
+                              SizedBox(height: 4,),
                               Row(
-                                children: [
+                                children: const [
                                   Icon(
                                     Icons.videocam,
                                     color: Colors.red,
@@ -128,10 +131,42 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                       color: Colors.red,
                                     ),
                                   ),
+                                  SizedBox(
+                                    width: 16,
+                                  ),
                                   Text(
                                     "120 watching",
                                     style: TextStyle(
                                       color: Colors.white,
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Container(
+                                    height: 28,
+                                    width: 28,
+                                    decoration: BoxDecoration(
+                                      color: Colors.pink,
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Unknown Specialist",
+                                          style: TextStyle(color: Colors.white, fontSize: 11),
+                                        ),
+                                        SizedBox(height: 4,),
+                                        Text(
+                                          "Pro trainer",
+                                          style: TextStyle(color: Colors.white, fontSize: 11),
+                                        )
+                                      ],
                                     ),
                                   )
                                 ],
@@ -184,7 +219,7 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.home),
+                  icon: const Icon(Icons.home),
                   color: Colors.grey,
                 ),
               ],
@@ -193,7 +228,7 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.bar_chart),
+                  icon: const Icon(Icons.bar_chart),
                   color: Colors.grey,
                 ),
               ],
@@ -202,10 +237,10 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.fitness_center),
+                  icon: const Icon(Icons.fitness_center),
                   color: Colors.purple,
                 ),
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 3,
                   backgroundColor: Colors.purple,
                 )
@@ -215,7 +250,7 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.list_alt),
+                  icon: const Icon(Icons.list_alt),
                   color: Colors.grey,
                 ),
               ],
@@ -224,7 +259,7 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.person),
+                  icon: const Icon(Icons.person),
                   color: Colors.grey,
                 ),
               ],
