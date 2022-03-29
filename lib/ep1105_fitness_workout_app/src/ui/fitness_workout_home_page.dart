@@ -12,6 +12,7 @@ class FitnessWorkoutHomePage extends StatefulWidget {
 class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with SingleTickerProviderStateMixin {
   late TabController _tabController;
   PageController? _pageController;
+  int _bottomTabIndex = 0;
 
   @override
   void initState() {
@@ -270,50 +271,86 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
             Column(
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      _bottomTabIndex = 0;
+                    });
+                  },
                   icon: const Icon(Icons.home),
-                  color: Colors.grey,
+                  color: _bottomTabIndex == 0 ? Colors.purple : Colors.grey,
                 ),
-              ],
-            ),
-            Column(
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.bar_chart),
-                  color: Colors.grey,
-                ),
-              ],
-            ),
-            Column(
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.fitness_center),
-                  color: Colors.purple,
-                ),
-                const CircleAvatar(
+                CircleAvatar(
                   radius: 3,
-                  backgroundColor: Colors.purple,
+                  backgroundColor: _bottomTabIndex == 0 ? Colors.purple : Colors.black,
                 )
               ],
             ),
             Column(
               children: [
                 IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.list_alt),
-                  color: Colors.grey,
+                  onPressed: () {
+                    setState(() {
+                      _bottomTabIndex = 1;
+                    });
+                  },
+                  icon: const Icon(Icons.bar_chart),
+                  color: _bottomTabIndex == 1 ? Colors.purple : Colors.grey,
                 ),
+                CircleAvatar(
+                  radius: 3,
+                  backgroundColor: _bottomTabIndex == 1 ? Colors.purple : Colors.black,
+                )
               ],
             ),
             Column(
               children: [
                 IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.person),
-                  color: Colors.grey,
+                  onPressed: () {
+                    setState(() {
+                      _bottomTabIndex = 2;
+                    });
+                  },
+                  icon: const Icon(Icons.fitness_center),
+                  color: _bottomTabIndex == 2 ? Colors.purple : Colors.grey,
                 ),
+                CircleAvatar(
+                  radius: 3,
+                  backgroundColor: _bottomTabIndex == 2 ? Colors.purple : Colors.black,
+                )
+              ],
+            ),
+            Column(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    setState(() {
+                      _bottomTabIndex = 3;
+                    });
+                  },
+                  icon: const Icon(Icons.list_alt),
+                  color: _bottomTabIndex == 3 ? Colors.purple : Colors.grey,
+                ),
+                CircleAvatar(
+                  radius: 3,
+                  backgroundColor: _bottomTabIndex == 3 ? Colors.purple : Colors.black,
+                )
+              ],
+            ),
+            Column(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    setState(() {
+                      _bottomTabIndex = 4;
+                    });
+                  },
+                  icon: const Icon(Icons.person),
+                  color: _bottomTabIndex == 4 ? Colors.purple : Colors.grey,
+                ),
+                CircleAvatar(
+                  radius: 3,
+                  backgroundColor: _bottomTabIndex == 4 ? Colors.purple : Colors.black,
+                )
               ],
             ),
           ],
