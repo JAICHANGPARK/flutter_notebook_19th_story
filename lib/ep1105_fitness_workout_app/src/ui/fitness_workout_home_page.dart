@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class FitnessWorkoutHomePage extends StatefulWidget {
   const FitnessWorkoutHomePage({Key? key}) : super(key: key);
@@ -184,10 +185,19 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                     ),
                                   )
                                 ],
-                              )
+                              ),
+                              SizedBox(
+                                height: 16,
+                              ),
+                              Center(
+                                child: SmoothPageIndicator(
+                                  controller: _pageController!,
+                                  count: 3,
+                                ),
+                              ),
                             ],
                           ),
-                        )
+                        ),
                       ],
                     )
                   ],
