@@ -107,6 +107,34 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                     ),
                                   ),
                                 ),
+                              ),
+                              Text(
+                                "Morning workouts",
+                                style: TextStyle(color: Colors.white, fontSize: 20),
+                              ),
+                              Text(
+                                "with fitness specialist",
+                                style: TextStyle(color: Colors.white, fontSize: 20),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.videocam,
+                                    color: Colors.red,
+                                  ),
+                                  Text(
+                                    "Live Now",
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                  Text(
+                                    "120 watching",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  )
+                                ],
                               )
                             ],
                           ),
