@@ -108,23 +108,28 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 12,),
+                              const SizedBox(
+                                height: 12,
+                              ),
                               const Text(
                                 "Morning workouts",
                                 style: const TextStyle(color: Colors.white, fontSize: 20),
                               ),
-                              SizedBox(height: 4,),
+                              const SizedBox(
+                                height: 4,
+                              ),
                               const Text(
                                 "with fitness specialist",
                                 style: TextStyle(color: Colors.white, fontSize: 20),
                               ),
-                              SizedBox(height: 12,),
+                              const SizedBox(
+                                height: 12,
+                              ),
                               Row(
                                 children: const [
                                   Icon(
                                     Icons.videocam,
                                     color: Colors.red,
-
                                   ),
                                   Text(
                                     "Live Now",
@@ -157,15 +162,23 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                     padding: const EdgeInsets.all(8.0),
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
+                                      children: const [
                                         Text(
                                           "Unknown Specialist",
-                                          style: TextStyle(color: Colors.white, fontSize: 11),
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 11,
+                                          ),
                                         ),
-                                        SizedBox(height: 4,),
+                                        SizedBox(
+                                          height: 4,
+                                        ),
                                         Text(
                                           "Pro trainer",
-                                          style: TextStyle(color: Colors.white, fontSize: 11),
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 11,
+                                          ),
                                         )
                                       ],
                                     ),
