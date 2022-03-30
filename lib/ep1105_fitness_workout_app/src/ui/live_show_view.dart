@@ -19,32 +19,61 @@ class _LiveShowViewState extends State<LiveShowView> {
                 top: 0,
                 left: 0,
                 right: 0,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                child: Column(
                   children: [
-                    IconButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                      icon: Icon(Icons.chevron_left),
-                      color: Colors.white,
-                    ),
-                    Expanded(
-                        child: Center(
-                      child: Text(
-                        "Specialist",
-                        style: TextStyle(
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          icon: const Icon(Icons.chevron_left),
                           color: Colors.white,
                         ),
-                      ),
-                    )),
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.share),
-                      color: Colors.white,
+                        const Expanded(
+                            child: Center(
+                          child: const Text(
+                            "Specialist",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                        )),
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.share),
+                          color: Colors.white,
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                          child: Row(
+                            children: const [
+                              Icon(Icons.videocam, color: Colors.white, size: 16),
+                              SizedBox(
+                                width: 4,
+                              ),
+                              Text(
+                                "Live",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
                     )
                   ],
-                ))
+                )),
           ],
         ),
       ),
