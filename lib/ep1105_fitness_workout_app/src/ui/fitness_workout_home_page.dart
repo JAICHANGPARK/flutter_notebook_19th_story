@@ -251,8 +251,51 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                 child: Container(
                   height: 240,
                   decoration: BoxDecoration(
-                    color: Colors.red,
+                    color: Colors.white.withOpacity(0.2),
                     borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Column(
+                    children: [
+                      Expanded(flex: 6, child: Placeholder()),
+                      Expanded(
+                          flex: 4,
+                          child: Column(
+                            children: [
+                              Text(
+                                "Yoga training with Dream",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                              Row(
+                                children: const [
+                                  Icon(
+                                    Icons.videocam,
+                                    color: Colors.red,
+                                  ),
+                                  Text(
+                                    "Live Now",
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 16,
+                                  ),
+                                  Text(
+                                    "120 watching",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                    ),
+                                  )
+                                ],
+                              ),
+
+                            ],
+                          )),
+                    ],
                   ),
                 ),
               ),
