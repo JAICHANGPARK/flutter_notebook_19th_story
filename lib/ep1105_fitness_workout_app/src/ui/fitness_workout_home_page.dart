@@ -259,41 +259,70 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                       Expanded(flex: 6, child: Placeholder()),
                       Expanded(
                         flex: 4,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Yoga training with Dream",
-                              style: TextStyle(
-                                color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Yoga training with Dream",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
                               ),
-                            ),
-                            Row(
-                              children: const [
-                                Icon(
-                                  Icons.videocam,
-                                  color: Colors.red,
-                                ),
-                                Text(
-                                  "Live Now",
-                                  style: TextStyle(
+                              Row(
+                                children: const [
+                                  Icon(
+                                    Icons.videocam,
                                     color: Colors.red,
-                                    fontSize: 12,
                                   ),
-                                ),
-                                SizedBox(
-                                  width: 16,
-                                ),
-                                Text(
-                                  "120 watching",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 12,
+                                  Text(
+                                    "Live Now",
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 12,
+                                    ),
                                   ),
-                                )
-                              ],
-                            ),
-                          ],
+                                  SizedBox(
+                                    width: 16,
+                                  ),
+                                  Text(
+                                    "120 watching",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Container(
+                                    height: 24,
+                                    width: 24,
+                                    decoration: BoxDecoration(
+                                      color: Colors.blue,
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                  ),
+                                  Text(
+                                    "Dream Walker",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Yoga Instructor at Flutter Gym",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.white,
+                                    ),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ],
