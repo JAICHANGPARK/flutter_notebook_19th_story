@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1105_fitness_workout_app/src/ui/live_show_view.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-
 class LiveShowCard extends StatelessWidget {
-  const LiveShowCard({Key? key, required  this.pageController}) : super(key: key);
+  const LiveShowCard({Key? key, required this.pageController}) : super(key: key);
   final PageController pageController;
+
   @override
   Widget build(BuildContext context) {
-    return   Stack(
+    return Stack(
       children: [
         Positioned(
           left: 0,
@@ -151,20 +152,25 @@ class LiveShowCard extends StatelessWidget {
         Positioned(
           right: 16,
           bottom: 48,
-          child: Container(
-            height: 64,
-            width: 64,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(
-                color: Colors.grey[200]!,
+          child: GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => LiveShowView()));
+            },
+            child: Container(
+              height: 64,
+              width: 64,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: Colors.grey[200]!,
+                ),
               ),
-            ),
-            padding: const EdgeInsets.all(4),
-            child: const CircleAvatar(
-              backgroundColor: Colors.deepPurpleAccent,
-              foregroundColor: Colors.white,
-              child: Icon(Icons.play_arrow),
+              padding: const EdgeInsets.all(4),
+              child: const CircleAvatar(
+                backgroundColor: Colors.deepPurpleAccent,
+                foregroundColor: Colors.white,
+                child: Icon(Icons.play_arrow),
+              ),
             ),
           ),
         ),
