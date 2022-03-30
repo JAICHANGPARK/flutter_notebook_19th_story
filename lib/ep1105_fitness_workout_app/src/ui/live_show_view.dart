@@ -19,6 +19,7 @@ class _LiveShowViewState extends State<LiveShowView> {
                 top: 0,
                 left: 0,
                 right: 0,
+                bottom: 16,
                 child: Column(
                   children: [
                     Row(
@@ -50,6 +51,7 @@ class _LiveShowViewState extends State<LiveShowView> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
                             decoration: BoxDecoration(
@@ -93,6 +95,48 @@ class _LiveShowViewState extends State<LiveShowView> {
                               ],
                             ),
                           )
+                        ],
+                      ),
+                    ),
+                    Spacer(),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.videocam,
+                            color: Colors.white,
+                          ),
+                          Text(
+                            "10:04",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          Spacer(),
+                          Icon(
+                            Icons.chat_bubble_outline,
+                            color: Colors.white,
+                          ),
+                          SizedBox(
+                            width: 4,
+                          ),
+                          Text(
+                            "240",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          SizedBox(
+                            width: 16,
+                          ),
+                          Icon(
+                            Icons.favorite_border,
+                            color: Colors.white,
+                          ),
+                          SizedBox(
+                            width: 4,
+                          ),
+                          Text(
+                            "1.5k",
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ],
                       ),
                     )
