@@ -47,30 +47,54 @@ class _LiveShowViewState extends State<LiveShowView> {
                         )
                       ],
                     ),
-                    Row(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(4),
-                          ),
-                          padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
-                          child: Row(
-                            children: const [
-                              Icon(Icons.videocam, color: Colors.white, size: 16),
-                              SizedBox(
-                                width: 4,
-                              ),
-                              Text(
-                                "Live",
-                                style: TextStyle(
-                                  color: Colors.white,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                            child: Row(
+                              children: const [
+                                Icon(Icons.videocam, color: Colors.white, size: 16),
+                                SizedBox(
+                                  width: 4,
                                 ),
-                              )
-                            ],
+                                Text(
+                                  "Live",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
-                        )
-                      ],
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.5),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                            child: Row(
+                              children: const [
+                                Icon(Icons.visibility, color: Colors.white, size: 16),
+                                SizedBox(
+                                  width: 4,
+                                ),
+                                Text(
+                                  "120",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     )
                   ],
                 )),
