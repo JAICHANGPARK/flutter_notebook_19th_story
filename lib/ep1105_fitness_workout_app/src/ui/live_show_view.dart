@@ -16,33 +16,35 @@ class _LiveShowViewState extends State<LiveShowView> {
         child: Stack(
           children: [
             Positioned(
-              top: 0,
+                top: 0,
                 left: 0,
                 right: 0,
                 child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.chevron_left),
-                  color: Colors.white,
-                ),
-                Expanded(
-                    child: Center(
-                  child: Text(
-                    "Specialist",
-                    style: TextStyle(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      icon: Icon(Icons.chevron_left),
                       color: Colors.white,
                     ),
-                  ),
-                )),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.share),
-                  color: Colors.white,
-                )
-              ],
-            ))
+                    Expanded(
+                        child: Center(
+                      child: Text(
+                        "Specialist",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    )),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.share),
+                      color: Colors.white,
+                    )
+                  ],
+                ))
           ],
         ),
       ),
