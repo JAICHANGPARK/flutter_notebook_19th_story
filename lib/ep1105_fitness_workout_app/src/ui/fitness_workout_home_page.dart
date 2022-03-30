@@ -258,43 +258,44 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                     children: [
                       Expanded(flex: 6, child: Placeholder()),
                       Expanded(
-                          flex: 4,
-                          child: Column(
-                            children: [
-                              Text(
-                                "Yoga training with Dream",
-                                style: TextStyle(
-                                  color: Colors.white,
+                        flex: 4,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Yoga training with Dream",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                            Row(
+                              children: const [
+                                Icon(
+                                  Icons.videocam,
+                                  color: Colors.red,
                                 ),
-                              ),
-                              Row(
-                                children: const [
-                                  Icon(
-                                    Icons.videocam,
+                                Text(
+                                  "Live Now",
+                                  style: TextStyle(
                                     color: Colors.red,
+                                    fontSize: 12,
                                   ),
-                                  Text(
-                                    "Live Now",
-                                    style: TextStyle(
-                                      color: Colors.red,
-                                      fontSize: 12,
-                                    ),
+                                ),
+                                SizedBox(
+                                  width: 16,
+                                ),
+                                Text(
+                                  "120 watching",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
                                   ),
-                                  SizedBox(
-                                    width: 16,
-                                  ),
-                                  Text(
-                                    "120 watching",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 12,
-                                    ),
-                                  )
-                                ],
-                              ),
-
-                            ],
-                          )),
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
