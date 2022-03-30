@@ -247,11 +247,12 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
             ...List.generate(
               10,
               (index) => Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(16.0),
                 child: Container(
                   height: 240,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Colors.red,
+                    borderRadius: BorderRadius.circular(12),
                   ),
                 ),
               ),
