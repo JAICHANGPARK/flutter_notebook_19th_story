@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -259,7 +260,11 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                       Expanded(
                         flex: 6,
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(12),
+                              topRight: Radius.circular(12),
+                            ),
                             image: DecorationImage(
                               image: CachedNetworkImageProvider(
                                   "https://cdn.pixabay.com/photo/2017/11/18/05/00/woman-2959213_960_720.jpg"),
@@ -276,7 +281,7 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
+                              const Text(
                                 "Yoga training with Dream",
                                 style: TextStyle(
                                   color: Colors.white,
@@ -317,17 +322,17 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                       borderRadius: BorderRadius.circular(4),
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 4,
                                   ),
-                                  Text(
+                                  const Text(
                                     "Dream Walker",
                                     style: TextStyle(
                                       fontSize: 10,
                                       color: Colors.white,
                                     ),
                                   ),
-                                  Text(
+                                  const Text(
                                     "  Yoga Instructor at Flutter Gym",
                                     style: TextStyle(
                                       fontSize: 10,
