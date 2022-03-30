@@ -115,7 +115,7 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                               ),
                               const Text(
                                 "Morning workouts",
-                                style: const TextStyle(color: Colors.white, fontSize: 20),
+                                style: TextStyle(color: Colors.white, fontSize: 20),
                               ),
                               const SizedBox(
                                 height: 4,
@@ -219,11 +219,11 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                 color: Colors.grey[200]!,
                               ),
                             ),
-                            padding: EdgeInsets.all(4),
-                            child: CircleAvatar(
+                            padding: const EdgeInsets.all(4),
+                            child: const CircleAvatar(
                               backgroundColor: Colors.deepPurpleAccent,
-                              child: Icon(Icons.play_arrow),
                               foregroundColor: Colors.white,
+                              child: Icon(Icons.play_arrow),
                             ),
                           ),
                         ),
