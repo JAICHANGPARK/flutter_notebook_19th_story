@@ -260,9 +260,10 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                       Expanded(
                         flex: 4,
                         child: Padding(
-                          padding: const EdgeInsets.all(16.0),
+                          padding: const EdgeInsets.all(12.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
                                 "Yoga training with Dream",
@@ -305,17 +306,18 @@ class _FitnessWorkoutHomePageState extends State<FitnessWorkoutHomePage> with Si
                                       borderRadius: BorderRadius.circular(4),
                                     ),
                                   ),
+                                  SizedBox(width: 4,),
                                   Text(
                                     "Dream Walker",
                                     style: TextStyle(
-                                      fontSize: 12,
+                                      fontSize: 10,
                                       color: Colors.white,
                                     ),
                                   ),
                                   Text(
-                                    "Yoga Instructor at Flutter Gym",
+                                    "  Yoga Instructor at Flutter Gym",
                                     style: TextStyle(
-                                      fontSize: 12,
+                                      fontSize: 10,
                                       color: Colors.white,
                                     ),
                                   )
