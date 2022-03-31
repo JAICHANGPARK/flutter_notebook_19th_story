@@ -34,13 +34,13 @@ class _LiveShowViewState extends State<LiveShowView> {
                         ),
                         const Expanded(
                             child: Center(
-                          child: const Text(
-                            "Specialist",
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                        )),
+                              child: const Text(
+                                "Specialist",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            )),
                         IconButton(
                           onPressed: () {},
                           icon: const Icon(Icons.share),
@@ -58,7 +58,7 @@ class _LiveShowViewState extends State<LiveShowView> {
                               color: Colors.red,
                               borderRadius: BorderRadius.circular(4),
                             ),
-                            padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                            padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
                             child: Row(
                               children: const [
                                 Icon(Icons.videocam, color: Colors.white, size: 16),
@@ -79,7 +79,7 @@ class _LiveShowViewState extends State<LiveShowView> {
                               color: Colors.white.withOpacity(0.5),
                               borderRadius: BorderRadius.circular(4),
                             ),
-                            padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                            padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
                             child: Row(
                               children: const [
                                 Icon(Icons.visibility, color: Colors.white, size: 16),
@@ -98,44 +98,44 @@ class _LiveShowViewState extends State<LiveShowView> {
                         ],
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                       child: Row(
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.videocam,
                             color: Colors.white,
                           ),
-                          Text(
+                          const Text(
                             "10:04",
                             style: TextStyle(color: Colors.white),
                           ),
-                          Spacer(),
-                          Icon(
+                          const Spacer(),
+                          const Icon(
                             Icons.chat_bubble_outline,
                             color: Colors.white,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 4,
                           ),
-                          Text(
+                          const Text(
                             "240",
                             style: TextStyle(color: Colors.white),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 16,
                           ),
-                          Icon(
+                          const Icon(
                             Icons.favorite_border,
                             color: Colors.white,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 4,
                           ),
-                          Text(
+                          const Text(
                             "1.5k",
-                            style: TextStyle(color: Colors.white),
+                            style: const TextStyle(color: Colors.white),
                           ),
                         ],
                       ),
