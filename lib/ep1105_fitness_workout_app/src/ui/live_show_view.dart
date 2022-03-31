@@ -18,7 +18,9 @@ class _LiveShowViewState extends State<LiveShowView> {
 
     videoPlayerController = VideoPlayerController.network(
       "player.vimeo.com/external/490319213.sd.mp4?s=15f30601fdd823acd5726a1e9c8c7959a4eb3820&profile_id=164",
-    )..initialize();
+    )..initialize().then((value) {
+        setState(() {});
+      });
   }
 
   @override
