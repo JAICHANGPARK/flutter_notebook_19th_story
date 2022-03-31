@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
 
 class LiveShowView extends StatefulWidget {
   const LiveShowView({Key? key}) : super(key: key);
@@ -8,15 +9,17 @@ class LiveShowView extends StatefulWidget {
 }
 
 class _LiveShowViewState extends State<LiveShowView> {
-  Video
+  VideoPlayerController? videoPlayerController;
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
 
-
+    videoPlayerController = VideoPlayerController.network(
+      "player.vimeo.com/external/490319213.sd.mp4?s=15f30601fdd823acd5726a1e9c8c7959a4eb3820&profile_id=164",
+    )..initialize();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -44,13 +47,13 @@ class _LiveShowViewState extends State<LiveShowView> {
                         ),
                         const Expanded(
                             child: Center(
-                              child: const Text(
-                                "Specialist",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),
-                              ),
-                            )),
+                          child: const Text(
+                            "Specialist",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                        )),
                         IconButton(
                           onPressed: () {},
                           icon: const Icon(Icons.share),
