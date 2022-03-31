@@ -8,6 +8,16 @@ class LiveShowView extends StatefulWidget {
 }
 
 class _LiveShowViewState extends State<LiveShowView> {
+  Video
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,40 +112,40 @@ class _LiveShowViewState extends State<LiveShowView> {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                       child: Row(
-                        children: [
-                          const Icon(
+                        children: const [
+                          Icon(
                             Icons.videocam,
                             color: Colors.white,
                           ),
-                          const Text(
+                          Text(
                             "10:04",
                             style: TextStyle(color: Colors.white),
                           ),
-                          const Spacer(),
-                          const Icon(
+                          Spacer(),
+                          Icon(
                             Icons.chat_bubble_outline,
                             color: Colors.white,
                           ),
-                          const SizedBox(
+                          SizedBox(
                             width: 4,
                           ),
-                          const Text(
+                          Text(
                             "240",
                             style: TextStyle(color: Colors.white),
                           ),
-                          const SizedBox(
+                          SizedBox(
                             width: 16,
                           ),
-                          const Icon(
+                          Icon(
                             Icons.favorite_border,
                             color: Colors.white,
                           ),
-                          const SizedBox(
+                          SizedBox(
                             width: 4,
                           ),
-                          const Text(
+                          Text(
                             "1.5k",
-                            style: const TextStyle(color: Colors.white),
+                            style: TextStyle(color: Colors.white),
                           ),
                         ],
                       ),
