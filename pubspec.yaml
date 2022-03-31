@@ -18,6 +18,8 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
   cached_network_image: any
 
+  video_player: ^2.3.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
