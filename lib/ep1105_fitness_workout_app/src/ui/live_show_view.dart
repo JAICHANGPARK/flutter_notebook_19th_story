@@ -31,6 +31,13 @@ class _LiveShowViewState extends State<LiveShowView> {
         child: Stack(
           children: [
             Positioned(
+              left: 0,
+              top: 0,
+              right: 0,
+              bottom: 0,
+              child: VideoPlayer(videoPlayerController!),
+            ),
+            Positioned(
                 top: 0,
                 left: 0,
                 right: 0,
@@ -49,7 +56,7 @@ class _LiveShowViewState extends State<LiveShowView> {
                         ),
                         const Expanded(
                             child: Center(
-                          child: const Text(
+                          child: Text(
                             "Specialist",
                             style: TextStyle(
                               color: Colors.white,
