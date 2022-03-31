@@ -17,10 +17,12 @@ class _LiveShowViewState extends State<LiveShowView> {
     super.initState();
 
     videoPlayerController = VideoPlayerController.network(
-      "player.vimeo.com/external/490319213.sd.mp4?s=15f30601fdd823acd5726a1e9c8c7959a4eb3820&profile_id=164",
+      "https://player.vimeo.com/external/422737323.sd.mp4?s=bf58885aa52bd32b9e023fb349fdf102e50bf3bd&profile_id=164",
     )..initialize().then((value) {
         setState(() {});
       });
+    videoPlayerController?.setLooping(true);
+    videoPlayerController?.play();
   }
 
   @override
@@ -42,7 +44,16 @@ class _LiveShowViewState extends State<LiveShowView> {
               top: 0,
               right: 0,
               bottom: 0,
-              child: VideoPlayer(videoPlayerController!),
+              child: FittedBox(
+                fit: BoxFit.cover,
+                child: SizedBox(
+                  width: videoPlayerController?.value.size.width ?? 200,
+                  height: videoPlayerController?.value.size.height ?? 400,
+                  child: VideoPlayer(
+                    videoPlayerController!,
+                  ),
+                ),
+              ),
             ),
             Positioned(
                 top: 0,
@@ -131,15 +142,20 @@ class _LiveShowViewState extends State<LiveShowView> {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                       child: Row(
-                        children: const [
+                        children: [
                           Icon(
                             Icons.videocam,
                             color: Colors.white,
                           ),
-                          Text(
-                            "10:04",
-                            style: TextStyle(color: Colors.white),
-                          ),
+                          ValueListenableBuilder<VideoPlayerValue>(
+                              valueListenable: videoPlayerController!,
+                              builder: (context, value, _) {
+                                return Text(
+                                  // "10:04",
+                                  "${value.position.toString()}",
+                                  style: TextStyle(color: Colors.white),
+                                );
+                              }),
                           Spacer(),
                           Icon(
                             Icons.chat_bubble_outline,
