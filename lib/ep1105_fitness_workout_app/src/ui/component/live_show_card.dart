@@ -136,7 +136,7 @@ class LiveShowCard extends StatelessWidget {
               ),
               Center(
                 child: SmoothPageIndicator(
-                  controller: pageController!,
+                  controller: pageController,
                   count: 3,
                   effect: const ExpandingDotsEffect(
                       dotHeight: 8,
