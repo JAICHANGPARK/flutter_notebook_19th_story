@@ -24,6 +24,13 @@ class _LiveShowViewState extends State<LiveShowView> {
   }
 
   @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    videoPlayerController?.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
