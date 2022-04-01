@@ -24,11 +24,15 @@ width="400px"/>
 src="https://cdn.dribbble.com/users/6470533/screenshots/17788043/media/881bd4f6057299ea7130251b1777c6bd.png"
 width="400px"/>
 
+## Flutter channel 
+
+- master
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
 
-> flutter run
+> flutter run -d
 
 
 A few resources to get you started if this is your first Flutter project:
