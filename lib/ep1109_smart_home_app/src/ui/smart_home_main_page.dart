@@ -175,6 +175,7 @@ class SmartHomeMainPage extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.all(16.0),
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
@@ -192,15 +193,30 @@ class SmartHomeMainPage extends StatelessWidget {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Text("0",style: TextStyle(
-                                        fontSize: 64,
-                                        color: Colors.grey,
-                                      ),),
-                                      Text("14",style: TextStyle(
-                                        fontSize: 64,
-                                        color: Colors.black,
-                                      ),)
+                                      Text(
+                                        "0",
+                                        style: TextStyle(
+                                          fontSize: 64,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                      Text(
+                                        "14",
+                                        style: TextStyle(
+                                          fontSize: 64,
+                                          color: Colors.black,
+                                        ),
+                                      )
                                     ],
+                                  ),
+                                  SizedBox(
+                                    height: 48,
+                                    child: Row(
+                                      children: [
+                                        Expanded(child: Placeholder()),
+                                        Expanded(child: Placeholder()),
+                                      ],
+                                    ),
                                   )
                                 ],
                               ),
