@@ -142,7 +142,7 @@ class SmartHomeMainPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
-                      children: [
+                      children: const[
                         Text(
                           "House",
                           style: TextStyle(
@@ -178,13 +178,13 @@ class SmartHomeMainPage extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
+                                  const Text(
                                     "Air purlfler",
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  Text(
+                                  const  Text(
                                     "Bedroom",
                                     style: TextStyle(
                                       color: Colors.grey,
@@ -192,7 +192,7 @@ class SmartHomeMainPage extends StatelessWidget {
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
+                                    children: const [
                                       Text(
                                         "0",
                                         style: TextStyle(
@@ -212,7 +212,7 @@ class SmartHomeMainPage extends StatelessWidget {
                                   SizedBox(
                                     height: 48,
                                     child: Row(
-                                      children: [
+                                      children: const[
                                         Expanded(child: Placeholder()),
                                         Expanded(child: Placeholder()),
                                       ],
@@ -222,7 +222,7 @@ class SmartHomeMainPage extends StatelessWidget {
                               ),
                             ),
                           )),
-                          Expanded(child: Placeholder()),
+                          const  Expanded(child: Placeholder()),
                         ],
                       ),
                     ),
