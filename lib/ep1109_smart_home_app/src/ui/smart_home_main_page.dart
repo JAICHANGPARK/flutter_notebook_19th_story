@@ -41,7 +41,7 @@ class SmartHomeMainPage extends StatelessWidget {
               height: 8,
             ),
             Expanded(
-                flex: 5,
+                flex: 4,
                 child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
@@ -74,6 +74,35 @@ class SmartHomeMainPage extends StatelessWidget {
                                 fontSize: 48,
                               ),
                             )
+                          ],
+                        ),
+                        Spacer(),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text("Humidity",style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.white,
+                            ),),
+
+                            Text("74%",style: TextStyle(
+                              fontSize: 24,
+                              color: Colors.white,
+                            ),)
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text("Temperature",style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.white,
+                            ),),
+
+                            Text("29C",style: TextStyle(
+                              fontSize: 24,
+                              color: Colors.white,
+                            ),)
                           ],
                         )
                       ],
