@@ -53,6 +53,9 @@ class SmartHomeMainPage extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
+                        SizedBox(
+                          height: 16,
+                        ),
                         Row(
                           children: [
                             Icon(
@@ -68,7 +71,7 @@ class SmartHomeMainPage extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "kWh",
+                              " kWh",
                               style: TextStyle(
                                 color: kShaSecondary,
                                 fontSize: 48,
@@ -79,30 +82,43 @@ class SmartHomeMainPage extends StatelessWidget {
                         Spacer(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text("Humidity",style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
-                            ),),
-
-                            Text("74%",style: TextStyle(
-                              fontSize: 24,
-                              color: Colors.white,
-                            ),)
+                          children: const [
+                            Text(
+                              "Humidity",
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Text(
+                              "74%",
+                              style: TextStyle(
+                                fontSize: 24,
+                                color: Colors.white,
+                              ),
+                            )
                           ],
+                        ),
+                        SizedBox(
+                          height: 24,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text("Temperature",style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
-                            ),),
-
-                            Text("29C",style: TextStyle(
-                              fontSize: 24,
-                              color: Colors.white,
-                            ),)
+                          children: const [
+                            Text(
+                              "Temperature",
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Text(
+                              "29C",
+                              style: TextStyle(
+                                fontSize: 24,
+                                color: Colors.white,
+                              ),
+                            )
                           ],
                         )
                       ],
