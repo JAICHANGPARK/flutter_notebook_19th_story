@@ -168,6 +168,47 @@ class SmartHomeMainPage extends StatelessWidget {
                     Container(
                       height: 240,
                       color: Colors.pink,
+                      child: Row(
+                        children: [
+                          Expanded(
+                              child: Card(
+                            child: Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Air purlfler",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Bedroom",
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text("0",style: TextStyle(
+                                        fontSize: 64,
+                                        color: Colors.grey,
+                                      ),),
+                                      Text("14",style: TextStyle(
+                                        fontSize: 64,
+                                        color: Colors.black,
+                                      ),)
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          )),
+                          Expanded(child: Placeholder()),
+                        ],
+                      ),
                     ),
                     Container(
                       height: 72,
