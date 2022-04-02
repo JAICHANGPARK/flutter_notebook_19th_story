@@ -139,6 +139,7 @@ class SmartHomeMainPage extends StatelessWidget {
                 ),
                 padding: EdgeInsets.all(16),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       children: [
