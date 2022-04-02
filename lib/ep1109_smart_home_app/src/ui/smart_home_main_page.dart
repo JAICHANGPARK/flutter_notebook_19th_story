@@ -137,6 +137,7 @@ class SmartHomeMainPage extends StatelessWidget {
                     topLeft: Radius.circular(16),
                   ),
                 ),
+                padding: EdgeInsets.all(16),
                 child: Column(
                   children: [
                     Row(
