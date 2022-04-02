@@ -137,6 +137,26 @@ class SmartHomeMainPage extends StatelessWidget {
                     topLeft: Radius.circular(16),
                   ),
                 ),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          "House",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                          ),
+                        ),
+                        Icon(
+                          Icons.keyboard_arrow_down,
+                          size: 32,
+                          color: Colors.white,
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
           ],
