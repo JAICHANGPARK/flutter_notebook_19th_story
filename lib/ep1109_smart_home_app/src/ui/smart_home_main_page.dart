@@ -43,11 +43,45 @@ class SmartHomeMainPage extends StatelessWidget {
             Expanded(
                 flex: 5,
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Placeholder(
-                    color: kShaAccents,
-                  ),
-                )),
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Energy usage",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.bolt,
+                              color: kShaAccents,
+                              size: 42,
+                            ),
+                            Text(
+                              "43.6",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 48,
+                              ),
+                            ),
+                            Text(
+                              "kWh",
+                              style: TextStyle(
+                                color: kShaSecondary,
+                                fontSize: 48,
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    )
+                    // Placeholder(
+                    //   color: kShaAccents,
+                    // ),
+                    )),
             Expanded(
               flex: 6,
               child: Container(
