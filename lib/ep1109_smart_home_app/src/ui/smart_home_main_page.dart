@@ -19,12 +19,12 @@ class SmartHomeMainPage extends StatelessWidget {
               child: Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
-                      "User12345",
+                      "user12345",
                       style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                        // fontWeight: FontWeight.bold,
                       ),
                     ),
                     SizedBox(
