@@ -154,7 +154,23 @@ class SmartHomeMainPage extends StatelessWidget {
                           size: 32,
                           color: Colors.white,
                         ),
+                        Spacer(),
+                        Text(
+                          "2 devices",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
                       ],
+                    ),
+                    Container(
+                      height: 240,
+                      color: Colors.pink,
+                    ),
+                    Container(
+                      height: 72,
+                      color: Colors.blue,
                     )
                   ],
                 ),
