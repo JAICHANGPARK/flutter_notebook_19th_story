@@ -36,7 +36,20 @@ class SmartHomeMainPage extends StatelessWidget {
                   ],
                 ),
               ),
-            )
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Expanded(
+                flex: 5,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Placeholder(),
+                )),
+            Expanded(
+              flex: 6,
+              child: Placeholder(),
+            ),
           ],
         ),
       ),
