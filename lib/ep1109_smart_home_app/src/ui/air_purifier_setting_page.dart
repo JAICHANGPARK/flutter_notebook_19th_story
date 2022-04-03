@@ -132,7 +132,7 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         "Condition",
                         style: TextStyle(
@@ -150,16 +150,9 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                       ),
                     ],
                   ),
-                  Spacer(),
-                  CircleAvatar(
-                    radius: 6,
-                    backgroundColor: Colors.green,
-                  ),
-                  SizedBox(
-                    width: 8,
-                  ),
-                  Text(
-                    "Excellent",
+                  const Spacer(),
+                  const Text(
+                    "85%",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 36,
@@ -167,6 +160,10 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                   ),
                 ],
               ),
+            ),
+            const Divider(
+              height: 0,
+              color: Colors.grey,
             ),
           ],
         ),
