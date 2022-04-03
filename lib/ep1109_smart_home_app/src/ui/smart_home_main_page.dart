@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_19th_story/ep1109_smart_home_app/src/utils/theme.dart';
 
@@ -47,13 +48,13 @@ class SmartHomeMainPage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "Energy usage",
                           style: TextStyle(
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 16,
                         ),
                         Row(
@@ -63,9 +64,9 @@ class SmartHomeMainPage extends StatelessWidget {
                               color: kShaAccents,
                               size: 42,
                             ),
-                            Text(
+                            const Text(
                               "43.6",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 48,
                               ),
@@ -79,7 +80,7 @@ class SmartHomeMainPage extends StatelessWidget {
                             )
                           ],
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: const [
@@ -99,7 +100,7 @@ class SmartHomeMainPage extends StatelessWidget {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 24,
                         ),
                         Row(
@@ -137,7 +138,7 @@ class SmartHomeMainPage extends StatelessWidget {
                     topLeft: Radius.circular(16),
                   ),
                 ),
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -219,12 +220,12 @@ class SmartHomeMainPage extends StatelessWidget {
                                               color: kShaAccents,
                                               borderRadius: BorderRadius.circular(12),
                                             ),
-                                            child: Center(
-                                              child: Icon(Icons.power_settings_new),
+                                            child: const Center(
+                                              child: const Icon(Icons.power_settings_new),
                                             ),
                                           ),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 4,
                                         ),
                                         Expanded(
@@ -234,8 +235,8 @@ class SmartHomeMainPage extends StatelessWidget {
                                               color: Colors.grey[500],
                                               borderRadius: BorderRadius.circular(12),
                                             ),
-                                            child: Center(
-                                              child: Icon(Icons.more_horiz),
+                                            child: const Center(
+                                              child: const Icon(Icons.more_horiz),
                                             ),
                                           ),
                                         ),
@@ -248,81 +249,74 @@ class SmartHomeMainPage extends StatelessWidget {
                           )),
                           Expanded(
                               child: Card(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(16.0),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      const Text(
-                                        "Air purifier",
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Text(
+                                    "Security camera",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  const Text(
+                                    "Living room",
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 80,
+                                    decoration: BoxDecoration(
+                                      color: Colors.teal,
+                                      borderRadius: BorderRadius.circular(12),
+                                      image: const DecorationImage(
+                                        image: CachedNetworkImageProvider(
+                                            "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_960_720.jpg"),
+                                        fit: BoxFit.cover,
                                       ),
-                                      const Text(
-                                        "Bedroom",
-                                        style: TextStyle(
-                                          color: Colors.grey,
-                                        ),
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: const [
-                                          Text(
-                                            "0",
-                                            style: TextStyle(
-                                              fontSize: 64,
-                                              color: Colors.grey,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 42,
+                                    child: Row(
+                                      children: [
+                                        Expanded(
+                                          flex: 8,
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              color: kShaAccents,
+                                              borderRadius: BorderRadius.circular(12),
+                                            ),
+                                            child: const Center(
+                                              child: const Icon(Icons.power_settings_new),
                                             ),
                                           ),
-                                          Text(
-                                            "14",
-                                            style: TextStyle(
-                                              fontSize: 64,
-                                              color: Colors.black,
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      SizedBox(
-                                        height: 42,
-                                        child: Row(
-                                          children: [
-                                            Expanded(
-                                              flex: 8,
-                                              child: Container(
-                                                decoration: BoxDecoration(
-                                                  color: kShaAccents,
-                                                  borderRadius: BorderRadius.circular(12),
-                                                ),
-                                                child: Center(
-                                                  child: Icon(Icons.power_settings_new),
-                                                ),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              width: 4,
-                                            ),
-                                            Expanded(
-                                              flex: 4,
-                                              child: Container(
-                                                decoration: BoxDecoration(
-                                                  color: Colors.grey[500],
-                                                  borderRadius: BorderRadius.circular(12),
-                                                ),
-                                                child: Center(
-                                                  child: Icon(Icons.more_horiz),
-                                                ),
-                                              ),
-                                            ),
-                                          ],
                                         ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              )),
+                                        const SizedBox(
+                                          width: 4,
+                                        ),
+                                        Expanded(
+                                          flex: 4,
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              color: Colors.grey[500],
+                                              borderRadius: BorderRadius.circular(12),
+                                            ),
+                                            child: const Center(
+                                              child: const Icon(Icons.more_horiz),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          )),
                         ],
                       ),
                     ),
