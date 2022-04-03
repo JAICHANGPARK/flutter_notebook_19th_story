@@ -212,9 +212,14 @@ class SmartHomeMainPage extends StatelessWidget {
                                   SizedBox(
                                     height: 48,
                                     child: Row(
-                                      children: const[
-                                        Expanded(child: Placeholder()),
-                                        Expanded(child: Placeholder()),
+                                      children: [
+                                        Expanded(
+                                            flex: 8,
+                                            child: Placeholder()),
+                                        SizedBox(width: 4,),
+                                        Expanded(
+                                            flex: 4,
+                                            child: Placeholder()),
                                       ],
                                     ),
                                   )
