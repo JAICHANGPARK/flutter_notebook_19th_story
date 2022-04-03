@@ -167,7 +167,6 @@ class SmartHomeMainPage extends StatelessWidget {
                     ),
                     Container(
                       height: 240,
-                      color: Colors.pink,
                       child: Row(
                         children: [
                           Expanded(
@@ -220,6 +219,9 @@ class SmartHomeMainPage extends StatelessWidget {
                                               color: kShaAccents,
                                               borderRadius: BorderRadius.circular(12),
                                             ),
+                                            child: Center(
+                                              child: Icon(Icons.power_settings_new),
+                                            ),
                                           ),
                                         ),
                                         SizedBox(
@@ -232,6 +234,9 @@ class SmartHomeMainPage extends StatelessWidget {
                                               color: Colors.grey[500],
                                               borderRadius: BorderRadius.circular(12),
                                             ),
+                                            child: Center(
+                                              child: Icon(Icons.more_horiz),
+                                            ),
                                           ),
                                         ),
                                       ],
@@ -241,7 +246,83 @@ class SmartHomeMainPage extends StatelessWidget {
                               ),
                             ),
                           )),
-                          const Expanded(child: Placeholder()),
+                          Expanded(
+                              child: Card(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(16.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      const Text(
+                                        "Air purifier",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      const Text(
+                                        "Bedroom",
+                                        style: TextStyle(
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: const [
+                                          Text(
+                                            "0",
+                                            style: TextStyle(
+                                              fontSize: 64,
+                                              color: Colors.grey,
+                                            ),
+                                          ),
+                                          Text(
+                                            "14",
+                                            style: TextStyle(
+                                              fontSize: 64,
+                                              color: Colors.black,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 42,
+                                        child: Row(
+                                          children: [
+                                            Expanded(
+                                              flex: 8,
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                  color: kShaAccents,
+                                                  borderRadius: BorderRadius.circular(12),
+                                                ),
+                                                child: Center(
+                                                  child: Icon(Icons.power_settings_new),
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                            Expanded(
+                                              flex: 4,
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                  color: Colors.grey[500],
+                                                  borderRadius: BorderRadius.circular(12),
+                                                ),
+                                                child: Center(
+                                                  child: Icon(Icons.more_horiz),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              )),
                         ],
                       ),
                     ),
