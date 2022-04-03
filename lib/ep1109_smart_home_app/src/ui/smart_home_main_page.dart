@@ -331,6 +331,7 @@ class SmartHomeMainPage extends StatelessWidget {
                           onPressed: () {},
                           icon: Icon(Icons.add),
                           color: Colors.white,
+                          iconSize: 32,
                         ),
                       ),
                     )
