@@ -15,38 +15,43 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
       body: SafeArea(
         child: Column(
           children: [
-            Row(
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.arrow_back_ios),
-                  color: Colors.white,
-                ),
-                Expanded(
-                    child: Column(
-                  children: [
-                    Text(
-                      "Air purifier",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  IconButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    icon: const Icon(Icons.arrow_back_ios),
+                    color: Colors.white,
+                  ),
+                  Expanded(
+                      child: Column(
+                    children: const [
+                      Text(
+                        "Air purifier",
+                        style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
-                    ),
-                    Text(
-                      "Bedroom",
-                      style: TextStyle(
-                        color: Colors.grey,
+                      Text(
+                        "Bedroom",
+                        style: TextStyle(
+                          color: Colors.grey,
+                        ),
                       ),
-                    ),
-                  ],
-                )),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.link),
-                  color: Colors.white,
-                ),
-              ],
-            )
+                    ],
+                  )),
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.link),
+                    color: Colors.white,
+                  ),
+                ],
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 0,
+            ),
+            
           ],
         ),
       ),
