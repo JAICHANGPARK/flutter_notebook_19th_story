@@ -322,7 +322,17 @@ class SmartHomeMainPage extends StatelessWidget {
                     ),
                     Container(
                       height: 72,
-                      color: Colors.blue,
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Center(
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.add),
+                          color: Colors.white,
+                        ),
+                      ),
                     )
                   ],
                 ),
