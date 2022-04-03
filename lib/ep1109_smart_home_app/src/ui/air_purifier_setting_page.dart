@@ -48,9 +48,10 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 ],
               ),
             ),
-             Divider(
+            Divider(
               color: kShaSecondary,
               height: 0,
+              thickness: 1.5,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 36),
@@ -58,7 +59,7 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 children: [
                   const Text(
                     "PM2.5ug/m3",
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: Colors.white,
                     ),
                   ),
@@ -77,7 +78,7 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                       ),
                       const Text(
                         "14",
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Colors.white,
                           fontSize: 64,
                         ),
@@ -90,9 +91,10 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
             const SizedBox(
               height: 16,
             ),
-             Divider(
+            Divider(
               height: 0,
-              color: kShaSecondary
+              color: kShaSecondary,
+              thickness: 1.5,
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -122,9 +124,10 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 ],
               ),
             ),
-             Divider(
+            Divider(
               height: 0,
               color: kShaSecondary,
+              thickness: 1.5,
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -161,10 +164,47 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 ],
               ),
             ),
-             Divider(
+            Divider(
               height: 0,
-              color: kShaSecondary
+              color: kShaSecondary,
+              thickness: 1.5,
             ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        "Coverage",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Text(
+                        "for bedroom",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const Spacer(),
+                  const Text(
+                    "7-12 m2",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 36,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
           ],
         ),
       ),
