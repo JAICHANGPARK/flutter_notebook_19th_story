@@ -10,6 +10,12 @@ class AirPurifierSettingPage extends StatefulWidget {
 class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Column(
+        children: [
+
+        ],
+      ),
+    );
   }
 }
