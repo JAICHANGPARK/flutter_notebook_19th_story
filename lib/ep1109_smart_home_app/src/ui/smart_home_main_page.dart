@@ -142,7 +142,7 @@ class SmartHomeMainPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
-                      children: const[
+                      children: const [
                         Text(
                           "House",
                           style: TextStyle(
@@ -184,7 +184,7 @@ class SmartHomeMainPage extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  const  Text(
+                                  const Text(
                                     "Bedroom",
                                     style: TextStyle(
                                       color: Colors.grey,
@@ -210,16 +210,30 @@ class SmartHomeMainPage extends StatelessWidget {
                                     ],
                                   ),
                                   SizedBox(
-                                    height: 48,
+                                    height: 42,
                                     child: Row(
                                       children: [
                                         Expanded(
-                                            flex: 8,
-                                            child: Placeholder()),
-                                        SizedBox(width: 4,),
+                                          flex: 8,
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              color: kShaAccents,
+                                              borderRadius: BorderRadius.circular(12),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 4,
+                                        ),
                                         Expanded(
-                                            flex: 4,
-                                            child: Placeholder()),
+                                          flex: 4,
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              color: Colors.grey[500],
+                                              borderRadius: BorderRadius.circular(12),
+                                            ),
+                                          ),
+                                        ),
                                       ],
                                     ),
                                   )
@@ -227,7 +241,7 @@ class SmartHomeMainPage extends StatelessWidget {
                               ),
                             ),
                           )),
-                          const  Expanded(child: Placeholder()),
+                          const Expanded(child: Placeholder()),
                         ],
                       ),
                     ),
