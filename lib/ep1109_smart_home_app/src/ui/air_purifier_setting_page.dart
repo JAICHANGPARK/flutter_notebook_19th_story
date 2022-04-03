@@ -11,10 +11,44 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-
-        ],
+      backgroundColor: Colors.black,
+      body: SafeArea(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.arrow_back_ios),
+                  color: Colors.white,
+                ),
+                Expanded(
+                    child: Column(
+                  children: [
+                    Text(
+                      "Air purifier",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18
+                      ),
+                    ),
+                    Text(
+                      "Bedroom",
+                      style: TextStyle(
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
+                )),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.link),
+                  color: Colors.white,
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
