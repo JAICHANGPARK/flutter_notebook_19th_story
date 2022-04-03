@@ -48,8 +48,8 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 ],
               ),
             ),
-            const Divider(
-              color: Colors.grey,
+             Divider(
+              color: kShaSecondary,
               height: 0,
             ),
             Padding(
@@ -90,9 +90,9 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
             const SizedBox(
               height: 16,
             ),
-            const Divider(
+             Divider(
               height: 0,
-              color: Colors.grey,
+              color: kShaSecondary
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -122,9 +122,9 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 ],
               ),
             ),
-            const Divider(
+             Divider(
               height: 0,
-              color: Colors.grey,
+              color: kShaSecondary,
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -161,9 +161,9 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 ],
               ),
             ),
-            const Divider(
+             Divider(
               height: 0,
-              color: Colors.grey,
+              color: kShaSecondary
             ),
           ],
         ),
