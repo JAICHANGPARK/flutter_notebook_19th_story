@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1109_smart_home_app/src/ui/air_purifier_setting_page.dart';
 import 'package:flutter_notebook_19th_story/ep1109_smart_home_app/src/utils/theme.dart';
 
 class SmartHomeMainPage extends StatelessWidget {
@@ -171,79 +172,88 @@ class SmartHomeMainPage extends StatelessWidget {
                       child: Row(
                         children: [
                           Expanded(
-                              child: Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(16.0),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Text(
-                                    "Air purifier",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  const Text(
-                                    "Bedroom",
-                                    style: TextStyle(
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: const [
-                                      Text(
-                                        "0",
-                                        style: TextStyle(
-                                          fontSize: 64,
-                                          color: Colors.grey,
-                                        ),
+                              child: InkWell(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => AirPurifierSettingPage(),
+                                ),
+                              );
+                            },
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text(
+                                      "Air purifier",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
                                       ),
-                                      Text(
-                                        "14",
-                                        style: TextStyle(
-                                          fontSize: 64,
-                                          color: Colors.black,
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: 42,
-                                    child: Row(
-                                      children: [
-                                        Expanded(
-                                          flex: 8,
-                                          child: Container(
-                                            decoration: BoxDecoration(
-                                              color: kShaAccents,
-                                              borderRadius: BorderRadius.circular(12),
-                                            ),
-                                            child: const Center(
-                                              child: const Icon(Icons.power_settings_new),
-                                            ),
+                                    ),
+                                    const Text(
+                                      "Bedroom",
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: const [
+                                        Text(
+                                          "0",
+                                          style: TextStyle(
+                                            fontSize: 64,
+                                            color: Colors.grey,
                                           ),
                                         ),
-                                        const SizedBox(
-                                          width: 4,
-                                        ),
-                                        Expanded(
-                                          flex: 4,
-                                          child: Container(
-                                            decoration: BoxDecoration(
-                                              color: Colors.grey[300],
-                                              borderRadius: BorderRadius.circular(12),
-                                            ),
-                                            child: const Center(
-                                              child: const Icon(Icons.more_horiz),
-                                            ),
+                                        Text(
+                                          "14",
+                                          style: TextStyle(
+                                            fontSize: 64,
+                                            color: Colors.black,
                                           ),
-                                        ),
+                                        )
                                       ],
                                     ),
-                                  )
-                                ],
+                                    SizedBox(
+                                      height: 42,
+                                      child: Row(
+                                        children: [
+                                          Expanded(
+                                            flex: 8,
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                color: kShaAccents,
+                                                borderRadius: BorderRadius.circular(12),
+                                              ),
+                                              child: const Center(
+                                                child: const Icon(Icons.power_settings_new),
+                                              ),
+                                            ),
+                                          ),
+                                          const SizedBox(
+                                            width: 4,
+                                          ),
+                                          Expanded(
+                                            flex: 4,
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.grey[300],
+                                                borderRadius: BorderRadius.circular(12),
+                                              ),
+                                              child: const Center(
+                                                child: const Icon(Icons.more_horiz),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           )),
