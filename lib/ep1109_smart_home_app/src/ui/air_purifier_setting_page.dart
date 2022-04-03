@@ -83,10 +83,46 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                         ),
                       )
                     ],
-                  )
+                  ),
                 ],
               ),
-            )
+            ),
+            Divider(
+              height: 0,
+              color: Colors.grey,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                children: [
+                  Text(
+                    "Air status",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  Spacer(),
+                  CircleAvatar(
+                    radius: 6,
+                    backgroundColor: Colors.green,
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Text(
+                    "Exellent",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 36,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Divider(
+              height: 0,
+              color: Colors.grey,
+            ),
           ],
         ),
       ),
