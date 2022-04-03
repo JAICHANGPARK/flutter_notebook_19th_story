@@ -232,7 +232,7 @@ class SmartHomeMainPage extends StatelessWidget {
                                           flex: 4,
                                           child: Container(
                                             decoration: BoxDecoration(
-                                              color: Colors.grey[500],
+                                              color: Colors.grey[300],
                                               borderRadius: BorderRadius.circular(12),
                                             ),
                                             child: const Center(
@@ -283,26 +283,26 @@ class SmartHomeMainPage extends StatelessWidget {
                                     height: 42,
                                     child: Row(
                                       children: [
-                                        Expanded(
-                                          flex: 8,
-                                          child: Container(
-                                            decoration: BoxDecoration(
-                                              color: kShaAccents,
-                                              borderRadius: BorderRadius.circular(12),
-                                            ),
-                                            child: const Center(
-                                              child: const Icon(Icons.power_settings_new),
-                                            ),
-                                          ),
-                                        ),
-                                        const SizedBox(
-                                          width: 4,
-                                        ),
+                                        // Expanded(
+                                        //   flex: 8,
+                                        //   child: Container(
+                                        //     decoration: BoxDecoration(
+                                        //       color: kShaAccents,
+                                        //       borderRadius: BorderRadius.circular(12),
+                                        //     ),
+                                        //     child: const Center(
+                                        //       child: const Icon(Icons.power_settings_new),
+                                        //     ),
+                                        //   ),
+                                        // ),
+                                        // const SizedBox(
+                                        //   width: 4,
+                                        // ),
                                         Expanded(
                                           flex: 4,
                                           child: Container(
                                             decoration: BoxDecoration(
-                                              color: Colors.grey[500],
+                                              color: Colors.grey[300],
                                               borderRadius: BorderRadius.circular(12),
                                             ),
                                             child: const Center(
