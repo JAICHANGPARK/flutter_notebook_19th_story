@@ -87,6 +87,9 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 ],
               ),
             ),
+            SizedBox(
+              height: 16,
+            ),
             Divider(
               height: 0,
               color: Colors.grey,
