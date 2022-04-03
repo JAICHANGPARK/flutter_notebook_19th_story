@@ -129,7 +129,7 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Row(
-                children:  [
+                children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -138,6 +138,9 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                         style: TextStyle(
                           color: Colors.white,
                         ),
+                      ),
+                      SizedBox(
+                        height: 12,
                       ),
                       Text(
                         "Until 45 days left",
