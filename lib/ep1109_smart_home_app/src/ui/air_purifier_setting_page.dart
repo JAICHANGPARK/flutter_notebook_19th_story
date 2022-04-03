@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1109_smart_home_app/src/utils/theme.dart';
 
 class AirPurifierSettingPage extends StatefulWidget {
   const AirPurifierSettingPage({Key? key}) : super(key: key);
@@ -51,7 +52,41 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
               color: Colors.grey,
               height: 0,
             ),
-            
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 36),
+              child: Column(
+                children: [
+                  Text(
+                    "PM2.5ug/m3",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "0",
+                        style: TextStyle(
+                          color: kShaSecondary,
+                          fontSize: 64,
+                        ),
+                      ),
+                      Text(
+                        "14",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 64,
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
