@@ -56,13 +56,13 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
               padding: const EdgeInsets.symmetric(vertical: 36),
               child: Column(
                 children: [
-                  Text(
+                  const Text(
                     "PM2.5ug/m3",
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
                   Row(
@@ -75,9 +75,9 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                           fontSize: 64,
                         ),
                       ),
-                      Text(
+                      const Text(
                         "14",
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 64,
                         ),
@@ -87,17 +87,17 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            Divider(
+            const Divider(
               height: 0,
               color: Colors.grey,
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Row(
-                children: [
+                children: const [
                   Text(
                     "Air status",
                     style: TextStyle(
@@ -113,7 +113,7 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                     width: 8,
                   ),
                   Text(
-                    "Exellent",
+                    "Excellent",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 36,
@@ -122,9 +122,48 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 ],
               ),
             ),
-            Divider(
+            const Divider(
               height: 0,
               color: Colors.grey,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                children:  [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Condition",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        "Until 45 days left",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Spacer(),
+                  CircleAvatar(
+                    radius: 6,
+                    backgroundColor: Colors.green,
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Text(
+                    "Excellent",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 36,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
