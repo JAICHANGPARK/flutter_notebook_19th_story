@@ -204,9 +204,19 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 ],
               ),
             ),
-            const SizedBox(
+             SizedBox(
               height: 42,
-              child: Placeholder(),
+              child: Expanded(
+                child: StatefulBuilder(
+                    builder: (context, setState) {
+                      return Slider(value: _sliderValue, onChanged: (d){
+                        setState((){
+                          _sliderValue = d;
+                        });
+                      });
+                    }
+                ),
+              ),
             ),
             const SizedBox(
               height: 24,
@@ -215,10 +225,10 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
-                  children: const [
+                  children:  [
                     Expanded(
                       child: Placeholder(),
-                    ),
+                    )
                     SizedBox(
                       height: 16,
                     ),
@@ -234,4 +244,5 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
       ),
     );
   }
+  double _sliderValue = 0.0;
 }
