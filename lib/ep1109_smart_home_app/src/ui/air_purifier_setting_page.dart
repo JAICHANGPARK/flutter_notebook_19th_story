@@ -262,7 +262,25 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                   children: [
                     Expanded(
                       child: Container(
-                        decoration: BoxDecoration(),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.2),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              child: Center(
+                                child: Text(
+                                  "Manual",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 24
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
