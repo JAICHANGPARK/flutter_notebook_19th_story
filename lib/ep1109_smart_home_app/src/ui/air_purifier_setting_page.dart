@@ -234,7 +234,7 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                                 // ),
                                 thumbShape: SliderThumbShape(),
                                 thumbColor: kShaAccents,
-                                trackShape: RoundedRectSliderTrackShape(),
+                                trackShape: const RoundedRectSliderTrackShape(),
                                 activeTrackColor: kShaAccents,
                                 overlayColor: Colors.black),
                             child: Slider(
@@ -268,26 +268,45 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                         ),
                         child: Stack(
                           children: [
-                            Positioned(
-                              child: Center(
+                            const Positioned(
+                              child: const Center(
                                 child: Text(
                                   "Manual",
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 24
+                                    fontSize: 24,
                                   ),
                                 ),
                               ),
-                            )
+                            ),
+                            Positioned(
+                                right: 8,
+                                top: 0,
+                                bottom: 0,
+                                child: Icon(
+                                  Icons.keyboard_arrow_down,
+                                  color: Colors.white,
+                                ))
                           ],
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
-                    Expanded(
-                      child: Placeholder(),
+                     Expanded(
+                      child:  Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Center(
+                          child: IconButton(
+                            onPressed: (){},
+                            icon: Icon(Icons.power_settings_new),
+                          ),
+                        ),
+                      ),
                     )
                   ],
                 ),
