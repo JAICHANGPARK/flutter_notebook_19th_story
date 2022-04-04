@@ -215,6 +215,7 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                         trackHeight: 24,
                         overlayShape: SliderComponentShape.noThumb,
                         inactiveTrackColor: Colors.white,
+                        trackShape:
                       ),
                       child: Slider(
                           value: _sliderValue,
