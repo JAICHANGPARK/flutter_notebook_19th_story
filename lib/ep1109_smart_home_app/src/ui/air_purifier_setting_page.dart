@@ -204,18 +204,18 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 42,
               child: Placeholder(),
             ),
-            SizedBox(
+            const SizedBox(
               height: 24,
             ),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
-                  children: [
+                  children: const [
                     Expanded(
                       child: Placeholder(),
                     ),
