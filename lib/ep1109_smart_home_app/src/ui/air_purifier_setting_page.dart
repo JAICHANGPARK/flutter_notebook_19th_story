@@ -204,18 +204,28 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 ],
               ),
             ),
-             SizedBox(
+            SizedBox(
               height: 42,
               child: Expanded(
-                child: StatefulBuilder(
-                    builder: (context, setState) {
-                      return Slider(value: _sliderValue, onChanged: (d){
-                        setState((){
-                          _sliderValue = d;
-                        });
-                      });
-                    }
-                ),
+                child: StatefulBuilder(builder: (context, setState) {
+                  return SizedBox(
+                    width: double.infinity,
+                    child: SliderTheme(
+                      data: SliderTheme.of(context).copyWith(
+                        trackHeight: 24,
+                        overlayShape: SliderComponentShape.noThumb,
+                        inactiveTrackColor: Colors.white,
+                      ),
+                      child: Slider(
+                          value: _sliderValue,
+                          onChanged: (d) {
+                            setState(() {
+                              _sliderValue = d;
+                            });
+                          }),
+                    ),
+                  );
+                }),
               ),
             ),
             const SizedBox(
@@ -225,10 +235,10 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
-                  children:  [
+                  children: [
                     Expanded(
                       child: Placeholder(),
-                    )
+                    ),
                     SizedBox(
                       height: 16,
                     ),
@@ -244,5 +254,6 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
       ),
     );
   }
+
   double _sliderValue = 0.0;
 }
