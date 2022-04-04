@@ -210,20 +210,42 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 child: StatefulBuilder(builder: (context, setState) {
                   return SizedBox(
                     width: double.infinity,
-                    child: SliderTheme(
-                      data: SliderTheme.of(context).copyWith(
-                        trackHeight: 24,
-                        overlayShape: SliderComponentShape.noThumb,
-                        inactiveTrackColor: Colors.white,
-                        trackShape:
-                      ),
-                      child: Slider(
-                          value: _sliderValue,
-                          onChanged: (d) {
-                            setState(() {
-                              _sliderValue = d;
-                            });
-                          }),
+                    child: Stack(
+                      children: [
+                        Positioned(
+                            left: 0,
+                            right: 0,
+                            child: Container(
+                              color: kShaAccents,
+                            )),
+                        Positioned(
+                          left: 0,
+                          right: 0,
+                          bottom: 0,
+                          top: 0,
+                          child: SliderTheme(
+                            data: SliderTheme.of(context).copyWith(
+                                trackHeight: 16,
+                                overlayShape: SliderComponentShape.noThumb,
+                                inactiveTrackColor: Colors.white,
+                                thumbShape: RoundSliderThumbShape(
+                                  enabledThumbRadius: 16,
+                                  pressedElevation: 2,
+                                ),
+                                thumbColor: kShaAccents,
+                                trackShape: RoundedRectSliderTrackShape(),
+                                activeTrackColor: kShaAccents,
+                                overlayColor: Colors.black),
+                            child: Slider(
+                                value: _sliderValue,
+                                onChanged: (d) {
+                                  setState(() {
+                                    _sliderValue = d;
+                                  });
+                                }),
+                          ),
+                        ),
+                      ],
                     ),
                   );
                 }),
@@ -258,3 +280,51 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
 
   double _sliderValue = 0.0;
 }
+
+class SliderThumbShape extends SliderComponentShape {
+  final double? enabledThumbRadius;
+  final double? disabledThumbRadius;
+  final double? elevation;
+  final double? pressedElevation;
+
+  SliderThumbShape({
+    this.enabledThumbRadius = 10.0,
+    this.disabledThumbRadius,
+    this.elevation = 1.0,
+    this.pressedElevation = 6.0,
+  });
+
+  double get _disabledThumbRadius => disabledThumbRadius ?? enabledThumbRadius ?? 0.0;
+
+  @override
+  Size getPreferredSize(bool isEnabled, bool isDiscrete) {
+    // TODO: implement getPreferredSize
+    throw UnimplementedError();
+  }
+
+  @override
+  void paint(PaintingContext context, Offset center,
+      {required Animation<double> activationAnimation,
+      required Animation<double> enableAnimation,
+      required bool isDiscrete,
+      required TextPainter labelPainter,
+      required RenderBox parentBox,
+      required SliderThemeData sliderTheme,
+      required TextDirection textDirection,
+      required double value,
+      required double textScaleFactor,
+      required Size sizeWithOverflow}) {
+    final Canvas canvas = context.canvas;
+    final Tween<double> radiusTween = Tween(
+      begin: _disabledThumbRadius,
+      end: enabledThumbRadius,
+    );
+
+    final double radius = radiusTween.evaluate(enableAnimation);
+    final Tween<double> elevationTween = Tween(
+      begin: elevation,
+      end: pressedElevation,
+    );
+  }
+}
+
