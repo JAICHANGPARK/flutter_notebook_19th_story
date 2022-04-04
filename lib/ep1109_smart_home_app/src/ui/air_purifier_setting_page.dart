@@ -228,10 +228,11 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                                 trackHeight: 16,
                                 overlayShape: SliderComponentShape.noThumb,
                                 inactiveTrackColor: Colors.white,
-                                thumbShape: RoundSliderThumbShape(
-                                  enabledThumbRadius: 16,
-                                  pressedElevation: 2,
-                                ),
+                                // thumbShape: RoundSliderThumbShape(
+                                //   enabledThumbRadius: 16,
+                                //   pressedElevation: 2,
+                                // ),
+                                thumbShape: SliderThumbShape(),
                                 thumbColor: kShaAccents,
                                 trackShape: RoundedRectSliderTrackShape(),
                                 activeTrackColor: kShaAccents,
@@ -260,7 +261,9 @@ class _AirPurifierSettingPageState extends State<AirPurifierSettingPage> {
                 child: Column(
                   children: [
                     Expanded(
-                      child: Placeholder(),
+                      child: Container(
+                        decoration: BoxDecoration(),
+                      ),
                     ),
                     SizedBox(
                       height: 16,
@@ -288,7 +291,7 @@ class SliderThumbShape extends SliderComponentShape {
   final double? pressedElevation;
 
   SliderThumbShape({
-    this.enabledThumbRadius = 10.0,
+    this.enabledThumbRadius = 16.0,
     this.disabledThumbRadius,
     this.elevation = 1.0,
     this.pressedElevation = 6.0,
@@ -299,7 +302,7 @@ class SliderThumbShape extends SliderComponentShape {
   @override
   Size getPreferredSize(bool isEnabled, bool isDiscrete) {
     // TODO: implement getPreferredSize
-    throw UnimplementedError();
+    return Size.fromRadius(isEnabled == true ? enabledThumbRadius ?? 0 : _disabledThumbRadius);
   }
 
   @override
@@ -325,6 +328,15 @@ class SliderThumbShape extends SliderComponentShape {
       begin: elevation,
       end: pressedElevation,
     );
+
+    final double evaluatedElevation = elevationTween.evaluate(activationAnimation);
+
+    final Paint paint = Paint()..color = kShaAccents;
+    paint.strokeWidth = 15;
+    paint.style = PaintingStyle.stroke;
+    canvas.drawCircle(center, radius, paint);
+    paint.color = Colors.black;
+    paint.style = PaintingStyle.fill;
+    canvas.drawCircle(center, radius, paint);
   }
 }
-
