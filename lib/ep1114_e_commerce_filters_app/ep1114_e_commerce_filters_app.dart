@@ -6,8 +6,8 @@ class ECommerceFiltersApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: EcommerceHomePage(),
+    return const MaterialApp(
+      home:  EcommerceHomePage(),
     );
   }
 }
