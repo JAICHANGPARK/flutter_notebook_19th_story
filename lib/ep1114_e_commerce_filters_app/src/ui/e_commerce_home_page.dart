@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class EcommerceHomePage extends StatelessWidget {
@@ -8,7 +6,13 @@ class EcommerceHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
+        title: const Text("Results for \"Mackbook\""),
+        leading: const Icon(Icons.key),
+      ),
+      body: Column(),
     );
   }
 }
