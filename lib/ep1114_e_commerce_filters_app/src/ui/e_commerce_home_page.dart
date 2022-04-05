@@ -14,7 +14,7 @@ class EcommerceHomePage extends StatelessWidget {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.shopping_bag,
             ),
             onPressed: () {},
@@ -25,13 +25,13 @@ class EcommerceHomePage extends StatelessWidget {
         children: [
           Container(
             height: 72,
-            padding: EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(color: Colors.grey[100]),
             child: Row(
               children: [
                 Expanded(
                   child: Container(
-                    padding: EdgeInsets.symmetric(vertical: 8),
+                    padding: const EdgeInsets.symmetric(vertical: 8),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(4),
@@ -42,18 +42,18 @@ class EcommerceHomePage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.unfold_more),
-                        Text("Sort by"),
+                        const Icon(Icons.unfold_more),
+                        const Text("Sort by"),
                       ],
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 12,
                 ),
                 Expanded(
                   child: Container(
-                    padding: EdgeInsets.symmetric(vertical: 8),
+                    padding: const EdgeInsets.symmetric(vertical: 8),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(4),
@@ -64,8 +64,8 @@ class EcommerceHomePage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.filter_list),
-                        Text("Filter"),
+                        const Icon(Icons.filter_list),
+                        const Text("Filter"),
                       ],
                     ),
                   ),
@@ -73,9 +73,26 @@ class EcommerceHomePage extends StatelessWidget {
               ],
             ),
           ),
-          Divider(
+          const Divider(
             height: 0,
             color: Colors.grey,
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, crossAxisSpacing: 12, mainAxisSpacing: 12, childAspectRatio: 5 / 6),
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                    ),
+                  );
+                },
+              ),
+            ),
           )
         ],
       ),
