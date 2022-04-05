@@ -10,7 +10,16 @@ class EcommerceHomePage extends StatelessWidget {
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
         title: const Text("Results for \"Mackbook\""),
-        leading: const Icon(Icons.key),
+        leading: const Icon(Icons.chevron_left),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.shopping_bag,
+            ),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -42,7 +51,25 @@ class EcommerceHomePage extends StatelessWidget {
                 SizedBox(
                   width: 12,
                 ),
-                Expanded(child: Placeholder()),
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(4),
+                      border: Border.all(
+                        color: Colors.grey[300]!,
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.filter_list),
+                        Text("Filter"),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
