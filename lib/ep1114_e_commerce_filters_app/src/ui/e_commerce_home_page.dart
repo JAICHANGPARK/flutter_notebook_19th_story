@@ -86,31 +86,65 @@ class EcommerceHomePage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Consumer(builder: (context, ref, _) {
                 AsyncValue<List<ShopResult>> items = ref.watch(shopResultProvider);
-                return items.when(data: (datas){
-                  return GridView.builder(
-                    itemCount: 10,
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 12,
-                      mainAxisSpacing: 12,
-                      childAspectRatio: 5 / 6,
-                    ),
-                    itemBuilder: (context, index) {
-                      return Container(
-                        decoration: const BoxDecoration(
-                          color: Colors.blue,
+                return items.when(
+                    data: (datas) {
+                      return GridView.builder(
+                        itemCount: 10,
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          crossAxisSpacing: 12,
+                          mainAxisSpacing: 12,
+                          childAspectRatio: 5 / 6,
                         ),
+                        itemBuilder: (context, index) {
+                          return Container(
+                            decoration: const BoxDecoration(
+                              color: Colors.blue,
+                            ),
+                            child: Column(
+                              children: [
+                                Expanded(flex: 6, child: Placeholder()),
+                                Expanded(
+                                  flex: 3,
+                                  child: Column(
+                                    children: [
+                                      Text.rich(
+                                        TextSpan(
+                                          children: [
+                                            TextSpan(text: datas[index].vendor ?? "-"),
+                                            TextSpan(
+                                              children: [
+                                                TextSpan(text: datas[index].name ?? "-"),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+
+
+                                      ),
+                                      Row(
+                                        children: [
+                                          Text("\$ ${datas[index].price}"),
+                                          Text("\$ ${datas[index].price}")
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          );
+                        },
                       );
                     },
-                  );
-                }, error: (e, s){
-                  return Center(
-                    child: Text("$e, $s"),
-                  );
-                }, loading: ()=> Center(
-                  child: CircularProgressIndicator(),
-                ));
-
+                    error: (e, s) {
+                      return Center(
+                        child: Text("$e, $s"),
+                      );
+                    },
+                    loading: () => Center(
+                          child: CircularProgressIndicator(),
+                        ));
               }),
             ),
           )
