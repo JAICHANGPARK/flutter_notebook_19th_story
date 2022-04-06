@@ -94,22 +94,29 @@ class EcommerceHomePage extends StatelessWidget {
                           crossAxisCount: 2,
                           crossAxisSpacing: 12,
                           mainAxisSpacing: 12,
-                          childAspectRatio: 5 / 7,
+                          childAspectRatio: 5 / 8,
                         ),
                         itemBuilder: (context, index) {
                           return Container(
                             decoration: const BoxDecoration(
-                              // color: Colors.blue,
-                            ),
+                                // color: Colors.blue,
+                                ),
                             child: Column(
                               children: [
                                 Expanded(
                                   flex: 6,
                                   child: Container(
-                                    decoration:
-                                        BoxDecoration(color: Colors.grey[400], borderRadius: BorderRadius.circular(8)),
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey[400],
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
                                     child: Stack(
                                       children: [
+                                        Positioned(
+                                          child: Image.network(
+                                            "${datas[index].img}",
+                                          ),
+                                        ),
                                         Positioned(
                                             right: 2,
                                             top: 2,
