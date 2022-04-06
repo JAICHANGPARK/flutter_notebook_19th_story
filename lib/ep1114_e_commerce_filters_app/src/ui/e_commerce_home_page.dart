@@ -89,7 +89,7 @@ class EcommerceHomePage extends StatelessWidget {
                 return items.when(
                     data: (datas) {
                       return GridView.builder(
-                        itemCount: 10,
+                        itemCount: datas.length,
                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           crossAxisSpacing: 12,
@@ -111,6 +111,7 @@ class EcommerceHomePage extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(8),
                                     ),
                                     child: Stack(
+                                      alignment: Alignment.center,
                                       children: [
                                         Positioned(
                                           left: 0,
@@ -121,6 +122,35 @@ class EcommerceHomePage extends StatelessWidget {
                                             "${datas[index].img}",
                                             fit: BoxFit.cover,
                                           ),
+                                        ),
+                                        Positioned(
+                                          left: 0,
+                                          right: 0,
+                                          bottom: 0,
+                                          top: 0,
+                                          child: Container(
+                                            color: (datas[index].isSoldOut ?? false)
+                                                ? Colors.black.withOpacity(0.5)
+                                                : Colors.transparent,
+                                          ),
+                                        ),
+                                        Positioned(
+                                          left: 48,
+                                          right: 48,
+                                          child: (datas[index].isSoldOut ?? false)
+                                              ? Align(
+                                                  alignment: Alignment.center,
+                                                  child: Container(
+                                                    padding: EdgeInsets.symmetric(vertical: 4),
+                                                    decoration: BoxDecoration(
+                                                        borderRadius: BorderRadius.circular(4), color: Colors.white),
+                                                    child: Align(
+                                                      alignment: Alignment.center,
+                                                      child: Text("SOLD OUT"),
+                                                    ),
+                                                  ),
+                                                )
+                                              : Container(),
                                         ),
                                         Positioned(
                                             right: 2,
