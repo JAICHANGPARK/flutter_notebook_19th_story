@@ -94,16 +94,48 @@ class EcommerceHomePage extends StatelessWidget {
                           crossAxisCount: 2,
                           crossAxisSpacing: 12,
                           mainAxisSpacing: 12,
-                          childAspectRatio: 5 / 6,
+                          childAspectRatio: 5 / 7,
                         ),
                         itemBuilder: (context, index) {
                           return Container(
                             decoration: const BoxDecoration(
-                              color: Colors.blue,
+                              // color: Colors.blue,
                             ),
                             child: Column(
                               children: [
-                                Expanded(flex: 6, child: Placeholder()),
+                                Expanded(
+                                  flex: 6,
+                                  child: Container(
+                                    decoration:
+                                        BoxDecoration(color: Colors.grey[400], borderRadius: BorderRadius.circular(8)),
+                                    child: Stack(
+                                      children: [
+                                        Positioned(
+                                            right: 2,
+                                            top: 2,
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius: BorderRadius.circular(4),
+                                              ),
+                                              child: IconButton(
+                                                onPressed: () {},
+                                                icon: (datas[index].isSoldOut ?? false)
+                                                    ? Icon(
+                                                        Icons.notifications_outlined,
+                                                      )
+                                                    : Icon(
+                                                        Icons.favorite_border,
+                                                      ),
+                                              ),
+                                            ))
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 8,
+                                ),
                                 Expanded(
                                   flex: 3,
                                   child: Column(
@@ -119,13 +151,11 @@ class EcommerceHomePage extends StatelessWidget {
                                             ),
                                           ],
                                         ),
-
-
                                       ),
                                       Row(
                                         children: [
                                           Text("\$ ${datas[index].price}"),
-                                          Text("\$ ${datas[index].price}")
+                                          Text("\$ ${datas[index].price}"),
                                         ],
                                       )
                                     ],
