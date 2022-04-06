@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1114_e_commerce_filters_app/src/model/shop_results.dart';
+import 'package:flutter_notebook_19th_story/ep1114_e_commerce_filters_app/src/provider/shop_result_provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_notebook_19th_story/ep1114_e_commerce_filters_app/src/provider/shop_result_provider.dart';
 
 class EcommerceHomePage extends StatelessWidget {
   const EcommerceHomePage({Key? key}) : super(key: key);
@@ -80,22 +84,34 @@ class EcommerceHomePage extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: GridView.builder(
-                itemCount: 10,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 12,
-                  mainAxisSpacing: 12,
-                  childAspectRatio: 5 / 6,
-                ),
-                itemBuilder: (context, index) {
-                  return Container(
-                    decoration: const BoxDecoration(
-                      color: Colors.blue,
+              child: Consumer(builder: (context, ref, _) {
+                AsyncValue<List<ShopResult>> items = ref.watch(shopResultProvider);
+                return items.when(data: (datas){
+                  return GridView.builder(
+                    itemCount: 10,
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 12,
+                      mainAxisSpacing: 12,
+                      childAspectRatio: 5 / 6,
                     ),
+                    itemBuilder: (context, index) {
+                      return Container(
+                        decoration: const BoxDecoration(
+                          color: Colors.blue,
+                        ),
+                      );
+                    },
                   );
-                },
-              ),
+                }, error: (e, s){
+                  return Center(
+                    child: Text("$e, $s"),
+                  );
+                }, loading: ()=> Center(
+                  child: CircularProgressIndicator(),
+                ));
+
+              }),
             ),
           )
         ],
