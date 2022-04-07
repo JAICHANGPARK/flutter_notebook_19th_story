@@ -43,12 +43,23 @@ class EcommerceHomePage extends StatelessWidget {
                         backgroundColor: Colors.transparent,
                         builder: (context) => Container(
                           height: 320,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(12),
-                              topRight: Radius.circular(12)
-                            )
+                              topRight: Radius.circular(12),
+                            ),
+                          ),
+                          child: Column(
+                            children: [
+                              Text(
+                                "SORT BY",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              )
+                            ],
                           ),
                         ),
                       );
@@ -161,10 +172,10 @@ class EcommerceHomePage extends StatelessWidget {
                                               ? Align(
                                                   alignment: Alignment.center,
                                                   child: Container(
-                                                    padding: EdgeInsets.symmetric(vertical: 4),
+                                                    padding: const EdgeInsets.symmetric(vertical: 4),
                                                     decoration: BoxDecoration(
                                                         borderRadius: BorderRadius.circular(4), color: Colors.white),
-                                                    child: Align(
+                                                    child: const Align(
                                                       alignment: Alignment.center,
                                                       child: Text("SOLD OUT"),
                                                     ),
@@ -183,10 +194,10 @@ class EcommerceHomePage extends StatelessWidget {
                                               child: IconButton(
                                                 onPressed: () {},
                                                 icon: (datas[index].isSoldOut ?? false)
-                                                    ? Icon(
+                                                    ? const Icon(
                                                         Icons.notifications_outlined,
                                                       )
-                                                    : Icon(
+                                                    : const Icon(
                                                         Icons.favorite_border,
                                                       ),
                                               ),
@@ -195,7 +206,7 @@ class EcommerceHomePage extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 8,
                                 ),
                                 Expanded(
@@ -234,7 +245,7 @@ class EcommerceHomePage extends StatelessWidget {
                         child: Text("$e, $s"),
                       );
                     },
-                    loading: () => Center(
+                    loading: () => const Center(
                           child: CircularProgressIndicator(),
                         ));
               }),
