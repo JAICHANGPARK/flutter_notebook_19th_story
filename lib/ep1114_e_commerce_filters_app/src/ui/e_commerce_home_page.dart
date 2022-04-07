@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1114_e_commerce_filters_app/src/enums/enum_sort_by.dart';
 import 'package:flutter_notebook_19th_story/ep1114_e_commerce_filters_app/src/model/shop_results.dart';
 import 'package:flutter_notebook_19th_story/ep1114_e_commerce_filters_app/src/provider/shop_result_provider.dart';
+import 'package:flutter_notebook_19th_story/ep1114_e_commerce_filters_app/src/provider/sort_filter_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_notebook_19th_story/ep1114_e_commerce_filters_app/src/provider/shop_result_provider.dart';
 
@@ -50,15 +52,103 @@ class EcommerceHomePage extends StatelessWidget {
                               topRight: Radius.circular(12),
                             ),
                           ),
+                          padding: const EdgeInsets.all(8),
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 "SORT BY",
                                 style: TextStyle(
                                   color: Colors.grey,
                                   fontWeight: FontWeight.bold,
                                 ),
-                              )
+                              ),
+                              Consumer(builder: (context, ref, _) {
+                                final sort = ref.watch(sortFilterProvider);
+                                return Column(
+                                  children: [
+                                    RadioListTile<EnumSortBy>(
+                                        value: EnumSortBy.recommended,
+                                        groupValue: sort,
+                                        title: const Text(
+                                          "Recommended",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        controlAffinity: ListTileControlAffinity.trailing,
+                                        activeColor: Colors.black,
+                                        onChanged: (v) {
+                                          ref.watch(sortFilterProvider.notifier).state = v ?? EnumSortBy.recommended;
+                                          Navigator.of(context).pop();
+                                        }),
+                                    RadioListTile<EnumSortBy>(
+                                      value: EnumSortBy.recentlyAdded,
+                                      groupValue: sort,
+                                      title: const Text(
+                                        "Recently Added",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      activeColor: Colors.black,
+                                      controlAffinity: ListTileControlAffinity.trailing,
+                                      onChanged: (v) {
+                                        ref.watch(sortFilterProvider.notifier).state = v ?? EnumSortBy.recentlyAdded;
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                    RadioListTile<EnumSortBy>(
+                                      value: EnumSortBy.priceLowToHigh,
+                                      groupValue: sort,
+                                      title: const Text(
+                                        "Price: Low to High",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      activeColor: Colors.black,
+                                      controlAffinity: ListTileControlAffinity.trailing,
+                                      onChanged: (v) {
+                                        ref.watch(sortFilterProvider.notifier).state = v ?? EnumSortBy.priceLowToHigh;
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                    RadioListTile<EnumSortBy>(
+                                      value: EnumSortBy.priceHighToLow,
+                                      groupValue: sort,
+                                      title: const Text(
+                                        "Price: High to Low",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      activeColor: Colors.black,
+                                      controlAffinity: ListTileControlAffinity.trailing,
+                                      onChanged: (v) {
+                                        ref.watch(sortFilterProvider.notifier).state = v ?? EnumSortBy.priceHighToLow;
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                    RadioListTile<EnumSortBy>(
+                                      value: EnumSortBy.topRated,
+                                      groupValue: sort,
+                                      title: const Text(
+                                        "Top rated",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      activeColor: Colors.black,
+                                      controlAffinity: ListTileControlAffinity.trailing,
+                                      onChanged: (v) {
+                                        ref.watch(sortFilterProvider.notifier).state = v ?? EnumSortBy.topRated;
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                  ],
+                                );
+                              })
                             ],
                           ),
                         ),
