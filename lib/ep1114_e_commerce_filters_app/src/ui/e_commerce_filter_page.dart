@@ -17,9 +17,36 @@ class _ECommerceFilterPageState extends State<ECommerceFilterPage> {
         elevation: 0,
         centerTitle: true,
         actions: [
-          TextButton(onPressed: () {}, child: Text("Reset")),
+          TextButton(
+            onPressed: () {},
+            child: Text("Reset"),
+            style: TextButton.styleFrom(
+              primary: Colors.black,
+            ),
+          ),
         ],
         title: Text("Filter"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Text(
+                  "Category",
+                  style: TextStyle(fontSize: 16),
+                ),
+                Spacer(),
+                Text(
+                  "View all",
+                  style: TextStyle(fontSize: 16),
+                ),
+                IconButton(onPressed: () {}, icon: Icon(Icons.arrow_forward_ios))
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
