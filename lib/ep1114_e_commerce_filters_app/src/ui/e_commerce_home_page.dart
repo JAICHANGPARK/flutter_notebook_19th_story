@@ -3,6 +3,7 @@ import 'package:flutter_notebook_19th_story/ep1114_e_commerce_filters_app/src/en
 import 'package:flutter_notebook_19th_story/ep1114_e_commerce_filters_app/src/model/shop_results.dart';
 import 'package:flutter_notebook_19th_story/ep1114_e_commerce_filters_app/src/provider/shop_result_provider.dart';
 import 'package:flutter_notebook_19th_story/ep1114_e_commerce_filters_app/src/provider/sort_filter_provider.dart';
+import 'package:flutter_notebook_19th_story/ep1114_e_commerce_filters_app/src/ui/e_commerce_filter_page.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_notebook_19th_story/ep1114_e_commerce_filters_app/src/provider/shop_result_provider.dart';
 
@@ -178,22 +179,9 @@ class EcommerceHomePage extends StatelessWidget {
                 ),
                 Expanded(
                   child: GestureDetector(
-                    onTap: (){
-                      showModalBottomSheet(
-                        context: context,
-                        enableDrag: false,
-                        isScrollControlled: true,
-                        backgroundColor: Colors.transparent,
-                        builder: (context) => Container(
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(12),
-                              topRight: Radius.circular(12),
-                            ),
-                          ),
-                          padding: const EdgeInsets.all(8),
-                        ),
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => ECommerceFilterPage()),
                       );
                     },
                     child: Container(
