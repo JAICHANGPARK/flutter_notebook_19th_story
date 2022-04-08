@@ -11,6 +11,6 @@ class ECommerceFilterPage extends StatefulWidget {
 class _ECommerceFilterPageState extends State<ECommerceFilterPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }
