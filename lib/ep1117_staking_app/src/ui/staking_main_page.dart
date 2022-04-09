@@ -54,17 +54,25 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                     child: const Center(
                       child: Text(
                         'Connect wallet',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold
-                        ),
+                        style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
                   )
                 ],
               ),
-              Container(
-                height: 360,
-              )
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                child: Container(
+                  height: MediaQuery.of(context).size.height / 1.5,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+
+                  child: Center(),
+                ),
+              ),
+
             ],
           ),
         ),
