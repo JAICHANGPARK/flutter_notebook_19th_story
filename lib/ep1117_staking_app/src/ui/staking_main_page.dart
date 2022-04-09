@@ -11,8 +11,9 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "vent",
         ),
         backgroundColor: Colors.black,
@@ -21,36 +22,51 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
           ),
         ],
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Text("Staking Vent"),
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(4)
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    "Staking Vent",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  child: Center(
-                    child: Text('Connect wallet'),
-                  ),
-                )
-              ],
-            ),
-            Container(
-              height: 360,
-            )
-          ],
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Connect wallet',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              Container(
+                height: 360,
+              )
+            ],
+          ),
         ),
       ),
     );
