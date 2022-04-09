@@ -70,7 +70,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(4),
                   ),
-                  padding: EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -78,36 +78,67 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                         height: 48,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text("Staking",style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),),
+                          children: const [
+                            Text(
+                              "Staking",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                             VerticalDivider(
                               color: Colors.grey,
                             ),
-                            Text("Unstaking",style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),),
+                            Text(
+                              "Unstaking",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                             VerticalDivider(
                               color: Colors.grey,
                             ),
-                            Text("Claiming",style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),),
+                            Text(
+                              "Claiming",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ],
                         ),
                       ),
                       Expanded(
                         child: PageView(
                           children: [
-
+                            Column(
+                              children: [
+                                const Expanded(child: const Placeholder()),
+                                const SizedBox(
+                                  height: 8,
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  padding: const EdgeInsets.symmetric(vertical: 16),
+                                  child: const Center(
+                                    child: Text(
+                                      "Stake tokens",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            )
                           ],
                         ),
                       ),
-
                     ],
                   ),
                 ),
@@ -120,7 +151,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(4),
                   ),
-                  child: Center(),
+                  child: const Center(),
                 ),
               ),
             ],
