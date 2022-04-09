@@ -8,6 +8,8 @@ class StakingMainPage extends StatefulWidget {
 }
 
 class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProviderStateMixin {
+  int _tabIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,8 +70,46 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(4),
                   ),
+                  padding: EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: 48,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text("Staking",style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),),
+                            VerticalDivider(
+                              color: Colors.grey,
+                            ),
+                            Text("Unstaking",style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),),
+                            VerticalDivider(
+                              color: Colors.grey,
+                            ),
+                            Text("Claiming",style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: PageView(
+                          children: [
 
-                  child: Center(),
+                          ],
+                        ),
+                      ),
+
+                    ],
+                  ),
                 ),
               ),
               Padding(
@@ -80,11 +120,9 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(4),
                   ),
-
                   child: Center(),
                 ),
               ),
-
             ],
           ),
         ),
