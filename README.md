@@ -2,7 +2,14 @@
 
 ## UI Design
 
-### EP1114
+### EP1117-
+
+- Vent – Staking Dashboard Responsive
+- by Stefan Tosic for bazen.
+- https://dribbble.com/shots/17966821-Vent-Staking-Dashboard-Responsive
+
+
+### EP1114-1116
 
 - E-Commerce Filters
 - by Diana Palavandishvili
