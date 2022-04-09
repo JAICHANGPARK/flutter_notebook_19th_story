@@ -29,6 +29,30 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
           ),
         ],
       ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Text("Staking Vent"),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(4)
+                  ),
+                  child: Center(
+                    child: Text('Connect wallet'),
+                  ),
+                )
+              ],
+            ),
+            Container(
+              height: 360,
+            )
+          ],
+        ),
+      ),
     );
   }
 }
