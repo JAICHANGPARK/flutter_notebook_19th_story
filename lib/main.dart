@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1117_staking_app/staking_app.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'ep1114_e_commerce_filters_app/ep1114_e_commerce_filters_app.dart';
 
 main() {
   runApp(
     const ProviderScope(
-      child: ECommerceFiltersApp(),
+      child: StakingApp(),
     ),
   );
 }
