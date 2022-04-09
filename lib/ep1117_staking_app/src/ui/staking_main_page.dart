@@ -72,6 +72,18 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                   child: Center(),
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                child: Container(
+                  height: MediaQuery.of(context).size.height / 1.8,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+
+                  child: Center(),
+                ),
+              ),
 
             ],
           ),
