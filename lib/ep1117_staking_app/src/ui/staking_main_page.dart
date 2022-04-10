@@ -11,6 +11,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
   int _tabIndex = 0;
   PageController _pageController = PageController();
   TextEditingController _textEditingController = TextEditingController(text: "1,214 VENT");
+  TextEditingController _textEditingController2 = TextEditingController(text: "15,628 VENT");
 
   @override
   Widget build(BuildContext context) {
@@ -273,8 +274,116 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                 )
                               ],
                             ),
-                            const Center(
-                              child: Text("Page1"),
+                            Column(
+                              children: [
+                                Expanded(
+                                    child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const SizedBox(
+                                      height: 24,
+                                    ),
+                                    const Text("Unstake tokens"),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(vertical: 8),
+                                      child: TextField(
+                                        controller: _textEditingController2,
+                                        style: const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                        decoration: const InputDecoration(
+                                          focusedBorder: OutlineInputBorder(),
+                                          enabledBorder: OutlineInputBorder(),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(vertical: 16),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: const [
+                                          Text(
+                                            "Initial Points for Unstaking",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                            ),
+                                          ),
+                                          Text(
+                                            "500 points",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(vertical: 16),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: const [
+                                          Text(
+                                            "Point generated APY",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                            ),
+                                          ),
+                                          Text(
+                                            "200 points",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Divider(
+                                      color: Colors.grey,
+                                      height: 48,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(vertical: 16),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: const [
+                                          Text(
+                                            "Tokens available",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                            ),
+                                          ),
+                                          Text(
+                                            "44,954",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 24
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                )),
+                                const SizedBox(
+                                  height: 8,
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  padding: const EdgeInsets.symmetric(vertical: 16),
+                                  child: const Center(
+                                    child: Text(
+                                      "Unstake tokens",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
                             ),
                             const Center(
                               child: Text("Page2"),
