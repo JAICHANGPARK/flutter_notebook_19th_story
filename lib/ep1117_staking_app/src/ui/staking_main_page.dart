@@ -81,8 +81,10 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                           children: [
                             GestureDetector(
                               onTap: () {
+
                                 setState(() {
                                   _tabIndex = 0;
+                                  _pageController.jumpToPage(_tabIndex);
                                 });
                               },
                               child: Text(
@@ -101,6 +103,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                               onTap: () {
                                 setState(() {
                                   _tabIndex = 1;
+                                  _pageController.jumpToPage(_tabIndex);
                                 });
                               },
                               child: Text(
@@ -119,6 +122,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                               onTap: () {
                                 setState(() {
                                   _tabIndex = 2;
+                                  _pageController.jumpToPage(_tabIndex);
                                 });
                               },
                               child: Text(
@@ -136,6 +140,11 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                       Expanded(
                         child: PageView(
                           controller: _pageController,
+                          onPageChanged: (index) {
+                            setState((){
+                              _tabIndex = index;
+                            });
+                          },
                           children: [
                             Column(
                               children: [
@@ -160,6 +169,12 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                   ),
                                 )
                               ],
+                            ),
+                            Center(
+                              child: Text("Page1"),
+                            ),
+                            Center(
+                              child: Text("Page2"),
                             )
                           ],
                         ),
