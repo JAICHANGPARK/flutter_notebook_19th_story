@@ -152,9 +152,10 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                     child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    SizedBox(height: 24,),
+                                    SizedBox(
+                                      height: 24,
+                                    ),
                                     Text("Generate tokens"),
-
                                     Padding(
                                       padding: const EdgeInsets.symmetric(vertical: 8),
                                       child: TextField(
@@ -164,7 +165,13 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                         ),
                                       ),
                                     ),
-
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text("Initial Points for Staking"),
+                                        Text("500 points"),
+                                      ],
+                                    )
                                   ],
                                 )),
                                 const SizedBox(
