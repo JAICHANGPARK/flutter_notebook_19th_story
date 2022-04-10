@@ -158,13 +158,13 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                     ),
                                     const Text("Generate tokens"),
                                     Padding(
-                                      padding: EdgeInsets.symmetric(vertical: 8),
+                                      padding: const EdgeInsets.symmetric(vertical: 8),
                                       child: TextField(
                                         controller: _textEditingController,
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           fontWeight: FontWeight.bold,
                                         ),
-                                        decoration: InputDecoration(
+                                        decoration: const InputDecoration(
                                           focusedBorder: OutlineInputBorder(),
                                           enabledBorder: OutlineInputBorder(),
                                         ),
