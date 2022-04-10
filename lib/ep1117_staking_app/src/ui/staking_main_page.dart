@@ -10,7 +10,9 @@ class StakingMainPage extends StatefulWidget {
 class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProviderStateMixin {
   int _tabIndex = 0;
   PageController _pageController = PageController();
-
+  TextEditingController _textEditingController = TextEditingController(
+    text: "1,214 VENT"
+  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -159,6 +161,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                     const Padding(
                                       padding: EdgeInsets.symmetric(vertical: 8),
                                       child: TextField(
+
                                         decoration: InputDecoration(
                                           focusedBorder: OutlineInputBorder(),
                                           enabledBorder: OutlineInputBorder(),
