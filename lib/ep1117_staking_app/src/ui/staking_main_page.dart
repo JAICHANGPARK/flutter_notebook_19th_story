@@ -10,6 +10,7 @@ class StakingMainPage extends StatefulWidget {
 class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProviderStateMixin {
   int _tabIndex = 0;
   PageController _pageController = PageController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,7 +82,6 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                           children: [
                             GestureDetector(
                               onTap: () {
-
                                 setState(() {
                                   _tabIndex = 0;
                                   _pageController.jumpToPage(_tabIndex);
@@ -141,14 +141,32 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                         child: PageView(
                           controller: _pageController,
                           onPageChanged: (index) {
-                            setState((){
+                            setState(() {
                               _tabIndex = index;
                             });
                           },
                           children: [
                             Column(
                               children: [
-                                const Expanded(child: const Placeholder()),
+                                Expanded(
+                                    child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SizedBox(height: 24,),
+                                    Text("Generate tokens"),
+
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(vertical: 8),
+                                      child: TextField(
+                                        decoration: InputDecoration(
+                                          focusedBorder: OutlineInputBorder(),
+                                          enabledBorder: OutlineInputBorder(),
+                                        ),
+                                      ),
+                                    ),
+
+                                  ],
+                                )),
                                 const SizedBox(
                                   height: 8,
                                 ),
