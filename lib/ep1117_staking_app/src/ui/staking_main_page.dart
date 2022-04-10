@@ -9,7 +9,7 @@ class StakingMainPage extends StatefulWidget {
 
 class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProviderStateMixin {
   int _tabIndex = 0;
-
+  PageController _pageController = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,7 +89,8 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                 "Staking",
                                 style: TextStyle(
                                   fontSize: 16,
-                                  fontWeight: _tabIndex == 0 ? FontWeight.bold : FontWeight.normal,
+                                  fontWeight: FontWeight.bold,
+                                  color: _tabIndex == 0 ? Colors.black : Colors.grey,
                                 ),
                               ),
                             ),
@@ -106,7 +107,8 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                 "Unstaking",
                                 style: TextStyle(
                                   fontSize: 16,
-                                  fontWeight: _tabIndex == 1 ? FontWeight.bold : FontWeight.normal,
+                                  fontWeight: FontWeight.bold,
+                                  color: _tabIndex == 1 ? Colors.black : Colors.grey,
                                 ),
                               ),
                             ),
@@ -122,9 +124,10 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                               child: Text(
                                 "Claiming",
                                 style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: _tabIndex == 2 ? FontWeight.bold : FontWeight.normal,
-                                    color: _tabIndex == 2 ? Colors.black : Colors.grey),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: _tabIndex == 2 ? Colors.black : Colors.grey,
+                                ),
                               ),
                             ),
                           ],
@@ -132,6 +135,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                       ),
                       Expanded(
                         child: PageView(
+                          controller: _pageController,
                           children: [
                             Column(
                               children: [
