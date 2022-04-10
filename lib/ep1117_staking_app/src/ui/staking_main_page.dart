@@ -342,7 +342,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                       height: 48,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 16),
+                                      padding: const EdgeInsets.symmetric(vertical: 24),
                                       child: Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: const [
