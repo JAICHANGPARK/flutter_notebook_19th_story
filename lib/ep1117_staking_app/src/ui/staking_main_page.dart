@@ -96,7 +96,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                 ),
                               ),
                             ),
-                            VerticalDivider(
+                            const VerticalDivider(
                               color: Colors.grey,
                             ),
                             GestureDetector(
@@ -115,7 +115,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                 ),
                               ),
                             ),
-                            VerticalDivider(
+                            const VerticalDivider(
                               color: Colors.grey,
                             ),
                             GestureDetector(
@@ -152,12 +152,12 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                     child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 24,
                                     ),
-                                    Text("Generate tokens"),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 8),
+                                    const Text("Generate tokens"),
+                                    const Padding(
+                                      padding: EdgeInsets.symmetric(vertical: 8),
                                       child: TextField(
                                         decoration: InputDecoration(
                                           focusedBorder: OutlineInputBorder(),
@@ -169,7 +169,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                       padding: const EdgeInsets.symmetric(vertical: 16),
                                       child: Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
+                                        children: const [
                                           Text(
                                             "Initial Points for Staking",
                                             style: TextStyle(
@@ -189,7 +189,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                       padding: const EdgeInsets.symmetric(vertical: 16),
                                       child: Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
+                                        children: const [
                                           Text(
                                             "Point generated APY",
                                             style: TextStyle(
@@ -209,7 +209,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                       padding: const EdgeInsets.symmetric(vertical: 16),
                                       child: Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
+                                        children: const [
                                           Text(
                                             "Past 30d Average",
                                             style: TextStyle(
@@ -229,7 +229,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                       padding: const EdgeInsets.symmetric(vertical: 16),
                                       child: Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
+                                        children: const [
                                           Text(
                                             "Liquidation Penalty",
                                             style: TextStyle(
@@ -268,10 +268,10 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                 )
                               ],
                             ),
-                            Center(
+                            const Center(
                               child: Text("Page1"),
                             ),
-                            Center(
+                            const Center(
                               child: Text("Page2"),
                             )
                           ],
