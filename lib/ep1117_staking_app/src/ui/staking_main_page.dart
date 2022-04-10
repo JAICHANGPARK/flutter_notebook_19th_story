@@ -165,22 +165,85 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                         ),
                                       ),
                                     ),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          "Initial Points for Staking",
-                                          style: TextStyle(
-                                            color: Colors.grey,
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(vertical: 16),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Initial Points for Staking",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                            ),
                                           ),
-                                        ),
-                                        Text(
-                                          "500 points",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
+                                          Text(
+                                            "500 points",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(vertical: 16),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Point generated APY",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                            ),
+                                          ),
+                                          Text(
+                                            "200 points",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(vertical: 16),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Past 30d Average",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                            ),
+                                          ),
+                                          Text(
+                                            "198 points",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(vertical: 16),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Liquidation Penalty",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                            ),
+                                          ),
+                                          Text(
+                                            "-",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     )
                                   ],
                                 )),
