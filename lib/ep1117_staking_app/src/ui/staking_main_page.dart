@@ -168,8 +168,18 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Text("Initial Points for Staking"),
-                                        Text("500 points"),
+                                        Text(
+                                          "Initial Points for Staking",
+                                          style: TextStyle(
+                                            color: Colors.grey,
+                                          ),
+                                        ),
+                                        Text(
+                                          "500 points",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
                                       ],
                                     )
                                   ],
