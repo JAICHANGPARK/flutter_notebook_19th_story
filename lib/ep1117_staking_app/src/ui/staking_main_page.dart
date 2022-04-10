@@ -78,32 +78,53 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                         height: 48,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: const [
-                            Text(
-                              "Staking",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  _tabIndex = 0;
+                                });
+                              },
+                              child: Text(
+                                "Staking",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: _tabIndex == 0 ? FontWeight.bold : FontWeight.normal,
+                                ),
                               ),
                             ),
                             VerticalDivider(
                               color: Colors.grey,
                             ),
-                            Text(
-                              "Unstaking",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  _tabIndex = 1;
+                                });
+                              },
+                              child: Text(
+                                "Unstaking",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: _tabIndex == 1 ? FontWeight.bold : FontWeight.normal,
+                                ),
                               ),
                             ),
                             VerticalDivider(
                               color: Colors.grey,
                             ),
-                            Text(
-                              "Claiming",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  _tabIndex = 2;
+                                });
+                              },
+                              child: Text(
+                                "Claiming",
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: _tabIndex == 2 ? FontWeight.bold : FontWeight.normal,
+                                    color: _tabIndex == 2 ? Colors.black : Colors.grey),
                               ),
                             ),
                           ],
