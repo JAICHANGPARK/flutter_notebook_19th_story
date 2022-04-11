@@ -499,7 +499,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                     children: [
                       const Text(
                         "Staking / Generating Overview",
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
                         ),
@@ -581,8 +581,21 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                         ],
                       ),
                       Expanded(
-                        child: LineChart(
-                          LineChartData(),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 16),
+                          child: LineChart(
+                            LineChartData(lineBarsData: [
+                              LineChartBarData(
+                                spots: List.generate(
+                                  10,
+                                  (index) => FlSpot(
+                                    index.toDouble(),
+                                    index.toDouble(),
+                                  ),
+                                ),
+                              )
+                            ]),
+                          ),
                         ),
                       ),
                     ],
