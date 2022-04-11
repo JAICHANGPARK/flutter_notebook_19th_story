@@ -492,14 +492,24 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(4),
                   ),
+                  padding: EdgeInsets.all(16),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Staking / Generating Overview"),
+                      Text(
+                        "Staking / Generating Overview",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                       Row(
                         children: [
                           CircleAvatar(
                             radius: 8,
                             backgroundColor: Colors.yellow,
+                          ),
+                          SizedBox(
+                            width: 16,
                           ),
                           Countup(
                             begin: 0,
@@ -509,7 +519,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                               seconds: 5,
                             ),
                             style: TextStyle(
-                              fontSize: 48,
+                              fontSize: 40,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -531,6 +541,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                               ),
                               borderRadius: BorderRadius.circular(4),
                             ),
+                            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                             child: Row(
                               children: [
                                 Text("Last Week"),
