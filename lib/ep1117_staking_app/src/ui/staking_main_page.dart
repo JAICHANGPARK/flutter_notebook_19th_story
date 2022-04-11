@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:countup/countup.dart';
 
 class StakingMainPage extends StatefulWidget {
   const StakingMainPage({Key? key}) : super(key: key);
@@ -499,7 +500,22 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(4),
                   ),
-                  child: const Center(),
+                  child:  Column(
+                    children: [
+                      Text("Staking / Generating Overview"),
+                      Row(
+                        children: [
+                          CircleAvatar(
+                            radius: 8,
+                            backgroundColor: Colors.yellow,
+                          ),
+                          Countup()
+
+                        ],
+                      )
+
+                    ],
+                  ),
                 ),
               ),
             ],
