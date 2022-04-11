@@ -505,6 +505,13 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                             begin: 0,
                             end: 3553201,
                             separator: ",",
+                            duration: Duration(
+                              seconds: 5,
+                            ),
+                            style: TextStyle(
+                              fontSize: 48,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           Text(
                             " /\$VENT staked",
@@ -512,13 +519,27 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-
                         ],
                       ),
-
                       Row(
                         children: [
-                          
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(
+                                color: Colors.grey,
+                              ),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: Row(
+                              children: [
+                                Text("Last Week"),
+                                Icon(
+                                  Icons.keyboard_arrow_down,
+                                )
+                              ],
+                            ),
+                          )
                         ],
                       )
                     ],
