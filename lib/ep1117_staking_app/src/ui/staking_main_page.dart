@@ -355,10 +355,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                           ),
                                           Text(
                                             "44,954",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 24
-                                            ),
+                                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
                                           ),
                                         ],
                                       ),
@@ -390,80 +387,75 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                               children: [
                                 Expanded(
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        const SizedBox(
-                                          height: 24,
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(vertical: 24),
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: const [
-                                              Text(
-                                                "Tokens available",
-                                                style: TextStyle(
-                                                  color: Colors.grey,
-                                                ),
-                                              ),
-                                              Text(
-                                                "1,214",
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 24
-                                                ),
-                                              ),
-                                            ],
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const SizedBox(
+                                      height: 24,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(vertical: 24),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: const [
+                                          Text(
+                                            "Tokens available",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                            ),
                                           ),
-                                        ),
-                                        Divider(
-                                          color: Colors.grey,
-                                          height: 48,
-                                        ),
-
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(vertical: 16),
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: const [
-                                              Text(
-                                                "Initial Points for Unstaking",
-                                                style: TextStyle(
-                                                  color: Colors.grey,
-                                                ),
-                                              ),
-                                              Text(
-                                                "500 points",
-                                                style: TextStyle(
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                              ),
-                                            ],
+                                          Text(
+                                            "1,214",
+                                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
                                           ),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(vertical: 16),
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: const [
-                                              Text(
-                                                "Point generated APY",
-                                                style: TextStyle(
-                                                  color: Colors.grey,
-                                                ),
-                                              ),
-                                              Text(
-                                                "200 points",
-                                                style: TextStyle(
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                              ),
-                                            ],
+                                        ],
+                                      ),
+                                    ),
+                                    Divider(
+                                      color: Colors.grey,
+                                      height: 48,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(vertical: 16),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: const [
+                                          Text(
+                                            "Initial Points for Unstaking",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                            ),
                                           ),
-                                        ),
-
-                                      ],
-                                    )),
+                                          Text(
+                                            "500 points",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(vertical: 16),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: const [
+                                          Text(
+                                            "Point generated APY",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                            ),
+                                          ),
+                                          Text(
+                                            "200 points",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                )),
                                 const SizedBox(
                                   height: 8,
                                 ),
@@ -500,7 +492,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(4),
                   ),
-                  child:  Column(
+                  child: Column(
                     children: [
                       Text("Staking / Generating Overview"),
                       Row(
@@ -509,11 +501,13 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                             radius: 8,
                             backgroundColor: Colors.yellow,
                           ),
-                          Countup()
-
+                          Countup(
+                            begin: 0,
+                            end: 3553201,
+                            separator: ",",
+                          )
                         ],
                       )
-
                     ],
                   ),
                 ),
