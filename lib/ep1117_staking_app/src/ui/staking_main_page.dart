@@ -502,34 +502,37 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Row(
-                        children: [
-                          CircleAvatar(
-                            radius: 8,
-                            backgroundColor: Colors.yellow,
-                          ),
-                          SizedBox(
-                            width: 16,
-                          ),
-                          Countup(
-                            begin: 0,
-                            end: 3553201,
-                            separator: ",",
-                            duration: Duration(
-                              seconds: 5,
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 16),
+                        child: Row(
+                          children: [
+                            CircleAvatar(
+                              radius: 8,
+                              backgroundColor: Colors.yellow,
                             ),
-                            style: TextStyle(
-                              fontSize: 40,
-                              fontWeight: FontWeight.bold,
+                            SizedBox(
+                              width: 16,
                             ),
-                          ),
-                          Text(
-                            " /\$VENT staked",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
+                            Countup(
+                              begin: 0,
+                              end: 3553201,
+                              separator: ",",
+                              duration: Duration(
+                                seconds: 5,
+                              ),
+                              style: TextStyle(
+                                fontSize: 40,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
-                        ],
+                            Text(
+                              " /\$VENT staked",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       Row(
                         children: [
