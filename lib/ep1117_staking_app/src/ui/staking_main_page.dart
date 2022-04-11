@@ -500,6 +500,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                         "Staking / Generating Overview",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
+                          fontSize: 18
                         ),
                       ),
                       Padding(
@@ -548,6 +549,25 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                             child: Row(
                               children: [
                                 Text("Last Week"),
+                                Icon(
+                                  Icons.keyboard_arrow_down,
+                                )
+                              ],
+                            ),
+                          ),
+                          SizedBox(width: 12,),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(
+                                color: Colors.grey,
+                              ),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                            child: Row(
+                              children: [
+                                Text("Staked"),
                                 Icon(
                                   Icons.keyboard_arrow_down,
                                 )
