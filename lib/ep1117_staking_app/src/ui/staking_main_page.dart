@@ -505,7 +505,20 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                             begin: 0,
                             end: 3553201,
                             separator: ",",
-                          )
+                          ),
+                          Text(
+                            " /\$VENT staked",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+
+                        ],
+                      ),
+
+                      Row(
+                        children: [
+                          
                         ],
                       )
                     ],
