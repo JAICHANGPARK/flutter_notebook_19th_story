@@ -1,3 +1,4 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:countup/countup.dart';
 
@@ -498,10 +499,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                     children: [
                       Text(
                         "Staking / Generating Overview",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18
-                        ),
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 16),
@@ -555,7 +553,9 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                               ],
                             ),
                           ),
-                          SizedBox(width: 12,),
+                          SizedBox(
+                            width: 12,
+                          ),
                           Container(
                             decoration: BoxDecoration(
                               color: Colors.white,
@@ -575,7 +575,12 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                             ),
                           )
                         ],
-                      )
+                      ),
+                      Expanded(
+                        child: LineChart(
+                          LineChartData(),
+                        ),
+                      ),
                     ],
                   ),
                 ),
