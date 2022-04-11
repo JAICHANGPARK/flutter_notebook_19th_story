@@ -339,7 +339,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                         ],
                                       ),
                                     ),
-                                    Divider(
+                                    const Divider(
                                       color: Colors.grey,
                                       height: 48,
                                     ),
@@ -411,7 +411,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                         ],
                                       ),
                                     ),
-                                    Divider(
+                                    const Divider(
                                       color: Colors.grey,
                                       height: 48,
                                     ),
@@ -493,41 +493,45 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(4),
                   ),
-                  padding: EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         "Staking / Generating Overview",
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         child: Row(
                           children: [
-                            CircleAvatar(
+                            const CircleAvatar(
                               radius: 8,
                               backgroundColor: Colors.yellow,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 16,
                             ),
                             Countup(
                               begin: 0,
                               end: 3553201,
                               separator: ",",
-                              duration: Duration(
+                              duration: const Duration(
                                 seconds: 5,
                               ),
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 40,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Text(
+                            const Text(
                               " /\$VENT staked",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
+                                color: Colors.grey,
                               ),
                             ),
                           ],
@@ -543,17 +547,17 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                               ),
                               borderRadius: BorderRadius.circular(4),
                             ),
-                            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                             child: Row(
                               children: [
-                                Text("Last Week"),
-                                Icon(
+                                const Text("Last Week"),
+                                const Icon(
                                   Icons.keyboard_arrow_down,
                                 )
                               ],
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 12,
                           ),
                           Container(
@@ -564,11 +568,11 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                               ),
                               borderRadius: BorderRadius.circular(4),
                             ),
-                            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                             child: Row(
                               children: [
-                                Text("Staked"),
-                                Icon(
+                                const Text("Staked"),
+                                const Icon(
                                   Icons.keyboard_arrow_down,
                                 )
                               ],
