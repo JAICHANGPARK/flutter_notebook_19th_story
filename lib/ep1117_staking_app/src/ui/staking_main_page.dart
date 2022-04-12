@@ -598,7 +598,11 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                     show: true,
                                     topTitles: AxisTitles(),
                                     rightTitles: AxisTitles(),
-                                    leftTitles: AxisTitles()),
+                                    leftTitles: AxisTitles(
+                                        drawBehindEverything: true,
+                                        sideTitles: SideTitles(
+                                          showTitles: true,
+                                        ))),
                                 borderData: FlBorderData(
                                   show: false,
                                 ),
