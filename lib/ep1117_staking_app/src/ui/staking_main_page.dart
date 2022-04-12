@@ -589,6 +589,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                   show: true,
                                   drawVerticalLine: false,
                                 ),
+                                titlesData: FlTitlesData(show: true, topTitles: AxisTitles()),
                                 lineBarsData: [
                                   LineChartBarData(
                                     spots: List.generate(
