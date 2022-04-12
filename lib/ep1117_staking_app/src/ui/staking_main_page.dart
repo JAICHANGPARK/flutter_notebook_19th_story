@@ -593,6 +593,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                 gridData: FlGridData(
                                   show: true,
                                   drawVerticalLine: false,
+                                  horizontalInterval: 25
                                 ),
                                 titlesData: FlTitlesData(
                                   show: true,
@@ -619,7 +620,6 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                 borderData: FlBorderData(
                                   show: false,
                                 ),
-                                maxY: 300,
                                 minY: 250,
                                 lineBarsData: [
                                   LineChartBarData(
