@@ -596,12 +596,15 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                 ),
                                 titlesData: FlTitlesData(
                                   show: true,
+
                                   topTitles: AxisTitles(),
                                   rightTitles: AxisTitles(),
                                   leftTitles: AxisTitles(
+                                    axisNameSize: 16,
                                     sideTitles: SideTitles(
                                         showTitles: true,
                                         interval: 100,
+                                        reservedSize: 42,
                                         getTitlesWidget: (v, meta) {
                                           return Text(
                                             "\$ $v",
