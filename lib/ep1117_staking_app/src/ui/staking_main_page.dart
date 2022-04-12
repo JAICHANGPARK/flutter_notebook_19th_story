@@ -582,7 +582,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 16,
                       ),
                       Expanded(
@@ -593,11 +593,10 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                 gridData: FlGridData(
                                   show: true,
                                   drawVerticalLine: false,
-                                  horizontalInterval: 25
+                                  horizontalInterval: 25,
                                 ),
                                 titlesData: FlTitlesData(
                                   show: true,
-
                                   topTitles: AxisTitles(),
                                   rightTitles: AxisTitles(),
                                   leftTitles: AxisTitles(
@@ -609,7 +608,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                         getTitlesWidget: (v, meta) {
                                           return Text(
                                             "\$ ${v.toStringAsFixed(0)}",
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               fontSize: 10,
                                               color: Colors.grey,
                                             ),
