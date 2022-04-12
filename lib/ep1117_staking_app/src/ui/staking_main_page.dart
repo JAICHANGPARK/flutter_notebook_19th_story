@@ -602,18 +602,35 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                   leftTitles: AxisTitles(
                                     axisNameSize: 16,
                                     sideTitles: SideTitles(
-                                        showTitles: true,
-                                        interval: 100,
-                                        reservedSize: 42,
-                                        getTitlesWidget: (v, meta) {
-                                          return Text(
-                                            "\$ ${v.toStringAsFixed(0)}",
-                                            style: const TextStyle(
-                                              fontSize: 10,
-                                              color: Colors.grey,
-                                            ),
-                                          );
-                                        }),
+                                      showTitles: true,
+                                      interval: 100,
+                                      reservedSize: 42,
+                                      getTitlesWidget: (v, meta) {
+                                        return Text(
+                                          "\$ ${v.toStringAsFixed(0)}",
+                                          style: const TextStyle(
+                                            fontSize: 10,
+                                            color: Colors.grey,
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                  bottomTitles: AxisTitles(
+                                    axisNameSize: 0,
+                                    sideTitles: SideTitles(
+                                      showTitles: true,
+                                      reservedSize: 42,
+                                      getTitlesWidget: (v, meta) {
+                                        return Text(
+                                          "${v.toStringAsFixed(0)}",
+                                          style: const TextStyle(
+                                            fontSize: 10,
+                                            color: Colors.grey,
+                                          ),
+                                        );
+                                      },
+                                    ),
                                   ),
                                 ),
                                 borderData: FlBorderData(
@@ -622,7 +639,9 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                 minY: 250,
                                 lineBarsData: [
                                   LineChartBarData(
+                                    barWidth: 4,
                                     color: Colors.yellow,
+
                                     isCurved: true,
                                     dotData: FlDotData(
                                       show: false,
