@@ -600,26 +600,34 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                   rightTitles: AxisTitles(),
                                   leftTitles: AxisTitles(
                                     sideTitles: SideTitles(
-                                      showTitles: true,
-                                      getTitlesWidget: (v, meta){
-                                        return Text("\$ $v");
-                                      }
-                                    ),
+                                        showTitles: true,
+                                        getTitlesWidget: (v, meta) {
+                                          return Text(
+                                            "\$ $v",
+                                            style: TextStyle(
+                                              fontSize: 10,
+                                              color: Colors.grey,
+                                            ),
+                                          );
+                                        }),
                                   ),
                                 ),
                                 borderData: FlBorderData(
                                   show: false,
                                 ),
-                                maxY: 11,
+                                maxY: 500,
                                 minY: -2,
                                 lineBarsData: [
                                   LineChartBarData(
                                     isCurved: true,
+                                    dotData: FlDotData(
+                                      show: false,
+                                    ),
                                     spots: List.generate(
                                       10,
                                       (index) => FlSpot(
                                         index.toDouble(),
-                                        index.toDouble() * Random().nextDouble(),
+                                        250 + (100 + Random().nextDouble()),
                                       ),
                                     ),
                                   )
