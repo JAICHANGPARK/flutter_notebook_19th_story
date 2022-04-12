@@ -72,7 +72,10 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 child: Container(
-                  height: MediaQuery.of(context).size.height / 1.5,
+                  height: MediaQuery
+                      .of(context)
+                      .size
+                      .height / 1.5,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(4),
@@ -156,107 +159,107 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                               children: [
                                 Expanded(
                                     child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const SizedBox(
-                                      height: 24,
-                                    ),
-                                    const Text("Generate tokens"),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 8),
-                                      child: TextField(
-                                        controller: _textEditingController,
-                                        style: const TextStyle(
-                                          fontWeight: FontWeight.bold,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        const SizedBox(
+                                          height: 24,
                                         ),
-                                        decoration: const InputDecoration(
-                                          focusedBorder: OutlineInputBorder(),
-                                          enabledBorder: OutlineInputBorder(),
+                                        const Text("Generate tokens"),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(vertical: 8),
+                                          child: TextField(
+                                            controller: _textEditingController,
+                                            style: const TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                            decoration: const InputDecoration(
+                                              focusedBorder: OutlineInputBorder(),
+                                              enabledBorder: OutlineInputBorder(),
+                                            ),
+                                          ),
                                         ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 16),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: const [
-                                          Text(
-                                            "Initial Points for Staking",
-                                            style: TextStyle(
-                                              color: Colors.grey,
-                                            ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(vertical: 16),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: const [
+                                              Text(
+                                                "Initial Points for Staking",
+                                                style: TextStyle(
+                                                  color: Colors.grey,
+                                                ),
+                                              ),
+                                              Text(
+                                                "500 points",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                          Text(
-                                            "500 points",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                            ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(vertical: 16),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: const [
+                                              Text(
+                                                "Point generated APY",
+                                                style: TextStyle(
+                                                  color: Colors.grey,
+                                                ),
+                                              ),
+                                              Text(
+                                                "200 points",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 16),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: const [
-                                          Text(
-                                            "Point generated APY",
-                                            style: TextStyle(
-                                              color: Colors.grey,
-                                            ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(vertical: 16),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: const [
+                                              Text(
+                                                "Past 30d Average",
+                                                style: TextStyle(
+                                                  color: Colors.grey,
+                                                ),
+                                              ),
+                                              Text(
+                                                "198 points",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                          Text(
-                                            "200 points",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                            ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(vertical: 16),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: const [
+                                              Text(
+                                                "Liquidation Penalty",
+                                                style: TextStyle(
+                                                  color: Colors.grey,
+                                                ),
+                                              ),
+                                              Text(
+                                                "-",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 16),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: const [
-                                          Text(
-                                            "Past 30d Average",
-                                            style: TextStyle(
-                                              color: Colors.grey,
-                                            ),
-                                          ),
-                                          Text(
-                                            "198 points",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 16),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: const [
-                                          Text(
-                                            "Liquidation Penalty",
-                                            style: TextStyle(
-                                              color: Colors.grey,
-                                            ),
-                                          ),
-                                          Text(
-                                            "-",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    )
-                                  ],
-                                )),
+                                        )
+                                      ],
+                                    )),
                                 const SizedBox(
                                   height: 8,
                                 ),
@@ -282,89 +285,89 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                               children: [
                                 Expanded(
                                     child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const SizedBox(
-                                      height: 24,
-                                    ),
-                                    const Text("Unstake tokens"),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 8),
-                                      child: TextField(
-                                        controller: _textEditingController2,
-                                        style: const TextStyle(
-                                          fontWeight: FontWeight.bold,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        const SizedBox(
+                                          height: 24,
                                         ),
-                                        decoration: const InputDecoration(
-                                          focusedBorder: OutlineInputBorder(),
-                                          enabledBorder: OutlineInputBorder(),
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 16),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: const [
-                                          Text(
-                                            "Initial Points for Unstaking",
-                                            style: TextStyle(
-                                              color: Colors.grey,
-                                            ),
-                                          ),
-                                          Text(
-                                            "500 points",
-                                            style: TextStyle(
+                                        const Text("Unstake tokens"),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(vertical: 8),
+                                          child: TextField(
+                                            controller: _textEditingController2,
+                                            style: const TextStyle(
                                               fontWeight: FontWeight.bold,
                                             ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 16),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: const [
-                                          Text(
-                                            "Point generated APY",
-                                            style: TextStyle(
-                                              color: Colors.grey,
+                                            decoration: const InputDecoration(
+                                              focusedBorder: OutlineInputBorder(),
+                                              enabledBorder: OutlineInputBorder(),
                                             ),
                                           ),
-                                          Text(
-                                            "200 points",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                            ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(vertical: 16),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: const [
+                                              Text(
+                                                "Initial Points for Unstaking",
+                                                style: TextStyle(
+                                                  color: Colors.grey,
+                                                ),
+                                              ),
+                                              Text(
+                                                "500 points",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                        ],
-                                      ),
-                                    ),
-                                    const Divider(
-                                      color: Colors.grey,
-                                      height: 48,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 24),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: const [
-                                          Text(
-                                            "Tokens available",
-                                            style: TextStyle(
-                                              color: Colors.grey,
-                                            ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(vertical: 16),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: const [
+                                              Text(
+                                                "Point generated APY",
+                                                style: TextStyle(
+                                                  color: Colors.grey,
+                                                ),
+                                              ),
+                                              Text(
+                                                "200 points",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                          Text(
-                                            "44,954",
-                                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                                        ),
+                                        const Divider(
+                                          color: Colors.grey,
+                                          height: 48,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(vertical: 24),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: const [
+                                              Text(
+                                                "Tokens available",
+                                                style: TextStyle(
+                                                  color: Colors.grey,
+                                                ),
+                                              ),
+                                              Text(
+                                                "44,954",
+                                                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                                              ),
+                                            ],
                                           ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                )),
+                                        ),
+                                      ],
+                                    )),
                                 const SizedBox(
                                   height: 8,
                                 ),
@@ -390,75 +393,75 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                               children: [
                                 Expanded(
                                     child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const SizedBox(
-                                      height: 24,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 24),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: const [
-                                          Text(
-                                            "Tokens available",
-                                            style: TextStyle(
-                                              color: Colors.grey,
-                                            ),
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        const SizedBox(
+                                          height: 24,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(vertical: 24),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: const [
+                                              Text(
+                                                "Tokens available",
+                                                style: TextStyle(
+                                                  color: Colors.grey,
+                                                ),
+                                              ),
+                                              Text(
+                                                "1,214",
+                                                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                                              ),
+                                            ],
                                           ),
-                                          Text(
-                                            "1,214",
-                                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                                        ),
+                                        const Divider(
+                                          color: Colors.grey,
+                                          height: 48,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(vertical: 16),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: const [
+                                              Text(
+                                                "Initial Points for Unstaking",
+                                                style: TextStyle(
+                                                  color: Colors.grey,
+                                                ),
+                                              ),
+                                              Text(
+                                                "500 points",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                        ],
-                                      ),
-                                    ),
-                                    const Divider(
-                                      color: Colors.grey,
-                                      height: 48,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 16),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: const [
-                                          Text(
-                                            "Initial Points for Unstaking",
-                                            style: TextStyle(
-                                              color: Colors.grey,
-                                            ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(vertical: 16),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: const [
+                                              Text(
+                                                "Point generated APY",
+                                                style: TextStyle(
+                                                  color: Colors.grey,
+                                                ),
+                                              ),
+                                              Text(
+                                                "200 points",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                          Text(
-                                            "500 points",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 16),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: const [
-                                          Text(
-                                            "Point generated APY",
-                                            style: TextStyle(
-                                              color: Colors.grey,
-                                            ),
-                                          ),
-                                          Text(
-                                            "200 points",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                )),
+                                        ),
+                                      ],
+                                    )),
                                 const SizedBox(
                                   height: 8,
                                 ),
@@ -490,12 +493,15 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 child: Container(
-                  height: MediaQuery.of(context).size.height / 1.8,
+                  height: MediaQuery
+                      .of(context)
+                      .size
+                      .height / 1.8,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(4),
                   ),
-                  padding: const EdgeInsets.all(16),
+                  padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -591,15 +597,18 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                   show: true,
                                   drawVerticalLine: false,
                                 ),
-                                titlesData: FlTitlesData(show: true, topTitles: AxisTitles()),
+                                titlesData: FlTitlesData(show: true, topTitles: AxisTitles(),
+                                rightTitles: AxisTitles()),
                                 lineBarsData: [
                                   LineChartBarData(
+                                    isCurved: true,
                                     spots: List.generate(
                                       10,
-                                      (index) => FlSpot(
-                                        index.toDouble(),
-                                        index.toDouble() * Random().nextDouble(),
-                                      ),
+                                          (index) =>
+                                          FlSpot(
+                                            index.toDouble(),
+                                            index.toDouble() * Random().nextDouble(),
+                                          ),
                                     ),
                                   )
                                 ]),
