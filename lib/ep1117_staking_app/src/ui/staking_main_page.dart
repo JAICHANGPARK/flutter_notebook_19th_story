@@ -601,6 +601,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                   leftTitles: AxisTitles(
                                     sideTitles: SideTitles(
                                         showTitles: true,
+                                        interval: 100,
                                         getTitlesWidget: (v, meta) {
                                           return Text(
                                             "\$ $v",
@@ -627,7 +628,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                       10,
                                       (index) => FlSpot(
                                         index.toDouble(),
-                                        250 + (100 + Random().nextDouble()),
+                                        250 + (100 * Random().nextDouble()),
                                       ),
                                     ),
                                   )
