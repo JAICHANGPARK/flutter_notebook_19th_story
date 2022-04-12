@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:countup/countup.dart';
@@ -596,7 +598,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                       10,
                                       (index) => FlSpot(
                                         index.toDouble(),
-                                        index.toDouble(),
+                                        index.toDouble() * Random().nextDouble(),
                                       ),
                                     ),
                                   )
