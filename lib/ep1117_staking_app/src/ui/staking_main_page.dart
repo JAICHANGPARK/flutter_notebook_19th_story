@@ -620,7 +620,6 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                   show: false,
                                 ),
                                 maxY: 500,
-                                minY: -2,
                                 lineBarsData: [
                                   LineChartBarData(
                                     isCurved: true,
