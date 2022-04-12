@@ -595,14 +595,18 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                   drawVerticalLine: false,
                                 ),
                                 titlesData: FlTitlesData(
-                                    show: true,
-                                    topTitles: AxisTitles(),
-                                    rightTitles: AxisTitles(),
-                                    leftTitles: AxisTitles(
-                                        drawBehindEverything: true,
-                                        sideTitles: SideTitles(
-                                          showTitles: true,
-                                        ))),
+                                  show: true,
+                                  topTitles: AxisTitles(),
+                                  rightTitles: AxisTitles(),
+                                  leftTitles: AxisTitles(
+                                    sideTitles: SideTitles(
+                                      showTitles: true,
+                                      getTitlesWidget: (v, meta){
+                                        return Text("\$ $v");
+                                      }
+                                    ),
+                                  ),
+                                ),
                                 borderData: FlBorderData(
                                   show: false,
                                 ),
