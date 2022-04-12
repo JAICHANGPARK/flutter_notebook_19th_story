@@ -607,7 +607,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                         reservedSize: 42,
                                         getTitlesWidget: (v, meta) {
                                           return Text(
-                                            "\$ $v",
+                                            "\$ ${v.toStringAsFixed(0)}",
                                             style: TextStyle(
                                               fontSize: 10,
                                               color: Colors.grey,
@@ -619,9 +619,11 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                                 borderData: FlBorderData(
                                   show: false,
                                 ),
-                                maxY: 500,
+                                maxY: 300,
+                                minY: 250,
                                 lineBarsData: [
                                   LineChartBarData(
+                                    color: Colors.yellow,
                                     isCurved: true,
                                     dotData: FlDotData(
                                       show: false,
