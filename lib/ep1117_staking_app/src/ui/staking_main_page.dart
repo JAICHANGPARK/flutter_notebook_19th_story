@@ -495,7 +495,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(4),
                   ),
-                  padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -587,7 +587,7 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                       ),
                       Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 16),
+                          padding: const EdgeInsets.symmetric(vertical: 8),
                           child: LineChart(
                             LineChartData(
                                 gridData: FlGridData(
