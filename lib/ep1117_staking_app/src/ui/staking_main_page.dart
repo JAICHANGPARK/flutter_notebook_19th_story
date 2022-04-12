@@ -584,17 +584,22 @@ class _StakingMainPageState extends State<StakingMainPage> with SingleTickerProv
                         child: Padding(
                           padding: const EdgeInsets.symmetric(vertical: 16),
                           child: LineChart(
-                            LineChartData(lineBarsData: [
-                              LineChartBarData(
-                                spots: List.generate(
-                                  10,
-                                  (index) => FlSpot(
-                                    index.toDouble(),
-                                    index.toDouble(),
-                                  ),
+                            LineChartData(
+                                gridData: FlGridData(
+                                  show: true,
+                                  drawVerticalLine: false,
                                 ),
-                              )
-                            ]),
+                                lineBarsData: [
+                                  LineChartBarData(
+                                    spots: List.generate(
+                                      10,
+                                      (index) => FlSpot(
+                                        index.toDouble(),
+                                        index.toDouble(),
+                                      ),
+                                    ),
+                                  )
+                                ]),
                           ),
                         ),
                       ),
