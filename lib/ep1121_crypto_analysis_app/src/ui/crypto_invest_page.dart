@@ -10,6 +10,21 @@ class CryptoInvestPage extends StatefulWidget {
 class _CryptoInvestPageState extends State<CryptoInvestPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        elevation: 0,
+        title: Text("Invest"),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.tune),
+          ),
+        ],
+        leading: IconButton(onPressed: (){},
+        icon: Icon(Icons.arrow_back_ios),),
+      ),
+    );
   }
 }
