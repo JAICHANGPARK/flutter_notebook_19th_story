@@ -14,6 +14,7 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
         elevation: 0,
         title: Text("Invest"),
         actions: [
