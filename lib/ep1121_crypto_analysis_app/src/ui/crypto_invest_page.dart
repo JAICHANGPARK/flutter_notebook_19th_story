@@ -24,22 +24,22 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
             icon: Icon(Icons.tune),
           ),
         ],
-        leading: IconButton(onPressed: (){},
-        icon: Icon(Icons.arrow_back_ios),),
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.arrow_back_ios),
+        ),
       ),
-
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
             Expanded(child: Placeholder()),
             Container(
-              height: 72,
-
-              decoration: BoxDecoration(
-                color: Colors.black,
-              ),
-            )
+                height: 84,
+                decoration: ShapeDecoration(
+                  shape: StadiumBorder(),
+                  color: Colors.black,
+                ))
           ],
         ),
       ),
