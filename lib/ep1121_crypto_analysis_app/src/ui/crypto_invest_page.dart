@@ -47,6 +47,9 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
                     ],
                   ),
                   Expanded(child: Placeholder()),
+                  const SizedBox(
+                    height: 16,
+                  ),
                   Container(
                     height: 72,
                     decoration: BoxDecoration(
