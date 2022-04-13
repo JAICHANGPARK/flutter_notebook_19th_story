@@ -2,7 +2,18 @@
 
 ## UI Design
 
-### EP1117-
+
+### EP1121
+
+- Crypto analysis mobile app
+- by Taras Migulko
+- https://dribbble.com/shots/17981674-Crypto-analysis-mobile-app
+
+<img
+src="https://cdn.dribbble.com/users/1998175/screenshots/17981674/media/ad5b6ef50ec0425e1acf42cca739b16e.jpg?compress=1&resize=1200x900&vertical=top"
+width="400px"/>
+
+### EP1117-1120
 
 - Vent – Staking Dashboard Responsive
 - by Stefan Tosic for bazen.
