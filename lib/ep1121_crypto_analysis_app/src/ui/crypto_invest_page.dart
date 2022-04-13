@@ -34,12 +34,26 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
         child: Column(
           children: [
             Expanded(child: Placeholder()),
+            SizedBox(
+              height: 16,
+            ),
             Container(
-                height: 84,
-                decoration: ShapeDecoration(
-                  shape: StadiumBorder(),
-                  color: Colors.black,
-                ))
+              height: 84,
+              decoration: ShapeDecoration(
+                shape: StadiumBorder(),
+                color: Colors.black,
+              ),
+              child: Center(
+                child: Text(
+                  "Trade Bitcoin",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
