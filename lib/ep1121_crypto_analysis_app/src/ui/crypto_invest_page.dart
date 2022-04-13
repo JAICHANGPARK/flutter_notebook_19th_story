@@ -27,6 +27,18 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
         leading: IconButton(onPressed: (){},
         icon: Icon(Icons.arrow_back_ios),),
       ),
+      body: Column(
+        children: [
+          Expanded(child: Placeholder()),
+          Container(
+            height: 72,
+
+            decoration: BoxDecoration(
+              color: Colors.black,
+            ),
+          )
+        ],
+      ),
     );
   }
 }
