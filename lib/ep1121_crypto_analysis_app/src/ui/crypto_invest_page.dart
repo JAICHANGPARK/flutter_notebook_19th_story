@@ -8,6 +8,9 @@ class CryptoInvestPage extends StatefulWidget {
 }
 
 class _CryptoInvestPageState extends State<CryptoInvestPage> {
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +69,30 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
                       ),
                     ],
                   ),
-                  const Expanded(child: const Placeholder()),
+                  const Expanded(child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: 16),
+                    child: const Placeholder(),
+                  )),
+                  TabBar(tabs: [
+                    Tab(
+                      text: "1h",
+                    ),
+                    Tab(
+                      text: "1d",
+                    ),
+                    Tab(
+                      text: "7d",
+                    ),
+                    Tab(
+                      text: "30d",
+                    ),
+                    Tab(
+                      text: "1y",
+                    ),
+                    Tab(
+                      text: "all",
+                    )
+                  ]),
                   const SizedBox(
                     height: 16,
                   ),
@@ -147,5 +173,12 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
         ),
       ),
     );
+  }
+  late TabController _tabController;
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 5, vsync: this);
+
   }
 }
