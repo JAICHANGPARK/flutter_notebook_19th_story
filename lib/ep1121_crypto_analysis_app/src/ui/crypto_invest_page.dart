@@ -73,6 +73,9 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                   )),
                   Divider(),
                   TabBar(
+                    labelColor: Colors.black,
+                      indicatorColor: Colors.teal,
+                      indicatorSize: TabBarIndicatorSize.label,
                       controller: _tabController,
                       tabs: const [
                     Tab(
