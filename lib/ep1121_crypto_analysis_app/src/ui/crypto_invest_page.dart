@@ -76,6 +76,7 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(8),
                     ),
+                    padding: EdgeInsets.symmetric(horizontal: 16),
                     child: Row(
                       children: [
                         CircleAvatar(
