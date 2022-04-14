@@ -82,17 +82,22 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
                         CircleAvatar(
                           backgroundColor: Colors.black,
                         ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text("ADA"),
-                            Text("Cardano"),
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("ADA"),
+                              SizedBox(height: 4,),
+                              Text("Cardano",),
+                            ],
+                          ),
                         ),
+                        Spacer(),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Text("\$0.08882934"),
                             Row(
