@@ -76,6 +76,24 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(8),
                     ),
+                    child: Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.black,
+                        ),
+                        Column(
+                          children: [
+                            Text("ADA"),
+                            Text("Cardano"),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            
+                          ],
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
