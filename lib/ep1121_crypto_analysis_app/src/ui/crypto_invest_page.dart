@@ -38,25 +38,35 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Bitcoin",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text("\$697.789",
+                  const Text(
+                    "\$697.789",
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
-                    ),),
+                    ),
+                  ),
                   Row(
-                    children: [
-                      Icon(Icons.arrow_drop_up),
-                      Text(" 17.75% this week"),
+                    children: const [
+                      Icon(
+                        Icons.arrow_drop_up,
+                        color: Colors.grey,
+                      ),
+                      Text(
+                        " 17.75% this week",
+                        style: TextStyle(
+                          color: Colors.grey,
+                        ),
+                      ),
                     ],
                   ),
-                  Expanded(child: Placeholder()),
+                  const Expanded(child: const Placeholder()),
                   const SizedBox(
                     height: 16,
                   ),
