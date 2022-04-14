@@ -71,7 +71,9 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                     padding: EdgeInsets.symmetric(vertical: 16),
                     child: const Placeholder(),
                   )),
-                  Divider(),
+                  Divider(
+                    color: Colors.grey,
+                  ),
                   TabBar(
                     labelColor: Colors.black,
                       indicatorColor: Colors.teal,
