@@ -71,6 +71,7 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                     padding: EdgeInsets.symmetric(vertical: 16),
                     child: const Placeholder(),
                   )),
+                  Divider(),
                   TabBar(
                       controller: _tabController,
                       tabs: const [
@@ -185,6 +186,6 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 5, vsync: this);
+    _tabController = TabController(length: 6, vsync: this);
   }
 }
