@@ -7,10 +7,7 @@ class CryptoInvestPage extends StatefulWidget {
   State<CryptoInvestPage> createState() => _CryptoInvestPageState();
 }
 
-class _CryptoInvestPageState extends State<CryptoInvestPage> {
-
-
-
+class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,11 +66,14 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
                       ),
                     ],
                   ),
-                  const Expanded(child: Padding(
+                  const Expanded(
+                      child: Padding(
                     padding: EdgeInsets.symmetric(vertical: 16),
                     child: const Placeholder(),
                   )),
-                  TabBar(tabs: [
+                  TabBar(
+                      controller: _tabController,
+                      tabs: const [
                     Tab(
                       text: "1h",
                     ),
@@ -115,10 +115,13 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text("ADA"),
-                              SizedBox(height: 4,),
-                              Text("Cardano",style: TextStyle(
-                                fontWeight: FontWeight.bold
-                              ),),
+                              SizedBox(
+                                height: 4,
+                              ),
+                              Text(
+                                "Cardano",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
                             ],
                           ),
                         ),
@@ -127,18 +130,20 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Text("\$0.08882934",style: TextStyle(
-                                fontWeight: FontWeight.bold
-                            ),),
+                            Text(
+                              "\$0.08882934",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
                             Row(
                               children: [
                                 Icon(
                                   Icons.arrow_drop_up,
                                   color: Colors.green,
                                 ),
-                                Text("11.83%",style: TextStyle(
-                                    fontWeight: FontWeight.bold
-                                ),)
+                                Text(
+                                  "11.83%",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                )
                               ],
                             )
                           ],
@@ -174,11 +179,12 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
       ),
     );
   }
+
   late TabController _tabController;
+
   @override
   void initState() {
     super.initState();
     _tabController = TabController(length: 5, vsync: this);
-
   }
 }
