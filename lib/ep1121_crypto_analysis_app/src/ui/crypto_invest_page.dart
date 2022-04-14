@@ -94,7 +94,16 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-
+                            Text("\$0.08882934"),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.arrow_drop_up,
+                                  color: Colors.green,
+                                ),
+                                Text("11.83%")
+                              ],
+                            )
                           ],
                         )
                       ],
