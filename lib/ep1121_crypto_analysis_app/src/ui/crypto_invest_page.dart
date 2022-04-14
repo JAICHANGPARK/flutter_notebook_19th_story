@@ -90,7 +90,9 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
                             children: [
                               Text("ADA"),
                               SizedBox(height: 4,),
-                              Text("Cardano",),
+                              Text("Cardano",style: TextStyle(
+                                fontWeight: FontWeight.bold
+                              ),),
                             ],
                           ),
                         ),
@@ -99,14 +101,18 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Text("\$0.08882934"),
+                            Text("\$0.08882934",style: TextStyle(
+                                fontWeight: FontWeight.bold
+                            ),),
                             Row(
                               children: [
                                 Icon(
                                   Icons.arrow_drop_up,
                                   color: Colors.green,
                                 ),
-                                Text("11.83%")
+                                Text("11.83%",style: TextStyle(
+                                    fontWeight: FontWeight.bold
+                                ),)
                               ],
                             )
                           ],
