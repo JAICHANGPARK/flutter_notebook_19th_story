@@ -82,14 +82,18 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> {
                           backgroundColor: Colors.black,
                         ),
                         Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text("ADA"),
                             Text("Cardano"),
                           ],
                         ),
                         Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            
+
                           ],
                         )
                       ],
