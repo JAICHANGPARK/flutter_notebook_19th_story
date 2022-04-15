@@ -69,17 +69,19 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                   ),
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsets.symmetric(vertical: 16),
+                      padding: const EdgeInsets.symmetric(vertical: 16),
                       child: LineChart(
                         LineChartData(
                           lineBarsData: [
-                            LineChartBarData()
+                            LineChartBarData(
+
+                            )
                           ]
                         )
                       ),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     color: Colors.grey,
                   ),
                   TabBar(
@@ -116,10 +118,10 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Row(
                       children: [
-                        CircleAvatar(
+                        const CircleAvatar(
                           backgroundColor: Colors.black,
                         ),
                         Padding(
@@ -128,35 +130,35 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("ADA"),
-                              SizedBox(
+                              const Text("ADA"),
+                              const SizedBox(
                                 height: 4,
                               ),
-                              Text(
+                              const Text(
                                 "Cardano",
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                             ],
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Text(
+                            const Text(
                               "\$0.08882934",
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: const TextStyle(fontWeight: FontWeight.bold),
                             ),
                             Row(
                               children: [
-                                Icon(
+                                const Icon(
                                   Icons.arrow_drop_up,
                                   color: Colors.green,
                                 ),
-                                Text(
+                                const Text(
                                   "11.83%",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                  style: const TextStyle(fontWeight: FontWeight.bold),
                                 )
                               ],
                             )
