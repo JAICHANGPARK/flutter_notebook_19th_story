@@ -85,6 +85,15 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                           gridData: FlGridData(
                             show: true,
                             drawVerticalLine: false,
+                            getDrawingHorizontalLine: (v){
+                              return FlLine(
+                                color: Colors.grey,
+                                strokeWidth: 1
+                              );
+
+                            }
+                            ,
+                            horizontalInterval: 0.5
                           ),
                           maxY: 43,
                           minY: 39.0,
