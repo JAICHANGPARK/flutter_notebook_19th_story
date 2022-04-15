@@ -78,11 +78,14 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                               color: Colors.green,
                               dotData: FlDotData(
                                 show: false,
-
                               ),
                               barWidth: 5,
                             ),
                           ],
+                          gridData: FlGridData(
+                            show: true,
+                            drawVerticalLine: false,
+                          ),
                           maxY: 43,
                           minY: 39.0,
                         ),
