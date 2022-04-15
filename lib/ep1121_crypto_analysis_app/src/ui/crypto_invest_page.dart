@@ -41,7 +41,7 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                 children: [
                   const Text(
                     "Bitcoin",
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
@@ -74,10 +74,10 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                         LineChartData(
                           lineBarsData: [
                             LineChartBarData(
-
-                            )
-                          ]
-                        )
+                              spots: _lineData
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -129,12 +129,12 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text("ADA"),
-                              const SizedBox(
+                            children: const [
+                              Text("ADA"),
+                              SizedBox(
                                 height: 4,
                               ),
-                              const Text(
+                              Text(
                                 "Cardano",
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
@@ -148,17 +148,17 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                           children: [
                             const Text(
                               "\$0.08882934",
-                              style: const TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             Row(
-                              children: [
-                                const Icon(
+                              children: const [
+                                Icon(
                                   Icons.arrow_drop_up,
                                   color: Colors.green,
                                 ),
-                                const Text(
+                                Text(
                                   "11.83%",
-                                  style: const TextStyle(fontWeight: FontWeight.bold),
+                                  style: TextStyle(fontWeight: FontWeight.bold),
                                 )
                               ],
                             )
@@ -197,6 +197,17 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
   }
 
   late TabController _tabController;
+
+  List<FlSpot> _lineData = [
+    FlSpot(0.0, 41.0),
+    FlSpot(1.0, 41.8),
+    FlSpot(2.0, 40.5),
+    FlSpot(3.0, 42.3),
+    FlSpot(4.0, 42.0),
+    FlSpot(5.0, 42.4),
+    FlSpot(5.0, 40.2),
+    FlSpot(5.0, 42.1),
+  ];
 
   @override
   void initState() {
