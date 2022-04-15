@@ -1,3 +1,4 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
 class CryptoInvestPage extends StatefulWidget {
@@ -66,39 +67,40 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                       ),
                     ],
                   ),
-                  const Expanded(
-                      child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 16),
-                    child: const Placeholder(),
-                  )),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(vertical: 16),
+                      child: LineChart(),
+                    ),
+                  ),
                   Divider(
                     color: Colors.grey,
                   ),
                   TabBar(
-                    labelColor: Colors.black,
+                      labelColor: Colors.black,
                       indicatorColor: Colors.teal,
                       indicatorSize: TabBarIndicatorSize.label,
                       controller: _tabController,
                       tabs: const [
-                    Tab(
-                      text: "1h",
-                    ),
-                    Tab(
-                      text: "1d",
-                    ),
-                    Tab(
-                      text: "7d",
-                    ),
-                    Tab(
-                      text: "30d",
-                    ),
-                    Tab(
-                      text: "1y",
-                    ),
-                    Tab(
-                      text: "all",
-                    )
-                  ]),
+                        Tab(
+                          text: "1h",
+                        ),
+                        Tab(
+                          text: "1d",
+                        ),
+                        Tab(
+                          text: "7d",
+                        ),
+                        Tab(
+                          text: "30d",
+                        ),
+                        Tab(
+                          text: "1y",
+                        ),
+                        Tab(
+                          text: "all",
+                        )
+                      ]),
                   const SizedBox(
                     height: 16,
                   ),
