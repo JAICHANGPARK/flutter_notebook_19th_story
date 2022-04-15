@@ -74,9 +74,17 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                         LineChartData(
                           lineBarsData: [
                             LineChartBarData(
-                              spots: _lineData
+                              spots: _lineData,
+                              color: Colors.green,
+                              dotData: FlDotData(
+                                show: false,
+
+                              ),
+                              barWidth: 5,
                             ),
                           ],
+                          maxY: 43,
+                          minY: 39.0,
                         ),
                       ),
                     ),
@@ -205,8 +213,8 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
     FlSpot(3.0, 42.3),
     FlSpot(4.0, 42.0),
     FlSpot(5.0, 42.4),
-    FlSpot(5.0, 40.2),
-    FlSpot(5.0, 42.1),
+    FlSpot(6.0, 40.2),
+    FlSpot(7.0, 42.1),
   ];
 
   @override
