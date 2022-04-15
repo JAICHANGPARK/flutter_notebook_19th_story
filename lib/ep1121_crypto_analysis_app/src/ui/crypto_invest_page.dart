@@ -70,7 +70,13 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                   Expanded(
                     child: Padding(
                       padding: EdgeInsets.symmetric(vertical: 16),
-                      child: LineChart(),
+                      child: LineChart(
+                        LineChartData(
+                          lineBarsData: [
+                            LineChartBarData()
+                          ]
+                        )
+                      ),
                     ),
                   ),
                   Divider(
