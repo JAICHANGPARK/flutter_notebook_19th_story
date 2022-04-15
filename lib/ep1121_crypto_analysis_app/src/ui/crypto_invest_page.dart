@@ -86,9 +86,12 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                             show: true,
                             drawVerticalLine: false,
                             getDrawingHorizontalLine: (v) {
-                              return FlLine(color: Colors.grey, strokeWidth: 1);
+                              return FlLine(
+                                color: Colors.grey[400],
+                                strokeWidth: 1,
+                              );
                             },
-                            horizontalInterval: 0.5,
+                            horizontalInterval: 1,
                           ),
                           titlesData: FlTitlesData(
                             bottomTitles: AxisTitles(),
