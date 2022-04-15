@@ -91,7 +91,7 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                                 strokeWidth: 1,
                               );
                             },
-                            horizontalInterval: 1,
+                            horizontalInterval: 0.8,
                           ),
                           titlesData: FlTitlesData(
                             bottomTitles: AxisTitles(),
@@ -99,8 +99,34 @@ class _CryptoInvestPageState extends State<CryptoInvestPage> with SingleTickerPr
                             topTitles: AxisTitles(
                               // axisNameSize: 0,
                               sideTitles: SideTitles(
-                                reservedSize: 64,
-                              ),
+                                  reservedSize: 64,
+                                  showTitles: true,
+                                  getTitlesWidget: (v, _) {
+                                    if(v == 0.0){
+                                      return Text("7:30");
+                                    }
+                                    else if(v == 1.0){
+                                      return Text("1:40");
+                                    }
+                                    else if(v == 2.0){
+                                      return Text("6:40");
+                                    }
+                                    else if(v == 3.0){
+                                      return Text("8:30");
+                                    }
+                                    else if(v == 4.0){
+                                      return Text("10:40");
+                                    }
+                                    else if(v == 5.0){
+                                      return Text("10:40");
+                                    }
+                                    else if(v == 6.0){
+                                      return Text("10:40");
+                                    }
+                                    else{
+                                      return Text("??:??");
+                                    }
+                                  }),
                             ),
                           ),
                           borderData: FlBorderData(
