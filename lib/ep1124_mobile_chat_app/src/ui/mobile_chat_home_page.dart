@@ -20,11 +20,24 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
             _bottomTabIndex = idx;
           });
         },
-        items: [
-          const BottomNavigationBarItem(icon: const Icon(Icons.send), label: "Messages"),
-          const BottomNavigationBarItem(icon: const Icon(Icons.call), label: "Call"),
-          const BottomNavigationBarItem(icon: const Icon(Icons.settings), label: "Settings"),
+        items:const [
+           BottomNavigationBarItem(icon:  Icon(Icons.send), label: "Messages"),
+           BottomNavigationBarItem(icon:  Icon(Icons.call), label: "Call"),
+           BottomNavigationBarItem(icon:  Icon(Icons.settings), label: "Settings"),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+
+        backgroundColor: Colors.black,
+        onPressed: () {  },
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(4)
+          ),
+          child: Icon(Icons.edit, color: Colors.black,),
+        ),
+
       ),
     );
   }
