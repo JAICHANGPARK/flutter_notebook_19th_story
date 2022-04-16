@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class MobileChatHomePage extends StatefulWidget {
@@ -12,6 +10,15 @@ class MobileChatHomePage extends StatefulWidget {
 class _MobileChatHomePageState extends State<MobileChatHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.black,
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.send), label: "Messages"),
+          BottomNavigationBarItem(icon: Icon(Icons.call), label: "Call"),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Settings"),
+        ],
+      ),
+    );
   }
 }
