@@ -17,15 +17,22 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
       body: Stack(
         children: [
           Positioned(
+            left: 4,
+            right: 4,
+            bottom: 0,
             child: Container(
               height: MediaQuery.of(context).size.height / 2,
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(topRight: Radius.circular(16), topLeft: Radius.circular(16))),
-              padding: EdgeInsets.all(16),
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(16),
+                  topLeft: Radius.circular(16),
+                ),
+              ),
+              padding: const EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text(
                     "Messages",
                     style: TextStyle(
@@ -35,9 +42,6 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                 ],
               ),
             ),
-            left: 4,
-            right: 4,
-            bottom: 0,
           )
         ],
       ),
@@ -59,7 +63,7 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
         onPressed: () {},
         child: Container(
           decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(4)),
-          child: Icon(
+          child: const Icon(
             Icons.edit,
             color: Colors.black,
           ),
