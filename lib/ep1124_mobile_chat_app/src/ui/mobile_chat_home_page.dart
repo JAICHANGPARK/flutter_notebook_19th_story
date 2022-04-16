@@ -13,6 +13,26 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
+
+      body: Stack(
+        children: [
+          Positioned(child: Container(
+            height: MediaQuery.of(context).size.height / 2 ,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(16),
+                topLeft: Radius.circular(16)
+              )
+            ),
+          ),
+          left: 4,
+            right: 4,
+            bottom: 0,
+          )
+        ],
+      ),
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _bottomTabIndex,
         onTap: (idx){
