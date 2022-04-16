@@ -14,49 +14,116 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Stack(
-        children: [
-          Positioned(
-            left: 4,
-            right: 4,
-            bottom: 0,
-            child: Container(
-              height: MediaQuery.of(context).size.height / 2,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(16),
-                  topLeft: Radius.circular(16),
-                ),
-              ),
-              padding: const EdgeInsets.all(16),
+      body: SafeArea(
+        child: Stack(
+          children: [
+            Positioned(
+              left: 0,
+              top: 0,
+              right: 0,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text(
-                    "Messages",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                children: [
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: 16),
-                    child: SizedBox(
-                      height: 64,
-                      child: ColoredBox(
-                        color: Colors.red,
-                        child: Center(),
-                      ),
+                    padding: const EdgeInsets.all(16),
+                    child: Row(
+                      children: [
+                        Text.rich(
+                          TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "Wang",
+                                style: TextStyle(
+                                  color: Colors.blueAccent,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              TextSpan(
+                                text: "saff",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Spacer(),
+                        Text.rich(
+                          TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "Hello, ",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              TextSpan(
+                                text: "Dreamwalker",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(width: 8,),
+                        CircleAvatar(
+                          radius: 14,
+                        )
+                      ],
                     ),
-                  ),
-                  Expanded(
-                    child: Placeholder(),
-                  ),
+                  )
                 ],
               ),
             ),
-          )
-        ],
+            Positioned(
+              left: 4,
+              right: 4,
+              bottom: 0,
+              child: Container(
+                height: MediaQuery.of(context).size.height / 2,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(16),
+                    topLeft: Radius.circular(16),
+                  ),
+                ),
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text(
+                      "Messages",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 16),
+                      child: SizedBox(
+                        height: 64,
+                        child: ColoredBox(
+                          color: Colors.red,
+                          child: Center(),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Placeholder(),
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _bottomTabIndex,
