@@ -8,15 +8,22 @@ class MobileChatHomePage extends StatefulWidget {
 }
 
 class _MobileChatHomePageState extends State<MobileChatHomePage> {
+  int _bottomTabIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _bottomTabIndex,
+        onTap: (idx){
+          setState((){
+            _bottomTabIndex = idx;
+          });
+        },
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.send), label: "Messages"),
-          BottomNavigationBarItem(icon: Icon(Icons.call), label: "Call"),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Settings"),
+          const BottomNavigationBarItem(icon: const Icon(Icons.send), label: "Messages"),
+          const BottomNavigationBarItem(icon: const Icon(Icons.call), label: "Call"),
+          const BottomNavigationBarItem(icon: const Icon(Icons.settings), label: "Settings"),
         ],
       ),
     );
