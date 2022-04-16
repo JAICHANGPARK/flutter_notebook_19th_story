@@ -72,11 +72,30 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                             ],
                           ),
                         ),
-                        SizedBox(width: 8,),
+                        SizedBox(
+                          width: 8,
+                        ),
                         CircleAvatar(
                           radius: 14,
-                        )
+                        ),
                       ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                    child: Container(
+                      height: 64,
+                      color: Colors.pink,
+                    ),
+                  ),
+                  Container(
+                    height: 160,
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.15),
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(16),
+                        topLeft: Radius.circular(16),
+                      ),
                     ),
                   )
                 ],
