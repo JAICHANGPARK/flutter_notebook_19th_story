@@ -2,8 +2,17 @@
 
 ## UI Design
 
+### EP1124
 
-### EP1121
+- Wangsaff - Mobile Chat App
+- by Wildan Hidayattulloh
+- https://dribbble.com/shots/18026290-Wangsaff-Mobile-Chat-App/attachments/13212229?mode=media
+
+<img
+src="https://cdn.dribbble.com/users/4610323/screenshots/18026290/media/b272d601b983aab53fe780e7e8e6bb29.jpg"
+width="400px"/>
+
+### EP1121-1123
 
 - Crypto analysis mobile app
 - by Taras Migulko
