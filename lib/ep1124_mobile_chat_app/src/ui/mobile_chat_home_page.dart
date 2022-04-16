@@ -38,7 +38,20 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
-                  )
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 16),
+                    child: SizedBox(
+                      height: 64,
+                      child: ColoredBox(
+                        color: Colors.red,
+                        child: Center(),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Placeholder(),
+                  ),
                 ],
               ),
             ),
