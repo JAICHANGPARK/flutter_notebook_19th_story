@@ -203,7 +203,7 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 16),
                       child: SizedBox(
-                        height: 48,
+                        height: 42,
                         child: Row(
                           children: [
                             Expanded(
@@ -222,7 +222,11 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                                 ),
                               ),
                             ),
-                            Expanded(child: Placeholder()),
+                            Expanded(
+                                child: TextButton(
+                              onPressed: () {},
+                              child: Text("Group"),
+                            )),
                           ],
                         ),
                       ),
