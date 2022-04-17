@@ -193,7 +193,7 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                 padding: const EdgeInsets.all(16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
                       "Messages",
                       style: TextStyle(
@@ -203,10 +203,27 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 16),
                       child: SizedBox(
-                        height: 64,
-                        child: ColoredBox(
-                          color: Colors.red,
-                          child: Center(),
+                        height: 48,
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.blueAccent,
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    "Personal",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Expanded(child: Placeholder()),
+                          ],
                         ),
                       ),
                     ),
