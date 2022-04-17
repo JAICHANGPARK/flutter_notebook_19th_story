@@ -232,7 +232,19 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                       ),
                     ),
                     Expanded(
-                      child: Placeholder(),
+                      child: ListView.separated(
+                        separatorBuilder: (context, _) => Divider(
+                          color: Colors.grey,
+                        ),
+                        itemBuilder: (context, index) {
+                          return Row(
+                            children: [
+                              CircleAvatar(),
+                            ],
+                          );
+                        },
+                        itemCount: 8,
+                      ),
                     ),
                   ],
                 ),
