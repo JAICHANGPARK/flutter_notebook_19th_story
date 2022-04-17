@@ -89,8 +89,9 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                         color: Colors.white.withOpacity(0.1),
                         borderRadius: BorderRadius.circular(4),
                       ),
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: const TextField(
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           icon: Icon(
                             Icons.search,
                             color: Colors.grey,
@@ -99,6 +100,7 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                           hintStyle: TextStyle(
                             color: Colors.grey,
                           ),
+                          border: InputBorder.none,
                         ),
                       ),
                     ),
@@ -108,7 +110,7 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.15),
                       borderRadius: const BorderRadius.only(
-                        topRight: const Radius.circular(16),
+                        topRight: Radius.circular(16),
                         topLeft: Radius.circular(16),
                       ),
                     ),
