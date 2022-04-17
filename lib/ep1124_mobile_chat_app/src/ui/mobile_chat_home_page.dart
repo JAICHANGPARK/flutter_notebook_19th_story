@@ -115,7 +115,7 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                         topLeft: Radius.circular(16),
                       ),
                     ),
-                    padding: EdgeInsets.only(top: 16, left: 16),
+                    padding: EdgeInsets.only(top: 16, left: 16, bottom: 16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
