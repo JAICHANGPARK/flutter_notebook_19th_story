@@ -145,13 +145,13 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                             itemBuilder: (context, index) {
                               return Row(
                                 children: [
-                                  CircleAvatar(),
+                                  const CircleAvatar(),
                                   Padding(
                                     padding: const EdgeInsets.only(left: 8),
                                     child: Column(
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
+                                      children: const [
                                         Text(
                                           "Best friend",
                                           style: TextStyle(color: Colors.white, fontSize: 12),
@@ -194,14 +194,14 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "Messages",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 16),
+                      padding: const EdgeInsets.symmetric(vertical: 16),
                       child: SizedBox(
                         height: 42,
                         child: Row(
@@ -212,7 +212,7 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                                   color: Colors.blueAccent,
                                   borderRadius: BorderRadius.circular(4),
                                 ),
-                                child: Center(
+                                child: const Center(
                                   child: Text(
                                     "Personal",
                                     style: TextStyle(
@@ -225,7 +225,7 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                             Expanded(
                                 child: TextButton(
                               onPressed: () {},
-                              child: Text("Group"),
+                              child: const Text("Group"),
                             )),
                           ],
                         ),
@@ -233,12 +233,12 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                     ),
                     Expanded(
                       child: ListView.separated(
-                        separatorBuilder: (context, _) => Divider(
+                        separatorBuilder: (context, _) => const Divider(
                           color: Colors.grey,
                         ),
                         itemBuilder: (context, index) {
                           return Row(
-                            children: [
+                            children: const [
                               CircleAvatar(),
                             ],
                           );
