@@ -85,7 +85,16 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                     padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                     child: Container(
                       height: 64,
-                      color: Colors.pink,
+
+                      decoration: BoxDecoration(
+                        color: Colors.pink,
+                      ),
+
+                      child: Row(
+                        children: [
+
+                        ],
+                      ),
                     ),
                   ),
                   Container(
