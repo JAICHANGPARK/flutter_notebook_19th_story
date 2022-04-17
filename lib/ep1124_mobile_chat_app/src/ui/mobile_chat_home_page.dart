@@ -120,6 +120,7 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                         Text("Status"),
                         Expanded(
                             child: GridView.builder(
+                              scrollDirection: Axis.horizontal,
                                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,
                                 mainAxisSpacing: 8,
                                 crossAxisSpacing: 8),
