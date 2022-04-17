@@ -87,7 +87,8 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                       height: 64,
 
                       decoration: BoxDecoration(
-                        color: Colors.pink,
+                        color: Colors.white.withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(4)
                       ),
 
                       child: Row(
