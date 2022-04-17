@@ -115,9 +115,13 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                         topLeft: Radius.circular(16),
                       ),
                     ),
+                    padding: EdgeInsets.only(top: 16, left: 16),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Status"),
+                        Text("Status", style: TextStyle(
+                          color: Colors.white
+                        ),),
                         Expanded(
                             child: GridView.builder(
                               scrollDirection: Axis.horizontal,
