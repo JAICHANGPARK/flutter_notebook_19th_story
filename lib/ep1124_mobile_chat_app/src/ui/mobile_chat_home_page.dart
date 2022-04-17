@@ -103,6 +103,9 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                           ),
                           border: InputBorder.none,
                         ),
+                        style: TextStyle(
+                          color: Colors.grey,
+                        ),
                       ),
                     ),
                   ),
@@ -134,10 +137,10 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                             child: GridView.builder(
                                 scrollDirection: Axis.horizontal,
                                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2,
-                                  mainAxisSpacing: 8,
-                                  crossAxisSpacing: 8,
-                                ),
+                                    crossAxisCount: 2,
+                                    mainAxisSpacing: 8,
+                                    crossAxisSpacing: 8,
+                                    childAspectRatio: 6 / 22),
                                 itemBuilder: (context, index) {
                                   return Container(
                                     color: Colors.blue,
