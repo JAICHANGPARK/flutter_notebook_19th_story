@@ -134,18 +134,37 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                           height: 8,
                         ),
                         Expanded(
-                            child: GridView.builder(
-                                scrollDirection: Axis.horizontal,
-                                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 2,
-                                    mainAxisSpacing: 8,
-                                    crossAxisSpacing: 8,
-                                    childAspectRatio: 6 / 22),
-                                itemBuilder: (context, index) {
-                                  return Container(
-                                    color: Colors.blue,
-                                  );
-                                }))
+                          child: GridView.builder(
+                            scrollDirection: Axis.horizontal,
+                            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              mainAxisSpacing: 8,
+                              crossAxisSpacing: 8,
+                              childAspectRatio: 6 / 22,
+                            ),
+                            itemBuilder: (context, index) {
+                              return Container(
+                                color: Colors.blue,
+                                child: Row(
+                                  children: [
+                                    CircleAvatar(),
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text("Best friend", style: TextStyle(
+                                          color: Colors.white,
+                                        ),),
+                                        SizedBox(height: 8,),
+                                        Text("1 minutes ago")
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                        )
                       ],
                     ),
                   )
