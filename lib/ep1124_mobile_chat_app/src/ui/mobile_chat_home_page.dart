@@ -84,20 +84,24 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                     child: Container(
-                        height: 54,
-                        decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.1),
-                          borderRadius: BorderRadius.circular(4),
-                        ),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            icon: Icon(
-                              Icons.search,
-                              color: Colors.white,
-                            ),
-                            hintText: "search ..",
+                      height: 54,
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: const TextField(
+                        decoration: const InputDecoration(
+                          icon: Icon(
+                            Icons.search,
+                            color: Colors.grey,
                           ),
-                        )),
+                          hintText: "search ..",
+                          hintStyle: TextStyle(
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                   Container(
                     height: 160,
