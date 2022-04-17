@@ -119,15 +119,25 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Status", style: TextStyle(
-                          color: Colors.white
-                        ),),
+                        Text(
+                          "Status",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
                         Expanded(
                             child: GridView.builder(
-                              scrollDirection: Axis.horizontal,
-                                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,
-                                mainAxisSpacing: 8,
-                                crossAxisSpacing: 8),
+                                scrollDirection: Axis.horizontal,
+                                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 2,
+                                  mainAxisSpacing: 8,
+                                  crossAxisSpacing: 8,
+                                ),
                                 itemBuilder: (context, index) {
                                   return Container(
                                     color: Colors.blue,
