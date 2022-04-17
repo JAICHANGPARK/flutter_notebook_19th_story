@@ -27,7 +27,7 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                   Padding(
                     padding: const EdgeInsets.all(16),
                     child: Row(
-                      children: [
+                      children: const [
                         Text.rich(
                           TextSpan(
                             children: [
@@ -92,8 +92,8 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                     height: 160,
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.15),
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(16),
+                      borderRadius: const BorderRadius.only(
+                        topRight: const Radius.circular(16),
                         topLeft: Radius.circular(16),
                       ),
                     ),
