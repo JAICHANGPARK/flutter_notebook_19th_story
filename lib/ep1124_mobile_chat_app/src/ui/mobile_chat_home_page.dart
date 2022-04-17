@@ -115,11 +115,11 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                         topLeft: Radius.circular(16),
                       ),
                     ),
-                    padding: EdgeInsets.only(top: 16, left: 16, bottom: 16),
+                    padding: const EdgeInsets.only(top: 16, left: 16, bottom: 16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "Status",
                           style: TextStyle(
                             color: Colors.white,
@@ -127,13 +127,13 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Expanded(
                             child: GridView.builder(
                                 scrollDirection: Axis.horizontal,
-                                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                                   crossAxisCount: 2,
                                   mainAxisSpacing: 8,
                                   crossAxisSpacing: 8,
