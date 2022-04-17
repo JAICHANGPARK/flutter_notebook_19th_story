@@ -143,24 +143,30 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                               childAspectRatio: 6 / 22,
                             ),
                             itemBuilder: (context, index) {
-                              return Container(
-                                color: Colors.blue,
-                                child: Row(
-                                  children: [
-                                    CircleAvatar(),
-                                    Column(
+                              return Row(
+                                children: [
+                                  CircleAvatar(),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 8),
+                                    child: Column(
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Text("Best friend", style: TextStyle(
-                                          color: Colors.white,
-                                        ),),
-                                        SizedBox(height: 8,),
-                                        Text("1 minutes ago")
+                                        Text(
+                                          "Best friend",
+                                          style: TextStyle(color: Colors.white, fontSize: 12),
+                                        ),
+                                        SizedBox(
+                                          height: 8,
+                                        ),
+                                        Text(
+                                          "1 minutes ago",
+                                          style: TextStyle(color: Colors.grey, fontSize: 12),
+                                        )
                                       ],
-                                    )
-                                  ],
-                                ),
+                                    ),
+                                  )
+                                ],
                               );
                             },
                           ),
