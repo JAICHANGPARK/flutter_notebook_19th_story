@@ -238,8 +238,17 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                         ),
                         itemBuilder: (context, index) {
                           return Row(
-                            children: const [
-                              CircleAvatar(),
+                            children:  [
+                              Container(
+                                height: 48,
+                                width: 48,
+                                child: Stack(
+                                  children: [
+                                    
+                                  ],
+                                ),
+                              ),
+
                             ],
                           );
                         },
