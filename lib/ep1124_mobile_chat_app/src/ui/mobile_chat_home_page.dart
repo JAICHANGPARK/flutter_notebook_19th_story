@@ -233,6 +233,7 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                     ),
                     Expanded(
                       child: ListView.separated(
+                        itemCount: 8,
                         separatorBuilder: (context, _) => const Divider(
                           color: Colors.grey,
                         ),
@@ -244,12 +245,12 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                                 width: 48,
                                 child: Stack(
                                   children: [
-                                    Positioned(
+                                    const Positioned(
                                       left: 0,
                                       top: 0,
                                       right: 0,
                                       bottom: 0,
-                                      child: CircleAvatar(),
+                                      child: const CircleAvatar(),
                                     ),
                                     Positioned(
                                       right: 0,
@@ -266,33 +267,72 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                                   ],
                                 ),
                               ),
-                              Column(
-                                children: [
-                                  Row(
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                                  child: Column(
                                     children: [
-                                      Text("Dreamwalker"),
-                                      Icon(
-                                        Icons.notifications_off,
-                                        size: 14,
+                                      Row(
+                                        children: const [
+                                          Text(
+                                            "Dreamwalker",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Spacer(),
+                                          Icon(
+                                            Icons.notifications_off,
+                                            size: 16,
+                                          ),
+                                          SizedBox(
+                                            width: 12,
+                                          ),
+                                          Icon(
+                                            Icons.bookmark_border,
+                                            size: 16,
+                                          ),
+                                          SizedBox(
+                                            width: 12,
+                                          ),
+                                          Text(
+                                            "05:00 PM",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                            ),
+                                          )
+                                        ],
                                       ),
-                                      Icon(
-                                        Icons.bookmark_border,
-                                        size: 14,
+                                      const SizedBox(
+                                        height: 8,
                                       ),
-                                      Text(
-                                        "05:00 PM",
-                                        style: TextStyle(
-                                          color: Colors.grey,
-                                        ),
+                                      Row(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: const [
+                                          Expanded(
+                                            child: Text(
+                                              "Lorem ipsum dolor sit amet, consectetur adipisicing elit,",
+                                              style: TextStyle(
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(width: 16,),
+                                          CircleAvatar(
+                                            radius: 10,
+                                            backgroundColor: Colors.blueAccent,
+                                            child: Text("1"),
+                                            foregroundColor: Colors.white,
+                                          )
+                                        ],
                                       )
                                     ],
-                                  )
-                                ],
-                              )
+                                  ),
+                                ),
+                              ),
                             ],
                           );
                         },
-                        itemCount: 8,
                       ),
                     ),
                   ],
