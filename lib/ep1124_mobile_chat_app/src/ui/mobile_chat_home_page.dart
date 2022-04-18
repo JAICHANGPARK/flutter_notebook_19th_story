@@ -238,17 +238,36 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                         ),
                         itemBuilder: (context, index) {
                           return Row(
-                            children:  [
+                            children: [
                               Container(
                                 height: 48,
                                 width: 48,
                                 child: Stack(
                                   children: [
-                                    
+                                    Positioned(
+                                      left: 0,
+                                      top: 0,
+                                      right: 0,
+                                      bottom: 0,
+                                      child: CircleAvatar(),
+                                    ),
+                                    Positioned(
+                                      right: 0,
+                                      bottom: 0,
+                                      child: Container(
+                                        height: 8,
+                                        width: 8,
+                                        decoration: BoxDecoration(
+                                          color: Colors.green,
+
+                                          shape: BoxShape.circle
+                                        ),
+                                      ),
+
+                                    )
                                   ],
                                 ),
                               ),
-
                             ],
                           );
                         },
