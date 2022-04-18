@@ -258,16 +258,37 @@ class _MobileChatHomePageState extends State<MobileChatHomePage> {
                                         height: 16,
                                         width: 16,
                                         decoration: BoxDecoration(
-                                          color: Colors.green,
-
-                                          shape: BoxShape.circle
-                                        ),
+                                            color: Colors.green,
+                                            shape: BoxShape.circle,
+                                            border: Border.all(color: Colors.white)),
                                       ),
-
                                     )
                                   ],
                                 ),
                               ),
+                              Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text("Dreamwalker"),
+                                      Icon(
+                                        Icons.notifications_off,
+                                        size: 14,
+                                      ),
+                                      Icon(
+                                        Icons.bookmark_border,
+                                        size: 14,
+                                      ),
+                                      Text(
+                                        "05:00 PM",
+                                        style: TextStyle(
+                                          color: Colors.grey,
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              )
                             ],
                           );
                         },
