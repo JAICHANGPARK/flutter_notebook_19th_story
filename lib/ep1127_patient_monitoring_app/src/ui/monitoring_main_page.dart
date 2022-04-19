@@ -12,6 +12,15 @@ class MonitoringMainPage extends StatefulWidget {
 class _MonitoringMainPageState extends State<MonitoringMainPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+
+          ],
+        ),
+      ),
+    );
   }
 }
