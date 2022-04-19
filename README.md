@@ -2,7 +2,17 @@
 
 ## UI Design
 
-### EP1124
+### EP1127
+
+- Patient Monitoring App Blood Oxygen
+- by Masudur Rahman
+- https://dribbble.com/shots/18052849-Patient-Monitoring-App-Blood-Oxygen
+
+<img
+src="https://cdn.dribbble.com/userupload/2614283/file/original-ec2c12ff7dc1132cdb8b9e28b765fd04.png?filters:format(webp)?filters%3Aformat%28webp%29=&compress=1&resize=1200x900"
+width="400px"/>
+
+### EP1124-1126
 
 - Wangsaff - Mobile Chat App
 - by Wildan Hidayattulloh
