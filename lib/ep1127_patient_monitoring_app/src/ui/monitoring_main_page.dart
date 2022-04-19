@@ -33,13 +33,13 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                           ),
                         ),
                         SizedBox(
-                          height: 8,
+                          height: 4,
                         ),
                         Text(
                           "Dreamwalker",
                           style: TextStyle(
                             fontSize: 18,
-                            fontWeight: FontWeight.w800,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       ],
@@ -55,26 +55,29 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 16,
-                ),
-                Container(
-                  height: 54,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[100],
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      icon: Icon(CupertinoIcons.search),
-                      hintText: "Search",
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w300
-                      )
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  child: Container(
+                    height: 54,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[100],
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+
+                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        icon: Icon(CupertinoIcons.search),
+                        hintText: "Search",
+                        hintStyle: TextStyle(
+                          fontWeight: FontWeight.w300
+                        ),
+                        border: InputBorder.none
+                      ),
                     ),
                   ),
-                )
+                ),
+
               ],
             ),
           ),
