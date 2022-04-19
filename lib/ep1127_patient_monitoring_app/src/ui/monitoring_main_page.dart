@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MonitoringMainPage extends StatefulWidget {
@@ -60,8 +61,18 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                 Container(
                   height: 54,
                   decoration: BoxDecoration(
-                    color: Colors.grey[200],
+                    color: Colors.grey[100],
                     borderRadius: BorderRadius.circular(8),
+                  ),
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      icon: Icon(CupertinoIcons.search),
+                      hintText: "Search",
+                      hintStyle: TextStyle(
+                        fontWeight: FontWeight.w300
+                      )
+                    ),
                   ),
                 )
               ],
