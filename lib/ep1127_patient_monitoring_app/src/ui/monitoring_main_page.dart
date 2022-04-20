@@ -151,7 +151,6 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                               "7 min ago",
                                               style: TextStyle(
                                                 color: Colors.red,
-                                                fontSize: 16,
                                               ),
                                             ),
                                           ],
@@ -212,8 +211,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                             const Text(
                                               "7 min ago",
                                               style: TextStyle(
-                                                color: Colors.red,
-                                                fontSize: 16,
+                                                color: Color.fromRGBO(206, 185, 103, 1),
                                               ),
                                             ),
                                           ],
