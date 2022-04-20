@@ -300,6 +300,80 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                               ],
                             ),
                           ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8),
+                          child: Container(
+                            height: 140,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(
+                                color: Colors.grey[300]!,
+                              ),
+                            ),
+                            padding: const EdgeInsets.all(16),
+                            child: Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text("Weight"),
+                                    Icon(Icons.keyboard_arrow_right),
+                                  ],
+                                ),
+                                Expanded(
+                                  child: Row(
+                                    children: [
+                                      Expanded(
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              "08,11,20 - 01,02,21",
+                                              style: TextStyle(
+                                                color: Colors.grey[400],
+                                                fontWeight: FontWeight.normal,
+                                              ),
+                                            ),
+                                            const Spacer(),
+                                            const Text.rich(
+
+                                              TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: "85.2",
+                                                    style: TextStyle(
+                                                        color: Colors.cyanAccent,
+                                                        fontSize: 24
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "kg",
+                                                    style: TextStyle(
+                                                      color: Colors.cyanAccent,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            const Text(
+                                              "Today",
+                                              style: TextStyle(
+                                                color: Colors.blueAccent,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      const Expanded(
+                                        child: Placeholder(),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         )
                       ],
                     ),
