@@ -135,7 +135,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                             Text(
                                               "last 4 hours",
                                               style: TextStyle(
-                                                color: Colors.grey[400],
+                                                color: Colors.grey[600],
                                                 fontWeight: FontWeight.normal,
                                               ),
                                             ),
@@ -196,7 +196,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                             Text(
                                               "last 4 hours",
                                               style: TextStyle(
-                                                color: Colors.grey[400],
+                                                color: Colors.grey[600],
                                                 fontWeight: FontWeight.normal,
                                               ),
                                             ),
@@ -257,7 +257,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                             Text(
                                               "last 7 days",
                                               style: TextStyle(
-                                                color: Colors.grey[400],
+                                                color: Colors.grey[600],
                                                 fontWeight: FontWeight.normal,
                                               ),
                                             ),
@@ -331,7 +331,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                             Text(
                                               "08,11,20 - 01,02,21",
                                               style: TextStyle(
-                                                color: Colors.grey[400],
+                                                color: Colors.grey[600],
                                                 fontWeight: FontWeight.normal,
                                               ),
                                             ),
