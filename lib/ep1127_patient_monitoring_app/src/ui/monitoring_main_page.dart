@@ -101,18 +101,21 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
               ),
               Expanded(
                 child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 72,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.grey[300]!,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 16),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 140,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Colors.grey[300]!,
+                            ),
+                            borderRadius: BorderRadius.circular(8)
                           ),
-                          borderRadius: BorderRadius.circular(8)
-                        ),
-                      )
-                    ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
