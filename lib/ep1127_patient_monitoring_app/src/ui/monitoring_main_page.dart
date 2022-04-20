@@ -106,7 +106,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                     child: Column(
                       children: [
                         Container(
-                          height: 120,
+                          height: 140,
                           decoration: BoxDecoration(
                               border: Border.all(
                                 color: Colors.grey[300]!,
@@ -142,10 +142,11 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                           fontSize: 24,
                                         ),
                                       ),
-                                      Text("7 min ago",
+                                      Text(
+                                        "7 min ago",
                                         style: TextStyle(
                                           color: Colors.red,
-                                          fontSize: 24,
+                                          fontSize: 16,
                                         ),
                                       ),
                                     ],
