@@ -103,7 +103,13 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                          
+                      Container(
+                        height: 72,
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                          color: Colors.grey[300],
+                        )),
+                      )
                     ],
                   ),
                 ),
