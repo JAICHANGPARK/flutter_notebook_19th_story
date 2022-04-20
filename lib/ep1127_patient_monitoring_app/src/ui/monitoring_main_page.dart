@@ -106,9 +106,11 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                       Container(
                         height: 72,
                         decoration: BoxDecoration(
-                            border: Border.all(
-                          color: Colors.grey[300],
-                        )),
+                          border: Border.all(
+                            color: Colors.grey[300]!,
+                          ),
+                          borderRadius: BorderRadius.circular(8)
+                        ),
                       )
                     ],
                   ),
