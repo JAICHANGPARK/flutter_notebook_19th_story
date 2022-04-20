@@ -262,28 +262,30 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                               ),
                                             ),
                                             const Spacer(),
-                                            Text.rich(
+                                            const Text.rich(
+
                                               TextSpan(
                                                 children: [
                                                   TextSpan(
-                                                      text: "3,133",
-                                                      style: TextStyle(
-                                                        color: Colors.blueAccent,
-                                                      )),
+                                                    text: "3,133",
+                                                    style: TextStyle(
+                                                      color: Colors.blueAccent,
+                                                      fontSize: 24
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "Steps",
+                                                    style: TextStyle(
+                                                      color: Colors.blueAccent,
+                                                    ),
+                                                  ),
                                                 ],
                                               ),
                                             ),
-                                            // const Text(
-                                            //   "3,133",
-                                            //   style: TextStyle(
-                                            //     color: Color.fromRGBO(206, 185, 103, 1),
-                                            //     fontSize: 24,
-                                            //   ),
-                                            // ),
                                             const Text(
-                                              "7 min ago",
+                                              "Today",
                                               style: TextStyle(
-                                                color: Color.fromRGBO(206, 185, 103, 1),
+                                                color: Colors.blueAccent,
                                               ),
                                             ),
                                           ],
