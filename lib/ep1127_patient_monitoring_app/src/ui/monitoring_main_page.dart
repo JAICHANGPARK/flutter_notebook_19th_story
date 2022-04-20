@@ -127,9 +127,27 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Text("last 4 hours"),
-                                      Text("141/90"),
-                                      Text("7 min ago"),
+                                      Text(
+                                        "last 4 hours",
+                                        style: TextStyle(
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Spacer(),
+                                      Text(
+                                        "141/90",
+                                        style: TextStyle(
+                                          color: Colors.red,
+                                          fontSize: 24,
+                                        ),
+                                      ),
+                                      Text("7 min ago",
+                                        style: TextStyle(
+                                          color: Colors.red,
+                                          fontSize: 24,
+                                        ),
+                                      ),
                                     ],
                                   )
                                 ],
