@@ -172,17 +172,18 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                           child: Container(
                             height: 140,
                             decoration: BoxDecoration(
-                                border: Border.all(
-                                  color: Colors.grey[300]!,
-                                ),
-                                borderRadius: BorderRadius.circular(8)),
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(
+                                color: Colors.grey[300]!,
+                              ),
+                            ),
                             padding: const EdgeInsets.all(16),
                             child: Column(
                               children: [
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: const [
-                                    Text("Blood Pressure (bpm)"),
+                                    Text("Blood oxygen (spo2)"),
                                     Icon(Icons.keyboard_arrow_right),
                                   ],
                                 ),
@@ -202,9 +203,9 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                             ),
                                             const Spacer(),
                                             const Text(
-                                              "141/90",
+                                              "90/60",
                                               style: TextStyle(
-                                                color: Colors.red,
+                                                color: Color.fromRGBO(206, 185, 103, 1),
                                                 fontSize: 24,
                                               ),
                                             ),
