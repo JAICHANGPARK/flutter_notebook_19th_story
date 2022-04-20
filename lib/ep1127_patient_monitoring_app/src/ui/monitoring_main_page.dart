@@ -99,7 +99,15 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                   )
                 ],
               ),
-              const Expanded(child: Placeholder())
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
