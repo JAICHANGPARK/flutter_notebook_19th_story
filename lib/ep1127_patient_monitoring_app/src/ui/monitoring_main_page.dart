@@ -106,12 +106,22 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                     child: Column(
                       children: [
                         Container(
-                          height: 140,
+                          height: 120,
                           decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.grey[300]!,
-                            ),
-                            borderRadius: BorderRadius.circular(8)
+                              border: Border.all(
+                                color: Colors.grey[300]!,
+                              ),
+                              borderRadius: BorderRadius.circular(8)),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text("Blood Pressure (bpm)"),
+                                  Icon(Icons.keyboard_arrow_right),
+                                ],
+                              )
+                            ],
                           ),
                         )
                       ],
