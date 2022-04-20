@@ -105,62 +105,127 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                     padding: const EdgeInsets.only(top: 16),
                     child: Column(
                       children: [
-                        Container(
-                          height: 140,
-                          decoration: BoxDecoration(
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8),
+                          child: Container(
+                            height: 140,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
                               border: Border.all(
                                 color: Colors.grey[300]!,
                               ),
-                              borderRadius: BorderRadius.circular(8)),
-                          padding: EdgeInsets.all(16),
-                          child: Column(
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: const [
-                                  Text("Blood Pressure (bpm)"),
-                                  Icon(Icons.keyboard_arrow_right),
-                                ],
-                              ),
-                              Expanded(
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: const [
-                                          Text(
-                                            "last 4 hours",
-                                            style: TextStyle(
-                                              color: Colors.grey,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                          Spacer(),
-                                          Text(
-                                            "141/90",
-                                            style: TextStyle(
-                                              color: Colors.red,
-                                              fontSize: 24,
-                                            ),
-                                          ),
-                                          Text(
-                                            "7 min ago",
-                                            style: TextStyle(
-                                              color: Colors.red,
-                                              fontSize: 16,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Placeholder(),
-                                    ),
+                            ),
+                            padding: const EdgeInsets.all(16),
+                            child: Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text("Blood Pressure (bpm)"),
+                                    Icon(Icons.keyboard_arrow_right),
                                   ],
                                 ),
-                              ),
-                            ],
+                                Expanded(
+                                  child: Row(
+                                    children: [
+                                      Expanded(
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              "last 4 hours",
+                                              style: TextStyle(
+                                                color: Colors.grey[400],
+                                                fontWeight: FontWeight.normal,
+                                              ),
+                                            ),
+                                            const Spacer(),
+                                            const Text(
+                                              "141/90",
+                                              style: TextStyle(
+                                                color: Colors.red,
+                                                fontSize: 24,
+                                              ),
+                                            ),
+                                            const Text(
+                                              "7 min ago",
+                                              style: TextStyle(
+                                                color: Colors.red,
+                                                fontSize: 16,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      const Expanded(
+                                        child: Placeholder(),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8),
+                          child: Container(
+                            height: 140,
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.grey[300]!,
+                                ),
+                                borderRadius: BorderRadius.circular(8)),
+                            padding: const EdgeInsets.all(16),
+                            child: Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text("Blood Pressure (bpm)"),
+                                    Icon(Icons.keyboard_arrow_right),
+                                  ],
+                                ),
+                                Expanded(
+                                  child: Row(
+                                    children: [
+                                      Expanded(
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              "last 4 hours",
+                                              style: TextStyle(
+                                                color: Colors.grey[400],
+                                                fontWeight: FontWeight.normal,
+                                              ),
+                                            ),
+                                            const Spacer(),
+                                            const Text(
+                                              "141/90",
+                                              style: TextStyle(
+                                                color: Colors.red,
+                                                fontSize: 24,
+                                              ),
+                                            ),
+                                            const Text(
+                                              "7 min ago",
+                                              style: TextStyle(
+                                                color: Colors.red,
+                                                fontSize: 16,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      const Expanded(
+                                        child: Placeholder(),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         )
                       ],
