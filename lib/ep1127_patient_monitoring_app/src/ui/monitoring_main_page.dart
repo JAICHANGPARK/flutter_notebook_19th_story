@@ -103,7 +103,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      
+                          
                     ],
                   ),
                 ),
