@@ -226,6 +226,78 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                               ],
                             ),
                           ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8),
+                          child: Container(
+                            height: 140,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(
+                                color: Colors.grey[300]!,
+                              ),
+                            ),
+                            padding: const EdgeInsets.all(16),
+                            child: Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text("Steps Count"),
+                                    Icon(Icons.keyboard_arrow_right),
+                                  ],
+                                ),
+                                Expanded(
+                                  child: Row(
+                                    children: [
+                                      Expanded(
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              "last 7 days",
+                                              style: TextStyle(
+                                                color: Colors.grey[400],
+                                                fontWeight: FontWeight.normal,
+                                              ),
+                                            ),
+                                            const Spacer(),
+                                            Text.rich(
+                                              TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                      text: "3,133",
+                                                      style: TextStyle(
+                                                        color: Colors.blueAccent,
+                                                      )),
+                                                ],
+                                              ),
+                                            ),
+                                            // const Text(
+                                            //   "3,133",
+                                            //   style: TextStyle(
+                                            //     color: Color.fromRGBO(206, 185, 103, 1),
+                                            //     fontSize: 24,
+                                            //   ),
+                                            // ),
+                                            const Text(
+                                              "7 min ago",
+                                              style: TextStyle(
+                                                color: Color.fromRGBO(206, 185, 103, 1),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      const Expanded(
+                                        child: Placeholder(),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         )
                       ],
                     ),
