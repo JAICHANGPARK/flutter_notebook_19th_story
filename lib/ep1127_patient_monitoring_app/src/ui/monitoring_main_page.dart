@@ -112,6 +112,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                 color: Colors.grey[300]!,
                               ),
                               borderRadius: BorderRadius.circular(8)),
+                          padding: EdgeInsets.all(16),
                           child: Column(
                             children: [
                               Row(
@@ -119,6 +120,18 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                 children: [
                                   Text("Blood Pressure (bpm)"),
                                   Icon(Icons.keyboard_arrow_right),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text("last 4 hours"),
+                                      Text("141/90"),
+                                      Text("7 min ago"),
+                                    ],
+                                  )
                                 ],
                               )
                             ],
