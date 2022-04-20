@@ -23,7 +23,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         "Good Morning",
                         style: TextStyle(
@@ -43,7 +43,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                       ),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Container(
                     height: 48,
                     width: 48,
@@ -62,21 +62,29 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                     color: Colors.grey[100],
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                  child: TextField(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 4,
+                  ),
+                  child: const TextField(
                     decoration: InputDecoration(
                         icon: Icon(CupertinoIcons.search),
                         hintText: "Search",
-                        hintStyle: TextStyle(fontWeight: FontWeight.w300),
+                        hintStyle: TextStyle(
+                          fontWeight: FontWeight.w300,
+                        ),
                         border: InputBorder.none),
                   ),
                 ),
               ),
               Row(
-                children: [
+                children: const [
                   Text(
                     "Measurements",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.w300),
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w300,
+                    ),
                   ),
                   Spacer(),
                   Text(
@@ -91,7 +99,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                   )
                 ],
               ),
-              Expanded(child: Placeholder())
+              const Expanded(child: Placeholder())
             ],
           ),
         ),
