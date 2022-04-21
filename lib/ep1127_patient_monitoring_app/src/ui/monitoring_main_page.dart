@@ -176,7 +176,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                                     100,
                                                     (index) => FlSpot(
                                                       index.toDouble(),
-                                                      (index + Random().nextInt(1)).toDouble(),
+                                                      (Random().nextInt(1)).toDouble(),
                                                     ),
                                                   ),
                                                 )
