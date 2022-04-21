@@ -445,14 +445,26 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                               borderData: FlBorderData(
                                                 show: false,
                                               ),
-                                            titlesData: FlTitlesData(
+                                              maxY: 10,
+                                              titlesData: FlTitlesData(
                                                 show: true,
                                                 bottomTitles: AxisTitles(
                                                   sideTitles: SideTitles(
                                                       showTitles: true,
                                                       getTitlesWidget: (v, _) {
-
-                                                        if(v == 0.0){
+                                                        if (v == 0.0) {
+                                                          return Text("S");
+                                                        } else if (v == 1.0) {
+                                                          return Text("M");
+                                                        } else if (v == 2.0) {
+                                                          return Text("T");
+                                                        } else if (v == 3.0) {
+                                                          return Text("W");
+                                                        } else if (v == 4.0) {
+                                                          return Text("T");
+                                                        } else if (v == 5.0) {
+                                                          return Text("F");
+                                                        } else if (v == 6.0) {
                                                           return Text("S");
                                                         }
                                                         return const Text(
@@ -480,72 +492,15 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                                     showTitles: false,
                                                   ),
                                                 ),
-                                            ),
+                                              ),
                                               barGroups: [
-                                                BarChartGroupData(
-                                                  x: 0,
-
-                                                    barRods: [
-                                                      BarChartRodData(
-                                                          toY: 2,
-                                                        width: 4
-                                                      )
-                                                    ]
-                                                ),
-                                                BarChartGroupData(
-                                                  x: 1,
-                                                    barRods: [
-                                                      BarChartRodData(
-                                                          toY: 4,
-                                                          width: 4
-                                                      )
-                                                    ]
-                                                ),
-                                                BarChartGroupData(
-                                                  x: 2,
-                                                    barRods: [
-                                                      BarChartRodData(
-                                                          toY: 3,
-                                                          width: 4
-                                                      )
-                                                    ]
-                                                ),
-                                                BarChartGroupData(
-                                                  x: 3,
-                                                    barRods: [
-                                                      BarChartRodData(
-                                                          toY: 5,
-                                                          width: 4
-                                                      )
-                                                    ]
-                                                ),
-                                                BarChartGroupData(
-                                                  x: 4,
-                                                    barRods: [
-                                                      BarChartRodData(
-                                                          toY: 5,
-                                                          width: 4
-                                                      )
-                                                    ]
-                                                ),
-                                                BarChartGroupData(
-                                                  x: 5,
-                                                    barRods: [
-                                                      BarChartRodData(
-                                                          toY: 6,
-                                                          width: 4
-                                                      )
-                                                    ]
-                                                ),
-                                                BarChartGroupData(
-                                                  x: 6,
-                                                  barRods: [
-                                                    BarChartRodData(
-                                                        toY: 7,
-                                                        width: 4
-                                                    )
-                                                  ]
-                                                ),
+                                                BarChartGroupData(x: 0, barRods: [BarChartRodData(toY: 2, width: 4)]),
+                                                BarChartGroupData(x: 1, barRods: [BarChartRodData(toY: 4, width: 4)]),
+                                                BarChartGroupData(x: 2, barRods: [BarChartRodData(toY: 3, width: 4)]),
+                                                BarChartGroupData(x: 3, barRods: [BarChartRodData(toY: 5, width: 4)]),
+                                                BarChartGroupData(x: 4, barRods: [BarChartRodData(toY: 5, width: 4)]),
+                                                BarChartGroupData(x: 5, barRods: [BarChartRodData(toY: 6, width: 4)]),
+                                                BarChartGroupData(x: 6, barRods: [BarChartRodData(toY: 7, width: 4)]),
                                               ]),
                                         ),
                                       ),
