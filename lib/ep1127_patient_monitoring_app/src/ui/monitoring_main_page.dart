@@ -178,7 +178,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                                       getTitlesWidget: (v, _) {
                                                         return Text(
                                                           "${v.toInt()}",
-                                                          style: TextStyle(
+                                                          style: const TextStyle(
                                                             fontSize: 12,
                                                             color: Colors.grey,
                                                           ),
@@ -276,8 +276,102 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                           ],
                                         ),
                                       ),
-                                      const Expanded(
-                                        child: Placeholder(),
+                                      Expanded(
+                                        child: LineChart(
+                                          LineChartData(
+                                              minY: 0,
+                                              maxY: 16,
+                                              borderData: FlBorderData(
+                                                show: false,
+                                              ),
+                                              gridData: FlGridData(
+                                                show: false,
+                                              ),
+                                              titlesData: FlTitlesData(
+                                                show: true,
+                                                bottomTitles: AxisTitles(
+                                                  sideTitles: SideTitles(
+                                                      showTitles: true,
+                                                      getTitlesWidget: (v, _) {
+                                                        if (v == 0) {
+                                                          return const Text(
+                                                            "${1}",
+                                                            style: TextStyle(
+                                                              fontSize: 12,
+                                                              color: Colors.grey,
+                                                            ),
+                                                          );
+                                                        } else if (v == 8) {
+                                                          return const Text(
+                                                            "${3}",
+                                                            style: TextStyle(
+                                                              fontSize: 12,
+                                                              color: Colors.grey,
+                                                            ),
+                                                          );
+                                                        }
+                                                        else if (v == 15) {
+                                                          return const Text(
+                                                            "${6}",
+                                                            style: TextStyle(
+                                                              fontSize: 12,
+                                                              color: Colors.grey,
+                                                            ),
+                                                          );
+                                                        }
+                                                        else if (v == 22) {
+                                                          return const Text(
+                                                            "${11}",
+                                                            style: TextStyle(
+                                                              fontSize: 12,
+                                                              color: Colors.grey,
+                                                            ),
+                                                          );
+                                                        }
+                                                        return const Text(
+                                                          "",
+                                                          style: TextStyle(
+                                                            fontSize: 12,
+                                                            color: Colors.grey,
+                                                          ),
+                                                        );
+                                                      },
+                                                    interval: 1
+                                                      ),
+                                                ),
+
+                                                leftTitles: AxisTitles(
+                                                  sideTitles: SideTitles(
+                                                    showTitles: false,
+                                                  ),
+                                                ),
+                                                rightTitles: AxisTitles(
+                                                  sideTitles: SideTitles(
+                                                    showTitles: false,
+                                                  ),
+                                                ),
+                                                topTitles: AxisTitles(
+                                                  sideTitles: SideTitles(
+                                                    showTitles: false,
+                                                  ),
+                                                ),
+                                              ),
+                                              lineBarsData: [
+                                                LineChartBarData(
+                                                  barWidth: 1.5,
+                                                  dotData: FlDotData(show: false),
+                                                  show: true,
+                                                  color: const Color.fromRGBO(206, 185, 103, 1),
+                                                  spots: List.generate(
+                                                    25,
+                                                        (index) => FlSpot(
+                                                      index.toDouble(),
+                                                      (5 + Random().nextInt(6)).toDouble(),
+                                                    ),
+                                                  ),
+                                                )
+                                              ]),
+                                        ),
                                       ),
                                     ],
                                   ),
