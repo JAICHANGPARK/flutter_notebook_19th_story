@@ -171,30 +171,36 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                               titlesData: FlTitlesData(
                                                 show: true,
                                                 bottomTitles: AxisTitles(
-                                                  sideTitles:  SideTitles(
-                                                    showTitles: true
-                                                  )
+                                                  sideTitles: SideTitles(
+                                                    showTitles: true,
+                                                  ),
                                                 ),
-                                                leftTitles:  AxisTitles(
-                                                    sideTitles:  SideTitles(
-                                                        showTitles: false
-                                                    )
+                                                leftTitles: AxisTitles(
+                                                  sideTitles: SideTitles(
+                                                    showTitles: false,
+                                                  ),
                                                 ),
-                                                rightTitles:  AxisTitles(
-                                                    sideTitles:  SideTitles(
-                                                        showTitles: false
-                                                    )
+                                                rightTitles: AxisTitles(
+                                                  sideTitles: SideTitles(
+                                                    showTitles: false,
+                                                  ),
+                                                ),
+                                                topTitles: AxisTitles(
+                                                  sideTitles: SideTitles(
+                                                    showTitles: false,
+                                                  ),
                                                 ),
                                               ),
                                               lineBarsData: [
                                                 LineChartBarData(
+                                                  dotData: FlDotData(show: false),
                                                   show: true,
                                                   color: Colors.red,
                                                   spots: List.generate(
-                                                    100,
+                                                    50,
                                                     (index) => FlSpot(
                                                       index.toDouble(),
-                                                      (Random().nextInt(24)).toDouble(),
+                                                      (Random().nextInt(16)).toDouble(),
                                                     ),
                                                   ),
                                                 )
