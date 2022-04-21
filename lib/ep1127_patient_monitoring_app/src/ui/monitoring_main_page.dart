@@ -162,7 +162,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                       Expanded(
                                         child: LineChart(
                                           LineChartData(
-                                            minY: 0,
+                                              minY: 0,
                                               maxY: 16,
                                               borderData: FlBorderData(
                                                 show: false,
@@ -174,15 +174,16 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                                 show: true,
                                                 bottomTitles: AxisTitles(
                                                   sideTitles: SideTitles(
-                                                    showTitles: true,
-                                                    getTitlesWidget: (v, _){
-                                                      return Text("${v.toInt()}",
-                                                      style: TextStyle(
-                                                        fontSize: 12,
-                                                        color: Colors.grey
-                                                      ),);
-                                                    }
-                                                  ),
+                                                      showTitles: true,
+                                                      getTitlesWidget: (v, _) {
+                                                        return Text(
+                                                          "${v.toInt()}",
+                                                          style: TextStyle(
+                                                            fontSize: 12,
+                                                            color: Colors.grey,
+                                                          ),
+                                                        );
+                                                      }),
                                                 ),
                                                 leftTitles: AxisTitles(
                                                   sideTitles: SideTitles(
