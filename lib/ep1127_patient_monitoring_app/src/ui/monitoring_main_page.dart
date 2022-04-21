@@ -195,6 +195,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                               ),
                                               lineBarsData: [
                                                 LineChartBarData(
+                                                  barWidth: 1.5,
                                                   dotData: FlDotData(show: false),
                                                   show: true,
                                                   color: Colors.red,
