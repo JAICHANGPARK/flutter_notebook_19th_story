@@ -263,15 +263,11 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                             ),
                                             const Spacer(),
                                             const Text.rich(
-
                                               TextSpan(
                                                 children: [
                                                   TextSpan(
                                                     text: "3,133",
-                                                    style: TextStyle(
-                                                      color: Colors.blueAccent,
-                                                      fontSize: 24
-                                                    ),
+                                                    style: TextStyle(color: Colors.blueAccent, fontSize: 24),
                                                   ),
                                                   TextSpan(
                                                     text: "Steps",
@@ -337,15 +333,11 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                             ),
                                             const Spacer(),
                                             const Text.rich(
-
                                               TextSpan(
                                                 children: [
                                                   TextSpan(
                                                     text: "85.2",
-                                                    style: TextStyle(
-                                                        color: Colors.cyanAccent,
-                                                        fontSize: 24
-                                                    ),
+                                                    style: TextStyle(color: Colors.cyanAccent, fontSize: 24),
                                                   ),
                                                   TextSpan(
                                                     text: "kg",
