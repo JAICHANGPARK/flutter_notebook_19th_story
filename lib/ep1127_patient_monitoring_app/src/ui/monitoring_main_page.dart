@@ -439,10 +439,114 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                       Expanded(
                                         child: BarChart(
                                           BarChartData(
-                                            gridData: FlGridData(
-                                              show: false,
+                                              gridData: FlGridData(
+                                                show: false,
+                                              ),
+                                              borderData: FlBorderData(
+                                                show: false,
+                                              ),
+                                            titlesData: FlTitlesData(
+                                                show: true,
+                                                bottomTitles: AxisTitles(
+                                                  sideTitles: SideTitles(
+                                                      showTitles: true,
+                                                      getTitlesWidget: (v, _) {
+
+                                                        if(v == 0.0){
+                                                          return Text("S");
+                                                        }
+                                                        return const Text(
+                                                          "",
+                                                          style: TextStyle(
+                                                            fontSize: 12,
+                                                            color: Colors.grey,
+                                                          ),
+                                                        );
+                                                      },
+                                                      interval: 1),
+                                                ),
+                                                leftTitles: AxisTitles(
+                                                  sideTitles: SideTitles(
+                                                    showTitles: false,
+                                                  ),
+                                                ),
+                                                rightTitles: AxisTitles(
+                                                  sideTitles: SideTitles(
+                                                    showTitles: false,
+                                                  ),
+                                                ),
+                                                topTitles: AxisTitles(
+                                                  sideTitles: SideTitles(
+                                                    showTitles: false,
+                                                  ),
+                                                ),
                                             ),
-                                          ),
+                                              barGroups: [
+                                                BarChartGroupData(
+                                                  x: 0,
+
+                                                    barRods: [
+                                                      BarChartRodData(
+                                                          toY: 2,
+                                                        width: 4
+                                                      )
+                                                    ]
+                                                ),
+                                                BarChartGroupData(
+                                                  x: 1,
+                                                    barRods: [
+                                                      BarChartRodData(
+                                                          toY: 4,
+                                                          width: 4
+                                                      )
+                                                    ]
+                                                ),
+                                                BarChartGroupData(
+                                                  x: 2,
+                                                    barRods: [
+                                                      BarChartRodData(
+                                                          toY: 3,
+                                                          width: 4
+                                                      )
+                                                    ]
+                                                ),
+                                                BarChartGroupData(
+                                                  x: 3,
+                                                    barRods: [
+                                                      BarChartRodData(
+                                                          toY: 5,
+                                                          width: 4
+                                                      )
+                                                    ]
+                                                ),
+                                                BarChartGroupData(
+                                                  x: 4,
+                                                    barRods: [
+                                                      BarChartRodData(
+                                                          toY: 5,
+                                                          width: 4
+                                                      )
+                                                    ]
+                                                ),
+                                                BarChartGroupData(
+                                                  x: 5,
+                                                    barRods: [
+                                                      BarChartRodData(
+                                                          toY: 6,
+                                                          width: 4
+                                                      )
+                                                    ]
+                                                ),
+                                                BarChartGroupData(
+                                                  x: 6,
+                                                  barRods: [
+                                                    BarChartRodData(
+                                                        toY: 7,
+                                                        width: 4
+                                                    )
+                                                  ]
+                                                ),
+                                              ]),
                                         ),
                                       ),
                                     ],
