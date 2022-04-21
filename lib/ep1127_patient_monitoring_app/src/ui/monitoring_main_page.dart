@@ -162,6 +162,8 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                       Expanded(
                                         child: LineChart(
                                           LineChartData(
+                                            minY: 0,
+                                              maxY: 16,
                                               borderData: FlBorderData(
                                                 show: false,
                                               ),
@@ -200,7 +202,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                                     50,
                                                     (index) => FlSpot(
                                                       index.toDouble(),
-                                                      (Random().nextInt(16)).toDouble(),
+                                                      (5 + Random().nextInt(6)).toDouble(),
                                                     ),
                                                   ),
                                                 )
