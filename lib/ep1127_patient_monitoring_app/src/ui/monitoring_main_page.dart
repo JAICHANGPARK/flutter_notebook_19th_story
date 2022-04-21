@@ -175,6 +175,13 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                                 bottomTitles: AxisTitles(
                                                   sideTitles: SideTitles(
                                                     showTitles: true,
+                                                    getTitlesWidget: (v, _){
+                                                      return Text("${v.toInt()}",
+                                                      style: TextStyle(
+                                                        fontSize: 12,
+                                                        color: Colors.grey
+                                                      ),);
+                                                    }
                                                   ),
                                                 ),
                                                 leftTitles: AxisTitles(
