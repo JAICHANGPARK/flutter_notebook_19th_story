@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -160,13 +162,25 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                       Expanded(
                                         child: LineChart(
                                           LineChartData(
-                                            borderData: FlBorderData(
-                                              show: false,
-                                            ),
-                                            gridData: FlGridData(
-                                              show: false,
-                                            ),
-                                          ),
+                                              borderData: FlBorderData(
+                                                show: false,
+                                              ),
+                                              gridData: FlGridData(
+                                                show: false,
+                                              ),
+                                              lineBarsData: [
+                                                LineChartBarData(
+                                                  show: true,
+                                                  color: Colors.red,
+                                                  spots: List.generate(
+                                                    100,
+                                                    (index) => FlSpot(
+                                                      index.toDouble(),
+                                                      (index + Random().nextInt(1)).toDouble(),
+                                                    ),
+                                                  ),
+                                                )
+                                              ]),
                                         ),
                                       ),
                                     ],
