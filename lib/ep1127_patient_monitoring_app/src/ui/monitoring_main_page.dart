@@ -1,3 +1,4 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -156,8 +157,17 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                           ],
                                         ),
                                       ),
-                                      const Expanded(
-                                        child: Placeholder(),
+                                      Expanded(
+                                        child: LineChart(
+                                          LineChartData(
+                                            borderData: FlBorderData(
+                                              show: false,
+                                            ),
+                                            gridData: FlGridData(
+                                              show: false,
+                                            ),
+                                          ),
+                                        ),
                                       ),
                                     ],
                                   ),
