@@ -309,8 +309,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                                               color: Colors.grey,
                                                             ),
                                                           );
-                                                        }
-                                                        else if (v == 15) {
+                                                        } else if (v == 15) {
                                                           return const Text(
                                                             "${6}",
                                                             style: TextStyle(
@@ -318,8 +317,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                                               color: Colors.grey,
                                                             ),
                                                           );
-                                                        }
-                                                        else if (v == 22) {
+                                                        } else if (v == 22) {
                                                           return const Text(
                                                             "${11}",
                                                             style: TextStyle(
@@ -336,10 +334,8 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                                           ),
                                                         );
                                                       },
-                                                    interval: 1
-                                                      ),
+                                                      interval: 1),
                                                 ),
-
                                                 leftTitles: AxisTitles(
                                                   sideTitles: SideTitles(
                                                     showTitles: false,
@@ -364,7 +360,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                                   color: const Color.fromRGBO(206, 185, 103, 1),
                                                   spots: List.generate(
                                                     25,
-                                                        (index) => FlSpot(
+                                                    (index) => FlSpot(
                                                       index.toDouble(),
                                                       (5 + Random().nextInt(6)).toDouble(),
                                                     ),
@@ -440,8 +436,14 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                           ],
                                         ),
                                       ),
-                                      const Expanded(
-                                        child: Placeholder(),
+                                      Expanded(
+                                        child: BarChart(
+                                          BarChartData(
+                                            gridData: FlGridData(
+                                              show: false,
+                                            ),
+                                          ),
+                                        ),
                                       ),
                                     ],
                                   ),
