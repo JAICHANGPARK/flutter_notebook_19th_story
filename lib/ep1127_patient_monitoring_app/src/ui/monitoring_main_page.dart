@@ -168,6 +168,24 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                               gridData: FlGridData(
                                                 show: false,
                                               ),
+                                              titlesData: FlTitlesData(
+                                                show: true,
+                                                bottomTitles: AxisTitles(
+                                                  sideTitles:  SideTitles(
+                                                    showTitles: true
+                                                  )
+                                                ),
+                                                leftTitles:  AxisTitles(
+                                                    sideTitles:  SideTitles(
+                                                        showTitles: false
+                                                    )
+                                                ),
+                                                rightTitles:  AxisTitles(
+                                                    sideTitles:  SideTitles(
+                                                        showTitles: false
+                                                    )
+                                                ),
+                                              ),
                                               lineBarsData: [
                                                 LineChartBarData(
                                                   show: true,
@@ -176,7 +194,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                                     100,
                                                     (index) => FlSpot(
                                                       index.toDouble(),
-                                                      (Random().nextInt(1)).toDouble(),
+                                                      (Random().nextInt(24)).toDouble(),
                                                     ),
                                                   ),
                                                 )
