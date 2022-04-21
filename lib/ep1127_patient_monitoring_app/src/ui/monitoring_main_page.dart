@@ -200,7 +200,7 @@ class _MonitoringMainPageState extends State<MonitoringMainPage> {
                                                   show: true,
                                                   color: Colors.red,
                                                   spots: List.generate(
-                                                    50,
+                                                    25,
                                                     (index) => FlSpot(
                                                       index.toDouble(),
                                                       (5 + Random().nextInt(6)).toDouble(),
