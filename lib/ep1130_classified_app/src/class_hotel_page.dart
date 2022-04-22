@@ -34,8 +34,8 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Row(
-                    children: const[
-                       CircleAvatar(
+                    children: const [
+                      CircleAvatar(
                         backgroundColor: Colors.white,
                         foregroundColor: Colors.black,
                         child: Center(
@@ -48,25 +48,37 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                     ],
                   ),
                 ),
-                SizedBox(height: 8,),
+                SizedBox(
+                  height: 8,
+                ),
                 Row(
                   children: [
                     Container(
-                      height: 48,
+                      height: 38,
                       width: 4,
                       decoration: BoxDecoration(
                         color: Colors.blue,
                         borderRadius: BorderRadius.only(
                           topRight: Radius.circular(3),
-                          bottomRight: Radius.circular(3)
-                          
-                        )
+                          bottomRight: Radius.circular(3),
+                        ),
                       ),
                     ),
-                    Text("Nearby Hotels", style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 24
-                    ),)
+                    SizedBox(
+                      width: 24,
+                    ),
+                    Text(
+                      "Nearby Hotels",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    Spacer(),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("See All"),
+                    ),
                   ],
                 )
               ],
