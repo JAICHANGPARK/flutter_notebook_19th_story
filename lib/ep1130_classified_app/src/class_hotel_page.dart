@@ -47,6 +47,23 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                       ),
                     ],
                   ),
+                ),
+                SizedBox(height: 8,),
+                Row(
+                  children: [
+                    Container(
+                      height: 32,
+                      width: 6,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(3),
+                          bottomRight: Radius.circular(3)
+                          
+                        )
+                      ),
+                    )
+                  ],
                 )
               ],
             ),
