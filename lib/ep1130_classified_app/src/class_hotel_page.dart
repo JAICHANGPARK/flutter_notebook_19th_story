@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class ClassHotelPage extends StatefulWidget {
@@ -13,17 +11,47 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Row(
-            children: [
-              CircleAvatar(
-
-                child: Icon(Icons.arrow_back_ios,),
-              )
-            ],
-          )
-        ],
+      backgroundColor: Colors.grey[200],
+      body: SafeArea(
+        child: Stack(
+          children: [
+            const Positioned(
+                left: 0,
+                right: 0,
+                top: 24,
+                child: Center(
+                  child: Text(
+                    "Hotels",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                )),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    children: const[
+                       CircleAvatar(
+                        backgroundColor: Colors.white,
+                        foregroundColor: Colors.black,
+                        child: Center(
+                          child: Icon(
+                            Icons.arrow_back_ios,
+                            size: 16,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
