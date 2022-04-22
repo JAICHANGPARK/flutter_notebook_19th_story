@@ -52,8 +52,8 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                 Row(
                   children: [
                     Container(
-                      height: 32,
-                      width: 6,
+                      height: 48,
+                      width: 4,
                       decoration: BoxDecoration(
                         color: Colors.blue,
                         borderRadius: BorderRadius.only(
@@ -62,7 +62,11 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                           
                         )
                       ),
-                    )
+                    ),
+                    Text("Nearby Hotels", style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24
+                    ),)
                   ],
                 )
               ],
