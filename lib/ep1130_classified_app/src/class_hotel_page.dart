@@ -13,7 +13,18 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: Column(
+        children: [
+          Row(
+            children: [
+              CircleAvatar(
 
+                child: Icon(Icons.arrow_back_ios,),
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }
