@@ -108,7 +108,7 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                         decoration: BoxDecoration(
                                           color: Colors.blue,
                                           borderRadius: BorderRadius.circular(16),
-                                          image: DecorationImage(
+                                          image: const DecorationImage(
                                             image: CachedNetworkImageProvider(
                                               "https://cdn.pixabay.com/photo/2017/05/31/10/23/manor-house-2359884_960_720.jpg",
                                             ),
@@ -117,7 +117,7 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                         ),
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 16,
                                     ),
                                     Column(
@@ -149,7 +149,7 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                             )
                                           ],
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 8,
                                         ),
                                         Row(
@@ -231,33 +231,42 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                           crossAxisCount: 2,
                           crossAxisSpacing: 8,
                           mainAxisSpacing: 8,
-                          childAspectRatio: 5 / 6,
+                          childAspectRatio: 8 / 10,
                         ),
                         children: List.generate(
                           10,
                           (index) => Card(
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(12.0),
                               child: Column(
                                 children: [
                                   Expanded(
-                                      child: Container(
-                                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
-                                  )),
-                                  const  SizedBox(
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(16),
+                                        image: const DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image: CachedNetworkImageProvider(
+                                            "https://cdn.pixabay.com/photo/2019/08/19/13/58/bed-4416515_960_720.jpg",
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
                                     height: 8,
                                   ),
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
-                                    children:  [
+                                    children: [
                                       const Text(
                                         "The Grand Hotel",
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                      const  SizedBox(
+                                      const SizedBox(
                                         height: 8,
                                       ),
                                       Row(
@@ -265,7 +274,10 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                           Text(
                                             "\$75",
                                             style: TextStyle(
-                                                fontWeight: FontWeight.bold, fontSize: 12, color: Colors.blue),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 12,
+                                              color: Colors.blue,
+                                            ),
                                           ),
                                           Spacer(),
                                           Icon(
