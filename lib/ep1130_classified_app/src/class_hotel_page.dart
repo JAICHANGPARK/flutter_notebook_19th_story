@@ -96,9 +96,7 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                           SizedBox(
                             width: 280,
                             child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16)
-                              ),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                               child: Padding(
                                 padding: const EdgeInsets.all(16.0),
                                 child: Column(
@@ -106,41 +104,56 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                   children: [
                                     Expanded(
                                       child: Container(
-                                        decoration: BoxDecoration(
-                                          color: Colors.blue,
-                                            borderRadius: BorderRadius.circular(16)
-                                        ),
+                                        decoration:
+                                            BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(16)),
                                       ),
                                     ),
-                                    SizedBox(height: 16,),
+                                    SizedBox(
+                                      height: 16,
+                                    ),
                                     Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Row(
                                           children: [
                                             Text("The Jefferson Hotel"),
+                                            Spacer(),
                                             Icon(
                                               Icons.star,
                                               size: 14,
                                               color: Colors.yellowAccent,
                                             ),
-                                            Text("4.0")
+                                            Text("4.0",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 12
+                                              ),
+                                            )
                                           ],
                                         ),
+                                        SizedBox(
+                                          height: 8,
+                                        ),
                                         Row(
-                                          children: [
+                                          children: const [
                                             Text(
                                               "\$205",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                               ),
                                             ),
+                                            Spacer(),
                                             Icon(
                                               Icons.location_on,
                                               size: 14,
                                               color: Colors.blue,
                                             ),
-                                            Text("Map")
+                                            Text("Map",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 12
+                                              ),
+                                            )
                                           ],
                                         ),
                                       ],
