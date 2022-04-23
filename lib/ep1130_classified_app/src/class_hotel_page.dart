@@ -86,57 +86,63 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                       ),
                     ],
                   ),
-                  SizedBox(
-                    height: 280,
-                    child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      children: [
-                        SizedBox(
-                          width: 420,
-                          child: Card(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Expanded(
-                                  child: Container(),
-                                ),
-                                Column(
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: SizedBox(
+                      height: 240,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          SizedBox(
+                            width: 240,
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Row(
-                                      children: [
-                                        Text("The Jefferson Hotel"),
-                                        Icon(
-                                          Icons.star,
-                                          size: 14,
-                                          color: Colors.yellowAccent,
-                                        ),
-                                        Text("4.0")
-                                      ],
+                                    Expanded(
+                                      child: Container(),
                                     ),
-                                    Row(
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Text(
-                                          "\$205",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                          ),
+                                        Row(
+                                          children: [
+                                            Text("The Jefferson Hotel"),
+                                            Icon(
+                                              Icons.star,
+                                              size: 14,
+                                              color: Colors.yellowAccent,
+                                            ),
+                                            Text("4.0")
+                                          ],
                                         ),
-                                        Icon(
-                                          Icons.location_on,
-                                          size: 14,
-                                          color: Colors.blue,
+                                        Row(
+                                          children: [
+                                            Text(
+                                              "\$205",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            Icon(
+                                              Icons.location_on,
+                                              size: 14,
+                                              color: Colors.blue,
+                                            ),
+                                            Text("Map")
+                                          ],
                                         ),
-                                        Text("Map")
                                       ],
-                                    ),
+                                    )
                                   ],
-                                )
-                              ],
+                                ),
+                              ),
                             ),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(
