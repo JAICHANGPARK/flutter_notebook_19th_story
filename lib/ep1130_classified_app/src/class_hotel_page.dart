@@ -96,6 +96,9 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                           SizedBox(
                             width: 280,
                             child: Card(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16)
+                              ),
                               child: Padding(
                                 padding: const EdgeInsets.all(16.0),
                                 child: Column(
@@ -104,7 +107,8 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                     Expanded(
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          color: Colors.blue
+                                          color: Colors.blue,
+                                            borderRadius: BorderRadius.circular(16)
                                         ),
                                       ),
                                     ),
