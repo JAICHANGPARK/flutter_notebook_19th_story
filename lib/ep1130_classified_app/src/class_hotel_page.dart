@@ -89,16 +89,31 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                    SizedBox(
                     height: 280,
                     child: ListView(
+                      scrollDirection: Axis.horizontal,
                       children: [
-                        Card(
-                          child: Column(
-                            children: [
-                              Expanded(
-                                child: Container(
-                                  
+                        SizedBox(
+                          width: 420,
+                          child: Card(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: Container(
+
+                                  ),
                                 ),
-                              )
-                            ],
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Text("")
+                                      ],
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
                           ),
                         )
                       ],
