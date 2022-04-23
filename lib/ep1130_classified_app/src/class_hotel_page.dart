@@ -53,7 +53,7 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   Row(
@@ -61,7 +61,7 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                       Container(
                         height: 38,
                         width: 4,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.blue,
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(3),
@@ -69,28 +69,28 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 24,
                       ),
-                      Text(
+                      const Text(
                         "Nearby Hotels",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       TextButton(
                         onPressed: () {},
-                        child: Text("See All"),
+                        child: const Text("See All"),
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 280,
                     child: Placeholder(),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   Row(
@@ -98,7 +98,7 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                       Container(
                         height: 38,
                         width: 4,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.blue,
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(3),
@@ -106,24 +106,24 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 24,
                       ),
-                      Text(
+                      const Text(
                         "Other Places",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       TextButton(
                         onPressed: () {},
-                        child: Text("See All"),
+                        child: const Text("See All"),
                       ),
                     ],
                   ),
-                  Expanded(child: Placeholder())
+                  const Expanded(child: Placeholder())
                 ],
               ),
             ),
