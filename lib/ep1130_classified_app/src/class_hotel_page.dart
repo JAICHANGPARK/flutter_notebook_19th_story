@@ -115,18 +115,27 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Row(
-                                          children: [
-                                            Text("The Jefferson Hotel"),
+                                          children: const [
+                                            Text(
+                                              "The Jefferson Hotel",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
                                             Spacer(),
                                             Icon(
                                               Icons.star,
                                               size: 14,
                                               color: Colors.yellowAccent,
                                             ),
-                                            Text("4.0",
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                            Text(
+                                              "4.0",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 12
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 12,
                                               ),
                                             )
                                           ],
@@ -140,6 +149,7 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                               "\$205",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
+                                                color: Colors.blue,
                                               ),
                                             ),
                                             Spacer(),
@@ -148,10 +158,14 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                               size: 14,
                                               color: Colors.blue,
                                             ),
-                                            Text("Map",
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                            Text(
+                                              "Map",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 12
+                                                fontSize: 12,
                                               ),
                                             )
                                           ],
