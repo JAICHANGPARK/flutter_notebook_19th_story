@@ -86,9 +86,23 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                       ),
                     ],
                   ),
-                  const SizedBox(
+                   SizedBox(
                     height: 280,
-                    child: Placeholder(),
+                    child: ListView(
+                      children: [
+                        Card(
+                          child: Column(
+                            children: [
+                              Expanded(
+                                child: Container(
+                                  
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 8,
