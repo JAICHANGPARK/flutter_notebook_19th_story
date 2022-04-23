@@ -86,7 +86,7 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                       ),
                     ],
                   ),
-                   SizedBox(
+                  SizedBox(
                     height: 280,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
@@ -98,18 +98,38 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Expanded(
-                                  child: Container(
-
-                                  ),
+                                  child: Container(),
                                 ),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Row(
                                       children: [
-                                        Text("")
+                                        Text("The Jefferson Hotel"),
+                                        Icon(
+                                          Icons.star,
+                                          size: 14,
+                                          color: Colors.yellowAccent,
+                                        ),
+                                        Text("4.0")
                                       ],
-                                    )
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          "\$205",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        Icon(
+                                          Icons.location_on,
+                                          size: 14,
+                                          color: Colors.blue,
+                                        ),
+                                        Text("Map")
+                                      ],
+                                    ),
                                   ],
                                 )
                               ],
