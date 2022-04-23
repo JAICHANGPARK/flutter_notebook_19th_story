@@ -227,7 +227,7 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                     child: Padding(
                       padding: const EdgeInsets.only(left: 16, right: 16),
                       child: GridView(
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           crossAxisSpacing: 8,
                           mainAxisSpacing: 8,
@@ -236,29 +236,37 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                         children: List.generate(
                           10,
                           (index) => Card(
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Column(
                                 children: [
-                                  Expanded(child: Placeholder()),
+                                  Expanded(
+                                      child: Container(
+                                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
+                                  )),
+                                  const  SizedBox(
+                                    height: 8,
+                                  ),
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
+                                    children:  [
+                                      const Text(
                                         "The Grand Hotel",
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                      SizedBox(height: 8,),
+                                      const  SizedBox(
+                                        height: 8,
+                                      ),
                                       Row(
-                                        children: [
-                                          Text("\$75",
+                                        children: const [
+                                          Text(
+                                            "\$75",
                                             style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 12,
-                                              color: Colors.blue
-                                            ),),
+                                                fontWeight: FontWeight.bold, fontSize: 12, color: Colors.blue),
+                                          ),
                                           Spacer(),
                                           Icon(
                                             Icons.location_on,
