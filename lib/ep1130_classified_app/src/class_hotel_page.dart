@@ -89,12 +89,12 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                   Padding(
                     padding: const EdgeInsets.only(left: 16),
                     child: SizedBox(
-                      height: 240,
+                      height: 200,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
                           SizedBox(
-                            width: 240,
+                            width: 280,
                             child: Card(
                               child: Padding(
                                 padding: const EdgeInsets.all(16.0),
@@ -102,8 +102,13 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Expanded(
-                                      child: Container(),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.blue
+                                        ),
+                                      ),
                                     ),
+                                    SizedBox(height: 16,),
                                     Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
