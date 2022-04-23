@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class ClassHotelPage extends StatefulWidget {
@@ -104,8 +105,16 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                   children: [
                                     Expanded(
                                       child: Container(
-                                        decoration:
-                                            BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(16)),
+                                        decoration: BoxDecoration(
+                                          color: Colors.blue,
+                                          borderRadius: BorderRadius.circular(16),
+                                          image: DecorationImage(
+                                            image: CachedNetworkImageProvider(
+                                              "https://cdn.pixabay.com/photo/2017/05/31/10/23/manor-house-2359884_960_720.jpg",
+                                            ),
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
                                       ),
                                     ),
                                     SizedBox(
