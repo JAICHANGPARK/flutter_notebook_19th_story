@@ -223,7 +223,16 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                       ),
                     ],
                   ),
-                  const Expanded(child: Placeholder())
+                  Expanded(
+                    child: GridView(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 16,
+                        mainAxisSpacing: 16,
+                      ),
+                      children: [Card()],
+                    ),
+                  )
                 ],
               ),
             ),
