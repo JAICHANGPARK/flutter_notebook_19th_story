@@ -250,9 +250,45 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
+                                      SizedBox(height: 8,),
                                       Row(
                                         children: [
-
+                                          Text("\$75",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 12,
+                                              color: Colors.blue
+                                            ),),
+                                          Spacer(),
+                                          Icon(
+                                            Icons.location_on,
+                                            size: 14,
+                                            color: Colors.blue,
+                                          ),
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Text(
+                                            "Map",
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                            ),
+                                          ),
+                                          Spacer(),
+                                          Icon(
+                                            Icons.star,
+                                            size: 14,
+                                            color: Colors.yellowAccent,
+                                          ),
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Text(
+                                            "4.0",
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                            ),
+                                          )
                                         ],
                                       )
                                     ],
