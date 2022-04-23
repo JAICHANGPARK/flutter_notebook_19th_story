@@ -225,18 +225,43 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(
-                        left: 16,
-                        right: 16
-                      ),
+                      padding: const EdgeInsets.only(left: 16, right: 16),
                       child: GridView(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           crossAxisSpacing: 8,
                           mainAxisSpacing: 8,
-                          childAspectRatio: 5/6
+                          childAspectRatio: 5 / 6,
                         ),
-                        children: List.generate(10, (index) => Card()),
+                        children: List.generate(
+                          10,
+                          (index) => Card(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: [
+                                  Expanded(child: Placeholder()),
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "The Grand Hotel",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Row(
+                                        children: [
+
+                                        ],
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                   )
