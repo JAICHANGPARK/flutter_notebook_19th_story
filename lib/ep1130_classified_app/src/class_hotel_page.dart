@@ -1,5 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1130_classified_app/src/mock/fake_other_places.dart';
+import 'package:flutter_notebook_19th_story/ep1130_classified_app/src/model/other_places.dart';
 
 class ClassHotelPage extends StatefulWidget {
   const ClassHotelPage({Key? key}) : super(key: key);
@@ -226,16 +228,17 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.only(left: 16, right: 16),
-                      child: GridView(
+                      child: GridView.builder(
                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           crossAxisSpacing: 8,
                           mainAxisSpacing: 8,
                           childAspectRatio: 8 / 10,
                         ),
-                        children: List.generate(
-                          10,
-                          (index) => Card(
+                        itemCount: fakeOtherPlaceItems.length,
+                        itemBuilder: (context, index) {
+                          OtherPlace item = fakeOtherPlaceItems[index];
+                          return Card(
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                             child: Padding(
                               padding: const EdgeInsets.all(12.0),
@@ -245,12 +248,24 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                     child: Container(
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(16),
-                                        image: const DecorationImage(
+                                        image: DecorationImage(
                                           fit: BoxFit.cover,
-                                          image: CachedNetworkImageProvider(
-                                            "https://cdn.pixabay.com/photo/2019/08/19/13/58/bed-4416515_960_720.jpg",
-                                          ),
+                                          image: CachedNetworkImageProvider(item.img ?? ""),
                                         ),
+                                      ),
+                                      child: Stack(
+                                        children: [
+                                          Positioned(
+                                            right: 0,
+                                            top: 0,
+                                            child: IconButton(
+                                              icon: Icon(Icons.favorite),
+                                              iconSize: 16,
+                                              onPressed: () {},
+                                              color: (item.isLike ?? false) ? Colors.red : Colors.white,
+                                            ),
+                                          )
+                                        ],
                                       ),
                                     ),
                                   ),
@@ -260,8 +275,8 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      const Text(
-                                        "The Grand Hotel",
+                                      Text(
+                                        item.title ?? "",
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                         ),
@@ -270,9 +285,9 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                         height: 8,
                                       ),
                                       Row(
-                                        children: const [
+                                        children: [
                                           Text(
-                                            "\$75",
+                                            "\$${item.price}",
                                             style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 12,
@@ -304,7 +319,7 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                             width: 4,
                                           ),
                                           Text(
-                                            "4.0",
+                                            "${item.review}",
                                             style: TextStyle(
                                               fontSize: 12,
                                             ),
@@ -316,8 +331,8 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                 ],
                               ),
                             ),
-                          ),
-                        ),
+                          );
+                        },
                       ),
                     ),
                   )
