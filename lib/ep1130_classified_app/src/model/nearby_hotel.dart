@@ -10,5 +10,6 @@ class NearbyHotel with _$NearbyHotel {
     String? price,
     String? review,
     @Default([]) List<String> imgItems,
+    String? desctiption,
   }) = _NearbyHotel;
 }
