@@ -73,38 +73,46 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                   ),
                 )),
             Expanded(
-              flex: 6,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Text(widget.nearbyHotel.title ?? ""),
-                      Icon(Icons.star, color: Colors.yellow,),
-                      Text(widget.nearbyHotel.review ?? ""),
+              flex: 5,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(widget.nearbyHotel.title ?? ""),
+                        Icon(Icons.star, color: Colors.yellow,),
+                        Text(widget.nearbyHotel.review ?? ""),
 
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.location_on,
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          color: Colors.blue,
+                        ),
+                        Text("${widget.nearbyHotel.location}"),
+                      ],
+                    ),
+                    Container(
+                      height: 64,
+                      decoration: BoxDecoration(
                         color: Colors.blue,
                       ),
-                      Text("${widget.nearbyHotel.location}"),
-                    ],
-                  ),
-                  Container(
-                    height: 64,
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
                     ),
-                  ),
-                  Text("Description", style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20
-                  ),)
-                ],
+                    Text("Description", style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20
+                    ),),
+                    Text("${widget.nearbyHotel.description}", style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.black
+                    ),),
+                  ],
+                ),
               ),
             ),
             const Divider(
