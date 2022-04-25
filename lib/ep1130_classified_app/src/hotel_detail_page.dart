@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_19th_story/ep1130_classified_app/src/model/nearby_hotel.dart';
 import 'package:flutter_notebook_19th_story/ep1130_classified_app/src/model/other_places.dart';
@@ -15,63 +16,117 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Expanded(child: Placeholder()),
-          Expanded(child: Placeholder()),
-          Divider(
-            height: 0,
-            color: Colors.grey,
-          ),
-          Container(
-            height: 52,
-            child: Row(
-              children: [
-                Expanded(
-                    child: Padding(
-                  padding: const EdgeInsets.only(
-                    left: 24,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
+      body: SafeArea(
+        child: Column(
+          children: [
+            Expanded(
+                flex: 8,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Stack(
                     children: [
-                      Text(
-                        "Total Amount:",
-                        style: TextStyle(
-                          fontSize: 12,
+                      Positioned(
+                        left: 0,
+                        bottom: 0,
+                        top: 0,
+                        right: 0,
+                        child: PageView(
+                          children: widget.nearbyHotel.imgItems
+                              .map((e) => Container(
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(16),
+                                        image:
+                                            DecorationImage(image: CachedNetworkImageProvider(e), fit: BoxFit.cover)),
+                                  ))
+                              .toList(),
                         ),
                       ),
-                      Text(
-                        "\$${widget.nearbyHotel.price}",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blue,
+                      Positioned(
+                        left: 16,
+                        top: 16,
+                        right: 16,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            CircleAvatar(
+                              child: IconButton(
+                                icon: const Icon(
+                                  Icons.arrow_back_ios,
+                                ),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ),
+                            CircleAvatar(
+                              child: IconButton(
+                                icon: const Icon(
+                                  Icons.favorite,
+                                ),
+                                onPressed: () {},
+                              ),
+                            )
+                          ],
                         ),
                       )
                     ],
                   ),
                 )),
-                Expanded(
-                    child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Book Now",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+            const Expanded(flex: 6, child: Placeholder()),
+            const Divider(
+              height: 0,
+              color: Colors.grey,
+            ),
+            Container(
+              height: 52,
+              child: Row(
+                children: [
+                  Expanded(
+                      child: Padding(
+                    padding: const EdgeInsets.only(
+                      left: 24,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          "Total Amount:",
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
+                        Text(
+                          "\$${widget.nearbyHotel.price}",
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue,
+                          ),
+                        )
+                      ],
+                    ),
+                  )),
+                  Expanded(
+                      child: Container(
+                    decoration: const BoxDecoration(
+                      color: Colors.blue,
+                    ),
+                    child: const Center(
+                      child: Text(
+                        "Book Now",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                  ),
-                )),
-              ],
-            ),
-          )
-        ],
+                  )),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
