@@ -24,7 +24,7 @@ class _$NearbyHotelTearOff {
       String? price,
       String? review,
       List<String> imgItems = const [],
-      String? desctiption,
+      String? description,
       String? location,
       Map<String, String>? roomInfo}) {
     return _NearbyHotel(
@@ -33,7 +33,7 @@ class _$NearbyHotelTearOff {
       price: price,
       review: review,
       imgItems: imgItems,
-      desctiption: desctiption,
+      description: description,
       location: location,
       roomInfo: roomInfo,
     );
@@ -50,7 +50,7 @@ mixin _$NearbyHotel {
   String? get price => throw _privateConstructorUsedError;
   String? get review => throw _privateConstructorUsedError;
   List<String> get imgItems => throw _privateConstructorUsedError;
-  String? get desctiption => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   String? get location => throw _privateConstructorUsedError;
   Map<String, String>? get roomInfo => throw _privateConstructorUsedError;
 
@@ -70,7 +70,7 @@ abstract class $NearbyHotelCopyWith<$Res> {
       String? price,
       String? review,
       List<String> imgItems,
-      String? desctiption,
+      String? description,
       String? location,
       Map<String, String>? roomInfo});
 }
@@ -90,7 +90,7 @@ class _$NearbyHotelCopyWithImpl<$Res> implements $NearbyHotelCopyWith<$Res> {
     Object? price = freezed,
     Object? review = freezed,
     Object? imgItems = freezed,
-    Object? desctiption = freezed,
+    Object? description = freezed,
     Object? location = freezed,
     Object? roomInfo = freezed,
   }) {
@@ -115,9 +115,9 @@ class _$NearbyHotelCopyWithImpl<$Res> implements $NearbyHotelCopyWith<$Res> {
           ? _value.imgItems
           : imgItems // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      desctiption: desctiption == freezed
-          ? _value.desctiption
-          : desctiption // ignore: cast_nullable_to_non_nullable
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String?,
       location: location == freezed
           ? _value.location
@@ -144,7 +144,7 @@ abstract class _$NearbyHotelCopyWith<$Res>
       String? price,
       String? review,
       List<String> imgItems,
-      String? desctiption,
+      String? description,
       String? location,
       Map<String, String>? roomInfo});
 }
@@ -166,7 +166,7 @@ class __$NearbyHotelCopyWithImpl<$Res> extends _$NearbyHotelCopyWithImpl<$Res>
     Object? price = freezed,
     Object? review = freezed,
     Object? imgItems = freezed,
-    Object? desctiption = freezed,
+    Object? description = freezed,
     Object? location = freezed,
     Object? roomInfo = freezed,
   }) {
@@ -191,9 +191,9 @@ class __$NearbyHotelCopyWithImpl<$Res> extends _$NearbyHotelCopyWithImpl<$Res>
           ? _value.imgItems
           : imgItems // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      desctiption: desctiption == freezed
-          ? _value.desctiption
-          : desctiption // ignore: cast_nullable_to_non_nullable
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String?,
       location: location == freezed
           ? _value.location
@@ -216,7 +216,7 @@ class _$_NearbyHotel implements _NearbyHotel {
       this.price,
       this.review,
       this.imgItems = const [],
-      this.desctiption,
+      this.description,
       this.location,
       this.roomInfo});
 
@@ -232,7 +232,7 @@ class _$_NearbyHotel implements _NearbyHotel {
   @override
   final List<String> imgItems;
   @override
-  final String? desctiption;
+  final String? description;
   @override
   final String? location;
   @override
@@ -240,7 +240,7 @@ class _$_NearbyHotel implements _NearbyHotel {
 
   @override
   String toString() {
-    return 'NearbyHotel(img: $img, title: $title, price: $price, review: $review, imgItems: $imgItems, desctiption: $desctiption, location: $location, roomInfo: $roomInfo)';
+    return 'NearbyHotel(img: $img, title: $title, price: $price, review: $review, imgItems: $imgItems, description: $description, location: $location, roomInfo: $roomInfo)';
   }
 
   @override
@@ -254,7 +254,7 @@ class _$_NearbyHotel implements _NearbyHotel {
             const DeepCollectionEquality().equals(other.review, review) &&
             const DeepCollectionEquality().equals(other.imgItems, imgItems) &&
             const DeepCollectionEquality()
-                .equals(other.desctiption, desctiption) &&
+                .equals(other.description, description) &&
             const DeepCollectionEquality().equals(other.location, location) &&
             const DeepCollectionEquality().equals(other.roomInfo, roomInfo));
   }
@@ -267,7 +267,7 @@ class _$_NearbyHotel implements _NearbyHotel {
       const DeepCollectionEquality().hash(price),
       const DeepCollectionEquality().hash(review),
       const DeepCollectionEquality().hash(imgItems),
-      const DeepCollectionEquality().hash(desctiption),
+      const DeepCollectionEquality().hash(description),
       const DeepCollectionEquality().hash(location),
       const DeepCollectionEquality().hash(roomInfo));
 
@@ -284,7 +284,7 @@ abstract class _NearbyHotel implements NearbyHotel {
       String? price,
       String? review,
       List<String> imgItems,
-      String? desctiption,
+      String? description,
       String? location,
       Map<String, String>? roomInfo}) = _$_NearbyHotel;
 
@@ -299,7 +299,7 @@ abstract class _NearbyHotel implements NearbyHotel {
   @override
   List<String> get imgItems;
   @override
-  String? get desctiption;
+  String? get description;
   @override
   String? get location;
   @override
