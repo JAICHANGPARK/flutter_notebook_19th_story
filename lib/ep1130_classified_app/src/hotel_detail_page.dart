@@ -19,14 +19,38 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
         children: [
           Expanded(child: Placeholder()),
           Expanded(child: Placeholder()),
+          Divider(
+            height: 0,
+            color: Colors.grey,
+          ),
           Container(
-            height: 64,
+            height: 52,
             child: Row(
               children: [
                 Expanded(
-                    child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [Text("Total Amount:"), Text("\$${widget.nearbyHotel.price}")],
+                    child: Padding(
+                  padding: const EdgeInsets.only(
+                    left: 24,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Total Amount:",
+                        style: TextStyle(
+                          fontSize: 12,
+                        ),
+                      ),
+                      Text(
+                        "\$${widget.nearbyHotel.price}",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue,
+                        ),
+                      )
+                    ],
+                  ),
                 )),
                 Expanded(
                     child: Container(
@@ -37,8 +61,9 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                     child: Text(
                       "Book Now",
                       style: TextStyle(
-                        fontSize: 24,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
                     ),
                   ),
