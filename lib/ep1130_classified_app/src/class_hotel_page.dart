@@ -100,92 +100,99 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                         children: [
                           SizedBox(
                             width: 280,
-                            child: Card(
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                              child: Padding(
-                                padding: const EdgeInsets.all(16.0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          color: Colors.blue,
-                                          borderRadius: BorderRadius.circular(16),
-                                          image: const DecorationImage(
-                                            image: CachedNetworkImageProvider(
-                                              "https://cdn.pixabay.com/photo/2017/05/31/10/23/manor-house-2359884_960_720.jpg",
+                            child: InkWell(
+                              onTap: () {
+                                // Navigator.of(context).push(MaterialPageRoute(
+                                //   builder: (context) => HotelDetailPage(),
+                                // ));
+                              },
+                              child: Card(
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(16.0),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Expanded(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.blue,
+                                            borderRadius: BorderRadius.circular(16),
+                                            image: const DecorationImage(
+                                              image: CachedNetworkImageProvider(
+                                                "https://cdn.pixabay.com/photo/2017/05/31/10/23/manor-house-2359884_960_720.jpg",
+                                              ),
+                                              fit: BoxFit.cover,
                                             ),
-                                            fit: BoxFit.cover,
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    const SizedBox(
-                                      height: 16,
-                                    ),
-                                    Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        Row(
-                                          children: const [
-                                            Text(
-                                              "The Jefferson Hotel",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
+                                      const SizedBox(
+                                        height: 16,
+                                      ),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            children: const [
+                                              Text(
+                                                "The Jefferson Hotel",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                ),
                                               ),
-                                            ),
-                                            Spacer(),
-                                            Icon(
-                                              Icons.star,
-                                              size: 14,
-                                              color: Colors.yellowAccent,
-                                            ),
-                                            SizedBox(
-                                              width: 4,
-                                            ),
-                                            Text(
-                                              "4.0",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 12,
+                                              Spacer(),
+                                              Icon(
+                                                Icons.star,
+                                                size: 14,
+                                                color: Colors.yellowAccent,
                                               ),
-                                            )
-                                          ],
-                                        ),
-                                        const SizedBox(
-                                          height: 8,
-                                        ),
-                                        Row(
-                                          children: const [
-                                            Text(
-                                              "\$205",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
+                                              SizedBox(
+                                                width: 4,
+                                              ),
+                                              Text(
+                                                "4.0",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 12,
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 8,
+                                          ),
+                                          Row(
+                                            children: const [
+                                              Text(
+                                                "\$205",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.blue,
+                                                ),
+                                              ),
+                                              Spacer(),
+                                              Icon(
+                                                Icons.location_on,
+                                                size: 14,
                                                 color: Colors.blue,
                                               ),
-                                            ),
-                                            Spacer(),
-                                            Icon(
-                                              Icons.location_on,
-                                              size: 14,
-                                              color: Colors.blue,
-                                            ),
-                                            SizedBox(
-                                              width: 4,
-                                            ),
-                                            Text(
-                                              "Map",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 12,
+                                              SizedBox(
+                                                width: 4,
                                               ),
-                                            )
-                                          ],
-                                        ),
-                                      ],
-                                    )
-                                  ],
+                                              Text(
+                                                "Map",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 12,
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                        ],
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -230,119 +237,117 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.only(left: 16, right: 16),
-                      child: Consumer(
-                        builder: (context, ref, _) {
-                          final items = ref.watch(otherPlacesProvider);
-                          return GridView.builder(
-                            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2,
-                              crossAxisSpacing: 8,
-                              mainAxisSpacing: 8,
-                              childAspectRatio: 8 / 10,
-                            ),
-                            itemCount: items.length,
-                            itemBuilder: (context, index) {
-                              OtherPlace item = items[index];
-                              return Card(
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(12.0),
-                                  child: Column(
-                                    children: [
-                                      Expanded(
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(16),
-                                            image: DecorationImage(
-                                              fit: BoxFit.cover,
-                                              image: CachedNetworkImageProvider(item.img ?? ""),
-                                            ),
-                                          ),
-                                          child: Stack(
-                                            children: [
-                                              Positioned(
-                                                right: 0,
-                                                top: 0,
-                                                child: IconButton(
-                                                  icon: Icon(Icons.favorite),
-                                                  iconSize: 16,
-                                                  onPressed: () {
-                                                    ref.read(otherPlacesProvider.notifier).updateLike(index);
-                                                  },
-                                                  color: (item.isLike ?? false) ? Colors.red : Colors.white,
-                                                ),
-                                              )
-                                            ],
+                      child: Consumer(builder: (context, ref, _) {
+                        final items = ref.watch(otherPlacesProvider);
+                        return GridView.builder(
+                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 8,
+                            mainAxisSpacing: 8,
+                            childAspectRatio: 8 / 10,
+                          ),
+                          itemCount: items.length,
+                          itemBuilder: (context, index) {
+                            OtherPlace item = items[index];
+                            return Card(
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                              child: Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(16),
+                                          image: DecorationImage(
+                                            fit: BoxFit.cover,
+                                            image: CachedNetworkImageProvider(item.img ?? ""),
                                           ),
                                         ),
-                                      ),
-                                      const SizedBox(
-                                        height: 8,
-                                      ),
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            item.title ?? "",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                          const SizedBox(
-                                            height: 8,
-                                          ),
-                                          Row(
-                                            children: [
-                                              Text(
-                                                "\$${item.price}",
-                                                style: TextStyle(
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 12,
-                                                  color: Colors.blue,
-                                                ),
+                                        child: Stack(
+                                          children: [
+                                            Positioned(
+                                              right: 0,
+                                              top: 0,
+                                              child: IconButton(
+                                                icon: Icon(Icons.favorite),
+                                                iconSize: 16,
+                                                onPressed: () {
+                                                  ref.read(otherPlacesProvider.notifier).updateLike(index);
+                                                },
+                                                color: (item.isLike ?? false) ? Colors.red : Colors.white,
                                               ),
-                                              Spacer(),
-                                              Icon(
-                                                Icons.location_on,
-                                                size: 14,
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 8,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          item.title ?? "",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 8,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              "\$${item.price}",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 12,
                                                 color: Colors.blue,
                                               ),
-                                              SizedBox(
-                                                width: 4,
+                                            ),
+                                            Spacer(),
+                                            Icon(
+                                              Icons.location_on,
+                                              size: 14,
+                                              color: Colors.blue,
+                                            ),
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                            Text(
+                                              "Map",
+                                              style: TextStyle(
+                                                fontSize: 12,
                                               ),
-                                              Text(
-                                                "Map",
-                                                style: TextStyle(
-                                                  fontSize: 12,
-                                                ),
+                                            ),
+                                            Spacer(),
+                                            Icon(
+                                              Icons.star,
+                                              size: 14,
+                                              color: Colors.yellowAccent,
+                                            ),
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                            Text(
+                                              "${item.review}",
+                                              style: TextStyle(
+                                                fontSize: 12,
                                               ),
-                                              Spacer(),
-                                              Icon(
-                                                Icons.star,
-                                                size: 14,
-                                                color: Colors.yellowAccent,
-                                              ),
-                                              SizedBox(
-                                                width: 4,
-                                              ),
-                                              Text(
-                                                "${item.review}",
-                                                style: TextStyle(
-                                                  fontSize: 12,
-                                                ),
-                                              )
-                                            ],
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    )
+                                  ],
                                 ),
-                              );
-                            },
-                          );
-                        }
-                      ),
+                              ),
+                            );
+                          },
+                        );
+                      }),
                     ),
                   )
                 ],
