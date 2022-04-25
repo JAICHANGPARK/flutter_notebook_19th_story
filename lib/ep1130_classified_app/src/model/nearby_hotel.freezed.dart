@@ -23,13 +23,19 @@ class _$NearbyHotelTearOff {
       String? title,
       String? price,
       String? review,
-      List<String> imgItems = const []}) {
+      List<String> imgItems = const [],
+      String? desctiption,
+      String? location,
+      Map<String, String>? roomInfo}) {
     return _NearbyHotel(
       img: img,
       title: title,
       price: price,
       review: review,
       imgItems: imgItems,
+      desctiption: desctiption,
+      location: location,
+      roomInfo: roomInfo,
     );
   }
 }
@@ -44,6 +50,9 @@ mixin _$NearbyHotel {
   String? get price => throw _privateConstructorUsedError;
   String? get review => throw _privateConstructorUsedError;
   List<String> get imgItems => throw _privateConstructorUsedError;
+  String? get desctiption => throw _privateConstructorUsedError;
+  String? get location => throw _privateConstructorUsedError;
+  Map<String, String>? get roomInfo => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $NearbyHotelCopyWith<NearbyHotel> get copyWith =>
@@ -60,7 +69,10 @@ abstract class $NearbyHotelCopyWith<$Res> {
       String? title,
       String? price,
       String? review,
-      List<String> imgItems});
+      List<String> imgItems,
+      String? desctiption,
+      String? location,
+      Map<String, String>? roomInfo});
 }
 
 /// @nodoc
@@ -78,6 +90,9 @@ class _$NearbyHotelCopyWithImpl<$Res> implements $NearbyHotelCopyWith<$Res> {
     Object? price = freezed,
     Object? review = freezed,
     Object? imgItems = freezed,
+    Object? desctiption = freezed,
+    Object? location = freezed,
+    Object? roomInfo = freezed,
   }) {
     return _then(_value.copyWith(
       img: img == freezed
@@ -100,6 +115,18 @@ class _$NearbyHotelCopyWithImpl<$Res> implements $NearbyHotelCopyWith<$Res> {
           ? _value.imgItems
           : imgItems // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      desctiption: desctiption == freezed
+          ? _value.desctiption
+          : desctiption // ignore: cast_nullable_to_non_nullable
+              as String?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      roomInfo: roomInfo == freezed
+          ? _value.roomInfo
+          : roomInfo // ignore: cast_nullable_to_non_nullable
+              as Map<String, String>?,
     ));
   }
 }
@@ -116,7 +143,10 @@ abstract class _$NearbyHotelCopyWith<$Res>
       String? title,
       String? price,
       String? review,
-      List<String> imgItems});
+      List<String> imgItems,
+      String? desctiption,
+      String? location,
+      Map<String, String>? roomInfo});
 }
 
 /// @nodoc
@@ -136,6 +166,9 @@ class __$NearbyHotelCopyWithImpl<$Res> extends _$NearbyHotelCopyWithImpl<$Res>
     Object? price = freezed,
     Object? review = freezed,
     Object? imgItems = freezed,
+    Object? desctiption = freezed,
+    Object? location = freezed,
+    Object? roomInfo = freezed,
   }) {
     return _then(_NearbyHotel(
       img: img == freezed
@@ -158,6 +191,18 @@ class __$NearbyHotelCopyWithImpl<$Res> extends _$NearbyHotelCopyWithImpl<$Res>
           ? _value.imgItems
           : imgItems // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      desctiption: desctiption == freezed
+          ? _value.desctiption
+          : desctiption // ignore: cast_nullable_to_non_nullable
+              as String?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      roomInfo: roomInfo == freezed
+          ? _value.roomInfo
+          : roomInfo // ignore: cast_nullable_to_non_nullable
+              as Map<String, String>?,
     ));
   }
 }
@@ -170,7 +215,10 @@ class _$_NearbyHotel implements _NearbyHotel {
       this.title,
       this.price,
       this.review,
-      this.imgItems = const []});
+      this.imgItems = const [],
+      this.desctiption,
+      this.location,
+      this.roomInfo});
 
   @override
   final String? img;
@@ -183,10 +231,16 @@ class _$_NearbyHotel implements _NearbyHotel {
   @JsonKey()
   @override
   final List<String> imgItems;
+  @override
+  final String? desctiption;
+  @override
+  final String? location;
+  @override
+  final Map<String, String>? roomInfo;
 
   @override
   String toString() {
-    return 'NearbyHotel(img: $img, title: $title, price: $price, review: $review, imgItems: $imgItems)';
+    return 'NearbyHotel(img: $img, title: $title, price: $price, review: $review, imgItems: $imgItems, desctiption: $desctiption, location: $location, roomInfo: $roomInfo)';
   }
 
   @override
@@ -198,7 +252,11 @@ class _$_NearbyHotel implements _NearbyHotel {
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality().equals(other.price, price) &&
             const DeepCollectionEquality().equals(other.review, review) &&
-            const DeepCollectionEquality().equals(other.imgItems, imgItems));
+            const DeepCollectionEquality().equals(other.imgItems, imgItems) &&
+            const DeepCollectionEquality()
+                .equals(other.desctiption, desctiption) &&
+            const DeepCollectionEquality().equals(other.location, location) &&
+            const DeepCollectionEquality().equals(other.roomInfo, roomInfo));
   }
 
   @override
@@ -208,7 +266,10 @@ class _$_NearbyHotel implements _NearbyHotel {
       const DeepCollectionEquality().hash(title),
       const DeepCollectionEquality().hash(price),
       const DeepCollectionEquality().hash(review),
-      const DeepCollectionEquality().hash(imgItems));
+      const DeepCollectionEquality().hash(imgItems),
+      const DeepCollectionEquality().hash(desctiption),
+      const DeepCollectionEquality().hash(location),
+      const DeepCollectionEquality().hash(roomInfo));
 
   @JsonKey(ignore: true)
   @override
@@ -222,7 +283,10 @@ abstract class _NearbyHotel implements NearbyHotel {
       String? title,
       String? price,
       String? review,
-      List<String> imgItems}) = _$_NearbyHotel;
+      List<String> imgItems,
+      String? desctiption,
+      String? location,
+      Map<String, String>? roomInfo}) = _$_NearbyHotel;
 
   @override
   String? get img;
@@ -234,6 +298,12 @@ abstract class _NearbyHotel implements NearbyHotel {
   String? get review;
   @override
   List<String> get imgItems;
+  @override
+  String? get desctiption;
+  @override
+  String? get location;
+  @override
+  Map<String, String>? get roomInfo;
   @override
   @JsonKey(ignore: true)
   _$NearbyHotelCopyWith<_NearbyHotel> get copyWith =>
