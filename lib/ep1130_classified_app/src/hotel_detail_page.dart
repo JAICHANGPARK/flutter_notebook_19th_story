@@ -72,7 +72,41 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                     ],
                   ),
                 )),
-            const Expanded(flex: 6, child: Placeholder()),
+            Expanded(
+              flex: 6,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Text(widget.nearbyHotel.title ?? ""),
+                      Icon(Icons.star, color: Colors.yellow,),
+                      Text(widget.nearbyHotel.review ?? ""),
+
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.location_on,
+                        color: Colors.blue,
+                      ),
+                      Text("${widget.nearbyHotel.location}"),
+                    ],
+                  ),
+                  Container(
+                    height: 64,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                    ),
+                  ),
+                  Text("Description", style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20
+                  ),)
+                ],
+              ),
+            ),
             const Divider(
               height: 0,
               color: Colors.grey,
