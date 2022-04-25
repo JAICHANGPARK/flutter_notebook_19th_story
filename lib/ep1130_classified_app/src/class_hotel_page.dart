@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1130_classified_app/src/hotel_detail_page.dart';
 import 'package:flutter_notebook_19th_story/ep1130_classified_app/src/mock/fake_other_places.dart';
 import 'package:flutter_notebook_19th_story/ep1130_classified_app/src/model/other_places.dart';
 import 'package:flutter_notebook_19th_story/ep1130_classified_app/src/provider/other_places_provider.dart';
@@ -95,16 +96,19 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                     padding: const EdgeInsets.only(left: 16),
                     child: SizedBox(
                       height: 200,
-                      child: ListView(
+                      child: ListView.builder(
                         scrollDirection: Axis.horizontal,
-                        children: [
-                          SizedBox(
+                        itemCount: fakeNearByHotelItems.length,
+                        itemBuilder: (context, index) {
+                          return SizedBox(
                             width: 280,
                             child: InkWell(
                               onTap: () {
-                                // Navigator.of(context).push(MaterialPageRoute(
-                                //   builder: (context) => HotelDetailPage(),
-                                // ));
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => HotelDetailPage(
+                                    nearbyHotel: fakeNearByHotelItems[index],
+                                  ),
+                                ));
                               },
                               child: Card(
                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -118,9 +122,10 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                           decoration: BoxDecoration(
                                             color: Colors.blue,
                                             borderRadius: BorderRadius.circular(16),
-                                            image: const DecorationImage(
+                                            image: DecorationImage(
                                               image: CachedNetworkImageProvider(
-                                                "https://cdn.pixabay.com/photo/2017/05/31/10/23/manor-house-2359884_960_720.jpg",
+                                                fakeNearByHotelItems[index].img ?? "",
+                                                // "https://cdn.pixabay.com/photo/2017/05/31/10/23/manor-house-2359884_960_720.jpg",
                                               ),
                                               fit: BoxFit.cover,
                                             ),
@@ -134,9 +139,10 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Row(
-                                            children: const [
+                                            children: [
                                               Text(
-                                                "The Jefferson Hotel",
+                                                // "The Jefferson Hotel",
+                                                fakeNearByHotelItems[index].title ?? "",
                                                 style: TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -151,7 +157,8 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                                 width: 4,
                                               ),
                                               Text(
-                                                "4.0",
+                                                // "4.0",
+                                                fakeNearByHotelItems[index].review ?? "",
                                                 style: TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 12,
@@ -163,9 +170,9 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                             height: 8,
                                           ),
                                           Row(
-                                            children: const [
+                                            children: [
                                               Text(
-                                                "\$205",
+                                                "\$${fakeNearByHotelItems[index].price ?? ""}",
                                                 style: TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.blue,
@@ -196,8 +203,8 @@ class _ClassHotelPageState extends State<ClassHotelPage> {
                                 ),
                               ),
                             ),
-                          )
-                        ],
+                          );
+                        },
                       ),
                     ),
                   ),
