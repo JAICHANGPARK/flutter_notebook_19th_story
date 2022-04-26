@@ -115,6 +115,23 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                               ),
                             ],
                           ),
+                          Container(
+                            height: 200,
+                            decoration: const BoxDecoration(
+                              color: Colors.red,
+                            ),
+                          ),
+                          const Divider(
+                            color: Colors.grey,
+                            height: 48,
+                            endIndent: 16,
+                          ),
+                          Container(
+                            height: 200,
+                            decoration: const BoxDecoration(
+                              color: Colors.red,
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -122,6 +139,28 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                 ],
               ),
             ),
+            Positioned(
+              left: 24,
+              right: 24,
+              bottom: 16,
+              child: Container(
+                height: 64,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      offset: Offset(
+                        0, 4
+                      ),
+                      blurRadius: 2,
+                      spreadRadius: 2
+                    )
+                  ]
+                ),
+              ),
+            )
           ],
         ),
       ),
