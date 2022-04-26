@@ -85,6 +85,10 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                             decoration: BoxDecoration(
                               color: Colors.red,
                             ),
+                          ),
+                          Divider(
+                            color: Colors.grey,
+                            height: 48,
                           )
 
                         ],
