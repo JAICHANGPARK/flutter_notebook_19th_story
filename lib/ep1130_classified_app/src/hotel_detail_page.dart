@@ -49,6 +49,8 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             CircleAvatar(
+                              backgroundColor: Colors.white.withOpacity(0.5),
+                              foregroundColor: Colors.white,
                               child: IconButton(
                                 icon: const Icon(
                                   Icons.arrow_back_ios,
@@ -59,6 +61,8 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                               ),
                             ),
                             CircleAvatar(
+                              backgroundColor: Colors.white.withOpacity(0.5),
+                              foregroundColor: Colors.white,
                               child: IconButton(
                                 icon: const Icon(
                                   Icons.favorite,
@@ -82,9 +86,16 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                   children: [
                     Row(
                       children: [
-                        Text(widget.nearbyHotel.title ?? ""),
+                        Text(widget.nearbyHotel.title ?? "", style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),),
+                        Spacer(),
                         Icon(Icons.star, color: Colors.yellow,),
-                        Text(widget.nearbyHotel.review ?? ""),
+                        Text(widget.nearbyHotel.review ?? "", style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),),
 
                       ],
                     ),
