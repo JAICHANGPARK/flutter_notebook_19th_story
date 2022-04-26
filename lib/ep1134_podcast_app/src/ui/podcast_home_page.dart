@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class PodcastHomePage extends StatefulWidget {
@@ -12,6 +10,28 @@ class PodcastHomePage extends StatefulWidget {
 class _PodcastHomePageState extends State<PodcastHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SafeArea(
+        child: Stack(
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Text("Hi Dream 👋"),
+                    CircleAvatar(
+                      backgroundColor: Colors.purple.withOpacity(0.5),
+                      foregroundColor: Colors.purple,
+                      child: Icon(Icons.notifications_outlined,),
+                    )
+                  ],
+                )
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
