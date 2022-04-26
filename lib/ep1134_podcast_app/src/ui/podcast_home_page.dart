@@ -89,6 +89,7 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                           Divider(
                             color: Colors.grey,
                             height: 48,
+                            endIndent: 16,
                           )
 
                         ],
