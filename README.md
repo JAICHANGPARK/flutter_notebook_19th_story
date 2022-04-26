@@ -2,8 +2,17 @@
 
 ## UI Design
 
+### EP1134
 
-### EP1130
+- Podcast App Design
+- by Beka Katsadze
+- https://dribbble.com/shots/18108439-Podcast-App-Design/attachments/13302495?mode=media
+
+<img
+src="https://cdn.dribbble.com/users/4026108/screenshots/18108439/media/dc361ff9d5da6be12002fbd80bacf1c0.png"
+width="400px"/>
+
+### EP1130-1133
 
 - Classified App - Mobile UI
 - by MQoS UI/UX
