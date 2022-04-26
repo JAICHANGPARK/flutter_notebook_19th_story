@@ -65,9 +65,44 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
+                              const Text(
                                 "More to Discover",
-                                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: () {},
+                                style: TextButton.styleFrom(
+                                  primary: Colors.grey,
+                                ),
+                                child: const Text(
+                                  "View all",
+                                ),
+                              ),
+                            ],
+                          ),
+                          Container(
+                            height: 200,
+                            decoration: const BoxDecoration(
+                              color: Colors.red,
+                            ),
+                          ),
+                          const Divider(
+                            color: Colors.grey,
+                            height: 48,
+                            endIndent: 16,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              const Text(
+                                "Recently Listened",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                               TextButton(
                                 onPressed: () {},
@@ -80,18 +115,6 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                               ),
                             ],
                           ),
-                          Container(
-                            height: 200,
-                            decoration: BoxDecoration(
-                              color: Colors.red,
-                            ),
-                          ),
-                          Divider(
-                            color: Colors.grey,
-                            height: 48,
-                            endIndent: 16,
-                          )
-
                         ],
                       ),
                     ),
