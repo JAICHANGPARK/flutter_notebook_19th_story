@@ -57,24 +57,40 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                       color: Colors.blue,
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "More to Discover",
-                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "More to Discover",
+                                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                              ),
+                              TextButton(
+                                onPressed: () {},
+                                style: TextButton.styleFrom(
+                                  primary: Colors.grey,
+                                ),
+                                child: Text(
+                                  "View all",
+                                ),
+                              ),
+                            ],
+                          ),
+                          Container(
+                            height: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.red,
+                            ),
+                          )
+
+                        ],
                       ),
-                      TextButton(
-                        onPressed: () {},
-                        style: TextButton.styleFrom(
-                          primary: Colors.grey,
-                        ),
-                        child: Text(
-                          "View all",
-                        ),
-                      )
-                    ],
-                  )
+                    ),
+                  ),
                 ],
               ),
             ),
