@@ -48,12 +48,32 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                     "Top Categories",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 16,),
+                  SizedBox(
+                    height: 16,
+                  ),
                   Container(
                     height: 64,
                     decoration: BoxDecoration(
                       color: Colors.blue,
                     ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "More to Discover",
+                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        style: TextButton.styleFrom(
+                          primary: Colors.grey,
+                        ),
+                        child: Text(
+                          "View all",
+                        ),
+                      )
+                    ],
                   )
                 ],
               ),
