@@ -14,11 +14,11 @@ dependencies:
   flutter_riverpod: ^2.0.0-dev.5
   freezed_annotation: any
 
-  url_launcher: ^6.0.20
+  url_launcher: ^6.1.0
   smooth_page_indicator: ^1.0.0+2
   cached_network_image: any
 
-  video_player: ^2.3.0
+  video_player: ^2.4.0
   countup: ^0.1.4
   fl_chart: ^0.50.1
   google_fonts: any
@@ -30,7 +30,7 @@ dev_dependencies:
   # preview
   flutter_lints: ^2.0.0
   build_runner: any
-  json_serializable: ^6.1.5
+  json_serializable: ^6.1.6
   freezed:  any
 
 flutter:
