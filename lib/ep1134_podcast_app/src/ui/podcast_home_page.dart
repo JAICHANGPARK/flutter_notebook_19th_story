@@ -23,7 +23,7 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.only(right: 8, bottom: 16, top: 16),
                     child: Row(
                       children: [
                         Text(
@@ -47,6 +47,13 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                   Text(
                     "Top Categories",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 16,),
+                  Container(
+                    height: 64,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                    ),
                   )
                 ],
               ),
