@@ -205,31 +205,46 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                             child: GridView.builder(
                                 scrollDirection: Axis.horizontal,
                                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2,
-                                  crossAxisSpacing: 12,
-                                  mainAxisSpacing: 12,
-                                  childAspectRatio: 4 / 12
-                                ),
+                                    crossAxisCount: 2,
+                                    crossAxisSpacing: 12,
+                                    mainAxisSpacing: 12,
+                                    childAspectRatio: 4 / 12),
                                 itemBuilder: (context, index) {
                                   return Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.yellow
-                                    ),
+                                    decoration: BoxDecoration(color: Colors.yellow),
                                     child: Row(
                                       children: [
                                         Container(
                                           height: 64,
                                           width: 64,
-                                          decoration: BoxDecoration(
-                                            color: Colors.pink,
-                                            borderRadius: BorderRadius.circular(8)
-                                          ),
+                                          decoration:
+                                              BoxDecoration(color: Colors.pink, borderRadius: BorderRadius.circular(8)),
                                         ),
-                                        Column(
-                                          children: [
-                                            Text("29 APRIL - 34 EPS"),
-                                            Text("The Emotional Health of ..")
-                                          ],
+                                        Expanded(
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(12.0),
+                                            child: Column(
+
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Text("29 APRIL - 34 EPS"),
+                                                Text("The Emotional Health of .."),
+                                                Row(
+                                                  children: [
+                                                    CircleAvatar(
+                                                      radius: 12,
+                                                      backgroundColor: Colors.purpleAccent.withOpacity(0.2),
+                                                      foregroundColor: Colors.purpleAccent,
+                                                      child: Icon(
+                                                        Icons.play_arrow_rounded,
+                                                        size: 16,
+                                                      ),
+                                                    )
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                          ),
                                         )
                                       ],
                                     ),
