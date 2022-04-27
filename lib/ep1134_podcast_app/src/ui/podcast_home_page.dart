@@ -204,7 +204,7 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                                 ),
                             child: GridView.builder(
                                 scrollDirection: Axis.horizontal,
-                                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                                     crossAxisCount: 2,
                                     crossAxisSpacing: 12,
                                     mainAxisSpacing: 12,
@@ -227,24 +227,34 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                               children: [
-                                                Text(
+                                                const Text(
                                                   "29 APRIL - 34 EPS",
-                                                  style: TextStyle(fontSize: 14, color: Colors.grey),
+                                                  style: TextStyle(
+                                                    fontSize: 14,
+                                                    color: Colors.grey,
+                                                  ),
                                                 ),
-                                                Text("The Emotional Health of .."),
+                                                const Text(
+                                                  "The Emotional Health of ..",
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
                                                 Row(
                                                   children: [
                                                     CircleAvatar(
                                                       radius: 12,
                                                       backgroundColor: Colors.purpleAccent.withOpacity(0.2),
                                                       foregroundColor: Colors.purpleAccent,
-                                                      child: Icon(
+                                                      child: const Icon(
                                                         Icons.play_arrow_rounded,
                                                         size: 16,
                                                       ),
                                                     ),
-                                                    SizedBox(width: 8,),
-                                                    Text(
+                                                    const SizedBox(
+                                                      width: 8,
+                                                    ),
+                                                    const Text(
                                                       "34 min",
                                                       style: TextStyle(
                                                         color: Colors.purpleAccent,
