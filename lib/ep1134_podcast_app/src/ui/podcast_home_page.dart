@@ -202,6 +202,33 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                             decoration: const BoxDecoration(
                               color: Colors.red,
                             ),
+                            child: GridView.builder(
+                                scrollDirection: Axis.horizontal,
+                                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 2,
+                                  crossAxisSpacing: 12,
+                                  mainAxisSpacing: 12,
+                                  childAspectRatio: 4 / 12
+                                ),
+                                itemBuilder: (context, index) {
+                                  return Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.yellow
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          height: 64,
+                                          width: 64,
+                                          decoration: BoxDecoration(
+                                            color: Colors.pink,
+                                            borderRadius: BorderRadius.circular(8)
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  );
+                                }),
                           ),
                           const Divider(
                             color: Colors.grey,
