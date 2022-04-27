@@ -131,10 +131,16 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
 
                                     width: 160,
                                     child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Expanded(child: Placeholder()),
                                         Column(
-                                          children: [],
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text("Ice Giants - Uranus"),
+                                            SizedBox(height: 4,),
+                                            Text("16 Eps - 24 MIN")
+                                          ],
                                         )
                                       ],
                                     ),
