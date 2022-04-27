@@ -119,7 +119,7 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                           Container(
                             height: 200,
                             decoration: const BoxDecoration(
-                              color: Colors.red,
+                              // color: Colors.red,
                             ),
                             child: ListView.builder(
                               scrollDirection: Axis.horizontal,
@@ -128,17 +128,28 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                                 return Padding(
                                   padding: const EdgeInsets.only(right: 8),
                                   child: SizedBox(
-
                                     width: 160,
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Expanded(child: Placeholder()),
+                                        Expanded(
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              color: Colors.cyanAccent,
+                                              borderRadius: BorderRadius.circular(16),
+                                            ),
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 8,
+                                        ),
                                         Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
+                                          children: const [
                                             Text("Ice Giants - Uranus"),
-                                            SizedBox(height: 4,),
+                                            SizedBox(
+                                              height: 4,
+                                            ),
                                             Text("16 Eps - 24 MIN")
                                           ],
                                         )
