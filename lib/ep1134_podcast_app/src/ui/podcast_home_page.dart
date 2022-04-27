@@ -224,6 +224,12 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                                             color: Colors.pink,
                                             borderRadius: BorderRadius.circular(8)
                                           ),
+                                        ),
+                                        Column(
+                                          children: [
+                                            Text("29 APRIL - 34 EPS"),
+                                            Text("The Emotional Health of ..")
+                                          ],
                                         )
                                       ],
                                     ),
