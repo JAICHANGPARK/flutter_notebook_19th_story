@@ -279,8 +279,76 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                           Container(
                             height: 200,
                             decoration: const BoxDecoration(
-                              color: Colors.red,
-                            ),
+                                // color: Colors.red,
+                                ),
+                            child: GridView.builder(
+                                scrollDirection: Axis.horizontal,
+                                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: 2,
+                                    crossAxisSpacing: 12,
+                                    mainAxisSpacing: 12,
+                                    childAspectRatio: 4 / 12),
+                                itemBuilder: (context, index) {
+                                  return Container(
+                                    // decoration: BoxDecoration(color: Colors.yellow),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          height: 64,
+                                          width: 64,
+                                          decoration:
+                                              BoxDecoration(color: Colors.pink, borderRadius: BorderRadius.circular(8)),
+                                        ),
+                                        Expanded(
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(12.0),
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                              children: [
+                                                const Text(
+                                                  "29 APRIL - 34 EPS",
+                                                  style: TextStyle(
+                                                    fontSize: 14,
+                                                    color: Colors.grey,
+                                                  ),
+                                                ),
+                                                const Text(
+                                                  "The Emotional Health of ..",
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                                Row(
+                                                  children: [
+                                                    CircleAvatar(
+                                                      radius: 12,
+                                                      backgroundColor: Colors.purpleAccent.withOpacity(0.2),
+                                                      foregroundColor: Colors.purpleAccent,
+                                                      child: const Icon(
+                                                        Icons.play_arrow_rounded,
+                                                        size: 16,
+                                                      ),
+                                                    ),
+                                                    const SizedBox(
+                                                      width: 8,
+                                                    ),
+                                                    const Text(
+                                                      "34 min",
+                                                      style: TextStyle(
+                                                        color: Colors.purpleAccent,
+                                                      ),
+                                                    )
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  );
+                                }),
                           ),
                         ],
                       ),
@@ -295,10 +363,18 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
               bottom: 16,
               child: Container(
                 height: 64,
-                decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12), boxShadow: [
-                  BoxShadow(
-                      color: Colors.black.withOpacity(0.2), offset: const Offset(0, 4), blurRadius: 2, spreadRadius: 2)
-                ]),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      offset: const Offset(0, 4),
+                      blurRadius: 2,
+                      spreadRadius: 2,
+                    )
+                  ],
+                ),
               ),
             )
           ],
