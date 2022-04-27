@@ -226,8 +226,12 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                                             child: Column(
 
                                               crossAxisAlignment: CrossAxisAlignment.start,
+                                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                               children: [
-                                                Text("29 APRIL - 34 EPS"),
+                                                Text("29 APRIL - 34 EPS", style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Colors.grey
+                                                ),),
                                                 Text("The Emotional Health of .."),
                                                 Row(
                                                   children: [
