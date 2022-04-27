@@ -119,8 +119,8 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                           Container(
                             height: 200,
                             decoration: const BoxDecoration(
-                              // color: Colors.red,
-                            ),
+                                // color: Colors.red,
+                                ),
                             child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               itemCount: 10,
@@ -146,11 +146,22 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                                         Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: const [
-                                            Text("Ice Giants - Uranus"),
+                                            Text(
+                                              "Ice Giants - Uranus",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
                                             SizedBox(
                                               height: 4,
                                             ),
-                                            Text("16 Eps - 24 MIN")
+                                            Text(
+                                              "16 Eps - 24 MIN",
+                                              style: TextStyle(
+                                                fontSize: 12,
+                                                color: Colors.grey,
+                                              ),
+                                            )
                                           ],
                                         )
                                       ],
