@@ -78,6 +78,9 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                                   child: Row(
                                     children: [
                                       Text("${categories[index].icon}"),
+                                      const SizedBox(
+                                        width: 8,
+                                      ),
                                       Text("${categories[index].title}"),
                                     ],
                                   ),
@@ -117,6 +120,27 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                             height: 200,
                             decoration: const BoxDecoration(
                               color: Colors.red,
+                            ),
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: 10,
+                              itemBuilder: (context, index) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(right: 8),
+                                  child: SizedBox(
+
+                                    width: 160,
+                                    child: Column(
+                                      children: [
+                                        Expanded(child: Placeholder()),
+                                        Column(
+                                          children: [],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
                             ),
                           ),
                           const Divider(
@@ -176,7 +200,8 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
               child: Container(
                 height: 64,
                 decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12), boxShadow: [
-                  BoxShadow(color: Colors.black.withOpacity(0.2), offset: const Offset(0, 4), blurRadius: 2, spreadRadius: 2)
+                  BoxShadow(
+                      color: Colors.black.withOpacity(0.2), offset: const Offset(0, 4), blurRadius: 2, spreadRadius: 2)
                 ]),
               ),
             )
