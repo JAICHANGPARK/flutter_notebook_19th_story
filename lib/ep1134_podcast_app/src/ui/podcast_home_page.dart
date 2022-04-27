@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1134_podcast_app/src/model/top_category.dart';
 
 class PodcastHomePage extends StatefulWidget {
   const PodcastHomePage({Key? key}) : super(key: key);
@@ -57,10 +58,10 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                       color: Colors.blue,
                     ),
                     child: ListView.builder(
-
-                        itemBuilder: (context,index){
-
-                    }),
+                        itemCount: categories.length,
+                        itemBuilder: (context, index) {
+                          return Container();
+                        }),
                   ),
                   Expanded(
                     child: SingleChildScrollView(
@@ -150,20 +151,9 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
               bottom: 16,
               child: Container(
                 height: 64,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      offset: Offset(
-                        0, 4
-                      ),
-                      blurRadius: 2,
-                      spreadRadius: 2
-                    )
-                  ]
-                ),
+                decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12), boxShadow: [
+                  BoxShadow(color: Colors.black.withOpacity(0.2), offset: Offset(0, 4), blurRadius: 2, spreadRadius: 2)
+                ]),
               ),
             )
           ],
