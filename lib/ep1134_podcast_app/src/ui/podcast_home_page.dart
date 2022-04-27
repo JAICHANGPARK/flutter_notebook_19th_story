@@ -56,6 +56,11 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                     decoration: BoxDecoration(
                       color: Colors.blue,
                     ),
+                    child: ListView.builder(
+
+                        itemBuilder: (context,index){
+
+                    }),
                   ),
                   Expanded(
                     child: SingleChildScrollView(
