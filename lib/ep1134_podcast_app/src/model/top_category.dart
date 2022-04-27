@@ -11,19 +11,19 @@ List<TopCategory> categories = [
     title: "Pets",
   ),
   TopCategory(
-    icon: "🐶",
+    icon: "🧘‍♀️",
     title: "Yoga",
   ),
   TopCategory(
-    icon: "🐶",
+    icon: "🏔",
     title: "Travel",
   ),
   TopCategory(
-    icon: "🐶",
+    icon: "🍔",
     title: "Eating",
   ),
   TopCategory(
-    icon: "🐶",
+    icon: "🧠",
     title: "Math",
   ),
 
