@@ -200,8 +200,8 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                           Container(
                             height: 200,
                             decoration: const BoxDecoration(
-                              color: Colors.red,
-                            ),
+                                // color: Colors.red,
+                                ),
                             child: GridView.builder(
                                 scrollDirection: Axis.horizontal,
                                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -211,7 +211,7 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                                     childAspectRatio: 4 / 12),
                                 itemBuilder: (context, index) {
                                   return Container(
-                                    decoration: BoxDecoration(color: Colors.yellow),
+                                    // decoration: BoxDecoration(color: Colors.yellow),
                                     child: Row(
                                       children: [
                                         Container(
@@ -224,14 +224,13 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                                           child: Padding(
                                             padding: const EdgeInsets.all(12.0),
                                             child: Column(
-
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                               children: [
-                                                Text("29 APRIL - 34 EPS", style: TextStyle(
-                                                  fontSize: 14,
-                                                  color: Colors.grey
-                                                ),),
+                                                Text(
+                                                  "29 APRIL - 34 EPS",
+                                                  style: TextStyle(fontSize: 14, color: Colors.grey),
+                                                ),
                                                 Text("The Emotional Health of .."),
                                                 Row(
                                                   children: [
@@ -242,6 +241,13 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                                                       child: Icon(
                                                         Icons.play_arrow_rounded,
                                                         size: 16,
+                                                      ),
+                                                    ),
+                                                    SizedBox(width: 8,),
+                                                    Text(
+                                                      "34 min",
+                                                      style: TextStyle(
+                                                        color: Colors.purpleAccent,
                                                       ),
                                                     )
                                                   ],
