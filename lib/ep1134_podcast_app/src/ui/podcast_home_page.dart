@@ -53,20 +53,30 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                     height: 16,
                   ),
                   Container(
-                    height: 64,
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
-                    ),
+                    height: 54,
+                    // decoration: BoxDecoration(
+                    //   color: Colors.blue,
+                    // ),
                     child: ListView.builder(
                         itemCount: categories.length,
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
-                          return Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Colors.grey[100]!,
+                          return Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              padding: EdgeInsets.symmetric(horizontal: 8),
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.grey[200]!,
+                                ),
+                                borderRadius: BorderRadius.circular(4)
                               ),
-                              borderRadius: BorderRadius.circular(4)
+                              child: Row(
+                                children: [
+                                  Text("${categories[index].icon}"),
+                                  Text("${categories[index].title}"),
+                                ],
+                              ),
                             ),
                           );
                         }),
