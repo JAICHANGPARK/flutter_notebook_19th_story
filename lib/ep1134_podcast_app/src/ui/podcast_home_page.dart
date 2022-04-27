@@ -59,8 +59,16 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                     ),
                     child: ListView.builder(
                         itemCount: categories.length,
+                        scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
-                          return Container();
+                          return Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.grey[100]!,
+                              ),
+                              borderRadius: BorderRadius.circular(4)
+                            ),
+                          );
                         }),
                   ),
                   Expanded(
