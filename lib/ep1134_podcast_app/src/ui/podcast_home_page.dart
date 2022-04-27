@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_19th_story/ep1134_podcast_app/src/model/top_category.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class PodcastHomePage extends StatefulWidget {
   const PodcastHomePage({Key? key}) : super(key: key);
@@ -57,29 +58,39 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                     // decoration: BoxDecoration(
                     //   color: Colors.blue,
                     // ),
-                    child: ListView.builder(
-                        itemCount: categories.length,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              padding: EdgeInsets.symmetric(horizontal: 8),
-                              decoration: BoxDecoration(
-                                border: Border.all(
-                                  color: Colors.grey[200]!,
+                    child: Consumer(
+                      builder: (context, ref, _) {
+
+                        return ListView.builder(
+                            itemCount: categories.length,
+                            scrollDirection: Axis.horizontal,
+                            itemBuilder: (context, index) {
+                              return Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: GestureDetector(
+                                  onTap: (){
+
+                                  },
+                                  child: Container(
+                                    padding: EdgeInsets.symmetric(horizontal: 8),
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        color: Colors.grey[200]!,
+                                      ),
+                                      borderRadius: BorderRadius.circular(4)
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Text("${categories[index].icon}"),
+                                        Text("${categories[index].title}"),
+                                      ],
+                                    ),
+                                  ),
                                 ),
-                                borderRadius: BorderRadius.circular(4)
-                              ),
-                              child: Row(
-                                children: [
-                                  Text("${categories[index].icon}"),
-                                  Text("${categories[index].title}"),
-                                ],
-                              ),
-                            ),
-                          );
-                        }),
+                              );
+                            });
+                      }
+                    ),
                   ),
                   Expanded(
                     child: SingleChildScrollView(
