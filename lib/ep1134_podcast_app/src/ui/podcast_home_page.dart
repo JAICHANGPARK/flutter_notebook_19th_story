@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_19th_story/ep1134_podcast_app/src/model/top_category.dart';
+import 'package:flutter_notebook_19th_story/ep1134_podcast_app/src/provider/category_index_controller.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class PodcastHomePage extends StatefulWidget {
@@ -28,29 +29,29 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                     padding: const EdgeInsets.only(right: 8, bottom: 16, top: 16),
                     child: Row(
                       children: [
-                        Text(
+                        const Text(
                           "Hi Dream 👋",
                           style: TextStyle(
                             fontSize: 16,
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         CircleAvatar(
                           radius: 16,
                           backgroundColor: Colors.purple.withOpacity(0.2),
                           foregroundColor: Colors.purple,
-                          child: Icon(
+                          child: const Icon(
                             Icons.notifications_outlined,
                           ),
                         )
                       ],
                     ),
                   ),
-                  Text(
+                  const Text(
                     "Top Categories",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
                   Container(
@@ -58,39 +59,33 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                     // decoration: BoxDecoration(
                     //   color: Colors.blue,
                     // ),
-                    child: Consumer(
-                      builder: (context, ref, _) {
-
-                        return ListView.builder(
-                            itemCount: categories.length,
-                            scrollDirection: Axis.horizontal,
-                            itemBuilder: (context, index) {
-                              return Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: GestureDetector(
-                                  onTap: (){
-
-                                  },
-                                  child: Container(
-                                    padding: EdgeInsets.symmetric(horizontal: 8),
-                                    decoration: BoxDecoration(
+                    child: Consumer(builder: (context, ref, _) {
+                      return ListView.builder(
+                          itemCount: categories.length,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            return Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: GestureDetector(
+                                onTap: () => ref.watch(categoryIndexProvider.notifier).state = index,
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                                  decoration: BoxDecoration(
                                       border: Border.all(
                                         color: Colors.grey[200]!,
                                       ),
-                                      borderRadius: BorderRadius.circular(4)
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        Text("${categories[index].icon}"),
-                                        Text("${categories[index].title}"),
-                                      ],
-                                    ),
+                                      borderRadius: BorderRadius.circular(4)),
+                                  child: Row(
+                                    children: [
+                                      Text("${categories[index].icon}"),
+                                      Text("${categories[index].title}"),
+                                    ],
                                   ),
                                 ),
-                              );
-                            });
-                      }
-                    ),
+                              ),
+                            );
+                          });
+                    }),
                   ),
                   Expanded(
                     child: SingleChildScrollView(
@@ -144,7 +139,7 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
                                 style: TextButton.styleFrom(
                                   primary: Colors.grey,
                                 ),
-                                child: Text(
+                                child: const Text(
                                   "View all",
                                 ),
                               ),
@@ -181,7 +176,7 @@ class _PodcastHomePageState extends State<PodcastHomePage> {
               child: Container(
                 height: 64,
                 decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12), boxShadow: [
-                  BoxShadow(color: Colors.black.withOpacity(0.2), offset: Offset(0, 4), blurRadius: 2, spreadRadius: 2)
+                  BoxShadow(color: Colors.black.withOpacity(0.2), offset: const Offset(0, 4), blurRadius: 2, spreadRadius: 2)
                 ]),
               ),
             )
