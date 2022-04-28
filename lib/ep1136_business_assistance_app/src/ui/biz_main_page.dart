@@ -22,7 +22,9 @@ class _BizMainPageState extends State<BizMainPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
+            Text("Company finance"),
+            SizedBox(height: 72,),
+            Expanded(child: Placeholder()),
           ],
         ),
       ),
