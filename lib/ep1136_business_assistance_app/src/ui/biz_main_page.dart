@@ -48,11 +48,25 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                 child: TabBar(
                   controller: tabController,
                   tabs: [
-                    Tab(text: ,)
+                    Tab(text: "overview",),
+                    Tab(text: "accounts",),
+                    Tab(text: "cashflows",),
+                    Tab(text: "indicators",),
+                    Tab(text: "clients",),
                   ],
                 ),
               ),
-              Expanded(child: Placeholder()),
+              Expanded(child: TabBarView(
+                controller: tabController,
+                children: [
+
+                  Container(),
+                  Container(),
+                  Container(),
+                  Container(),
+                  Container(),
+                ],
+              )),
             ],
           ),
         ),
