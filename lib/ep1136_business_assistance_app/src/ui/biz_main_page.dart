@@ -47,6 +47,7 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                 height: 48,
                 child: TabBar(
                   controller: tabController,
+                  isScrollable: true,
                   tabs: [
                     Tab(text: "overview",),
                     Tab(text: "accounts",),
@@ -60,7 +61,31 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                 controller: tabController,
                 children: [
 
-                  Container(),
+                  SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Container(
+                            height: MediaQuery.of(context).size.height / 2.3,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(16)
+                            ),
+                          ),
+                        ),
+
+                        Container(
+                          height: MediaQuery.of(context).size.height / 2,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(16)
+                          ),
+                        )
+
+                      ],
+                    ),
+                  ),
                   Container(),
                   Container(),
                   Container(),
