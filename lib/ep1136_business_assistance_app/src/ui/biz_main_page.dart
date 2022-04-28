@@ -19,13 +19,21 @@ class _BizMainPageState extends State<BizMainPage> {
         foregroundColor: Colors.white,
       ),
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("Company finance"),
-            SizedBox(height: 72,),
-            Expanded(child: Placeholder()),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.only(top: 24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text("Company finance"),
+              ),
+              SizedBox(
+                height: 72,
+              ),
+              Expanded(child: Placeholder()),
+            ],
+          ),
         ),
       ),
     );
