@@ -7,7 +7,17 @@ class BizMainPage extends StatefulWidget {
   State<BizMainPage> createState() => _BizMainPageState();
 }
 
-class _BizMainPageState extends State<BizMainPage> {
+class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStateMixin {
+  TabController? tabController;
+
+  @override
+  void initState() {
+    super.initState();
+
+    tabController = TabController(length: 5, vsync: this);
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,12 +36,21 @@ class _BizMainPageState extends State<BizMainPage> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Text("Company finance", style: TextStyle(
-                  fontSize: 20,
-                ),),
+                child: Text(
+                  "Company finance",
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
               ),
               SizedBox(
-                height: 72,
+                height: 48,
+                child: TabBar(
+                  controller: tabController,
+                  tabs: [
+                    Tab(text: ,)
+                  ],
+                ),
               ),
               Expanded(child: Placeholder()),
             ],
