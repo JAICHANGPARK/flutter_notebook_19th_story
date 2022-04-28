@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class BizMainPage extends StatefulWidget {
@@ -12,6 +10,13 @@ class BizMainPage extends StatefulWidget {
 class _BizMainPageState extends State<BizMainPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.black,
+        onPressed: () {},
+        child: Icon(Icons.menu),
+        foregroundColor: Colors.white,
+      ),
+    );
   }
 }
