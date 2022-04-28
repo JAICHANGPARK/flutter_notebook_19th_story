@@ -2,7 +2,17 @@
 
 ## UI Design
 
-### EP1134
+### EP1136
+
+- Personal Business Assistance – Mobile App
+- by AIC
+- https://dribbble.com/shots/18120908/attachments/13316194?mode=media
+
+<img
+src="https://cdn.dribbble.com/users/760772/screenshots/18120908/media/5433a8cd8167b5fb1c986a044883cb20.png"
+width="400px"/>
+
+### EP1134-1135
 
 - Podcast App Design
 - by Beka Katsadze
