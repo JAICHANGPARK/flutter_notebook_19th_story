@@ -18,6 +18,14 @@ class _BizMainPageState extends State<BizMainPage> {
         child: Icon(Icons.menu),
         foregroundColor: Colors.white,
       ),
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+
+          ],
+        ),
+      ),
     );
   }
 }
