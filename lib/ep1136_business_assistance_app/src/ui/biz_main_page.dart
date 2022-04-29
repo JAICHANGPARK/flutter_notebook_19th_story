@@ -15,7 +15,6 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
     super.initState();
 
     tabController = TabController(length: 5, vsync: this);
-
   }
 
   @override
@@ -25,7 +24,7 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.black,
         onPressed: () {},
-        child: Icon(Icons.menu),
+        child: const Icon(Icons.menu),
         foregroundColor: Colors.white,
       ),
       body: SafeArea(
@@ -34,8 +33,8 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(16.0),
+              const Padding(
+                padding: EdgeInsets.all(16.0),
                 child: Text(
                   "Company finance",
                   style: TextStyle(
@@ -48,19 +47,30 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                 child: TabBar(
                   controller: tabController,
                   isScrollable: true,
+                  labelColor: Colors.black,
                   tabs: [
-                    Tab(text: "overview",),
-                    Tab(text: "accounts",),
-                    Tab(text: "cashflows",),
-                    Tab(text: "indicators",),
-                    Tab(text: "clients",),
+                    const Tab(
+                      text: "overview",
+                    ),
+                    const Tab(
+                      text: "accounts",
+                    ),
+                    const Tab(
+                      text: "cashflows",
+                    ),
+                    const Tab(
+                      text: "indicators",
+                    ),
+                    const Tab(
+                      text: "clients",
+                    ),
                   ],
                 ),
               ),
-              Expanded(child: TabBarView(
+              Expanded(
+                  child: TabBarView(
                 controller: tabController,
                 children: [
-
                   SingleChildScrollView(
                     child: Column(
                       children: [
@@ -68,26 +78,30 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                           padding: const EdgeInsets.all(16.0),
                           child: Container(
                             height: MediaQuery.of(context).size.height / 2.3,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16)
-                            ),
+                            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16)),
                           ),
                         ),
-
                         Container(
                           height: MediaQuery.of(context).size.height / 2,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16)
-                          ),
+                          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16)),
                         )
-
                       ],
                     ),
                   ),
                   Container(),
-                  Container(),
+                  SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 64,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                          ),
+                          child: Stack(),
+                        )
+                      ],
+                    ),
+                  ),
                   Container(),
                   Container(),
                 ],
