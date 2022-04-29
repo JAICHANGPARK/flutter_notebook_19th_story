@@ -90,16 +90,32 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                   ),
                   Container(),
                   SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 64,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                          ),
-                          child: Stack(),
-                        )
-                      ],
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 64,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                            ),
+                            child: Stack(
+                              children: [
+                                Positioned(
+                                  child: Text("total"),
+                                  left: 8,
+                                  top: 8,
+                                ),
+                                Positioned(
+                                  child: Text("total"),
+                                  left: 8,
+                                  top: 8,
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Container(),
