@@ -106,17 +106,17 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                 borderRadius: BorderRadius.circular(12),
                               ),
                               child: Stack(
-                                children: const [
+                                children: [
                                   Positioned(
                                     left: 8,
                                     top: 8,
-                                    child: Text("total"),
+                                    child: Text("${item.items?[0].title ?? ""}"),
                                   ),
                                   Positioned(
                                     right: 8,
                                     bottom: 8,
                                     child: Text(
-                                      "\$2,343,538",
+                                      "\$${item.items?[0].price ?? ""}",
                                       style: TextStyle(
                                         fontSize: 38,
                                         fontWeight: FontWeight.w500,
@@ -136,24 +136,26 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                   crossAxisSpacing: 4,
                                   mainAxisSpacing: 4,
                                 ),
+                                itemCount: (item.items?.length ?? 1) - 1,
                                 itemBuilder: (context, index) {
+                                  var _item = item.items?[index + 1];
                                   return Container(
                                     decoration: BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                     child: Stack(
-                                      children: const [
+                                      children:  [
                                         Positioned(
                                           left: 8,
                                           top: 8,
-                                          child: Text("total"),
+                                          child: Text("${_item?.title??""} "),
                                         ),
                                         Positioned(
                                           right: 8,
                                           bottom: 8,
                                           child: Text(
-                                            "\$2,343,538",
+                                            "\$${_item?.price??""} ",
                                             style: TextStyle(
                                               fontSize: 32,
                                               fontWeight: FontWeight.w500,
