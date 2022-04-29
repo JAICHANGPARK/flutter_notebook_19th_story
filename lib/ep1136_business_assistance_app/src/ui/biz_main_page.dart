@@ -90,7 +90,7 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                   ),
                   Container(),
                   Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.only(left: 16, top: 16, right: 16),
                     child: Column(
                       children: [
                         Container(
