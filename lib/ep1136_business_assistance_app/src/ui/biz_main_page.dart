@@ -98,7 +98,7 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                             height: 84,
                             decoration: BoxDecoration(
                               color: Colors.white,
-                              borderRadius: BorderRadius.circular(12)
+                              borderRadius: BorderRadius.circular(12),
                             ),
                             child: Stack(
                               children: [
@@ -108,9 +108,15 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                   top: 8,
                                 ),
                                 Positioned(
-                                  child: Text("total"),
-                                  left: 8,
-                                  top: 8,
+                                  child: Text(
+                                    "\$2,343,538",
+                                    style: TextStyle(
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  right: 8,
+                                  bottom: 8,
                                 )
                               ],
                             ),
