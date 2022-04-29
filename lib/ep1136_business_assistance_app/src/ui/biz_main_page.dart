@@ -95,9 +95,10 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                       child: Column(
                         children: [
                           Container(
-                            height: 64,
+                            height: 84,
                             decoration: BoxDecoration(
                               color: Colors.white,
+                              borderRadius: BorderRadius.circular(12)
                             ),
                             child: Stack(
                               children: [
