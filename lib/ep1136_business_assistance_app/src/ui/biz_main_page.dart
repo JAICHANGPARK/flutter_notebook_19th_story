@@ -111,8 +111,8 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                   child: Text(
                                     "\$2,343,538",
                                     style: TextStyle(
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.bold,
+                                      fontSize: 32,
+                                      fontWeight: FontWeight.w800,
                                     ),
                                   ),
                                   right: 8,
