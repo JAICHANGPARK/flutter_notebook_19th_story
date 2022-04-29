@@ -156,7 +156,7 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                           bottom: 8,
                                           child: Text(
                                             "\$${_item?.price??""} ",
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               fontSize: 32,
                                               fontWeight: FontWeight.w500,
                                             ),
