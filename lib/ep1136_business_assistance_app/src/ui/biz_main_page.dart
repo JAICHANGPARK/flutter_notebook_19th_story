@@ -89,40 +89,77 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                     ),
                   ),
                   Container(),
-                  SingleChildScrollView(
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 84,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Stack(
-                              children: const [
-                                Positioned(
-                                  left: 8,
-                                  top: 8,
-                                  child: Text("total"),
-                                ),
-                                Positioned(
-                                  right: 8,
-                                  bottom: 8,
-                                  child: Text(
-                                    "\$2,343,538",
-                                    style: TextStyle(
-                                      fontSize: 38,
-                                      fontWeight: FontWeight.w800,
-                                    ),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 84,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Stack(
+                            children: const [
+                              Positioned(
+                                left: 8,
+                                top: 8,
+                                child: Text("total"),
+                              ),
+                              Positioned(
+                                right: 8,
+                                bottom: 8,
+                                child: Text(
+                                  "\$2,343,538",
+                                  style: TextStyle(
+                                    fontSize: 38,
+                                    fontWeight: FontWeight.w500,
                                   ),
-                                )
-                              ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 4,),
+                        Expanded(
+                          child: GridView.builder(
+                            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              crossAxisSpacing: 4,
+                              mainAxisSpacing: 4,
+
                             ),
-                          )
-                        ],
-                      ),
+                            itemBuilder: (context, index) {
+                              return Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Stack(
+                                  children: const [
+                                    Positioned(
+                                      left: 8,
+                                      top: 8,
+                                      child: Text("total"),
+                                    ),
+                                    Positioned(
+                                      right: 8,
+                                      bottom: 8,
+                                      child: Text(
+                                        "\$2,343,538",
+                                        style: TextStyle(
+                                          fontSize: 32,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                        )
+                      ],
                     ),
                   ),
                   Container(),
