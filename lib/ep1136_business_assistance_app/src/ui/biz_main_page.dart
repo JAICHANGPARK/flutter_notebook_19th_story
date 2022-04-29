@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1136_business_assistance_app/src/model/cashflow.dart';
+import 'package:flutter_notebook_19th_story/ep1136_business_assistance_app/src/provider/cashflows_provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class BizMainPage extends StatefulWidget {
   const BizMainPage({Key? key}) : super(key: key);
@@ -91,76 +94,92 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                   Container(),
                   Padding(
                     padding: const EdgeInsets.only(left: 16, top: 16, right: 16),
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 84,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Stack(
-                            children: const [
-                              Positioned(
-                                left: 8,
-                                top: 8,
-                                child: Text("total"),
-                              ),
-                              Positioned(
-                                right: 8,
-                                bottom: 8,
-                                child: Text(
-                                  "\$2,343,538",
-                                  style: TextStyle(
-                                    fontSize: 38,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        SizedBox(height: 4,),
-                        Expanded(
-                          child: GridView.builder(
-                            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2,
-                              crossAxisSpacing: 4,
-                              mainAxisSpacing: 4,
-
+                    child: Consumer(builder: (context, ref, _) {
+                      AsyncValue<CashFlowItems> items = ref.watch(cashFlowProvider);
+                      return items.when(
+                          data: (item) {},
+                          error: (e, s) {
+                            return Center(
+                              child: Text("$e, $s"),
+                            );
+                          },
+                          loading: () {
+                            return Center(
+                              child: CircularProgressIndicator(),
+                            );
+                          });
+                      return Column(
+                        children: [
+                          Container(
+                            height: 84,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12),
                             ),
-                            itemBuilder: (context, index) {
-                              return Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(12),
+                            child: Stack(
+                              children: const [
+                                Positioned(
+                                  left: 8,
+                                  top: 8,
+                                  child: Text("total"),
                                 ),
-                                child: Stack(
-                                  children: const [
-                                    Positioned(
-                                      left: 8,
-                                      top: 8,
-                                      child: Text("total"),
+                                Positioned(
+                                  right: 8,
+                                  bottom: 8,
+                                  child: Text(
+                                    "\$2,343,538",
+                                    style: TextStyle(
+                                      fontSize: 38,
+                                      fontWeight: FontWeight.w500,
                                     ),
-                                    Positioned(
-                                      right: 8,
-                                      bottom: 8,
-                                      child: Text(
-                                        "\$2,343,538",
-                                        style: TextStyle(
-                                          fontSize: 32,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              );
-                            },
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
-                        )
-                      ],
-                    ),
+                          SizedBox(
+                            height: 4,
+                          ),
+                          Expanded(
+                            child: GridView.builder(
+                              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2,
+                                crossAxisSpacing: 4,
+                                mainAxisSpacing: 4,
+                              ),
+                              itemBuilder: (context, index) {
+                                return Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Stack(
+                                    children: const [
+                                      Positioned(
+                                        left: 8,
+                                        top: 8,
+                                        child: Text("total"),
+                                      ),
+                                      Positioned(
+                                        right: 8,
+                                        bottom: 8,
+                                        child: Text(
+                                          "\$2,343,538",
+                                          style: TextStyle(
+                                            fontSize: 32,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                );
+                              },
+                            ),
+                          )
+                        ],
+                      );
+                    }),
                   ),
                   Container(),
                   Container(),
