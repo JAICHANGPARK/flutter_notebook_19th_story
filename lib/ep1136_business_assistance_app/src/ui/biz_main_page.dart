@@ -24,8 +24,8 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.black,
         onPressed: () {},
-        child: const Icon(Icons.menu),
         foregroundColor: Colors.white,
+        child: const Icon(Icons.menu),
       ),
       body: SafeArea(
         child: Padding(
@@ -101,22 +101,22 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                               borderRadius: BorderRadius.circular(12),
                             ),
                             child: Stack(
-                              children: [
+                              children: const [
                                 Positioned(
-                                  child: Text("total"),
                                   left: 8,
                                   top: 8,
+                                  child: Text("total"),
                                 ),
                                 Positioned(
+                                  right: 8,
+                                  bottom: 8,
                                   child: Text(
                                     "\$2,343,538",
                                     style: TextStyle(
-                                      fontSize: 32,
+                                      fontSize: 38,
                                       fontWeight: FontWeight.w800,
                                     ),
                                   ),
-                                  right: 8,
-                                  bottom: 8,
                                 )
                               ],
                             ),
