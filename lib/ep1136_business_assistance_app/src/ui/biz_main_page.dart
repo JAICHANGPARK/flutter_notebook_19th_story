@@ -1,3 +1,4 @@
+import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_19th_story/ep1136_business_assistance_app/src/model/cashflow.dart';
 import 'package:flutter_notebook_19th_story/ep1136_business_assistance_app/src/provider/cashflows_provider.dart';
@@ -51,20 +52,22 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                   controller: tabController,
                   isScrollable: true,
                   labelColor: Colors.black,
-                  tabs: [
-                    const Tab(
+                  indicatorSize: TabBarIndicatorSize.tab,
+                  indicator: BubbleTabIndicator(),
+                  tabs: const [
+                    Tab(
                       text: "overview",
                     ),
-                    const Tab(
+                    Tab(
                       text: "accounts",
                     ),
-                    const Tab(
+                    Tab(
                       text: "cashflows",
                     ),
-                    const Tab(
+                    Tab(
                       text: "indicators",
                     ),
-                    const Tab(
+                    Tab(
                       text: "clients",
                     ),
                   ],
