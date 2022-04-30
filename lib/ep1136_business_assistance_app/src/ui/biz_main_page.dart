@@ -132,6 +132,22 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                                 )
                                               ],
                                             ),
+
+                                          ),
+                                          Row(
+                                            children: [
+                                              Text("\$135,583"),
+                                              CircleAvatar(
+                                                radius: 8,
+                                                backgroundColor: Colors.green[100],
+                                                foregroundColor: Colors.green,
+                                                child: Icon(Icons.arrow_forward,
+                                                size: 12,),
+                                              ),
+                                              Text("4.4%",style: TextStyle(
+                                                color: Colors.green
+                                              ),)
+                                            ],
                                           )
                                         ],
                                       ))
