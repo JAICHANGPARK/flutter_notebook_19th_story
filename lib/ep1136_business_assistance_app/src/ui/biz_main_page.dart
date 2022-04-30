@@ -164,6 +164,9 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                                 )
                                               ],
                                             ),
+                                            SizedBox(
+                                              height: 16,
+                                            ),
                                             Expanded(
                                               child: LineChart(
                                                 LineChartData(
