@@ -101,11 +101,24 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                   child: Stack(
                                     children: [
                                       Positioned(
-                                          right: 8,
-                                          top: 8,
-                                          child: CircleAvatar(radius: 16,
-                                      backgroundColor: Colors.grey[200],
-                                      child: Icon(Icons.arrow_forward),
+                                        right: 8,
+                                        top: 8,
+                                        child: CircleAvatar(
+                                          radius: 16,
+                                          backgroundColor: Colors.grey[200],
+                                          foregroundColor: Colors.grey,
+                                          child: Icon(Icons.arrow_forward),
+                                        ),
+                                      ),
+                                      Positioned(
+                                          child: Column(
+                                        children: [
+                                          Text.rich(
+                                            TextSpan(
+                                              children: [],
+                                            ),
+                                          )
+                                        ],
                                       ))
                                     ],
                                   ),
