@@ -272,9 +272,19 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                 height: 160,
                                 child: Row(
                                   children: [
-                                    Expanded(child: Placeholder()),
+                                    Expanded(child: Container(
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey[200],
+                                          borderRadius: BorderRadius.circular(8)
+                                      ),
+                                    )),
                                     SizedBox(width: 4,),
-                                    Expanded(child: Placeholder())
+                                    Expanded(child: Container(
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey[200],
+                                          borderRadius: BorderRadius.circular(8)
+                                      ),
+                                    ))
                                   ],
                                 ),
                               )
