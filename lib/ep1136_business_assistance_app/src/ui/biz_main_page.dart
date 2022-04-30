@@ -111,11 +111,26 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                         ),
                                       ),
                                       Positioned(
+                                        left: 8,
+                                          top: 8,
+                                          right: 8,
+                                          bottom: 8,
                                           child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Text.rich(
                                             TextSpan(
-                                              children: [],
+                                              children: [
+                                                TextSpan(
+                                                  text: "revenue",
+                                                ),
+                                                TextSpan(
+                                                  text: "today",
+                                                  style: TextStyle(
+                                                    color: Colors.blue
+                                                  )
+                                                )
+                                              ],
                                             ),
                                           )
                                         ],
