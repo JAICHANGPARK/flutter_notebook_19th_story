@@ -51,9 +51,16 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                 child: TabBar(
                   controller: tabController,
                   isScrollable: true,
-                  labelColor: Colors.black,
+                  unselectedLabelColor: Colors.black,
+                  labelColor: Colors.white,
                   indicatorSize: TabBarIndicatorSize.tab,
-                  indicator: BubbleTabIndicator(),
+                  indicator: BubbleTabIndicator(
+                    indicatorHeight: 24,
+                    indicatorColor: Colors.black,
+                    tabBarIndicatorSize: TabBarIndicatorSize.tab,
+
+
+                  ),
                   tabs: const [
                     Tab(
                       text: "overview",
