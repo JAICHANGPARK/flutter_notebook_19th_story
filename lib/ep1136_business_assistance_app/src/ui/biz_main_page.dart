@@ -207,26 +207,7 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(16),
                                   ),
-                                  child: Column(
-                                    children: [
-                                      Text("financial results"),
-                                      Container(
-                                        decoration: BoxDecoration(color: Colors.grey[400]),
-                                        child: Column(
-                                          children: [
-                                            Text("\$2,343,538"),
-                                            Text("total"),
-                                            Row(
-                                              children: [
-                                                Text("main"),
-                                                Text("\$2,343,538"),
-                                              ],
-                                            )
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  ),
+
                                 ),
                               ),
                             ],
@@ -237,6 +218,27 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("financial results"),
+                              Container(
+                                decoration: BoxDecoration(color: Colors.grey[400]),
+                                child: Column(
+                                  children: [
+                                    Text("\$2,343,538"),
+                                    Text("total"),
+                                    Row(
+                                      children: [
+                                        Text("main"),
+                                        Text("\$2,343,538"),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
                           ),
                         )
                       ],
