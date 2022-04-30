@@ -207,7 +207,6 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(16),
                                   ),
-
                                 ),
                               ),
                             ],
@@ -219,22 +218,63 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                           ),
+                          padding: EdgeInsets.all(16),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text("financial results"),
+                              SizedBox(
+                                height: 16,
+                              ),
                               Container(
-                                decoration: BoxDecoration(color: Colors.grey[400]),
+                                decoration: BoxDecoration(
+                                  color: Colors.grey[200],
+                                  borderRadius: BorderRadius.circular(8)
+                                ),
+                                padding: EdgeInsets.all(8),
                                 child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text("\$2,343,538"),
+                                    Text("\$2,343,538", style: TextStyle(
+                                      fontSize: 24,
+                                    ),),
                                     Text("total"),
+                                    SizedBox(height: 16,),
                                     Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text("main"),
+                                        Text("\$2,343,538"),
+                                      ],
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(vertical: 8),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text("main"),
+                                          Text("\$2,343,538"),
+                                        ],
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text("main"),
                                         Text("\$2,343,538"),
                                       ],
                                     )
+                                  ],
+                                ),
+                              ),
+                              SizedBox(height: 4,),
+                              SizedBox(
+                                height: 160,
+                                child: Row(
+                                  children: [
+                                    Expanded(child: Placeholder()),
+                                    SizedBox(width: 4,),
+                                    Expanded(child: Placeholder())
                                   ],
                                 ),
                               )
