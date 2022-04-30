@@ -54,12 +54,10 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                   unselectedLabelColor: Colors.black,
                   labelColor: Colors.white,
                   indicatorSize: TabBarIndicatorSize.tab,
-                  indicator: BubbleTabIndicator(
+                  indicator: const BubbleTabIndicator(
                     indicatorHeight: 24,
                     indicatorColor: Colors.black,
                     tabBarIndicatorSize: TabBarIndicatorSize.tab,
-
-
                   ),
                   tabs: const [
                     Tab(
@@ -83,20 +81,55 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
               Expanded(
                   child: TabBarView(
                 controller: tabController,
+                physics: NeverScrollableScrollPhysics(),
                 children: [
                   SingleChildScrollView(
                     child: Column(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Container(
-                            height: MediaQuery.of(context).size.height / 2.3,
-                            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16)),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height / 2.3,
+                          child: PageView(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: Container(
+                                  height: MediaQuery.of(context).size.height / 2.3,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  child: Stack(
+                                    children: [
+                                      Positioned(
+                                          right: 8,
+                                          top: 8,
+                                          child: CircleAvatar(radius: 16,
+                                      backgroundColor: Colors.grey[200],
+                                      child: Icon(Icons.arrow_forward),
+                                      ))
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: Container(
+                                  height: MediaQuery.of(context).size.height / 2.3,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                         Container(
                           height: MediaQuery.of(context).size.height / 2,
-                          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16)),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                          ),
                         )
                       ],
                     ),
@@ -120,14 +153,16 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                   Positioned(
                                     left: 8,
                                     top: 8,
-                                    child: Text("${item.items?[0].title ?? ""}"),
+                                    child: Text(
+                                      "${item.items?[0].title ?? ""}",
+                                    ),
                                   ),
                                   Positioned(
                                     right: 8,
                                     bottom: 8,
                                     child: Text(
                                       "\$${item.items?[0].price ?? ""}",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         fontSize: 38,
                                         fontWeight: FontWeight.w500,
                                       ),
@@ -136,7 +171,7 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                 ],
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 4,
                             ),
                             Expanded(
@@ -155,17 +190,17 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                     child: Stack(
-                                      children:  [
+                                      children: [
                                         Positioned(
                                           left: 8,
                                           top: 8,
-                                          child: Text("${_item?.title??""} "),
+                                          child: Text("${_item?.title ?? ""} "),
                                         ),
                                         Positioned(
                                           right: 8,
                                           bottom: 8,
                                           child: Text(
-                                            "\$${_item?.price??""} ",
+                                            "\$${_item?.price ?? ""} ",
                                             style: const TextStyle(
                                               fontSize: 32,
                                               fontWeight: FontWeight.w500,
@@ -185,7 +220,7 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                           child: Text("$e, $s"),
                         );
                       }, loading: () {
-                        return Center(
+                        return const Center(
                           child: CircularProgressIndicator(),
                         );
                       });
