@@ -1,4 +1,5 @@
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_19th_story/ep1136_business_assistance_app/src/model/cashflow.dart';
 import 'package:flutter_notebook_19th_story/ep1136_business_assistance_app/src/provider/cashflows_provider.dart';
@@ -111,56 +112,86 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                         ),
                                       ),
                                       Positioned(
-                                          left: 8,
-                                          top: 8,
-                                          right: 8,
-                                          bottom: 8,
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              const Text.rich(
-                                                TextSpan(
-                                                  children: [
-                                                    TextSpan(
-                                                      text: "revenue",
+                                        left: 8,
+                                        top: 8,
+                                        right: 8,
+                                        bottom: 8,
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            const Text.rich(
+                                              TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: "revenue",
+                                                  ),
+                                                  TextSpan(
+                                                    text: "today",
+                                                    style: TextStyle(
+                                                      color: Colors.blue,
                                                     ),
-                                                    TextSpan(
-                                                      text: "today",
-                                                      style: TextStyle(
-                                                        color: Colors.blue,
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                            const SizedBox(
+                                              height: 8,
+                                            ),
+                                            Row(
+                                              crossAxisAlignment: CrossAxisAlignment.end,
+                                              children: [
+                                                const Text(
+                                                  "\$135,583",
+                                                  style: TextStyle(fontSize: 34),
+                                                ),
+                                                SizedBox(
+                                                  width: 4,
+                                                ),
+                                                CircleAvatar(
+                                                  radius: 8,
+                                                  backgroundColor: Colors.green[100],
+                                                  foregroundColor: Colors.green,
+                                                  child: const Icon(
+                                                    Icons.arrow_forward,
+                                                    size: 12,
+                                                  ),
+                                                ),
+                                                const Text(
+                                                  "4.4%",
+                                                  style: TextStyle(
+                                                    color: Colors.green,
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                            Expanded(
+                                              child: LineChart(
+                                                LineChartData(
+                                                  borderData: FlBorderData(
+                                                    show: false,
+                                                  ),
+                                                  gridData: FlGridData(
+                                                    show: true,
+                                                    drawVerticalLine: false,
+                                                  ),
+                                                  lineBarsData: [
+                                                    LineChartBarData(
+                                                      show: true,
+                                                      spots: List.generate(
+                                                        7,
+                                                        (index) => FlSpot(
+                                                          index.toDouble(),
+                                                          index.toDouble(),
+                                                        ),
                                                       ),
                                                     )
                                                   ],
                                                 ),
                                               ),
-                                              const SizedBox(
-                                                height: 8,
-                                              ),
-                                              Row(
-                                                children: [
-                                                  const Text(
-                                                    "\$135,583",
-                                                    style: TextStyle(fontSize: 28),
-                                                  ),
-                                                  CircleAvatar(
-                                                    radius: 8,
-                                                    backgroundColor: Colors.green[100],
-                                                    foregroundColor: Colors.green,
-                                                    child: const Icon(
-                                                      Icons.arrow_forward,
-                                                      size: 12,
-                                                    ),
-                                                  ),
-                                                  const Text(
-                                                    "4.4%",
-                                                    style: TextStyle(
-                                                      color: Colors.green,
-                                                    ),
-                                                  )
-                                                ],
-                                              )
-                                            ],
-                                          ))
+                                            )
+                                          ],
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -172,6 +203,26 @@ class _BizMainPageState extends State<BizMainPage> with SingleTickerProviderStat
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Text("financial results"),
+                                      Container(
+                                        decoration: BoxDecoration(color: Colors.grey[400]),
+                                        child: Column(
+                                          children: [
+                                            Text("\$2,343,538"),
+                                            Text("total"),
+                                            Row(
+                                              children: [
+                                                Text("main"),
+                                                Text("\$2,343,538"),
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      )
+                                    ],
                                   ),
                                 ),
                               ),
