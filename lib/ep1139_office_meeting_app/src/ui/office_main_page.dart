@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1139_office_meeting_app/src/ui/meeting_todays_widget.dart';
 
 class OfficeMainPage extends StatefulWidget {
   const OfficeMainPage({Key? key}) : super(key: key);
@@ -124,7 +125,7 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                 Expanded(
                   child: TabBarView(
                     children: [
-                      Container(),
+                      MeetingTodaysWidget(),
                       Container(),
                       Container(),
                     ],
