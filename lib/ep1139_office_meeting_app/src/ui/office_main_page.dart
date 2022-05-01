@@ -41,9 +41,42 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                           ),
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
+              ),
+              SizedBox(height: 16,),
+              Row(
+                children: [
+                  Text("Hello Dreamwalker", style: TextStyle(
+                    
+                  ),),
+
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: Colors.blueAccent,
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.add,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                        SizedBox(width: 4,),
+                        Text(
+                          "Create Meeting",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
               )
             ],
           ),
