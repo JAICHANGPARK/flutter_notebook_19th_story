@@ -45,7 +45,7 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                   ],
                 ),
               ),
-              SizedBox(height: 16,),
+              SizedBox(height: 36,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
