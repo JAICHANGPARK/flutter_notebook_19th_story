@@ -12,34 +12,41 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(right: 16),
-              child: Row(
-                children: [
-                  Container(
-                    height: 24,
-                    width: 24,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.blueAccent,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 24),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 24,
+                      width: 24,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.blueAccent,
+                      ),
+                      child: const Icon(
+                        Icons.keyboard_arrow_left,
+                        color: Colors.white,
+                      ),
                     ),
-                    child: Icon(
-                      Icons.keyboard_arrow_left,
-                      color: Colors.white,
-                    ),
-                  ),
-                  Expanded(
+                    const Expanded(
                       child: Center(
-                    child: Text(
-                      "Meeting Schedule",
-                    ),
-                  ))
-                ],
-              ),
-            )
-          ],
+                        child: Text(
+                          "Meeting Schedule",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
