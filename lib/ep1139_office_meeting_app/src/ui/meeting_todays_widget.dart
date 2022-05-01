@@ -12,6 +12,6 @@ class MeetingTodaysWidget extends StatefulWidget {
 class _MeetingTodaysWidgetState extends State<MeetingTodaysWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Placeholder();
   }
 }
