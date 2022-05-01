@@ -45,41 +45,53 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                   ],
                 ),
               ),
-              SizedBox(height: 36,),
+              const SizedBox(
+                height: 36,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Hello Dreamwalker", style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20
-                  ),),
-
-
+                  const Text(
+                    "Hello Dreamwalker",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
                       color: Colors.blueAccent,
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.add,
                           color: Colors.white,
                           size: 16,
                         ),
-                        SizedBox(width: 4,),
+                        SizedBox(
+                          width: 4,
+                        ),
                         Text(
                           "Create Meeting",
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 12
+                            fontSize: 12,
                           ),
                         )
                       ],
                     ),
                   )
                 ],
+              ),
+              const Text(
+                "Lets Get Started",
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey,
+                ),
               )
             ],
           ),
