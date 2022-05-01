@@ -103,6 +103,11 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                   indicatorSize: TabBarIndicatorSize.label,
                   labelColor: Colors.blueAccent,
                   unselectedLabelColor: Colors.grey,
+                  isScrollable: true,
+                  labelStyle: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                   tabs: [
                     Tab(
                       text: "Todays",
