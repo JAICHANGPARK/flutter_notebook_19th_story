@@ -41,6 +41,7 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                             "Meeting Schedule",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
+                              fontSize: 16,
                             ),
                           ),
                         ),
