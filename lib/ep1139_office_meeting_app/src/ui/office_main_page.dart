@@ -130,6 +130,14 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                       Container(),
                     ],
                   ),
+                ),
+                SizedBox(height: 8,),
+                Container(
+                  height: 84,
+                  decoration: BoxDecoration(
+                    color: Colors.blueAccent,
+                    borderRadius: BorderRadius.circular(8)
+                  ),
                 )
               ],
             ),
