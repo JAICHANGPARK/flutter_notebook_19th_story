@@ -47,10 +47,13 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
               ),
               SizedBox(height: 16,),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("Hello Dreamwalker", style: TextStyle(
-                    
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20
                   ),),
+
 
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
