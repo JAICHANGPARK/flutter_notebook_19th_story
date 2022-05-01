@@ -14,21 +14,30 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
       body: SafeArea(
         child: Column(
           children: [
-            Row(
-              children: [
-                Container(
-                  height: 24,
-                  width: 24,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.blueAccent,
+            Padding(
+              padding: const EdgeInsets.only(right: 16),
+              child: Row(
+                children: [
+                  Container(
+                    height: 24,
+                    width: 24,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.blueAccent,
+                    ),
+                    child: Icon(
+                      Icons.keyboard_arrow_left,
+                      color: Colors.white,
+                    ),
                   ),
-                  child: Icon(
-                    Icons.keyboard_arrow_left,
-                    color: Colors.white,
-                  ),
-                )
-              ],
+                  Expanded(
+                      child: Center(
+                    child: Text(
+                      "Meeting Schedule",
+                    ),
+                  ))
+                ],
+              ),
             )
           ],
         ),
