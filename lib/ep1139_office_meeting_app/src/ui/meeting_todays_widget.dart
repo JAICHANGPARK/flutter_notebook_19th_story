@@ -14,59 +14,72 @@ class _MeetingTodaysWidgetState extends State<MeetingTodaysWidget> {
       children: [
         Container(
           decoration: BoxDecoration(color: Colors.yellow[100], borderRadius: BorderRadius.circular(8)),
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
-                  CircleAvatar(),
+                  const CircleAvatar(),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Dream Walker"),
-                        Text("Project Manager"),
+                      children: const [
+                        Text(
+                          "Dream Walker",
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "Project Manager",
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.grey,
+                          ),
+                        ),
                       ],
                     ),
                   ),
-                  Spacer(),
-                  CircleAvatar(
+                  const Spacer(),
+                  const CircleAvatar(
                     radius: 4,
                     backgroundColor: Colors.green,
                   ),
-                  Text(
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  const Text(
                     "on Going Meeting",
-                    style: TextStyle(
-                      color: Colors.orangeAccent,
-                    ),
+                    style: TextStyle(color: Colors.orangeAccent, fontSize: 12),
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
-              Text(
+              const Text(
                 "Food App Project Discussion",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
                 ),
               ),
-              Text(
+              const Text(
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U",
                 style: TextStyle(
                   fontSize: 12,
                   color: Colors.grey,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Row(
                 children: [
-                  Expanded(
+                  const Expanded(
                     child: SizedBox(
                       height: 48,
                     ),
@@ -76,9 +89,9 @@ class _MeetingTodaysWidgetState extends State<MeetingTodaysWidget> {
                       color: Colors.yellow[700],
                       borderRadius: BorderRadius.circular(3),
                     ),
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     child: Row(
-                      children: [
+                      children: const [
                         Text(
                           "Join Now",
                           style: TextStyle(
