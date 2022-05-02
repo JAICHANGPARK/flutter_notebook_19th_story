@@ -148,6 +148,11 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                           color: Colors.purpleAccent,
                           borderRadius: BorderRadius.circular(8),
                         ),
+                      ),
+                      Column(
+                        children: [
+
+                        ],
                       )
                     ],
                   ),
