@@ -44,9 +44,25 @@ class _MeetingTodaysWidgetState extends State<MeetingTodaysWidget> {
                   )
                 ],
               ),
-              Text("Food App Project Discussion"),
+              SizedBox(
+                height: 16,
+              ),
+              Text(
+                "Food App Project Discussion",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
               Text(
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U",
+                style: TextStyle(
+                  fontSize: 12,
+                  color: Colors.grey,
+                ),
+              ),
+              SizedBox(
+                height: 16,
               ),
               Row(
                 children: [
