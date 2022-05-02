@@ -148,9 +148,8 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.only(left: 12),
                         child: Column(
-
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
@@ -158,17 +157,19 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                               "New Virtual Meetup",
                               style: TextStyle(
                                 color: Colors.white,
-
                               ),
                             ),
-                            Text("Mobile App New Trends 2022",style: TextStyle(
-                              fontSize: 12,
-                              color: Colors.grey[200]
-                            ),),
+                            Text(
+                              "Mobile App New Trends 2022",
+                              style: TextStyle(fontSize: 12, color: Colors.grey[200]),
+                            ),
                             Container(
                               decoration: BoxDecoration(
-                                
-                              ),
+                                  borderRadius: BorderRadius.circular(8),
+                                  border: Border.all(
+                                    color: Colors.white,
+                                  ),),
+                              padding: EdgeInsets.symmetric(horizontal: 4, vertical: 4),
                               child: Center(
                                 child: Text(
                                   "Subscribe Now",
