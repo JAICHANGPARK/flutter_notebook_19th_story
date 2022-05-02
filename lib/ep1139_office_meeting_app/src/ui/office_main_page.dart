@@ -135,7 +135,7 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                   height: 8,
                 ),
                 Container(
-                  height: 84,
+                  height: 94,
                   decoration: BoxDecoration(color: Colors.blueAccent, borderRadius: BorderRadius.circular(8)),
                   padding: EdgeInsets.all(8),
                   child: Row(
@@ -161,21 +161,26 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                             ),
                             Text(
                               "Mobile App New Trends 2022",
-                              style: TextStyle(fontSize: 12, color: Colors.grey[200]),
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.grey[100],
+                              ),
+                            ),
+                            SizedBox(
+                              height: 4,
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8),
-                                  border: Border.all(
-                                    color: Colors.white,
-                                  ),),
-                              padding: EdgeInsets.symmetric(horizontal: 4, vertical: 4),
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(
+                                  color: Colors.white,
+                                ),
+                              ),
+                              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                               child: Center(
                                 child: Text(
                                   "Subscribe Now",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                  ),
+                                  style: TextStyle(color: Colors.white, fontSize: 12),
                                 ),
                               ),
                             )
