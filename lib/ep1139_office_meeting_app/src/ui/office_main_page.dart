@@ -137,7 +137,10 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                 ),
                 Container(
                   height: 94,
-                  decoration: BoxDecoration(color: Colors.blueAccent, borderRadius: BorderRadius.circular(8)),
+                  decoration: BoxDecoration(
+                    color: Colors.blueAccent,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
                   padding: const EdgeInsets.all(8),
                   child: Row(
                     children: [
@@ -146,7 +149,7 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                         decoration: BoxDecoration(
                             color: Colors.purpleAccent,
                             borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               image: CachedNetworkImageProvider(
                                 "https://cdn.pixabay.com/photo/2021/12/01/19/53/business-6839039_960_720.jpg",
                               ),
