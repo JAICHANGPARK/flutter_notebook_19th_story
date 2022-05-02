@@ -147,25 +147,39 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
-                      Column(
-                        children: [
-                          Text(
-                            "New Virtual Meetup",
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                          Text("Mobile App New Trends 2022"),
-                          Container(
-                            child: Center(
-                                child: Text(
-                              "Subscribe Now",
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text(
+                              "New Virtual Meetup",
                               style: TextStyle(
                                 color: Colors.white,
+
                               ),
-                            )),
-                          )
-                        ],
+                            ),
+                            Text("Mobile App New Trends 2022",style: TextStyle(
+                              fontSize: 12,
+                              color: Colors.grey[200]
+                            ),),
+                            Container(
+                              decoration: BoxDecoration(
+                                
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "Subscribe Now",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       )
                     ],
                   ),
