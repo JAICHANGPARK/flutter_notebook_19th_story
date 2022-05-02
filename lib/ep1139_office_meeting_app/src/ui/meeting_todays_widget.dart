@@ -21,12 +21,15 @@ class _MeetingTodaysWidgetState extends State<MeetingTodaysWidget> {
               Row(
                 children: [
                   CircleAvatar(),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Dream Walker"),
-                      Text("Project Manager"),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Dream Walker"),
+                        Text("Project Manager"),
+                      ],
+                    ),
                   ),
                   Spacer(),
                   CircleAvatar(
@@ -37,6 +40,43 @@ class _MeetingTodaysWidgetState extends State<MeetingTodaysWidget> {
                     "on Going Meeting",
                     style: TextStyle(
                       color: Colors.orangeAccent,
+                    ),
+                  )
+                ],
+              ),
+              Text("Food App Project Discussion"),
+              Text(
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U",
+              ),
+              Row(
+                children: [
+                  Expanded(
+                      child: SizedBox(
+                    height: 48,
+                  )),
+                  Container(
+                    decoration: BoxDecoration(),
+                    child: Row(
+                      children: [
+                        Text(
+                          "Join Now",
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 4,
+                        ),
+                        CircleAvatar(
+                          radius: 8,
+                          backgroundColor: Colors.black,
+                          child: Icon(
+                            Icons.keyboard_arrow_right,
+                            color: Colors.white,
+                            size: 12,
+                          ),
+                        )
+                      ],
                     ),
                   )
                 ],
