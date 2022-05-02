@@ -163,7 +163,7 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                               "Mobile App New Trends 2022",
                               style: TextStyle(
                                 fontSize: 12,
-                                color: Colors.grey[100],
+                                color: Colors.grey[300],
                               ),
                             ),
                             SizedBox(
