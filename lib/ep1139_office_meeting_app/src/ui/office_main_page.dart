@@ -138,6 +138,19 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                     color: Colors.blueAccent,
                     borderRadius: BorderRadius.circular(8)
                   ),
+
+                  padding: EdgeInsets.all(8),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        decoration: BoxDecoration(
+                          color: Colors.purpleAccent,
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
