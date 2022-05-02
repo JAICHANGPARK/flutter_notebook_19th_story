@@ -126,7 +126,10 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                 Expanded(
                   child: TabBarView(
                     children: [
-                      const MeetingTodaysWidget(),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 16),
+                        child: const MeetingTodaysWidget(),
+                      ),
                       Container(),
                       Container(),
                     ],
