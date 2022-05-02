@@ -55,7 +55,11 @@ class _MeetingTodaysWidgetState extends State<MeetingTodaysWidget> {
                     height: 48,
                   )),
                   Container(
-                    decoration: BoxDecoration(),
+                    decoration: BoxDecoration(
+                      color: Colors.orange,
+                      borderRadius: BorderRadius.all(4)
+                    ),
+                    padding: EdgeInsets.all(8),
                     child: Row(
                       children: [
                         Text(
