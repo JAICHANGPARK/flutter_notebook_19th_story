@@ -14,8 +14,29 @@ class _MeetingTodaysWidgetState extends State<MeetingTodaysWidget> {
   Widget build(BuildContext context) {
     return ListView(
       children: [
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.yellow[100],
+            borderRadius: BorderRadius.circular(8)
+          ),
+          padding: EdgeInsets.all(8),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CircleAvatar(
 
-        
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Dream Walker"),
+                  Text("Project Manager")
+                ],
+              )
+            ],
+          ),
+        )
+
       ],
     );
   }
