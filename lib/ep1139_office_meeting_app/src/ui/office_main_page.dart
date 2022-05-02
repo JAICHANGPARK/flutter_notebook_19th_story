@@ -131,19 +131,17 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                     ],
                   ),
                 ),
-                SizedBox(height: 8,),
+                SizedBox(
+                  height: 8,
+                ),
                 Container(
                   height: 84,
-                  decoration: BoxDecoration(
-                    color: Colors.blueAccent,
-                    borderRadius: BorderRadius.circular(8)
-                  ),
-
+                  decoration: BoxDecoration(color: Colors.blueAccent, borderRadius: BorderRadius.circular(8)),
                   padding: EdgeInsets.all(8),
                   child: Row(
                     children: [
                       Container(
-                        width: 160,
+                        width: 140,
                         decoration: BoxDecoration(
                           color: Colors.purpleAccent,
                           borderRadius: BorderRadius.circular(8),
@@ -151,7 +149,22 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                       ),
                       Column(
                         children: [
-
+                          Text(
+                            "New Virtual Meetup",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text("Mobile App New Trends 2022"),
+                          Container(
+                            child: Center(
+                                child: Text(
+                              "Subscribe Now",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            )),
+                          )
                         ],
                       )
                     ],
