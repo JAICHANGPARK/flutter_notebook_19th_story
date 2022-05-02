@@ -51,13 +51,14 @@ class _MeetingTodaysWidgetState extends State<MeetingTodaysWidget> {
               Row(
                 children: [
                   Expanded(
-                      child: SizedBox(
-                    height: 48,
-                  )),
+                    child: SizedBox(
+                      height: 48,
+                    ),
+                  ),
                   Container(
                     decoration: BoxDecoration(
-                      color: Colors.orange,
-                      borderRadius: BorderRadius.all(4)
+                      color: Colors.yellow[700],
+                      borderRadius: BorderRadius.circular(3),
                     ),
                     padding: EdgeInsets.all(8),
                     child: Row(
