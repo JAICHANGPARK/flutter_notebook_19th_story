@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_19th_story/ep1139_office_meeting_app/src/ui/meeting_todays_widget.dart';
 
@@ -125,27 +126,32 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                 Expanded(
                   child: TabBarView(
                     children: [
-                      MeetingTodaysWidget(),
+                      const MeetingTodaysWidget(),
                       Container(),
                       Container(),
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
                 Container(
                   height: 94,
                   decoration: BoxDecoration(color: Colors.blueAccent, borderRadius: BorderRadius.circular(8)),
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
                   child: Row(
                     children: [
                       Container(
                         width: 140,
                         decoration: BoxDecoration(
-                          color: Colors.purpleAccent,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
+                            color: Colors.purpleAccent,
+                            borderRadius: BorderRadius.circular(8),
+                            image: DecorationImage(
+                              image: CachedNetworkImageProvider(
+                                "https://cdn.pixabay.com/photo/2021/12/01/19/53/business-6839039_960_720.jpg",
+                              ),
+                              fit: BoxFit.cover,
+                            )),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 12),
@@ -153,7 +159,7 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Text(
+                            const Text(
                               "New Virtual Meetup",
                               style: TextStyle(
                                 color: Colors.white,
@@ -166,7 +172,7 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                                 color: Colors.grey[300],
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 4,
                             ),
                             Container(
@@ -176,11 +182,17 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                                   color: Colors.white,
                                 ),
                               ),
-                              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                              child: Center(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 4,
+                              ),
+                              child: const Center(
                                 child: Text(
                                   "Subscribe Now",
-                                  style: TextStyle(color: Colors.white, fontSize: 12),
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                  ),
                                 ),
                               ),
                             )
