@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_19th_story/ep1139_office_meeting_app/src/enums/meeting_state.dart';
+import 'package:flutter_notebook_19th_story/ep1139_office_meeting_app/src/ui/widgets/meeting_button_widget.dart';
+import 'package:flutter_notebook_19th_story/ep1139_office_meeting_app/src/ui/widgets/meeting_state_widget.dart';
 
 class TodayBasicCardWidget extends StatelessWidget {
   TodayBasicCardWidget({
@@ -53,20 +55,10 @@ class TodayBasicCardWidget extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                const CircleAvatar(
-                  radius: 4,
-                  backgroundColor: Colors.green,
+                MeetingStateWidget(
+                  enumMeetingState: enumMeetingState,
+                  color: cardColor,
                 ),
-                const SizedBox(
-                  width: 8,
-                ),
-                const Text(
-                  "on Going Meeting",
-                  style: TextStyle(
-                    color: Colors.orangeAccent,
-                    fontSize: 12,
-                  ),
-                )
               ],
             ),
             const SizedBox(
@@ -98,34 +90,9 @@ class TodayBasicCardWidget extends StatelessWidget {
                     height: 48,
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.yellow[700],
-                    borderRadius: BorderRadius.circular(3),
-                  ),
-                  padding: const EdgeInsets.all(8),
-                  child: Row(
-                    children: const [
-                      Text(
-                        "Join Now",
-                        style: TextStyle(
-                          fontSize: 12,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 4,
-                      ),
-                      CircleAvatar(
-                        radius: 8,
-                        backgroundColor: Colors.black,
-                        child: Icon(
-                          Icons.keyboard_arrow_right,
-                          color: Colors.white,
-                          size: 12,
-                        ),
-                      )
-                    ],
-                  ),
+                MeetingButtonWidget(
+                  enumMeetingState: enumMeetingState,
+                  color: cardColor,
                 )
               ],
             ),
