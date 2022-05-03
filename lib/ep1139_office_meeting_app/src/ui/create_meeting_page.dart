@@ -49,6 +49,23 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
               const SizedBox(
                 height: 36,
               ),
+              Spacer(),
+              Container(
+                padding: EdgeInsets.symmetric(vertical: 20),
+                decoration: BoxDecoration(
+                  color: Colors.blueAccent,
+                  borderRadius: BorderRadius.circular(8)
+                ),
+                child: Center(
+                  child: Text(
+                    "Create Now",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              )
             ],
           ),
         ),
