@@ -18,6 +18,9 @@ class _MeetingTodaysWidgetState extends State<MeetingTodaysWidget> {
         TodayBasicCardWidget(
           cardColor: Colors.yellow,
           enumMeetingState: EnumMeetingState.online,
+          title: "Food App Project Discussion",
+          subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiconst usmod tempor incididunt ut labore et dolore magna aliqua. U",
+          
         ),
         TodayBasicCardWidget(
           cardColor: Colors.blue,
