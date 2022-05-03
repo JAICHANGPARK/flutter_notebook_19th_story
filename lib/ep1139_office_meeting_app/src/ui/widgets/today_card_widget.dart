@@ -5,8 +5,10 @@ class TodayBasicCardWidget extends StatelessWidget {
   TodayBasicCardWidget({
     Key? key,
     required this.enumMeetingState,
+    required this.cardColor,
   }) : super(key: key);
   EnumMeetingState enumMeetingState;
+  MaterialColor cardColor;
 
   @override
   Widget build(BuildContext context) {
