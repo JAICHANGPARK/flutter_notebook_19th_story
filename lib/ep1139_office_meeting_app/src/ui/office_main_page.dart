@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1139_office_meeting_app/src/ui/create_meeting_page.dart';
 import 'package:flutter_notebook_19th_story/ep1139_office_meeting_app/src/ui/meeting_todays_widget.dart';
 
 class OfficeMainPage extends StatefulWidget {
@@ -64,30 +65,39 @@ class _OfficeMainPageState extends State<OfficeMainPage> {
                         fontSize: 20,
                       ),
                     ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                      decoration: BoxDecoration(
-                        color: Colors.blueAccent,
-                        borderRadius: BorderRadius.circular(4),
-                      ),
-                      child: Row(
-                        children: const [
-                          Icon(
-                            Icons.add,
-                            color: Colors.white,
-                            size: 16,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => CreateMeetingPage(),
                           ),
-                          SizedBox(
-                            width: 4,
-                          ),
-                          Text(
-                            "Create Meeting",
-                            style: TextStyle(
+                        );
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        decoration: BoxDecoration(
+                          color: Colors.blueAccent,
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Row(
+                          children: const [
+                            Icon(
+                              Icons.add,
                               color: Colors.white,
-                              fontSize: 12,
+                              size: 16,
                             ),
-                          )
-                        ],
+                            SizedBox(
+                              width: 4,
+                            ),
+                            Text(
+                              "Create Meeting",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     )
                   ],
