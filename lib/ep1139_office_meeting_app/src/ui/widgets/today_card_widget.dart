@@ -6,9 +6,13 @@ class TodayBasicCardWidget extends StatelessWidget {
     Key? key,
     required this.enumMeetingState,
     required this.cardColor,
+    this.title,
+    this.subtitle,
   }) : super(key: key);
   EnumMeetingState enumMeetingState;
   MaterialColor cardColor;
+  String? title;
+  String? subtitle;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +20,7 @@ class TodayBasicCardWidget extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 8),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.yellow[100],
+          color: cardColor[100],
           borderRadius: BorderRadius.circular(8),
         ),
         padding: const EdgeInsets.all(8),
@@ -58,23 +62,28 @@ class TodayBasicCardWidget extends StatelessWidget {
                 ),
                 const Text(
                   "on Going Meeting",
-                  style: TextStyle(color: Colors.orangeAccent, fontSize: 12),
+                  style: TextStyle(
+                    color: Colors.orangeAccent,
+                    fontSize: 12,
+                  ),
                 )
               ],
             ),
             const SizedBox(
               height: 16,
             ),
-            const Text(
-              "Food App Project Discussion",
-              style: TextStyle(
+            Text(
+              // "Food App Project Discussion",
+              title ?? "Unknown Meeting",
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
               ),
             ),
-            const Text(
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U",
-              style: TextStyle(
+            Text(
+              subtitle ??
+                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiconst usmod tempor incididunt ut labore et dolore magna aliqua. U",
+              style: const TextStyle(
                 fontSize: 12,
                 color: Colors.grey,
               ),
