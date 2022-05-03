@@ -35,8 +35,29 @@ class MeetingStateWidget extends StatelessWidget {
     } else if (enumMeetingState == EnumMeetingState.notYet) {
       return Row(
         children: [
-           Text(
+          Text(
             "Not Started Yet",
+            style: TextStyle(
+              color: color,
+              fontSize: 12,
+            ),
+          )
+        ],
+      );
+    } else if (enumMeetingState == EnumMeetingState.done) {
+      return Row(
+        children: [
+          CircleAvatar(
+            radius: 8,
+            backgroundColor: color,
+            foregroundColor: Colors.white,
+            child: Icon(Icons.check, size: 12,),
+          ),
+          SizedBox(
+            width: 8,
+          ),
+          Text(
+            "Meeting Finished",
             style: TextStyle(
               color: color,
               fontSize: 12,
