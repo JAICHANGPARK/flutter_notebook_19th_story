@@ -49,12 +49,14 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
               const SizedBox(
                 height: 36,
               ),
-              Spacer(),
+              Expanded(
+                child: Placeholder(),
+              ),
               Container(
                 padding: EdgeInsets.symmetric(vertical: 20),
                 decoration: BoxDecoration(
                   color: Colors.blueAccent,
-                  borderRadius: BorderRadius.circular(8)
+                  borderRadius: BorderRadius.circular(8),
                 ),
                 child: Center(
                   child: Text(
