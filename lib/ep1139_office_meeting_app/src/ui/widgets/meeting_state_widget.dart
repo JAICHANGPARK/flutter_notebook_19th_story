@@ -28,6 +28,7 @@ class MeetingStateWidget extends StatelessWidget {
             style: TextStyle(
               color: Colors.orangeAccent,
               fontSize: 12,
+              fontWeight: FontWeight.bold,
             ),
           )
         ],
@@ -40,6 +41,7 @@ class MeetingStateWidget extends StatelessWidget {
             style: TextStyle(
               color: color,
               fontSize: 12,
+              fontWeight: FontWeight.bold,
             ),
           )
         ],
@@ -51,7 +53,10 @@ class MeetingStateWidget extends StatelessWidget {
             radius: 8,
             backgroundColor: color,
             foregroundColor: Colors.white,
-            child: Icon(Icons.check, size: 12,),
+            child: Icon(
+              Icons.check,
+              size: 12,
+            ),
           ),
           SizedBox(
             width: 8,
@@ -61,6 +66,7 @@ class MeetingStateWidget extends StatelessWidget {
             style: TextStyle(
               color: color,
               fontSize: 12,
+              fontWeight: FontWeight.bold,
             ),
           )
         ],
