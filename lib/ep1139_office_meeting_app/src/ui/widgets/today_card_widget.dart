@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1139_office_meeting_app/src/enums/meeting_state.dart';
 
 class TodayBasicCardWidget extends StatelessWidget {
-  const TodayBasicCardWidget({Key? key}) : super(key: key);
+  TodayBasicCardWidget({
+    Key? key,
+    required this.enumMeetingState,
+  }) : super(key: key);
+  EnumMeetingState enumMeetingState;
 
   @override
   Widget build(BuildContext context) {
