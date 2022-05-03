@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_19th_story/ep1139_office_meeting_app/src/enums/meeting_state.dart';
-import 'package:flutter_notebook_19th_story/generated/i18n.dart';
 
 class MeetingButtonWidget extends StatelessWidget {
   MeetingButtonWidget({
@@ -47,7 +46,7 @@ class MeetingButtonWidget extends StatelessWidget {
     else if(enumMeetingState == EnumMeetingState.notYet){
       return Container(
         decoration: BoxDecoration(
-          color: color![700],
+          color: color![500],
           borderRadius: BorderRadius.circular(3),
         ),
         padding: const EdgeInsets.all(8),
