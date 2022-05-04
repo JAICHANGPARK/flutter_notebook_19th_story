@@ -52,8 +52,23 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
               Expanded(
                 child: Column(
                   children: [
-
-                    
+                    TextField(
+                      style: TextStyle(
+                        fontSize: 24,
+                      ),
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: " Meeting Title",
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                            child: Row(
+                          children: [CircleAvatar(), Column()],
+                        ))
+                      ],
+                    )
                   ],
                 ),
               ),
