@@ -119,9 +119,12 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text("Due date", style: TextStyle(
-                                    color: Colors.grey,
-                                  ),),
+                                  Text(
+                                    "Due date",
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                    ),
+                                  ),
                                   SizedBox(
                                     height: 8,
                                   ),
@@ -138,9 +141,21 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
                         )
                       ],
                     ),
-                    Text("Add Team Member if required",style: TextStyle(
-                      fontSize: 16
-                    ),)
+                    SizedBox(
+                      height: 24,
+                    ),
+                    Text(
+                      "Add Team Member if required",
+                      style: TextStyle(fontSize: 16),
+                    ),
+                    SizedBox(
+                      height: 16,
+                    ),
+                    CircleAvatar(
+                      child: Icon(
+                        Icons.add,
+                      ),
+                    ),
                   ],
                 ),
               ),
