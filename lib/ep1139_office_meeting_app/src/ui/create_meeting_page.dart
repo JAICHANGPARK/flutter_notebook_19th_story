@@ -21,16 +21,21 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
                 padding: const EdgeInsets.only(right: 24),
                 child: Row(
                   children: [
-                    Container(
-                      height: 24,
-                      width: 24,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.blueAccent,
-                      ),
-                      child: const Icon(
-                        Icons.keyboard_arrow_left,
-                        color: Colors.white,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Container(
+                        height: 24,
+                        width: 24,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.blueAccent,
+                        ),
+                        child: const Icon(
+                          Icons.keyboard_arrow_left,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                     const Expanded(
@@ -163,6 +168,9 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
                     Text(
                       "Add Description",
                       style: TextStyle(fontSize: 16),
+                    ),
+                    SizedBox(
+                      height: 8,
                     ),
                     Expanded(
                       child: Container(
