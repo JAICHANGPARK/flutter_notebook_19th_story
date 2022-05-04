@@ -50,7 +50,12 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
                 height: 36,
               ),
               Expanded(
-                child: Placeholder(),
+                child: Column(
+                  children: [
+
+                    
+                  ],
+                ),
               ),
               Container(
                 padding: EdgeInsets.symmetric(vertical: 20),
