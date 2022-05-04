@@ -83,7 +83,12 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text("Organised By"),
+                                  Text(
+                                    "Organised By",
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                    ),
+                                  ),
                                   SizedBox(
                                     height: 8,
                                   ),
@@ -103,6 +108,9 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
                             children: [
                               CircleAvatar(
                                 radius: 24,
+                                child: Icon(
+                                  Icons.calendar_today_outlined,
+                                ),
                               ),
                               SizedBox(
                                 width: 12,
@@ -110,7 +118,9 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text("Due date"),
+                                  Text("Due date", style: TextStyle(
+                                    color: Colors.grey,
+                                  ),),
                                   SizedBox(
                                     height: 8,
                                   ),
