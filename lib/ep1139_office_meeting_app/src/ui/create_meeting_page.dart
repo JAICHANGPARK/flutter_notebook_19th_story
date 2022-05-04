@@ -163,7 +163,15 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
                       "Add Description",
                       style: TextStyle(fontSize: 16),
                     ),
-
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey,),
+                          borderRadius: BorderRadius.circular(8)
+                        ),
+                        child: TextField(),
+                      ),
+                    )
                   ],
                 ),
               ),
