@@ -156,6 +156,14 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
                         Icons.add,
                       ),
                     ),
+                    SizedBox(
+                      height: 16,
+                    ),
+                    Text(
+                      "Add Description",
+                      style: TextStyle(fontSize: 16),
+                    ),
+
                   ],
                 ),
               ),
