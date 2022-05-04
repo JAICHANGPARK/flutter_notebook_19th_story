@@ -11,7 +11,7 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      // resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
@@ -172,15 +172,22 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
                           ),
                           borderRadius: BorderRadius.circular(8),
                         ),
+                        padding: EdgeInsets.all(8),
                         child: TextField(
                           decoration: InputDecoration(
                             border: InputBorder.none,
+                            hintText: "Type here",
                           ),
+                          maxLines: 100,
+                          maxLength: 1024,
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
+              ),
+              SizedBox(
+                height: 8,
               ),
               Container(
                 padding: EdgeInsets.symmetric(vertical: 20),
