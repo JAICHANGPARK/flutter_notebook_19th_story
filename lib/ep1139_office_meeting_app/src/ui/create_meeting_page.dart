@@ -52,21 +52,43 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
               Expanded(
                 child: Column(
                   children: [
-                    TextField(
-                      style: TextStyle(
-                        fontSize: 24,
-                      ),
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: " Meeting Title",
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      child: TextField(
+                        style: TextStyle(
+                          fontSize: 24,
+                        ),
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: " Meeting Title",
+                        ),
                       ),
                     ),
                     Row(
                       children: [
                         Expanded(
-                            child: Row(
-                          children: [CircleAvatar(), Column()],
-                        ))
+                          child: Row(
+                            children: [
+                              CircleAvatar(),
+                              Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("Organised By"),
+                                  Text(
+                                    "Name",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          child: Row(
+                            children: [CircleAvatar(), Column()],
+                          ),
+                        )
                       ],
                     )
                   ],
