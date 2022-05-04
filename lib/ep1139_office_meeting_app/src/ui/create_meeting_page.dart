@@ -51,6 +51,7 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
               ),
               Expanded(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 16),
@@ -136,7 +137,10 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
                           ),
                         )
                       ],
-                    )
+                    ),
+                    Text("Add Team Member if required",style: TextStyle(
+                      fontSize: 16
+                    ),)
                   ],
                 ),
               ),
