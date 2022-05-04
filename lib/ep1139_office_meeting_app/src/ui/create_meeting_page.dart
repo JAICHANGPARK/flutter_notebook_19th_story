@@ -69,10 +69,24 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
                         Expanded(
                           child: Row(
                             children: [
-                              CircleAvatar(),
-                              Column(crossAxisAlignment: CrossAxisAlignment.start,
+                              CircleAvatar(
+                                radius: 24,
+                                backgroundColor: Colors.grey[200],
+                                foregroundColor: Colors.black,
+                                child: Icon(
+                                  Icons.person,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 12,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text("Organised By"),
+                                  SizedBox(
+                                    height: 8,
+                                  ),
                                   Text(
                                     "Name",
                                     style: TextStyle(
@@ -86,7 +100,29 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
                         ),
                         Expanded(
                           child: Row(
-                            children: [CircleAvatar(), Column()],
+                            children: [
+                              CircleAvatar(
+                                radius: 24,
+                              ),
+                              SizedBox(
+                                width: 12,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("Due date"),
+                                  SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    "Date",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ],
                           ),
                         )
                       ],
