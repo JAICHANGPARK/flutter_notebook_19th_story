@@ -2,7 +2,17 @@
 
 ## UI Design
 
-### EP1139
+### EP1143
+
+- Fitness Mobile App
+- by Kamila Ochenkowska
+- https://dribbble.com/shots/18163230-Fitness-Mobile-App/attachments/13362158?mode=media
+
+<img
+src="https://cdn.dribbble.com/users/8449469/screenshots/18163230/media/077128ee90a89ca1be16450e258915b9.png"
+width="400px"/>
+
+### EP1139-1142
 
 - Office Meeting App
 - by Pratik Agrawal
