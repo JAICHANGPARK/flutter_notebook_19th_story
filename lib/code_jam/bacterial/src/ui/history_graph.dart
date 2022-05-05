@@ -16,7 +16,7 @@ class BacteriaGrowthChartPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final double dotSize = size.height / 60;
+    final double dotSize = size.height / 70;
     final Paint paint = Paint();
 
     for (int i = 0; i < historyElements.length; i++) {
