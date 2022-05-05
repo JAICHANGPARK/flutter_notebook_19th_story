@@ -15,7 +15,7 @@ class FitnessStartScreen extends StatelessWidget {
             bottom: 0,
             right: 0,
             child: ColorFiltered(
-              colorFilter: ColorFilter.mode(Colors.blue.withOpacity(0.2), BlendMode.color),
+              colorFilter: ColorFilter.mode(Colors.blue.withOpacity(0.2), BlendMode.colorBurn),
               child: CachedNetworkImage(
                 imageUrl: 'https://cdn.pixabay.com/photo/2016/11/19/16/48/woman-1840275_960_720.jpg',
                 fit: BoxFit.cover,
@@ -63,7 +63,10 @@ class FitnessStartScreen extends StatelessWidget {
                 SizedBox(
                   height: 16,
                 ),
-                Text("Don't waste time and start your new life today with a personalized training plan"),
+                Text(
+                  "Don't waste time and start your new life today with a personalized training plan",
+                  style: TextStyle(color: Colors.white),
+                ),
                 SizedBox(
                   height: 42,
                 ),
