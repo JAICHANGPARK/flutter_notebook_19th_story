@@ -31,6 +31,7 @@ class FitnessStartScreen extends StatelessWidget {
               children: [
                 CircleAvatar(
                   backgroundColor: Colors.white.withOpacity(0.5),
+                  radius: 28,
                 ),
                 SizedBox(
                   height: 24,
@@ -54,6 +55,22 @@ class FitnessStartScreen extends StatelessWidget {
                   color: Colors.white,
                 ),),
                 Text("Don't waste time and start your new life today with a personalized training plan"),
+                SizedBox(
+                  height: 42,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text("Start Now"),
+                      Icon(Icons.arrow_forward, size: 14,)
+                    ],
+                  ),
+                )
               ],
             ),
           )
