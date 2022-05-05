@@ -40,34 +40,47 @@ class FitnessStartScreen extends StatelessWidget {
                   "Transform",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
+                    fontSize: 42,
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  "your life",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
                     fontSize: 32,
                     color: Colors.white,
                   ),
                 ),
-                Text("your life",  style: TextStyle(
-                  fontWeight: FontWeight.w300,
-                  fontSize: 32,
-                  color: Colors.white,
-                ),),
-                Text("for better",  style: TextStyle(
-                  fontWeight: FontWeight.w300,
-                  fontSize: 32,
-                  color: Colors.white,
-                ),),
+                Text(
+                  "for better",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                    fontSize: 32,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  height: 16,
+                ),
                 Text("Don't waste time and start your new life today with a personalized training plan"),
                 SizedBox(
                   height: 42,
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-
-                  ),
+                  decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(24)),
+                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text("Start Now"),
-                      Icon(Icons.arrow_forward, size: 14,)
+                      SizedBox(
+                        width: 32,
+                      ),
+                      Icon(
+                        Icons.arrow_forward,
+                        size: 14,
+                      )
                     ],
                   ),
                 )
