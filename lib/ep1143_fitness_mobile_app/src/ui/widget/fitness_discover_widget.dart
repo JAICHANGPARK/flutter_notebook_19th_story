@@ -6,7 +6,7 @@ class FitnessDiscoverWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 16, right: 0, left: 8),
+      padding: const EdgeInsets.only(top: 16, right: 0, left: 8, bottom: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -58,7 +58,8 @@ class FitnessDiscoverWidget extends StatelessWidget {
           ),
           Expanded(
             child: Placeholder(),
-          )
+          ),
+
         ],
       ),
     );
