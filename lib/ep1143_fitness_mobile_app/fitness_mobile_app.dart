@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'src/fitness_start_screen.dart';
+import 'src/ui/fitness_start_screen.dart';
 
 class FitnessMobileApp extends StatelessWidget {
   const FitnessMobileApp({Key? key}) : super(key: key);
