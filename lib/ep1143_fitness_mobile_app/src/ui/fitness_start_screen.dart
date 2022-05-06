@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1143_fitness_mobile_app/src/ui/fitness_mobile_main_page.dart';
 
 class FitnessStartScreen extends StatelessWidget {
   const FitnessStartScreen({Key? key}) : super(key: key);
@@ -73,27 +74,36 @@ class FitnessStartScreen extends StatelessWidget {
                 const SizedBox(
                   height: 42,
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(24),
-                  ),
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 24,
-                    vertical: 16,
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: const [
-                      Text("Start Now"),
-                      SizedBox(
-                        width: 32,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => FitnessMobileMainPage(),
                       ),
-                      Icon(
-                        Icons.arrow_forward,
-                        size: 14,
-                      )
-                    ],
+                    );
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 24,
+                      vertical: 16,
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: const [
+                        Text("Start Now"),
+                        SizedBox(
+                          width: 32,
+                        ),
+                        Icon(
+                          Icons.arrow_forward,
+                          size: 14,
+                        )
+                      ],
+                    ),
                   ),
                 )
               ],
