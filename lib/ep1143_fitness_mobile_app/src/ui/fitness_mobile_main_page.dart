@@ -15,14 +15,16 @@ class _FitnessMobileMainPageState extends State<FitnessMobileMainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueGrey[50],
-      body: IndexedStack(
-        index: _pageIndex,
-        children: [
-          Center(
-            child: Text("Page 1"),
-          ),
-          FitnessDiscoverWidget(),
-        ],
+      body: SafeArea(
+        child: IndexedStack(
+          index: _pageIndex,
+          children: [
+            Center(
+              child: Text("Page 1"),
+            ),
+            FitnessDiscoverWidget(),
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
