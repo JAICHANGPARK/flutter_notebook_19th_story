@@ -17,7 +17,7 @@ class _FitnessMobileMainPageState extends State<FitnessMobileMainPage> {
       body: IndexedStack(
         index: _pageIndex,
         children: [
-          
+
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
