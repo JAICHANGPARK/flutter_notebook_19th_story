@@ -57,9 +57,22 @@ class FitnessDiscoverWidget extends StatelessWidget {
             ],
           ),
           Expanded(
-            child: Placeholder(),
+            child: ListView.builder(
+                itemCount: 10,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.only(right: 12),
+                    child: Container(
+                      width: 140,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8)
+                      ),
+                    ),
+                  );
+                }),
           ),
-
         ],
       ),
     );
