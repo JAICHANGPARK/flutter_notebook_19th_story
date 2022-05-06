@@ -24,10 +24,36 @@ class FitnessDiscoverWidget extends StatelessWidget {
             height: 16,
           ),
           Container(
-            height: 64,
+            height: 42,
             decoration: BoxDecoration(
-              color: Colors.pink,
+
             ),
+            child: ListView.builder(
+                itemCount: 10,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.only(right: 12),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(32),
+                      ),
+                      padding: EdgeInsets.symmetric(horizontal: 4, vertical: 4),
+                      child: Row(
+                        children: [
+                          CircleAvatar(),
+                          SizedBox(
+                            width: 8,
+                          ),
+                          Text(
+                            "389 kcal",
+                          )
+                        ],
+                      ),
+                    ),
+                  );
+                }),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(
@@ -65,10 +91,7 @@ class FitnessDiscoverWidget extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 12),
                     child: Container(
                       width: 140,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(8)
-                      ),
+                      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
                     ),
                   );
                 }),
