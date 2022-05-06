@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_19th_story/ep1143_fitness_mobile_app/src/ui/widget/fitness_discover_widget.dart';
 
 class FitnessMobileMainPage extends StatefulWidget {
   const FitnessMobileMainPage({Key? key}) : super(key: key);
@@ -17,7 +18,10 @@ class _FitnessMobileMainPageState extends State<FitnessMobileMainPage> {
       body: IndexedStack(
         index: _pageIndex,
         children: [
-
+          Center(
+            child: Text("Page 1"),
+          ),
+          FitnessDiscoverWidget(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
