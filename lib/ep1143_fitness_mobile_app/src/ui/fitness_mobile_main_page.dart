@@ -17,6 +17,9 @@ class _FitnessMobileMainPageState extends State<FitnessMobileMainPage> {
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
         showUnselectedLabels: false,
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.grey[400],
         items: [
           BottomNavigationBarItem(
               icon: Icon(
