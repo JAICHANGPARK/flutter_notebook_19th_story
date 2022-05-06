@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class FitnessDiscoverWidget extends StatelessWidget {
@@ -7,8 +5,22 @@ class FitnessDiscoverWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      
+    return Column(
+      children: [
+        Container(
+          height: 160,
+          decoration: BoxDecoration(
+            color: Colors.blueGrey,
+            borderRadius: BorderRadius.circular(8),
+          ),
+        ),
+        Container(
+          height: 64,
+          decoration: BoxDecoration(
+            color: Colors.pink,
+          ),
+        )
+      ],
     );
   }
 }
