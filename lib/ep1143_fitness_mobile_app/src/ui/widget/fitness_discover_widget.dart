@@ -6,8 +6,9 @@ class FitnessDiscoverWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 8, right: 0, left: 8),
+      padding: const EdgeInsets.only(top: 16, right: 0, left: 8),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: const EdgeInsets.only(right: 8),
@@ -28,8 +29,13 @@ class FitnessDiscoverWidget extends StatelessWidget {
               color: Colors.pink,
             ),
           ),
-          Text(
-            "Exercises",
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 16,
+            ),
+            child: Text(
+              "Exercises",
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(right: 8),
@@ -39,6 +45,19 @@ class FitnessDiscoverWidget extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("Coach Recommendations"),
+              TextButton(
+                onPressed: () {},
+                child: Text("View All"),
+              )
+            ],
+          ),
+          Expanded(
+            child: Placeholder(),
           )
         ],
       ),
