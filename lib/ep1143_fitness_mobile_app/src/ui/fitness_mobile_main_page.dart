@@ -8,6 +8,8 @@ class FitnessMobileMainPage extends StatefulWidget {
 }
 
 class _FitnessMobileMainPageState extends State<FitnessMobileMainPage> {
+  int _pageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +23,13 @@ class _FitnessMobileMainPageState extends State<FitnessMobileMainPage> {
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey[400],
-        items: [
+        currentIndex: _pageIndex,
+        onTap: (idx) {
+          setState(() {
+            _pageIndex = idx;
+          });
+        },
+        items: const [
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
