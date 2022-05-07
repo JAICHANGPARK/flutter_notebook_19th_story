@@ -15,6 +15,7 @@ class FitnessDiscoverWidget extends StatelessWidget {
             padding: const EdgeInsets.only(right: 8),
             child: Container(
               height: 160,
+              width: double.infinity,
               decoration: BoxDecoration(
                 color: Colors.blueGrey,
                 borderRadius: BorderRadius.circular(8),
@@ -25,9 +26,9 @@ class FitnessDiscoverWidget extends StatelessWidget {
                 ),
               ),
               child: Column(
-                children: [
-                  
-                ],
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [Text("Get Fit"), Text("Challenge"), Text("by Chloe Ting")],
               ),
             ),
           ),
