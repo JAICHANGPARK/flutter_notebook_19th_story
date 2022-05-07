@@ -115,7 +115,9 @@ class FitnessDiscoverWidget extends StatelessWidget {
               child: Column(
                 children: [
                   ListTile(
-                    leading: Icon(Icons.fitness_center),
+                    leading: Icon(Icons.fitness_center,),
+                    iconColor: Colors.blue,
+
                     title: Text("Strength training"),
                     subtitle: Text("10 exercises 30 min"),
                     trailing: Icon(Icons.pause),
@@ -128,6 +130,7 @@ class FitnessDiscoverWidget extends StatelessWidget {
                     leading: Icon(Icons.monitor_heart_outlined),
                     title: Text("Cardio"),
                     subtitle: Text("4 exercises 15 min"),
+                    iconColor: Colors.blue,
                     trailing: Icon(Icons.play_arrow),
                   ),
                   Divider(
@@ -135,9 +138,10 @@ class FitnessDiscoverWidget extends StatelessWidget {
                     height: 4,
                   ),
                   ListTile(
-                    leading: Icon(Icons.monitor_heart_outlined),
-                    title: Text("Cardio"),
+                    leading: Icon(Icons.all_inclusive),
+                    title: Text("Jumping rope"),
                     subtitle: Text("4 exercises 15 min"),
+                    iconColor: Colors.blue,
                     trailing: Icon(Icons.play_arrow),
                   ),
                 ],
