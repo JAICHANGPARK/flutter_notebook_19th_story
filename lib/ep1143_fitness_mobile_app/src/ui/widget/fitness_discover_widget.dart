@@ -25,10 +25,37 @@ class FitnessDiscoverWidget extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
+              padding: EdgeInsets.all(16),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [Text("Get Fit"), Text("Challenge"), Text("by Chloe Ting")],
+                children: [
+                  Text(
+                    "Get Fit",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "Challenge",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Text(
+                    "by Chloe Ting",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
