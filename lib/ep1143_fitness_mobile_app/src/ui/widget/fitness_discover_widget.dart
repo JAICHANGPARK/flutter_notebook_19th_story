@@ -73,19 +73,27 @@ class FitnessDiscoverWidget extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 12),
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Colors.blueGrey[200],
                         borderRadius: BorderRadius.circular(32),
                       ),
-                      padding: EdgeInsets.symmetric(horizontal: 4, vertical: 4),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 4,
+                        vertical: 4,
+                      ),
                       child: Row(
                         children: [
-                          CircleAvatar(),
+                          CircleAvatar(
+                            backgroundColor: Colors.white,
+                          ),
                           SizedBox(
-                            width: 8,
+                            width: 4,
                           ),
                           Text(
                             "389 kcal",
-                          )
+                          ),
+                          SizedBox(
+                            width: 8,
+                          ),
                         ],
                       ),
                     ),
@@ -103,9 +111,31 @@ class FitnessDiscoverWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 8),
             child: Container(
-              height: 200,
-              decoration: BoxDecoration(
-                color: Colors.white,
+              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: Icon(Icons.fitness_center),
+                    title: Text("Strength training"),
+                    subtitle: Text("10 exercises 30 min"),
+                    trailing: Icon(Icons.pause),
+                  ),
+                  Divider(
+                    color: Colors.grey,
+                    height: 8,
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.fitness_center),
+                    title: Text("Cardio"),
+                    subtitle: Text("10 exercises 30 min"),
+                    trailing: Icon(Icons.pause),
+                  ),
+                  Divider(
+                    color: Colors.grey,
+                    height: 8,
+                  ),
+                  ListTile(),
+                ],
               ),
             ),
           ),
