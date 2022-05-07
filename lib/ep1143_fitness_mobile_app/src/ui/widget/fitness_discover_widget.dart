@@ -180,10 +180,18 @@ class FitnessDiscoverWidget extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        Expanded(child: Stack()),
+                        Expanded(
+                            child: Stack(
+                          children: [
+                            Positioned(
+                              child: CircleAvatar(),
+                            ),
+                          ],
+                        )),
                         Expanded(
                             child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Text(
                               "Pamela Reif",
@@ -191,7 +199,14 @@ class FitnessDiscoverWidget extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Text("17 Training Plans"),
+                            Text(
+                              "17 Training Plans",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey,
+                                fontSize: 12,
+                              ),
+                            ),
                           ],
                         ))
                       ],
