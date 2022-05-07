@@ -16,13 +16,19 @@ class FitnessDiscoverWidget extends StatelessWidget {
             child: Container(
               height: 160,
               decoration: BoxDecoration(
-                  color: Colors.blueGrey,
-                  borderRadius: BorderRadius.circular(8),
-                  image: DecorationImage(
-                    image: CachedNetworkImageProvider(
-                        "https://cdn.pixabay.com/photo/2017/08/06/12/52/woman-2592247_960_720.jpg"),
-                    fit: BoxFit.cover,
-                  )),
+                color: Colors.blueGrey,
+                borderRadius: BorderRadius.circular(8),
+                image: DecorationImage(
+                  image: CachedNetworkImageProvider(
+                      "https://cdn.pixabay.com/photo/2017/08/06/12/52/woman-2592247_960_720.jpg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: Column(
+                children: [
+                  
+                ],
+              ),
             ),
           ),
           SizedBox(
