@@ -182,9 +182,26 @@ class FitnessDiscoverWidget extends StatelessWidget {
                       children: [
                         Expanded(
                             child: Stack(
-                          children: [
+                          children: const [
                             Positioned(
-                              child: CircleAvatar(),
+                              left: 16,
+                              top: 16,
+                              child: CircleAvatar(
+                                backgroundImage: CachedNetworkImageProvider(
+                                  "https://cdn.pixabay.com/photo/2017/05/12/11/29/girl-2306829_960_720.jpg",
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              left: 42,
+                              top: 16,
+                              child: CircleAvatar(
+                                backgroundColor: Colors.tealAccent,
+                                foregroundColor: Colors.white,
+                                child: Text(
+                                  "5.0",
+                                ),
+                              ),
                             ),
                           ],
                         )),
@@ -192,7 +209,7 @@ class FitnessDiscoverWidget extends StatelessWidget {
                             child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
+                          children: const [
                             Text(
                               "Pamela Reif",
                               style: TextStyle(
