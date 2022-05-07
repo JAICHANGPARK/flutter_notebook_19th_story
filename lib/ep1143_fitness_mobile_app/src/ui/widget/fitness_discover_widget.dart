@@ -178,6 +178,24 @@ class FitnessDiscoverWidget extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(8),
                     ),
+                    child: Column(
+                      children: [
+                        Expanded(child: Stack()),
+                        Expanded(
+                            child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Pamela Reif",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text("17 Training Plans"),
+                          ],
+                        ))
+                      ],
+                    ),
                   ),
                 );
               },
