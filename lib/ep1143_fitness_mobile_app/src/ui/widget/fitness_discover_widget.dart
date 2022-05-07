@@ -19,17 +19,17 @@ class FitnessDiscoverWidget extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.blueGrey,
                 borderRadius: BorderRadius.circular(8),
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: CachedNetworkImageProvider(
                       "https://cdn.pixabay.com/photo/2017/08/06/12/52/woman-2592247_960_720.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text(
                     "Get Fit",
                     style: TextStyle(
@@ -59,12 +59,12 @@ class FitnessDiscoverWidget extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Container(
             height: 42,
-            decoration: BoxDecoration(),
+            decoration: const BoxDecoration(),
             child: ListView.builder(
                 itemCount: 10,
                 scrollDirection: Axis.horizontal,
@@ -73,17 +73,20 @@ class FitnessDiscoverWidget extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 12),
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Colors.blueGrey[200],
+                        color: Colors.blueGrey[100],
                         borderRadius: BorderRadius.circular(32),
                       ),
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         horizontal: 4,
                         vertical: 4,
                       ),
                       child: Row(
-                        children: [
+                        children: const [
                           CircleAvatar(
                             backgroundColor: Colors.white,
+                            child: Icon(
+                              Icons.local_fire_department,
+                            ),
                           ),
                           SizedBox(
                             width: 4,
@@ -100,8 +103,8 @@ class FitnessDiscoverWidget extends StatelessWidget {
                   );
                 }),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
+          const Padding(
+            padding: EdgeInsets.symmetric(
               vertical: 16,
             ),
             child: Text(
@@ -111,13 +114,17 @@ class FitnessDiscoverWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 8),
             child: Container(
-              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(8),
+              ),
               child: Column(
-                children: [
+                children: const [
                   ListTile(
-                    leading: Icon(Icons.fitness_center,),
+                    leading: Icon(
+                      Icons.fitness_center,
+                    ),
                     iconColor: Colors.blue,
-
                     title: Text("Strength training"),
                     subtitle: Text("10 exercises 30 min"),
                     trailing: Icon(Icons.pause),
@@ -151,10 +158,10 @@ class FitnessDiscoverWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Coach Recommendations"),
+              const Text("Coach Recommendations"),
               TextButton(
                 onPressed: () {},
-                child: Text("View All"),
+                child: const Text("View All"),
               )
             ],
           ),
