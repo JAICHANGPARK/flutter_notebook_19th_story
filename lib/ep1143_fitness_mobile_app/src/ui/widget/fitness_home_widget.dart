@@ -236,15 +236,24 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8),
-                      child: Container(
-                        height: 190,
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      child: SizedBox(
+                        height: 170,
                         child: BarChart(
                           BarChartData(
                             borderData: FlBorderData(
                               show: false,
                             ),
-                            maxY: 15,
+                            titlesData: FlTitlesData(
+                              rightTitles: AxisTitles(),
+                              topTitles: AxisTitles(),
+                            ),
+                            gridData: FlGridData(
+                              show: true,
+                              drawVerticalLine: false,
+                              horizontalInterval: 4
+                            ),
+                            maxY: 20,
                             barGroups: [
                               BarChartGroupData(
                                 x: 0,
