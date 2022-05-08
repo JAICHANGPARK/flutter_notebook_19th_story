@@ -23,6 +23,7 @@ dependencies:
   fl_chart: ^0.50.1
   google_fonts: any
   bubble_tab_indicator: "^0.1.5"
+  sleek_circular_slider: ^2.0.1
 
 dev_dependencies:
   flutter_test:
