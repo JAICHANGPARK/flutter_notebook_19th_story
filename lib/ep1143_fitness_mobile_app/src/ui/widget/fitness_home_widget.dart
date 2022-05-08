@@ -34,45 +34,56 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
               ),
               Row(
                 children: [
-                  Expanded(child: Container(
+                  Expanded(
+                      child: Container(
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(8)
+                      borderRadius: BorderRadius.circular(8),
                     ),
+                    padding: EdgeInsets.all(8),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Icon(Icons.local_fire_department),
-                        Text("2,900"),
-                        Text("Kcal Burnt")
+                        SizedBox(
+                          height: 12,
+                        ),
+                        Text(
+                          "2,900",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 4,
+                        ),
+                        Text(
+                          "Kcal Burnt",
+                          style: TextStyle(
+                            color: Colors.grey,
+                          ),
+                        )
                       ],
                     ),
                   )),
-                  SizedBox(width: 8,),
-                  Expanded(child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(8)
-                    ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Expanded(
+                      child: Container(
+                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
                     child: Column(
-                      children: [
-                        Icon(Icons.local_fire_department),
-                        Text("2,900"),
-                        Text("Kcal Burnt")
-                      ],
+                      children: [Icon(Icons.local_fire_department), Text("2,900"), Text("Kcal Burnt")],
                     ),
                   )),
-                  SizedBox(width: 8,),
-                  Expanded(child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(8)
-                    ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Expanded(
+                      child: Container(
+                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
                     child: Column(
-                      children: [
-                        Icon(Icons.local_fire_department),
-                        Text("2,900"),
-                        Text("Kcal Burnt")
-                      ],
+                      children: [Icon(Icons.local_fire_department), Text("2,900"), Text("Kcal Burnt")],
                     ),
                   ))
                 ],
@@ -80,7 +91,6 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
             ],
           ),
         )
-
       ],
     );
   }
