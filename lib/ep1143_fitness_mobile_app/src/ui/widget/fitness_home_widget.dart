@@ -12,7 +12,20 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-
+        Container(
+          height: 200,
+          decoration: BoxDecoration(color: Colors.white),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text("Overview"),
+            TextButton(
+              onPressed: () {},
+              child: Text("View All"),
+            ),
+          ],
+        )
       ],
     );
   }
