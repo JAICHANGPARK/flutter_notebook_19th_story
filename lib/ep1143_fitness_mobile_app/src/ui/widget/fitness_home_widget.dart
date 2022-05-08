@@ -16,16 +16,24 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
           height: 200,
           decoration: BoxDecoration(color: Colors.white),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("Overview"),
-            TextButton(
-              onPressed: () {},
-              child: Text("View All"),
-            ),
-          ],
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Overview"),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text("View All"),
+                  ),
+                ],
+              )
+            ],
+          ),
         )
+
       ],
     );
   }
