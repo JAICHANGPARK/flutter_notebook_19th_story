@@ -239,22 +239,130 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: Container(
                         height: 190,
-                        decoration: BoxDecoration(
-                          color: Colors.pink,
-                        ),
                         child: BarChart(
                           BarChartData(
                             borderData: FlBorderData(
                               show: false,
                             ),
+                            maxY: 15,
                             barGroups: [
                               BarChartGroupData(
                                 x: 0,
                                 barRods: [
                                   BarChartRodData(
-                                      toY: 11, color: Colors.indigo, width: 12, borderRadius: BorderRadius.circular(2)),
+                                    toY: 11,
+                                    color: Colors.indigo,
+                                    width: 12,
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
                                   BarChartRodData(
-                                      toY: 5, width: 12, color: Colors.blue, borderRadius: BorderRadius.circular(2)),
+                                    toY: 5,
+                                    width: 12,
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
+                                ],
+                              ),
+                              BarChartGroupData(
+                                x: 1,
+                                barRods: [
+                                  BarChartRodData(
+                                    toY: 5,
+                                    color: Colors.indigo,
+                                    width: 12,
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
+                                  BarChartRodData(
+                                    toY: 6,
+                                    width: 12,
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
+                                ],
+                              ),
+                              BarChartGroupData(
+                                x: 2,
+                                barRods: [
+                                  BarChartRodData(
+                                    toY: 11,
+                                    color: Colors.indigo,
+                                    width: 12,
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
+                                  BarChartRodData(
+                                    toY: 4,
+                                    width: 12,
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
+                                ],
+                              ),
+                              BarChartGroupData(
+                                x: 3,
+                                barRods: [
+                                  BarChartRodData(
+                                    toY: 8,
+                                    color: Colors.indigo,
+                                    width: 12,
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
+                                  BarChartRodData(
+                                    toY: 4,
+                                    width: 12,
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
+                                ],
+                              ),
+                              BarChartGroupData(
+                                x: 4,
+                                barRods: [
+                                  BarChartRodData(
+                                    toY: 3,
+                                    color: Colors.indigo,
+                                    width: 12,
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
+                                  BarChartRodData(
+                                    toY: 4,
+                                    width: 12,
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
+                                ],
+                              ),
+                              BarChartGroupData(
+                                x: 5,
+                                barRods: [
+                                  BarChartRodData(
+                                    toY: 10,
+                                    color: Colors.grey[100],
+                                    width: 12,
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
+                                  BarChartRodData(
+                                    toY: 10,
+                                    width: 12,
+                                    color: Colors.grey[100],
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
+                                ],
+                              ),
+                              BarChartGroupData(
+                                x: 6,
+                                barRods: [
+                                  BarChartRodData(
+                                    toY: 10,
+                                    color: Colors.grey[100],
+                                    width: 12,
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
+                                  BarChartRodData(
+                                    toY: 10,
+                                    width: 12,
+                                    color: Colors.grey[100],
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
                                 ],
                               ),
                             ],
