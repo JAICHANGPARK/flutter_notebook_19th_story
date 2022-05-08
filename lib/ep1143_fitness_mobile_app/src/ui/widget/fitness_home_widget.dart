@@ -14,7 +14,7 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          height: 200,
+          height: 280,
           decoration: const BoxDecoration(color: Colors.white),
         ),
         Padding(
@@ -149,10 +149,67 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                     ),
                   ),
                 ],
-              )
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              Container(
+                decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
+                padding: EdgeInsets.all(8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Activity"),
+                        Container(
+                          width: 160,
+                          decoration: BoxDecoration(
+                            color: Colors.grey[200],
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(2.0),
+                                  child: Container(
+                                    decoration:
+                                        BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16)),
+                                    padding: EdgeInsets.symmetric(vertical: 4),
+                                    child: Center(
+                                      child: Text(
+                                        "Week",
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.blue,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: Container(
+                                  decoration: BoxDecoration(),
+                                  child: Center(
+                                    child: Text("Week"),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
-        )
+        ),
       ],
     );
   }
