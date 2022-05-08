@@ -1,3 +1,4 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
 class FitnessHomeWidget extends StatefulWidget {
@@ -240,6 +241,24 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                         height: 190,
                         decoration: BoxDecoration(
                           color: Colors.pink,
+                        ),
+                        child: BarChart(
+                          BarChartData(
+                            borderData: FlBorderData(
+                              show: false,
+                            ),
+                            barGroups: [
+                              BarChartGroupData(
+                                x: 0,
+                                barRods: [
+                                  BarChartRodData(
+                                      toY: 11, color: Colors.indigo, width: 12, borderRadius: BorderRadius.circular(2)),
+                                  BarChartRodData(
+                                      toY: 5, width: 12, color: Colors.blue, borderRadius: BorderRadius.circular(2)),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
