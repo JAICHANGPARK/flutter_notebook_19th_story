@@ -15,7 +15,20 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
       children: [
         Container(
           height: 260,
-          decoration: const BoxDecoration(color: Colors.white),
+          decoration: const BoxDecoration(
+            color: Colors.white,
+          ),
+          child: Column(
+            children: [
+              Text(
+                "Weekly Statistics",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Expanded(child: Placeholder()),
+            ],
+          ),
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -154,7 +167,10 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                 height: 16,
               ),
               Container(
-                decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(8),
+                ),
                 padding: const EdgeInsets.all(8),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
