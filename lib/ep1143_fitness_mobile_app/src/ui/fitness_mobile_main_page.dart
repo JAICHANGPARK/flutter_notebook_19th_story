@@ -19,7 +19,7 @@ class _FitnessMobileMainPageState extends State<FitnessMobileMainPage> {
       body: SafeArea(
         child: IndexedStack(
           index: _pageIndex,
-          children: [
+          children: const [
             FitnessHomeWidget(),
             FitnessDiscoverWidget(),
           ],
