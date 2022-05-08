@@ -10,6 +10,10 @@ class FitnessHomeWidget extends StatefulWidget {
 class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      children: [
+
+      ],
+    );
   }
 }
