@@ -15,7 +15,7 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
       children: [
         Container(
           height: 200,
-          decoration: BoxDecoration(color: Colors.white),
+          decoration: const BoxDecoration(color: Colors.white),
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -25,10 +25,10 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Overview"),
+                  const Text("Overview"),
                   TextButton(
                     onPressed: () {},
-                    child: Text("View All"),
+                    child: const Text("View All"),
                   ),
                 ],
               ),
@@ -40,7 +40,7 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
@@ -67,8 +67,8 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    width: 8,
+                  const SizedBox(
+                    width: 16,
                   ),
                   Expanded(
                     child: Container(
@@ -76,7 +76,7 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
@@ -103,8 +103,8 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    width: 8,
+                  const SizedBox(
+                    width: 16,
                   ),
                   Expanded(
                     child: Container(
@@ -112,7 +112,7 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
