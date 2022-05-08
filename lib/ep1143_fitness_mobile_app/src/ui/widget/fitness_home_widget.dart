@@ -44,7 +44,10 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
-                          Icon(Icons.local_fire_department),
+                          Icon(
+                            Icons.local_fire_department,
+                            color: Colors.blue,
+                          ),
                           SizedBox(
                             height: 12,
                           ),
@@ -80,7 +83,10 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
-                          Icon(Icons.timer),
+                          Icon(
+                            Icons.timer,
+                            color: Colors.blue,
+                          ),
                           SizedBox(
                             height: 12,
                           ),
@@ -116,7 +122,10 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
-                          Icon(Icons.fitness_center),
+                          Icon(
+                            Icons.fitness_center,
+                            color: Colors.blue,
+                          ),
                           SizedBox(
                             height: 12,
                           ),
