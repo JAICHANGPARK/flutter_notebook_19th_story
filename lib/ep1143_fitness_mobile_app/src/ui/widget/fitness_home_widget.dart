@@ -217,6 +217,48 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                           ),
                         )
                       ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      child: Container(
+                        height: 170,
+                        decoration: BoxDecoration(
+                          color: Colors.pink,
+                        ),
+                      ),
+                    ),
+                    Row(
+                      children: const [
+                        CircleAvatar(
+                          radius: 4,
+                          backgroundColor: Colors.indigo,
+                        ),
+                        SizedBox(
+                          width: 4,
+                        ),
+                        Text(
+                          "Biking",
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        CircleAvatar(
+                          radius: 4,
+                          backgroundColor: Colors.blue,
+                        ),
+                        SizedBox(
+                          width: 4,
+                        ),
+                        Text(
+                          "Running",
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
                     )
                   ],
                 ),
