@@ -35,57 +35,110 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
               Row(
                 children: [
                   Expanded(
-                      child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    padding: EdgeInsets.all(8),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Icon(Icons.local_fire_department),
-                        SizedBox(
-                          height: 12,
-                        ),
-                        Text(
-                          "2,900",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      padding: EdgeInsets.all(8),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Icon(Icons.local_fire_department),
+                          SizedBox(
+                            height: 12,
                           ),
-                        ),
-                        SizedBox(
-                          height: 4,
-                        ),
-                        Text(
-                          "Kcal Burnt",
-                          style: TextStyle(
-                            color: Colors.grey,
+                          Text(
+                            "2,900",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        )
-                      ],
+                          SizedBox(
+                            height: 4,
+                          ),
+                          Text(
+                            "Kcal Burnt",
+                            style: TextStyle(
+                              color: Colors.grey,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                  )),
+                  ),
                   SizedBox(
                     width: 8,
                   ),
                   Expanded(
-                      child: Container(
-                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
-                    child: Column(
-                      children: [Icon(Icons.local_fire_department), Text("2,900"), Text("Kcal Burnt")],
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      padding: EdgeInsets.all(8),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Icon(Icons.timer),
+                          SizedBox(
+                            height: 12,
+                          ),
+                          Text(
+                            "28h",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 4,
+                          ),
+                          Text(
+                            "Total Time",
+                            style: TextStyle(
+                              color: Colors.grey,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                  )),
+                  ),
                   SizedBox(
                     width: 8,
                   ),
                   Expanded(
-                      child: Container(
-                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
-                    child: Column(
-                      children: [Icon(Icons.local_fire_department), Text("2,900"), Text("Kcal Burnt")],
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      padding: EdgeInsets.all(8),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Icon(Icons.fitness_center),
+                          SizedBox(
+                            height: 12,
+                          ),
+                          Text(
+                            "293",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 4,
+                          ),
+                          Text(
+                            "Exercises",
+                            style: TextStyle(
+                              color: Colors.grey,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                  ))
+                  ),
                 ],
               )
             ],
