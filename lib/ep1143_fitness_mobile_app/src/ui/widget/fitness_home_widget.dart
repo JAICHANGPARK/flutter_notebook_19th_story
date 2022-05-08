@@ -150,19 +150,24 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Container(
                 decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Activity"),
+                        const Text(
+                          "Activity",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                         Container(
                           width: 160,
                           decoration: BoxDecoration(
@@ -173,12 +178,14 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                             children: [
                               Expanded(
                                 child: Padding(
-                                  padding: const EdgeInsets.all(2.0),
+                                  padding: const EdgeInsets.all(3.0),
                                   child: Container(
-                                    decoration:
-                                        BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16)),
-                                    padding: EdgeInsets.symmetric(vertical: 4),
-                                    child: Center(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(16),
+                                    ),
+                                    padding: const EdgeInsets.symmetric(vertical: 4),
+                                    child: const Center(
                                       child: Text(
                                         "Week",
                                         style: TextStyle(
@@ -193,9 +200,16 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                               ),
                               Expanded(
                                 child: Container(
-                                  decoration: BoxDecoration(),
-                                  child: Center(
-                                    child: Text("Week"),
+                                  decoration: const BoxDecoration(),
+                                  child: const Center(
+                                    child: Text(
+                                      "Month",
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.grey,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               )
