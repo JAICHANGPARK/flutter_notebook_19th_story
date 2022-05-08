@@ -14,7 +14,7 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          height: 280,
+          height: 260,
           decoration: const BoxDecoration(color: Colors.white),
         ),
         Padding(
@@ -221,7 +221,7 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: Container(
-                        height: 170,
+                        height: 190,
                         decoration: BoxDecoration(
                           color: Colors.pink,
                         ),
