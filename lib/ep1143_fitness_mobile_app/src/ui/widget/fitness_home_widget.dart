@@ -38,18 +38,24 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                   controller: _pageController,
                   children: [
                     SleekCircularSlider(),
-                    SleekCircularSlider(
-                      appearance: CircularSliderAppearance(
-                        angleRange: 360.0,
-                        startAngle: 0,
-                        customWidths: CustomSliderWidths(progressBarWidth: 4),
-                        customColors: CustomSliderColors(
-                          progressBarColor: Colors.cyan,
+                    Stack(
+                      children: [
+                        Positioned(
+                          child: SleekCircularSlider(
+                            appearance: CircularSliderAppearance(
+                              angleRange: 360.0,
+                              startAngle: 0,
+                              customWidths: CustomSliderWidths(progressBarWidth: 4),
+                              customColors: CustomSliderColors(
+                                progressBarColor: Colors.cyan,
+                              ),
+                            ),
+                            max: 100,
+                            min: 0,
+                            initialValue: 64,
+                          ),
                         ),
-                      ),
-                      max: 100,
-                      min: 0,
-                      initialValue: 64,
+                      ],
                     ),
                     SleekCircularSlider(),
                   ],
