@@ -9,6 +9,9 @@ class FitnessHomeWidget extends StatefulWidget {
 }
 
 class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
+  PageController _pageController = PageController(
+      initialPage: 1,
+      viewportFraction: 0.8);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +31,12 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Expanded(child: PageView()),
+              Expanded(
+                child: PageView(
+                  controller: _pageController,
+                  children: [],
+                ),
+              ),
             ],
           ),
         ),
