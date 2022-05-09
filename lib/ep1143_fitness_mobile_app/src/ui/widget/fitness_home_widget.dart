@@ -27,7 +27,9 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Expanded(child: Placeholder()),
+              Expanded(child: PageView(
+
+              )),
             ],
           ),
         ),
@@ -248,7 +250,11 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                               rightTitles: AxisTitles(),
                               topTitles: AxisTitles(),
                             ),
-                            gridData: FlGridData(show: true, drawVerticalLine: false, horizontalInterval: 4),
+                            gridData: FlGridData(
+                              show: true,
+                              drawVerticalLine: false,
+                              horizontalInterval: 4,
+                            ),
                             maxY: 20,
                             barGroups: [
                               BarChartGroupData(
