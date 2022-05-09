@@ -52,17 +52,22 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                               appearance: CircularSliderAppearance(
                                 angleRange: 360.0,
                                 startAngle: 0,
-                                customWidths: CustomSliderWidths(progressBarWidth: 4),
+                                customWidths: CustomSliderWidths(progressBarWidth: 8,
+                                trackWidth: 4
+                                ),
                                 customColors: CustomSliderColors(
                                   progressBarColor: Colors.cyan,
+                                  trackColor: Colors.cyan[100]
                                 ),
                               ),
-                              innerWidget: (p){
+                              innerWidget: (p) {
                                 return Column(
-                                  children: [
-                                    Text("16.578"),
-                                    Text("steps")
-                                  ],
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [Text("16.578",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 32
+                                  ),), Text("steps")],
                                 );
                               },
                               max: 100,
@@ -84,6 +89,9 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                                   progressBarColor: Colors.cyan,
                                 ),
                               ),
+                              innerWidget: (p) {
+                                return Container();
+                              },
                               max: 100,
                               min: 0,
                               initialValue: 64,
