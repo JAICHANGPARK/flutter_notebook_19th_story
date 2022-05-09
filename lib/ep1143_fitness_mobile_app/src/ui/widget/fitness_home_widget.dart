@@ -50,8 +50,8 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                             top: 0,
                             child: SleekCircularSlider(
                               appearance: CircularSliderAppearance(
-                                angleRange: 360.0,
-                                startAngle: 0,
+                                angleRange: 270.0,
+                                startAngle: 90,
                                 customWidths: CustomSliderWidths(progressBarWidth: 8,
                                 trackWidth: 4
                                 ),
