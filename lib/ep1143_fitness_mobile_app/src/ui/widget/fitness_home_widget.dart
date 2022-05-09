@@ -114,19 +114,23 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                         ],
                       ),
                     ),
-                    SleekCircularSlider(
-                      appearance: CircularSliderAppearance(
-                        angleRange: 360.0,
-                        startAngle: 270,
-                        customWidths: CustomSliderWidths(progressBarWidth: 8, trackWidth: 6),
-                        customColors: CustomSliderColors(progressBarColor: Colors.grey, trackColor: Colors.grey[200]),
+                    Padding(
+
+                      padding: EdgeInsets.all(24),
+                      child: SleekCircularSlider(
+                        appearance: CircularSliderAppearance(
+                          angleRange: 360.0,
+                          startAngle: 270,
+                          customWidths: CustomSliderWidths(progressBarWidth: 8, trackWidth: 6),
+                          customColors: CustomSliderColors(progressBarColor: Colors.grey, trackColor: Colors.grey[200]),
+                        ),
+                        innerWidget: (p) {
+                          return Container();
+                        },
+                        max: 100,
+                        min: 0,
+                        initialValue: 0,
                       ),
-                      innerWidget: (p) {
-                        return Container();
-                      },
-                      max: 100,
-                      min: 0,
-                      initialValue: 0,
                     ),
                   ],
                 ),
