@@ -10,7 +10,7 @@ class FitnessHomeWidget extends StatefulWidget {
 }
 
 class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
-  PageController _pageController = PageController(initialPage: 1, viewportFraction: 0.5);
+  PageController _pageController = PageController(initialPage: 1, viewportFraction: 0.7);
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +41,10 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                     Stack(
                       children: [
                         Positioned(
+                          left: 0,
+                          right: 0,
+                          bottom: 0,
+                          top: 0,
                           child: SleekCircularSlider(
                             appearance: CircularSliderAppearance(
                               angleRange: 360.0,
