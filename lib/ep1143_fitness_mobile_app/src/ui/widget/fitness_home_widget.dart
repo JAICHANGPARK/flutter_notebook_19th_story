@@ -38,28 +38,59 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                   controller: _pageController,
                   children: [
                     SleekCircularSlider(),
-                    Stack(
-                      children: [
-                        Positioned(
-                          left: 0,
-                          right: 0,
-                          bottom: 0,
-                          top: 0,
-                          child: SleekCircularSlider(
-                            appearance: CircularSliderAppearance(
-                              angleRange: 360.0,
-                              startAngle: 0,
-                              customWidths: CustomSliderWidths(progressBarWidth: 4),
-                              customColors: CustomSliderColors(
-                                progressBarColor: Colors.cyan,
+                    SizedBox(
+                      height: 240,
+                      width: 240,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            left: 64,
+                            right: 64,
+                            bottom: 0,
+                            top: 0,
+                            child: SleekCircularSlider(
+                              appearance: CircularSliderAppearance(
+                                angleRange: 360.0,
+                                startAngle: 0,
+                                customWidths: CustomSliderWidths(progressBarWidth: 4),
+                                customColors: CustomSliderColors(
+                                  progressBarColor: Colors.cyan,
+                                ),
                               ),
+                              innerWidget: (p){
+                                return Column(
+                                  children: [
+                                    Text("16.578"),
+                                    Text("steps")
+                                  ],
+                                );
+                              },
+                              max: 100,
+                              min: 0,
+                              initialValue: 64,
                             ),
-                            max: 100,
-                            min: 0,
-                            initialValue: 64,
                           ),
-                        ),
-                      ],
+                          Positioned(
+                            left: 48,
+                            right: 48,
+                            bottom: 0,
+                            top: 0,
+                            child: SleekCircularSlider(
+                              appearance: CircularSliderAppearance(
+                                angleRange: 360.0,
+                                startAngle: 0,
+                                customWidths: CustomSliderWidths(progressBarWidth: 4),
+                                customColors: CustomSliderColors(
+                                  progressBarColor: Colors.cyan,
+                                ),
+                              ),
+                              max: 100,
+                              min: 0,
+                              initialValue: 64,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     SleekCircularSlider(),
                   ],
