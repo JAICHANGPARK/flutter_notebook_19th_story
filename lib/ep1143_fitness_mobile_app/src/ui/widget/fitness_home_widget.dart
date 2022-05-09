@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
 class FitnessHomeWidget extends StatefulWidget {
   const FitnessHomeWidget({Key? key}) : super(key: key);
@@ -9,9 +10,7 @@ class FitnessHomeWidget extends StatefulWidget {
 }
 
 class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
-  PageController _pageController = PageController(
-      initialPage: 1,
-      viewportFraction: 0.8);
+  PageController _pageController = PageController(initialPage: 1, viewportFraction: 0.5);
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +30,29 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              SizedBox(
+                height: 16,
+              ),
               Expanded(
                 child: PageView(
                   controller: _pageController,
-                  children: [],
+                  children: [
+                    SleekCircularSlider(),
+                    SleekCircularSlider(
+                      appearance: CircularSliderAppearance(
+                        angleRange: 360.0,
+                        startAngle: 0,
+                        customWidths: CustomSliderWidths(progressBarWidth: 4),
+                        customColors: CustomSliderColors(
+                          progressBarColor: Colors.cyan,
+                        ),
+                      ),
+                      max: 100,
+                      min: 0,
+                      initialValue: 64,
+                    ),
+                    SleekCircularSlider(),
+                  ],
                 ),
               ),
             ],
