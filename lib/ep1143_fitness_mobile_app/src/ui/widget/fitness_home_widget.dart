@@ -9,6 +9,7 @@ class FitnessHomeWidget extends StatefulWidget {
 }
 
 class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -27,9 +28,7 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Expanded(child: PageView(
-
-              )),
+              Expanded(child: PageView()),
             ],
           ),
         ),
