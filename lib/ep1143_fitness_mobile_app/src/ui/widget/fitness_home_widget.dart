@@ -84,9 +84,11 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                               appearance: CircularSliderAppearance(
                                 angleRange: 360.0,
                                 startAngle: 0,
-                                customWidths: CustomSliderWidths(progressBarWidth: 4),
+                                customWidths: CustomSliderWidths(progressBarWidth: 8,
+                                trackWidth: 6),
                                 customColors: CustomSliderColors(
-                                  progressBarColor: Colors.cyan,
+                                  progressBarColor: Colors.indigo,
+                                  trackColor: Colors.indigo[200]
                                 ),
                               ),
                               innerWidget: (p) {
