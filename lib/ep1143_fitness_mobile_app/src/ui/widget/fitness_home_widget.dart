@@ -37,61 +37,29 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                 child: PageView(
                   controller: _pageController,
                   children: [
-                    SleekCircularSlider(
-                      appearance: CircularSliderAppearance(
-                        angleRange: 360.0,
-                        startAngle: 270,
-                        customWidths: CustomSliderWidths(progressBarWidth: 8,
-                            trackWidth: 6),
-                        customColors: CustomSliderColors(
-                            progressBarColor: Colors.grey,
-                            trackColor: Colors.grey[200]
+                    Padding(
+                    
+                      padding: EdgeInsets.all(24),
+                      child: SleekCircularSlider(
+                        appearance: CircularSliderAppearance(
+                          angleRange: 360.0,
+                          startAngle: 270,
+                          customWidths: CustomSliderWidths(progressBarWidth: 8, trackWidth: 6),
+                          customColors: CustomSliderColors(progressBarColor: Colors.grey, trackColor: Colors.grey[200]),
                         ),
+                        innerWidget: (p) {
+                          return Container();
+                        },
+                        max: 100,
+                        min: 0,
+                        initialValue: 0,
                       ),
-                      innerWidget: (p) {
-                        return Container();
-                      },
-                      max: 100,
-                      min: 0,
-                      initialValue: 0,
                     ),
                     SizedBox(
                       height: 240,
                       width: 240,
                       child: Stack(
                         children: [
-                          Positioned(
-                            left: 64,
-                            right: 64,
-                            bottom: 0,
-                            top: 0,
-                            child: SleekCircularSlider(
-                              appearance: CircularSliderAppearance(
-                                angleRange: 360.0,
-                                startAngle: 270,
-                                customWidths: CustomSliderWidths(progressBarWidth: 8,
-                                trackWidth: 4
-                                ),
-                                customColors: CustomSliderColors(
-                                  progressBarColor: Colors.cyan,
-                                  trackColor: Colors.cyan[100]
-                                ),
-                              ),
-                              innerWidget: (p) {
-                                return Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [Text("16.578",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 32
-                                  ),), Text("steps")],
-                                );
-                              },
-                              max: 100,
-                              min: 0,
-                              initialValue: 64,
-                            ),
-                          ),
                           Positioned(
                             left: 48,
                             right: 48,
@@ -101,12 +69,39 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                               appearance: CircularSliderAppearance(
                                 angleRange: 360.0,
                                 startAngle: 270,
-                                customWidths: CustomSliderWidths(progressBarWidth: 8,
-                                trackWidth: 6),
-                                customColors: CustomSliderColors(
-                                  progressBarColor: Colors.indigo,
-                                  trackColor: Colors.indigo[200]
-                                ),
+                                customWidths: CustomSliderWidths(progressBarWidth: 8, trackWidth: 4),
+                                customColors:
+                                    CustomSliderColors(progressBarColor: Colors.cyan, trackColor: Colors.cyan[100]),
+                              ),
+                              innerWidget: (p) {
+                                return Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "16.578",
+                                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 32),
+                                    ),
+                                    Text("steps")
+                                  ],
+                                );
+                              },
+                              max: 100,
+                              min: 0,
+                              initialValue: 64,
+                            ),
+                          ),
+                          Positioned(
+                            left: 32,
+                            right: 32,
+                            bottom: 0,
+                            top: 0,
+                            child: SleekCircularSlider(
+                              appearance: CircularSliderAppearance(
+                                angleRange: 360.0,
+                                startAngle: 270,
+                                customWidths: CustomSliderWidths(progressBarWidth: 8, trackWidth: 6),
+                                customColors:
+                                    CustomSliderColors(progressBarColor: Colors.indigo, trackColor: Colors.indigo[200]),
                               ),
                               innerWidget: (p) {
                                 return Container();
@@ -123,12 +118,8 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                       appearance: CircularSliderAppearance(
                         angleRange: 360.0,
                         startAngle: 270,
-                        customWidths: CustomSliderWidths(progressBarWidth: 8,
-                            trackWidth: 6),
-                        customColors: CustomSliderColors(
-                            progressBarColor: Colors.grey,
-                            trackColor: Colors.grey[200]
-                        ),
+                        customWidths: CustomSliderWidths(progressBarWidth: 8, trackWidth: 6),
+                        customColors: CustomSliderColors(progressBarColor: Colors.grey, trackColor: Colors.grey[200]),
                       ),
                       innerWidget: (p) {
                         return Container();
