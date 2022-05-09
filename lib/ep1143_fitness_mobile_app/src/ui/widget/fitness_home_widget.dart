@@ -10,7 +10,7 @@ class FitnessHomeWidget extends StatefulWidget {
 }
 
 class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
-  PageController _pageController = PageController(initialPage: 1, viewportFraction: 0.7);
+  PageController _pageController = PageController(initialPage: 1, viewportFraction: 0.6);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,24 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                 child: PageView(
                   controller: _pageController,
                   children: [
-                    SleekCircularSlider(),
+                    SleekCircularSlider(
+                      appearance: CircularSliderAppearance(
+                        angleRange: 360.0,
+                        startAngle: 270,
+                        customWidths: CustomSliderWidths(progressBarWidth: 8,
+                            trackWidth: 6),
+                        customColors: CustomSliderColors(
+                            progressBarColor: Colors.grey,
+                            trackColor: Colors.grey[200]
+                        ),
+                      ),
+                      innerWidget: (p) {
+                        return Container();
+                      },
+                      max: 100,
+                      min: 0,
+                      initialValue: 0,
+                    ),
                     SizedBox(
                       height: 240,
                       width: 240,
@@ -102,7 +119,24 @@ class _FitnessHomeWidgetState extends State<FitnessHomeWidget> {
                         ],
                       ),
                     ),
-                    SleekCircularSlider(),
+                    SleekCircularSlider(
+                      appearance: CircularSliderAppearance(
+                        angleRange: 360.0,
+                        startAngle: 270,
+                        customWidths: CustomSliderWidths(progressBarWidth: 8,
+                            trackWidth: 6),
+                        customColors: CustomSliderColors(
+                            progressBarColor: Colors.grey,
+                            trackColor: Colors.grey[200]
+                        ),
+                      ),
+                      innerWidget: (p) {
+                        return Container();
+                      },
+                      max: 100,
+                      min: 0,
+                      initialValue: 0,
+                    ),
                   ],
                 ),
               ),
