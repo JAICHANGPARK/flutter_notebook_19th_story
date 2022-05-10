@@ -18,31 +18,41 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      children: [
-                        Text(
-                          "Temukan Kursus",
-                          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 24),
-                        ),
-                        Text(
-                          "Online Sesuai Minat",
-                          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 24),
-                        ),
-                      ],
+              child: Padding(
+                padding: const EdgeInsets.only(top: 16, left: 16, bottom: 16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(0.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Temukan Kursus",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 24,
+                            ),
+                          ),
+                          Text(
+                            "Online Sesuai Minat",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 24,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  Container(
-                    height: 240,
-                    decoration: BoxDecoration(
-                      color: Colors.red,
-                    ),
-                  )
-                ],
+                    Container(
+                      height: 240,
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
             Divider(
