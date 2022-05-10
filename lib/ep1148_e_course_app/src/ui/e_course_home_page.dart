@@ -21,6 +21,17 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
           Container(
             height: 72,
             decoration: BoxDecoration(),
+            child: Row(
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.home_outlined,
+                  ),
+                  iconSize: 38,
+                )
+              ],
+            ),
           )
         ],
       ),
