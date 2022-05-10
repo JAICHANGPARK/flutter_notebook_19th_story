@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 
 class ECourseHomePage extends StatefulWidget {
   const ECourseHomePage({Key? key}) : super(key: key);
@@ -26,7 +27,14 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                 IconButton(
                   onPressed: () {},
                   icon: Icon(
-                    Icons.home_outlined,
+                    Ionicons.home_outline,
+                  ),
+                  iconSize: 38,
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Ionicons.list,
                   ),
                   iconSize: 38,
                 )
