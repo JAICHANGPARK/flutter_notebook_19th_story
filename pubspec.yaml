@@ -24,6 +24,7 @@ dependencies:
   google_fonts: any
   bubble_tab_indicator: "^0.1.5"
   sleek_circular_slider: ^2.0.1
+  ionicons: ^0.1.2
 
 dev_dependencies:
   flutter_test:
