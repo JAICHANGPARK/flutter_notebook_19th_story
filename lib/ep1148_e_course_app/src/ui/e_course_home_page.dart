@@ -31,13 +31,7 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                   ),
                   iconSize: 38,
                 ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Ionicons.list,
-                  ),
-                  iconSize: 38,
-                )
+
               ],
             ),
           )
