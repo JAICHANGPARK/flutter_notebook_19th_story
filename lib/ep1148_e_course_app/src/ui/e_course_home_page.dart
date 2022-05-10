@@ -21,8 +21,21 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Temukan Kursus"),
-                  Text("Online Sesuai Minat"),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Temukan Kursus",
+                          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 24),
+                        ),
+                        Text(
+                          "Online Sesuai Minat",
+                          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 24),
+                        ),
+                      ],
+                    ),
+                  ),
                   Container(
                     height: 240,
                     decoration: BoxDecoration(
