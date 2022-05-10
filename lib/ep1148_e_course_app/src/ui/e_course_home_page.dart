@@ -45,10 +45,25 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                         ],
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      child: Container(
+                        height: 200,
+                        decoration: BoxDecoration(
+                          color: Colors.red,
+                        ),
+                      ),
+                    ),
                     Container(
-                      height: 240,
+                      height: 84,
                       decoration: BoxDecoration(
-                        color: Colors.red,
+                        color: Colors.blue,
+                      ),
+                    ),
+                    SizedBox(height: 16,),
+                    Expanded(
+                      child: Container(
+                        color: Colors.pink,
                       ),
                     )
                   ],
@@ -59,7 +74,7 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
               color: Colors.grey,
             ),
             Container(
-              height: 72,
+              height: 64,
               decoration: BoxDecoration(),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
