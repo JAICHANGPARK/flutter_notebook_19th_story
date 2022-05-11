@@ -211,6 +211,33 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                   ),
+                                  child: Column(
+                                    children: [
+                                      Expanded(child: Placeholder()),
+                                      Container(
+                                        height: 52,
+                                        decoration: BoxDecoration(
+                                          color: Colors.black,
+                                        ),
+                                        padding: EdgeInsets.symmetric(horizontal: 8),
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "Pelajari",
+                                              style: TextStyle(
+                                                color: Colors.lightGreenAccent,
+                                              ),
+                                            ),
+                                            Icon(
+                                              Icons.arrow_forward,
+                                              color: Colors.lightGreenAccent,
+                                            )
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                               SizedBox(
