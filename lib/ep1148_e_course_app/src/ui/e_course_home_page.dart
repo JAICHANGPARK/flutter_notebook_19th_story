@@ -52,6 +52,16 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                         decoration: BoxDecoration(
                           color: Colors.red,
                         ),
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              left: 0,
+                              right: 16,
+                              top: 0,
+                              child: Container(),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Container(
@@ -60,7 +70,9 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                         color: Colors.blue,
                       ),
                     ),
-                    SizedBox(height: 16,),
+                    SizedBox(
+                      height: 16,
+                    ),
                     Expanded(
                       child: Container(
                         color: Colors.pink,
