@@ -60,23 +60,27 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                                 decoration: BoxDecoration(
                                   color: Colors.black,
                                 ),
-                                padding: EdgeInsets.only(
-                                  top: 42
-                                ),
+                                padding: EdgeInsets.only(top: 42, left: 16),
                                 child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
                                       "Lanjukan belajar",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                      ),
+                                      style: TextStyle(color: Colors.white, fontSize: 18),
                                     ),
                                     Divider(
                                       color: Colors.white,
+                                      height: 42,
                                     ),
                                     Row(
                                       children: [
-
+                                        Container(
+                                          height: 42,
+                                          width: 42,
+                                          decoration: BoxDecoration(
+                                            color: Colors.blue,
+                                          ),
+                                        )
                                       ],
                                     )
                                   ],
