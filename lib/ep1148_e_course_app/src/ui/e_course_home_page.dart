@@ -82,31 +82,43 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                                           ),
                                         ),
                                         Expanded(
-                                          child: Column(
-                                            children: [
-                                              Text(
-                                                "Cara Membuat Design System",
-                                                style: TextStyle(
-                                                  color: Colors.white,
-                                                ),
-                                              ),
-                                              Row(
-                                                children: [
-                                                  Text("30%"),
-                                                  SizedBox(
-                                                    width: 12,
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(horizontal: 16),
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  "Cara Membuat Design System",
+                                                  style: TextStyle(
+                                                    color: Colors.white,
                                                   ),
-                                                  Expanded(
-                                                    child: Container(
-                                                      height: 4,
-                                                      decoration: BoxDecoration(
-                                                        color: Colors.grey,
+                                                ),
+                                                SizedBox(
+                                                  height: 16,
+                                                ),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      "30%",
+                                                      style: TextStyle(
+                                                        color: Colors.white,
                                                       ),
                                                     ),
-                                                  )
-                                                ],
-                                              )
-                                            ],
+                                                    SizedBox(
+                                                      width: 12,
+                                                    ),
+                                                    Expanded(
+                                                      child: Container(
+                                                        height: 4,
+                                                        decoration: BoxDecoration(
+                                                          color: Colors.grey,
+                                                        ),
+                                                      ),
+                                                    )
+                                                  ],
+                                                )
+                                              ],
+                                            ),
                                           ),
                                         )
                                       ],
