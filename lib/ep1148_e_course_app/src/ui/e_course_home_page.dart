@@ -56,16 +56,28 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                           children: [
                             Positioned(
                               left: 0,
+                              right: 0,
+                              top: 24,
+                              bottom: 0,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              left: 0,
                               right: 16,
                               top: 0,
                               child: Container(
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                 ),
+                                padding: EdgeInsets.symmetric(horizontal: 16),
                                 child: TextField(
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
-                                    helperText: "Cari kursus online disini...",
+                                    hintText: "Cari kursus online disini...",
                                     icon: Icon(
                                       Icons.search,
                                     ),
