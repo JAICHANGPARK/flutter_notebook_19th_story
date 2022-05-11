@@ -49,9 +49,6 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       child: Container(
                         height: 200,
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                        ),
                         child: Stack(
                           children: [
                             Positioned(
@@ -62,6 +59,27 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                               child: Container(
                                 decoration: BoxDecoration(
                                   color: Colors.black,
+                                ),
+                                padding: EdgeInsets.only(
+                                  top: 42
+                                ),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      "Lanjukan belajar",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    Divider(
+                                      color: Colors.white,
+                                    ),
+                                    Row(
+                                      children: [
+
+                                      ],
+                                    )
+                                  ],
                                 ),
                               ),
                             ),
