@@ -83,7 +83,7 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                                         ),
                                         Expanded(
                                           child: Padding(
-                                            padding: const EdgeInsets.symmetric(horizontal: 16),
+                                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                                             child: Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               children: [
@@ -111,7 +111,19 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                                                       child: Container(
                                                         height: 4,
                                                         decoration: BoxDecoration(
-                                                          color: Colors.grey,
+                                                          color: Colors.white.withOpacity(0.4),
+                                                          borderRadius: BorderRadius.circular(4),
+                                                        ),
+                                                        child: Row(
+                                                          children: [
+                                                            Container(
+                                                              width: 84,
+                                                              height: 4,
+                                                              decoration: BoxDecoration(
+                                                                color: Colors.lightGreenAccent,
+                                                              ),
+                                                            ),
+                                                          ],
                                                         ),
                                                       ),
                                                     )
@@ -151,10 +163,39 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                         ),
                       ),
                     ),
-                    Container(
-                      height: 84,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
+                    Padding(
+                      padding: const EdgeInsets.only(right: 16),
+                      child: Container(
+                        height: 64,
+                        decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                        ),
+                        padding: EdgeInsets.all(6),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                ),
+                                child: Center(
+                                  child:
+                                  Text("Gratis"),
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Center(
+                                child: Text(
+                                  "Berbayar",
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
