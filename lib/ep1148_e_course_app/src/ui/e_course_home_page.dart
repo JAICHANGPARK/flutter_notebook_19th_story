@@ -58,7 +58,20 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                               left: 0,
                               right: 16,
                               top: 0,
-                              child: Container(),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                ),
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    border: InputBorder.none,
+                                    helperText: "Cari kursus online disini...",
+                                    icon: Icon(
+                                      Icons.search,
+                                    ),
+                                  ),
+                                ),
+                              ),
                             ),
                           ],
                         ),
