@@ -12,6 +12,7 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.brown[50],
       body: SafeArea(
         child: Column(
