@@ -166,7 +166,7 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                     Padding(
                       padding: const EdgeInsets.only(right: 16),
                       child: Container(
-                        height: 64,
+                        height: 58,
                         decoration: BoxDecoration(
                           color: Colors.grey[300],
                         ),
@@ -179,8 +179,7 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                                   color: Colors.white,
                                 ),
                                 child: Center(
-                                  child:
-                                  Text("Gratis"),
+                                  child: Text("Gratis"),
                                 ),
                               ),
                             ),
@@ -202,8 +201,31 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                       height: 16,
                     ),
                     Expanded(
-                      child: Container(
-                        color: Colors.pink,
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 16),
+                        child: Container(
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 16,
+                              ),
+                              Expanded(
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     )
                   ],
