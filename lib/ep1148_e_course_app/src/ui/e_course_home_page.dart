@@ -81,15 +81,33 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                                             color: Colors.blue,
                                           ),
                                         ),
-                                        Column(
-                                          children: [
-                                            Text(
-                                              "Cara Membuat Design System",
-                                              style: TextStyle(
-                                                color: Colors.white,
+                                        Expanded(
+                                          child: Column(
+                                            children: [
+                                              Text(
+                                                "Cara Membuat Design System",
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                ),
                                               ),
-                                            )
-                                          ],
+                                              Row(
+                                                children: [
+                                                  Text("30%"),
+                                                  SizedBox(
+                                                    width: 12,
+                                                  ),
+                                                  Expanded(
+                                                    child: Container(
+                                                      height: 4,
+                                                      decoration: BoxDecoration(
+                                                        color: Colors.grey,
+                                                      ),
+                                                    ),
+                                                  )
+                                                ],
+                                              )
+                                            ],
+                                          ),
                                         )
                                       ],
                                     )
