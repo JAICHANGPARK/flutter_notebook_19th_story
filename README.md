@@ -142,6 +142,7 @@ width="400px"/>
 ## Flutter channel 
 
 - master
+- stable (Flutter 3)
 
 ## Getting Started
 
