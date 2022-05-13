@@ -116,6 +116,12 @@ class _EcourseDetailPageState extends State<EcourseDetailPage> {
                                   ],
                                 ),
                               ),
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.arrow_right_alt,
+                              ),
                             )
                           ],
                         ),
