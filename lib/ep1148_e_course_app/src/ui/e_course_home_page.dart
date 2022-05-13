@@ -214,7 +214,19 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                                   ),
                                   child: Column(
                                     children: [
-                                      Expanded(child: Placeholder()),
+                                      Expanded(
+                                        child: Column(
+                                          children: [
+                                            Container(),
+                                            Text(
+                                              "Cara Membuat Website",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
                                       Container(
                                         height: 52,
                                         decoration: BoxDecoration(
