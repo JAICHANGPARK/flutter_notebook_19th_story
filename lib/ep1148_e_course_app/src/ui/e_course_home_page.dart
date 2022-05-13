@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
-
+import 'e_course_detail_page.dart';
 class ECourseHomePage extends StatefulWidget {
   const ECourseHomePage({Key? key}) : super(key: key);
 
@@ -57,86 +57,95 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                               right: 0,
                               top: 24,
                               bottom: 0,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.black,
-                                ),
-                                padding: EdgeInsets.only(top: 42, left: 16),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Lanjukan belajar",
-                                      style: TextStyle(color: Colors.white, fontSize: 18),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (context) => EcourseDetailPage(),
                                     ),
-                                    Divider(
-                                      color: Colors.white,
-                                      height: 42,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Container(
-                                          height: 52,
-                                          width: 52,
-                                          decoration: BoxDecoration(
-                                            color: Colors.blue,
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: Padding(
-                                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                                            child: Column(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                              children: [
-                                                Text(
-                                                  "Cara Membuat Design System",
-                                                  style: TextStyle(
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                                SizedBox(
-                                                  height: 16,
-                                                ),
-                                                Row(
-                                                  children: [
-                                                    Text(
-                                                      "30%",
-                                                      style: TextStyle(
-                                                        color: Colors.white,
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      width: 12,
-                                                    ),
-                                                    Expanded(
-                                                      child: Container(
-                                                        height: 4,
-                                                        decoration: BoxDecoration(
-                                                          color: Colors.white.withOpacity(0.4),
-                                                          borderRadius: BorderRadius.circular(4),
-                                                        ),
-                                                        child: Row(
-                                                          children: [
-                                                            Container(
-                                                              width: 84,
-                                                              height: 4,
-                                                              decoration: BoxDecoration(
-                                                                color: Colors.lightGreenAccent,
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    )
-                                                  ],
-                                                )
-                                              ],
+                                  );
+                                },
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                  ),
+                                  padding: EdgeInsets.only(top: 42, left: 16),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Lanjukan belajar",
+                                        style: TextStyle(color: Colors.white, fontSize: 18),
+                                      ),
+                                      Divider(
+                                        color: Colors.white,
+                                        height: 42,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Container(
+                                            height: 52,
+                                            width: 52,
+                                            decoration: BoxDecoration(
+                                              color: Colors.blue,
                                             ),
                                           ),
-                                        )
-                                      ],
-                                    )
-                                  ],
+                                          Expanded(
+                                            child: Padding(
+                                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    "Cara Membuat Design System",
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 16,
+                                                  ),
+                                                  Row(
+                                                    children: [
+                                                      Text(
+                                                        "30%",
+                                                        style: TextStyle(
+                                                          color: Colors.white,
+                                                        ),
+                                                      ),
+                                                      SizedBox(
+                                                        width: 12,
+                                                      ),
+                                                      Expanded(
+                                                        child: Container(
+                                                          height: 4,
+                                                          decoration: BoxDecoration(
+                                                            color: Colors.white.withOpacity(0.4),
+                                                            borderRadius: BorderRadius.circular(4),
+                                                          ),
+                                                          child: Row(
+                                                            children: [
+                                                              Container(
+                                                                width: 84,
+                                                                height: 4,
+                                                                decoration: BoxDecoration(
+                                                                  color: Colors.lightGreenAccent,
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      )
+                                                    ],
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
