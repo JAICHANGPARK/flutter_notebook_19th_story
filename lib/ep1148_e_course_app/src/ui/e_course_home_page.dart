@@ -212,7 +212,6 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                   ),
-
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: [
@@ -227,6 +226,9 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                                                   child: Container(
                                                     decoration: BoxDecoration(
                                                       color: Colors.red,
+                                                      border: Border.all(
+                                                        color: Colors.black,
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
