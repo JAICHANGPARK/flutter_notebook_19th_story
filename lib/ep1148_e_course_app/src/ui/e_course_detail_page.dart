@@ -63,16 +63,44 @@ class _EcourseDetailPageState extends State<EcourseDetailPage> {
                           ),
                         ),
                         Row(
-                          children: [
-                            Text("30%")
-                          ],
+                          children: [Text("30%")],
                         )
                       ],
                     ),
                   ),
                 ),
                 Expanded(
-                  child: Placeholder(),
+                  child: ListView.separated(
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.only(
+                          left: 24, bottom: 16
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                              ),
+                              padding: EdgeInsets.all(8),
+                              child: Center(
+                                child: Text(
+                                  "${index + 1}",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      );
+                    },
+                    itemCount: 10,
+                    separatorBuilder: (context, index) {
+                      return Divider();
+                    },
+                  ),
                 ),
               ],
             ),
