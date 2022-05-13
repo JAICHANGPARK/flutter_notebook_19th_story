@@ -212,19 +212,37 @@ class _ECourseHomePageState extends State<ECourseHomePage> {
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                   ),
+
                                   child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: [
                                       Expanded(
-                                        child: Column(
-                                          children: [
-                                            Container(),
-                                            Text(
-                                              "Cara Membuat Website",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
+                                        child: Padding(
+                                          padding: EdgeInsets.all(8),
+                                          child: Column(
+                                            children: [
+                                              Expanded(
+                                                child: Padding(
+                                                  padding: const EdgeInsets.all(8.0),
+                                                  child: Container(
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.red,
+                                                    ),
+                                                  ),
+                                                ),
                                               ),
-                                            )
-                                          ],
+                                              Padding(
+                                                padding: const EdgeInsets.all(8.0),
+                                                child: Text(
+                                                  "Cara Membuat Website",
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 18,
+                                                  ),
+                                                ),
+                                              )
+                                            ],
+                                          ),
                                         ),
                                       ),
                                       Container(
