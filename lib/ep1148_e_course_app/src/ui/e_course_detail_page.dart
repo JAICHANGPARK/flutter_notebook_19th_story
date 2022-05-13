@@ -73,10 +73,9 @@ class _EcourseDetailPageState extends State<EcourseDetailPage> {
                   child: ListView.separated(
                     itemBuilder: (context, index) {
                       return Padding(
-                        padding: const EdgeInsets.only(
-                          left: 24, bottom: 16
-                        ),
+                        padding: const EdgeInsets.only(left: 24, bottom: 16),
                         child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
                               decoration: BoxDecoration(
@@ -89,6 +88,32 @@ class _EcourseDetailPageState extends State<EcourseDetailPage> {
                                   style: TextStyle(
                                     color: Colors.white,
                                   ),
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 16),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Pengenalan Materi",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 8,
+                                    ),
+                                    Text(
+                                      "4:20 Menit",
+                                      style: TextStyle(),
+                                    ),
+                                    SizedBox(
+                                      height: 8,
+                                    ),
+                                  ],
                                 ),
                               ),
                             )
