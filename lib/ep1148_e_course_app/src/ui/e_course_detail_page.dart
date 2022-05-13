@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class EcourseDetailPage extends StatefulWidget {
@@ -13,10 +11,21 @@ class _EcourseDetailPageState extends State<EcourseDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.brown[100],
       body: Column(
         children: [
           Container(
-            height: 200,
+            height: 280,
+            decoration: BoxDecoration(
+              color: Colors.black,
+            ),
+          ),
+          Expanded(
+            child: Column(
+              children: [
+                
+              ],
+            ),
           )
         ],
       ),
